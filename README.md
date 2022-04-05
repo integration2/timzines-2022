@@ -13,7 +13,7 @@ Et les critères de réussite dans le fichier [évaluation](_cadre-pedagogique/e
 
 ## Déclaration d’inclusivité & formation d’une communauté d’apprentissage
 - [ ] Nous comprenons que les membres de cette communauté représentent un riche éventail de contextes culturels et de perspectives.
-- [ ] Nous nous engageons à fournir un climat d’apprentissage respectueux de cette diversité.
+- [ ] Nous nous engageons à fournir un climat d’apprentissage respectueux de cette diversité.  
 __Tout en travaillant ensemble pour bâtir cette communauté, nous demandons à chacun(e) de:__
 - [ ] porter une attention bienveillante aux collègues de sa classe
 - [ ] contribuer à créer une atmosphère positive
