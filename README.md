@@ -13,7 +13,8 @@ Et les critères de réussite dans le fichier [évaluation](_cadre-pedagogique/e
 
 ## Déclaration d’inclusivité & formation d’une communauté d’apprentissage
 - [ ] Nous comprenons que les membres de cette communauté représentent un riche éventail de contextes culturels et de perspectives.
-- [ ] Nous nous engageons à fournir un climat d’apprentissage respectueux de cette diversité.
+- [ ] Nous nous engageons à fournir un climat d’apprentissage respectueux de cette diversité.  
+
 __Tout en travaillant ensemble pour bâtir cette communauté, nous demandons à chacun(e) de:__
 - [ ] porter une attention bienveillante aux collègues de sa classe
 - [ ] contribuer à créer une atmosphère positive
@@ -24,8 +25,7 @@ __Tout en travaillant ensemble pour bâtir cette communauté, nous demandons a
 - [ ] apprécier l’opportunité que nous avons d’apprendre l’un de l’autre dans cette communauté 
 
 ## Développement et évaluation des attitudes socioprofessionnelles 
-Les attitudes socioprofessionnelles sont des savoir être, des savoir-faire relationnels, collaboratifs et organisationnels qui complètent le profil professionnel du domaine d’emploi.   
-Voici un exemple tiré d’une offre d’emploi en décembre 2021 :  
+Les attitudes socioprofessionnelles sont des savoir être, des savoir-faire relationnels, collaboratifs et organisationnels qui complètent le profil professionnel du domaine d’emploi. Voici un exemple tiré d’une offre d’emploi en décembre 2021 :    
 - *Débrouillard et autonome;*  
 - *Efficace et rigoureux;*  
 - *Équipier de pointe, aimant partager et apprendre en équipe;*   
