@@ -8,7 +8,8 @@ Chaque TimZine est une page Web réactive:
 - Écran moyen: selon une variante de la grille css de l'écran large 
 - Écran large: selon une grille css d'au minimum 3 rangées et 3 colonnes dont les zones(grid-areas) sont définies avec la propriété grid template-areas
 
-Voir les détails dans l'[énoncé du projet]().
+Voir les détails dans l'[énoncé du projet](_cadre-pedagogique/enonce-P1-TimZines.pdf).  
+Et les critères de réussite dans le fichier [évaluation](_cadre-pedagogique/evaluation.md).
 
 ## Déclaration d’inclusivité & formation d’une communauté d’apprentissage
 - [ ] Nous comprenons que les membres de cette communauté représentent un riche éventail de contextes culturels et de perspectives.
