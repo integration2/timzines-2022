@@ -1,102 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!-- source url=https://gridbyexample.com/examples/code/example13.html -->
-    <title>Exemple 13 - départ pour katas de grilles css</title>
-    <style>
-        .wrapper {
-            display: grid;
-            grid-gap: 1em;
-            grid-template-areas:
-                            "header"
-                            "sidebar"
-                            "content"
-                            "sidebar2"
-                            "footer"
-        }
-        @media only screen and (min-width: 500px) {
-            .wrapper {
-                grid-template-columns: 20% auto;
-                grid-template-areas:
-                            "header   header"
-                            "sidebar  content"
-                            "sidebar2 sidebar2"
-                            "footer   footer";
-            }
-        }
-        @media only screen and (min-width: 600px) {
-            .wrapper {
-                grid-gap: 20px;
-                grid-template-columns: 120px auto 120px;
-                grid-template-areas:
-                            "header  header  header"
-                            "sidebar content sidebar2"
-                            "footer  footer  footer";
+    <title>The Neighbourhood - Départ en hiatus</title>
+    <link rel="stylesheet" href="css/style.css">
 
-                /* CENTRAGE */
-                max-width: 1000px;
-                margin: 0 auto;
-                padding: 0;
-                /* Grille 12 colonnes en arrière-plan - À utiliser au besoin */
-                /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
-            }
-        }
-		/* aire occupée par les éléments d'interface */
-		.header {
-			grid-area: header;
-		}
-		.content {
-			grid-area: content;
-		}
-		.sidebar {
-			grid-area: sidebar;
-		}
-		.sidebar2 {
-			grid-area: sidebar2;
-		}
-		.footer {
-			grid-area: footer;
-		}
-
-		/* régles générales */
-		body {
-			margin: 40px;
-		}
-		.box {
-			background-color: #444;
-			color: #fff;
-			border-radius: 5px;
-			padding: 10px;
-			font-size: 150%;
-		}
-		.header,
-		.footer {
-			background-color: #999;
-		}
-		.sidebar2 {
-			background-color: #ccc;
-			color: #444;
-		}
-    </style>
 </head>
 
 <body>
+<header class="entete">
+    <a href="index.html" class="logo"> <img class="header__logo" src="" alt=""></a>
+    <div class="header__content">
+        <h1 class="h1"> Hiatus non anticipé du groupe rock alternatif The Neighbourhood</h1>
+        <p class="header__intro">
+            The Neighbourhood, groupe de musique alternative connu pour leur hit “Sweater Weather”, ont sorti leur
+            quatrième album en septembre 2020 « Chip chrome and the monotones ». Durant ses deux dernières années, ils
+            ont joué 2 concerts en octobre 2021 au Hollywood Bowl à Los Angeles et Forest Hills Stadium à New York et
+            ils ont sorti une collection de linges en novembre. Ils n’ont pas été actif sur Instagram depuis, démontrant
+            donc peu d’action sur leur média sociaux en général.
+        </p>
+        <picture class="header__picture" alt="**">
+            <source srcset="" media="">
+            <source srcset="" media="">
+            <img class="header__img" src="" alt="">
+        </picture>
+    </div>
+</header>
 
-<div class="wrapper">
-    <header class="box header">Header</header>
-    <main class="box content">
-		<h1>Contenu principal</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			A, consectetur dolorem ducimus facilis, fugit hic impedit,
-			in ipsam itaque laborum natus obcaecati perspiciatis quam
-			quos reiciendis sapiente sunt tempore velit.</p>
-    </main>
-	<aside class="box sidebar">Sidebar</aside>
-	<aside class="box sidebar2">Sidebar 2</aside>
-    <footer class="box footer">Footer</footer>
-</div>
+<main class="main">
+    <div class="main__div">
+        <h2 class="main__h2"> Un succès rapide</h2>
+        <img class="main__img" src="" alt="">
+        <p class="main__p"> Le groupe consistant de Jesse Rutherford comme chanteur principal, Jeremy Freedman et Zach
+            Abels comme guitaristes puis Mikey Margott et Brandon Fried comme bassistes ont connu un énorme succès lors
+            de la sortie de leur chanson « Sweater Weather » ainsi que la sortie de leur premier album « I’m sorry » en
+            2012. Ils ont rapidement signé avec Columbia records en 2013 et peu de temps par la suite, leur deuxième
+            album « I love you » atteignait la 39e place sur le « billboard hot 200 ». Ils ont depuis sorti plusieurs
+            albums, tels que « Wiped out! », « Hard to imagine the neighbourhood ever changing » et leur plus récent
+            « chip chrome & the monotones ». Le groupe et alors largement connu dans le monde, surtout avec leur plus
+            récent succès tel que « Softcore », « daddy issues » ainsi, que « baby came home 2/valentines » qui ont été
+            grandement utilisés sur la plateforme tiktok.
+
+        </p>
+    </div>
+
+    <div class="main__div">
+        <h2 class="main__h2"> Un départ en hiatus</h2>
+        <p class="main__p"> Rutherford a annoncé durant la dernière semaine de février 2022 que lui et le groupe avaient
+            décidé de partir en pause. Le groupe avait annoncé une tourner en Europe o il performerait plusieurs
+            concerts. Celle-ci a donc dû être subitement annulée, au grand regret des fans qui attendait depuis le début
+            de la pandémie d’aller voir leur groupe favori. Cependant, ce hiatus n’aurait pas été une surprise pour
+            certains fans puisque depuis le 14 février 2022, Jesse Rutherfrod a commencé à publier des vidéos sur la
+            plateforme tiktok. Nous pouvons voir sur ses tiktoks qu’il semble performer des extraits de nouvelles
+            chansons solos, et donc il avait déjà commencé en faire de la création musicale sans son groupe. Cela serait
+            donc peut-être un signe que le chanteur a l’intention de se séparer du groupe.
+        </p>
+        <img class="main__img" src="" alt="">
+        <p class="main__citation"> “Je crois que Chip (leur tout dernier album) m’a donné la possibilité de ne pas
+            sentir de comme si je perdais quelque chose si je ne post pas sur les médias à chaque jour.”</p>
+    </div>
+
+    <div class="main__div">
+        <h2 class="main__h2"> Seront-il de retour?</h2>
+        <img class="main__img" src="" alt="">
+        <p class="main__p"> Puisque Rutherford semble prendre une tournure solo à sa carrière de musicien, il serait
+            possible de penser que le groupe soit sur le chemin de la séparation. Le musicien ayant une place centrale
+            importante dans le groupe, il est possible qu’il veule prendre le contrôle complet sur sa musique et
+            continuer une carrière solo. Cependant, les fans sont sans nouvelle depuis la dernière publication du groupe
+            sur Instagram annonçant leur pause, ils sont donc dans l’ignorance pour le moment. Cette décision subite
+            tout juste avant le début de leur tournée en Europe porte à croire qu’un conflit aurait éclaté entre les
+            membres du groupe, ce qui n’est pas bon signe pour un retour de leur part. Espérons tout de même que The
+            neighbourhood rejoigne les palmarès dans la prochaine année.
+
+        </p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="source">
+        <p class="footer__src"> Photo entête: <a
+                href="https://www.ticketmaster.ca/the-nbhd-the-neighbourhood-tickets/artist/1741875">https://www.ticketmaster.ca/the-nbhd-the-neighbourhood-tickets/artist/1741875</a>
+        </p>
+
+
+        <p class="footer__src"> Photo 1: <a href=" https://the-neighbourhood.fandom.com/wiki/Hard_to_Imagine_the_Neighbourhood_Ever_Changing_(Album)
+"> https://the-neighbourhood.fandom.com/wiki/Hard_to_Imagine_the_Neighbourhood_Ever_Changing_(Album)
+        </a></p>
+
+
+        <p class="footer__src"> Photo 2: <a href="https://www.allure.com/story/chip-chrome-jesse-rutherford-the-neighbourhood-makeup-interview
+">https://www.allure.com/story/chip-chrome-jesse-rutherford-the-neighbourhood-makeup-interview
+        </a></p>
+
+
+        <p class="footer__src"> Photo 3: <a href=" https://www.billboard.com/music/rock/the-neighbourhood-stargazing-video-9499462/
+"> https://www.billboard.com/music/rock/the-neighbourhood-stargazing-video-9499462/
+        </a></p>
+
+
+        <p class="footer__src"> Source des textes:
+        <ul>
+            <li>
+                <a href="https://variety.com/2022/music/news/the-neighbourhood-band-hiatus-tour-1235187834/">https://variety.com/2022/music/news/the-neighbourhood-band-hiatus-tour-1235187834/</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://popculture.com/music/news/the-neighbourhood-hiatus-despite-tiktok-resurgence/">https://popculture.com/music/news/the-neighbourhood-hiatus-despite-tiktok-resurgence/</a>
+            </li>
+        </ul>
+        </p>
+    </div>
+
+    <div class="footer__logo">
+        <a href="index.html" class="logo"> <img class="footer__logo" src="" alt=""></a>
+    </div>
+
+    <div class="footer__media">
+        <ul class="footer__liste">
+            <li class="footer__items">
+                <a class="footer__lien" href="**"> <img class="media__img" src="**">Facebook</a>
+            </li>
+            <li class="footer__items">
+                <a class="footer__lien" href="**"> <img class="media__img" src="**">Instagram</a>
+            </li>
+            <li class="footer__items">
+                <a class="footer__lien" href="**"> <img class="media__img" src="**">Twitter</a>
+            </li>
+        </ul>
+    </div>
+
+
+</footer>
 
 </body>
 </html>
