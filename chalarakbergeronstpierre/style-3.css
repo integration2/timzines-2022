@@ -4,7 +4,7 @@
     grid-gap: 1em;
     grid-template-areas:
                             "header"
-                            "sidebar"
+                            "section_1"
                             "content"
                             "sidebar2"
                             "footer"
@@ -52,7 +52,7 @@
     grid-column-start: 1;
     grid-column-end: 5;
 }
-.sidebar {
+.section_1 {
     grid-area: sidebar;
     grid-column-start: 1;
     grid-column-end: 2;
