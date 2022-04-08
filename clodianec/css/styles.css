@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/**
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Mise en page
+ *** entête
+ *** main
+ *** interactivité
+ *** footer
+ */
+
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+
+/* Mise en page
+   ========================================================================== */
+/*** entête
+   ========================================================================== */
+/* Padding de l'introduction */
+
+/*** main
+   ========================================================================== */
+/* Couleur d'arrière plan générale et du main */
+
+/*** interactivité
+   ========================================================================== */
+/* Interactivité(hover focus selected) des boutons radio de la question du jour */
+
+/*** footer
+   ========================================================================== */
+/* Style du pied de page */
