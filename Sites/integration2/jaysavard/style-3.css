@@ -3,8 +3,8 @@
     grid-gap: 1em;
     grid-template-areas:
                     "header  header"
-                    "content content"
                     "sidebar sidebar2"
+                    "content content"
                     "footer  footer"
 }
 @media only screen and (min-width: 500px) {
@@ -12,8 +12,8 @@
         grid-template-columns: 20% auto;
         grid-template-areas:
                     "header   header"
-                    "sidebar  content"
-                    "sidebar2 sidebar2"
+                    "sidebar sidebar"
+                    "sidebar2  content"
                     "footer   footer";
     }
 }
@@ -22,9 +22,9 @@
         grid-gap: 20px;
         grid-template-columns: 120px auto 120px;
         grid-template-areas:
-                    "header  header  header"
-                    "sidebar  sidebar2 content"
-                    "footer  footer  footer";
+                    "header  header  header  header"
+                    "sidebar content content sidebar2"
+                    "footer  footer  footer  footer";
 
         /* CENTRAGE */
         max-width: 1000px;
