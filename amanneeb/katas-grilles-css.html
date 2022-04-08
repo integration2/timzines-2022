@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- source url=https://gridbyexample.com/examples/code/example13.html -->
+    <title>Katas de grilles css - version du prof</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="style3">
+<div class="wrapper">
+    <header class="box header">Header</header>
+    <main class="box content">
+		<h1>Contenu principal</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			A, consectetur dolorem ducimus facilis, fugit hic impedit,
+			in ipsam itaque laborum natus obcaecati perspiciatis quam
+			quos reiciendis sapiente sunt tempore velit.</p>
+    </main>
+	<aside class="box sidebar">Sidebar</aside>
+	<aside class="box sidebar2">Sidebar 2</aside>
+<!--    <aside class="box sidebar3">Sidebar 3</aside>-->
+    <footer class="box footer">
+        <ul class="style-switcher">
+            <li>
+                <button data-style="style1">Style&nbsp;1</button>
+            </li>
+            <li>
+                <button data-style="style2">Style&nbsp;2</button>
+            </li>
+            <li>
+                <button data-style="style3">Style&nbsp;3</button>
+            </li>
+        </ul>
+    </footer>
+</div>
+<script>
+    const refListeButtons = document.querySelectorAll('button[data-style]');
+    refListeButtons.forEach(function(bouton){
+        bouton.addEventListener('click', function(){
+            document.querySelector('body').className = this.dataset.style;
+        })
+    });
+</script>
+</body>
+</html>
