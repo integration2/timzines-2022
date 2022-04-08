@@ -3,17 +3,17 @@
     grid-gap: 1em;
     grid-template-areas:
                     "header"
-                    "sidebar"
                     "content"
+                    "sidebar"
                     "sidebar2"
                     "footer"
 }
 @media only screen and (min-width: 500px) {
     .wrapper {
-        grid-template-columns: 20% auto;
+        grid-template-columns: auto 20%;
         grid-template-areas:
                     "header   header"
-                    "sidebar  content"
+                    "content sidebar"
                     "sidebar2 sidebar2"
                     "footer   footer";
     }
@@ -21,10 +21,10 @@
 @media only screen and (min-width: 600px) {
     .wrapper {
         grid-gap: 20px;
-        grid-template-columns: 120px auto 120px;
+        grid-template-columns: auto 120px 120px;
         grid-template-areas:
                     "header  header  header"
-                    "sidebar content sidebar2"
+                    "content sidebar sidebar2"
                     "footer  footer  footer";
 
         /* CENTRAGE */
