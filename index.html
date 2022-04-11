@@ -54,16 +54,16 @@
             overflow: hidden;
         }
         .flex li:hover {
-            transform: scale(125%);
+            transform: scale(110%);
         }
         .flex h3::before {
             content:"";
             display: inline-block;
             background-color: var(--orange);
-            margin-right:0.5em;
+            margin-right:0.15em;
             /* Faire une forme ronde avec border-radius */
             height: 10px;
-            width: 10px;
+            width: 15px;
             border-radius: 50%;
         }
         .flex h3:hover::before {
@@ -84,7 +84,7 @@
         }
         header{
             /*background-color: rgba(114,145,173,1);*/
-            background: linear-gradient(353deg, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 50%, rgba(114,145,173,1) 50%, rgba(114,145,173,1) 100%);
+            background: linear-gradient(353deg, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 45%, rgba(114,145,173,1) 45%, rgba(114,145,173,1) 100%);
 
             padding: 1em 0 1em 0;
             margin-bottom: 5em;
@@ -115,6 +115,7 @@
         a:hover {
             text-decoration: underline;
         }
+        h3:hover a,
         h3 a:hover {
             /* font-size:110%; */
             text-decoration: none;
