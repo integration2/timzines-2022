@@ -7,55 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - TimZines 2022</title>
     <style>
+        :root{
+            --alice:rgba(240,248,255,0.5);
+            --turquoise: rgba(114,145,173,0.5);
+            --orange: chocolate;
+            --mauve: purple;
+        }
         * {
             box-sizing: border-box;
         }
         body{
             margin:0 1em;
         }
-        .grille {
-            display: grid;
-            grid-gap: 1.5em;
-            /* base */
+        @media (min-width:600px) {
+            body{
+                margin:0;
+            }
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            /* base sur ul */
             list-style: none;
             padding-left: 0;
         }
-
-        @media (min-width:500px) {
-            .grille {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-            }
-        }
-
         @media (min-width:600px) {
-            .grille {
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3, 1fr);
+            .flex {
+                 flex-direction: row-reverse;
+                justify-content: center;
             }
         }
-
-        @media (min-width:800px) {
-            body{
-                padding:0;
-            }
-            .grille {
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(4, 1fr);
-            }
-        }
-
-        .grille li {
+        .flex li {
             border-radius: 35px;
             border: 1px solid grey;
             box-shadow: 4px 4px 6px black;
-            padding: 1.5em;
-            background: radial-gradient(#fff 64%, #9198e5);
+            /*background: radial-gradient(#fff 64%, #9198e5);*/
+            background-color: var(--alice);
             transition:transform 0.3s;
             text-align: center;
+            padding: 0 1em;
+            margin:1em;
+            /* si on utilise positionnement absolu d'un svg'*/
+            position: relative;
+            /* cacher le reste du svg */
+            overflow: hidden;
         }
-        .grille li:hover { 
+        .flex li:hover {
             transform: scale(125%);
+        }
+        .flex h3::before {
+            content:"";
+            display: inline-block;
+            background-color: var(--orange);
+            margin-right:0.5em;
+            /* Faire une forme ronde avec border-radius */
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+        }
+        .flex h3:hover::before {
+            background-color: var(--mauve);
         }
         h1,
         h2,
@@ -65,94 +77,156 @@
         } 
         h2 {
             font-style: italic;
+            background-color: #cccccc;
+            transform: skew(-5deg) rotate(-5deg);
+            padding: 0.75em 0 3em;
+            margin-top: 1.5em;
+        }
+        header{
+            /*background-color: rgba(114,145,173,1);*/
+            background: linear-gradient(353deg, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 50%, rgba(114,145,173,1) 50%, rgba(114,145,173,1) 100%);
+
+            padding: 1em 0 1em 0;
+            margin-bottom: 5em;
+            /*border-bottom-right-radius: 60%;*/
+        }
+        .titre-portfolio{
+            position:relative;
+        }
+        .titre-portfolio::after{
+            background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            content: '';
+            display: block;
+            height: 3em;
+            width: 100%;
+            position: absolute;
+            /*bottom: -10vw;*/
+        }
+        /* HYPERLIENS */
+        a:link {
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+        h3 a:hover {
+            /* font-size:110%; */
+            text-decoration: none;
+            color: var(--mauve);
+        }
+        .web-developer a{
+            color: var(--orange);
+        }
+
+        .web-developer a:hover{
+            color:black;
+        }
+        .web-developer::after{
+            background-color: var(--turquoise);
+            content:" ";
+            display:block;
+            width:100%;
+            height:80%;
+            /*height:100px;*/
+            /*background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="fill:rgba(114,145,173,0.5)"><polygon points="0,0 100,0 0,100" /></svg>');*/
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            bottom:-1.5em;
+            left:0;
+            z-index:-1;
+            transform:skew(350deg) rotate(355deg);
+        }
     </style>
 </head>
 
 <body>
+<header>
     <h1>TimZines, design digital d'actualités culturelles</h1>
-    <h2>portfolio pour le cours Intégration II</h2>
-    <ul class="grille">
+    <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
+</header>
+    <ul class="flex portfolio">
         <li>
-            <a href="andreannearchambault/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/andreannearchambault">andreannearchambault</a>
+            <h3><a href="andreannearchambault/index.html">Le titre du zine</a> </h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/andreannearchambault">andreannearchambault</a></p>
         </li>
         <li>
-            <a href="chalarakbergeronstpierre/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/chalarakbergeronstpierre">chalarakbergeronstpierre</a>
+            <h3><a href="chalarakbergeronstpierre/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/chalarakbergeronstpierre">chalarakbergeronstpierre</a></p>
         </li>
         <li>
-            <a href="louisemilevromet/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/louisemilevromet">louisemilevromet</a>
+            <h3><a href="louisemilevromet/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/louisemilevromet">louisemilevromet</a></p>
         </li>
         <li>
-            <a href="lproy/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/lproy">lproy</a>
+            <h3><a href="lproy/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/lproy">lproy</a></p>
         </li>
         <li>
-            <a href="clodianec/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/clodianec">clodianec</a>
+            <h3><a href="clodianec/index.html">Danse du Monde</a></h3>
+           <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/clodianec">clodianec</a></p>
         </li>
         <li>
-            <a href="maximegraignon/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/maximegraignon">maximegraignon</a>
+           <h3> <a href="maximegraignon/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/maximegraignon">maximegraignon</a></p>
         </li>
         <li>
-            <a href="michelkingmalord/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/michelkingmalord">michelkingmalord</a>
+           <h3> <a href="michelkingmalord/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/michelkingmalord">michelkingmalord</a></p>
         </li>
         <li>
-            <a href="BenjaminBrouillette/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/BenjaminBrouillette">BenjaminBrouillette</a>
+            <h3><a href="BenjaminBrouillette/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/BenjaminBrouillette">BenjaminBrouillette</a></p>
         </li>
         <li>
-            <a href="marianneanctil/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/marianneanctil ">marianneanctil </a>
+            <h3><a href="marianneanctil/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/marianneanctil ">marianneanctil </a></p>
         </li>
         <li>
-            <a href="gisellehessen/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/gisellehessen">gisellehessen</a>
+            <h3><a href="gisellehessen/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/gisellehessen">gisellehessen</a></p>
         </li>
         <li>
-            <a href="christopherbyatt/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/christopherbyatt">christopherbyatt</a>
+            <h3><a href="christopherbyatt/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/christopherbyatt">christopherbyatt</a></p>
         </li>
         <li>
-            <a href="jaysavard/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/jaysavard ">jaysavard</a>
+            <h3><a href="jaysavard/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/jaysavard ">jaysavard</a></p>
         </li>
         <li>
-            <a href="darengarneaudionne/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/darengarneaudionne">darengarneaudionne</a>
+            <h3><a href="darengarneaudionne/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/darengarneaudionne">darengarneaudionne</a></p>
         </li>
         <li>
-            <a href="juscarr/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/juscarr">juscarr</a>
+            <h3><a href="juscarr/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/juscarr">juscarr</a></p>
         </li>
         <li>
-            <a href="amanneeb/katas-grilles-css.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/amanneeb">amanneeb</a>
+            <h3><a href="amanneeb/katas-grilles-css.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/amanneeb">amanneeb</a></p>
         </li>
         <li>
-            <a href="rosaliecsfoy/katas-grilles-css.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/rosaliecsfoy">rosaliecsfoy</a>
+            <h3><a href="rosaliecsfoy/katas-grilles-css.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/rosaliecsfoy">rosaliecsfoy</a></p>
         </li>
         <li>
-            <a href="smithmichael001/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/smithmichael001">smithmichael001</a>
+            <h3><a href="isaacdube/katas-grilles-css.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/isaacdube">isaacdube</a></p>
         </li>
         <li>
-            <a href="isaacdube/katas-grilles-css.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/isaacdube">isaacdube</a>
+            <h3><a href="AlexisPerron17/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/AlexisPerron17">AlexisPerron17</a></p>
         </li>
         <li>
-            <a href="AlexisPerron17/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/AlexisPerron17">AlexisPerron17</a>
-        </li>
-        <li>
-            <a href="matteaue/index.html">Titre Zine</a><br>
-            par&nbsp;<a href="https://github.com/matteaue">matteaue</a>
+            <h3><a href="matteaue/index.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/matteaue">matteaue</a></p>
         </li>
     </ul>
 <footer>
