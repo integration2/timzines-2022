@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - TimZines 2022</title>
     <style>
+        /* @author Ève Février */
+        /* variables */
         :root{
             --alice:rgba(240,248,255,0.5);
             --turquoise: rgba(114,145,173,0.5);
@@ -16,6 +18,7 @@
         * {
             box-sizing: border-box;
         }
+        /* base */
         body{
             margin:0 1em;
         }
@@ -24,6 +27,7 @@
                 margin:0;
             }
         }
+        /* contenu principal - Web Developers list */
         .flex {
             display: flex;
             flex-wrap: wrap;
@@ -56,12 +60,13 @@
         .flex li:hover {
             transform: scale(110%);
         }
+        /* Border-radius pour une forme ronde ou ovale */
         .flex h3::before {
             content:"";
             display: inline-block;
             background-color: var(--orange);
             margin-right:0.15em;
-            /* Faire une forme ronde (ou ovale si déformée par le width) avec border-radius */
+            /* hauteur aplatie !!! le rond se fait au survol */
             height: 2px;
             width: 15px;
             border-radius: 50%;
@@ -87,15 +92,21 @@
         header{
             /*background-color: rgba(114,145,173,1);*/
             background: linear-gradient(353deg, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 45%, rgba(114,145,173,1) 45%, rgba(114,145,173,1) 100%);
-
             padding: 1em 0 1em 0;
             margin-bottom: 5em;
-            /*border-bottom-right-radius: 60%;*/
         }
+        /* BANDE MAUVE SOUS LE SOUS-TITRE
+           Exemple de SVG de forme trapézoïdale
+           placé en background-image
+           dans un pseudo-élément ::before ou ::after
+           et encodé en data-uri
+           voir https://css-tricks.com/lodge/svg/09-svg-data-uris/
+         */
         .titre-portfolio{
             position:relative;
         }
         .titre-portfolio::after{
+            position: absolute;
             background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E");
             background-position: center center;
             background-repeat: no-repeat;
@@ -104,8 +115,6 @@
             display: block;
             height: 3em;
             width: 100%;
-            position: absolute;
-            /*bottom: -10vw;*/
         }
         /* HYPERLIENS INTERACTIVITÉ */
         a:link {
@@ -129,18 +138,20 @@
         .web-developer a{
             color: var(--orange);
         }
-
         .web-developer a:hover{
             color:black;
         }
+        /* SÉPARATION ENTRE TitreZine et Web Developer
+           Forme trapézoïdale obtenue en combinant
+           pseudo-élément ::after
+           avec transform: skew + rotate
+         */
         .web-developer::after{
             background-color: var(--turquoise);
             content:" ";
             display:block;
             width:100%;
             height:80%;
-            /*height:100px;*/
-            /*background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="fill:rgba(114,145,173,0.5)"><polygon points="0,0 100,0 0,100" /></svg>');*/
             background-size: cover;
             background-position: center center;
             position: absolute;
