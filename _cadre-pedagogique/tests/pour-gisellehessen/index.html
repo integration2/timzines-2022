@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+        .conteneur {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        body {
+            color: white;
+            background-color: #444444;
+            font-size: 1.25em;
+        }
+
+        /* 1ère grille */
+        /* triangle gris svg en ligne dans le html */
+       .grille1 svg {
+            display: none;
+        }
+
+        @media (min-width: 600px) {
+            .grille1 {
+                display: grid;
+                grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+                grid-template-areas:
+                        "a a a a ."
+                        "b b b . .";
+                position: relative;
+            }
+            .grille1 svg {
+                position: absolute;
+                bottom: -0.35em;
+                right: calc(-50% + 1em);
+                width: 100%;
+                height: 20vw;
+                z-index: 2;
+                display: block;
+            }
+            .a {
+                grid-area: a;
+            }
+            .b {
+                grid-area: b;
+            }
+        }
+
+        /* 2ème grille */
+        .film-se-distingue {
+            min-height: 80vh;
+            position: relative;
+        }
+        .film-se-distingue::before {
+            position: absolute;
+            width: 100%;
+            top: 10vh;
+            bottom: 0;
+            transform: skew(11deg) rotate(11deg);
+            background-color: rgba(200, 0, 0, 1);
+            content: " ";
+            z-index: -1;
+        }
+        @media (min-width: 600px) {
+            .film-se-distingue {
+                /* multiple backgrounds */
+                background-image: url("photo-1_w1200.jpeg"), url("photo-2_w1200.jpeg");
+                background-position: top left, bottom right;
+                background-size: calc(50% - 1em), calc(50% + 1em);
+                background-repeat: no-repeat, no-repeat;
+                background-origin: content-box, content-box;
+                padding-top: 0.25em;
+                /*background-attachment: fixed, fixed;*/
+                /*overflow: hidden;*/
+            }
+            .film-se-distingue::before {
+                top: 0;
+                transform: skew(-11deg) rotate(-11deg);
+                background-color: rgba(200, 0, 0, 0.75);
+                z-index: 0;
+            }
+        }
+        .c {
+            position: relative;
+            min-height: 20vh;
+            /*background-color: #cccccc;*/
+        }
+        .le-grand-shang-shi__picture {
+            position: absolute;
+            right: 35px;
+            bottom: 0;
+            z-index: 3;
+        }
+        @media (min-width: 600px) {
+            .grille2 {
+                display: grid;
+                grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+                grid-template-areas:
+                        ". . . c c"
+                        ". d d e e";
+            }
+
+            .c {
+                grid-area: c;
+                position: relative;
+                min-height: 10vh;
+            }
+
+            .le-grand-shang-shi__picture {
+                position: absolute;
+                right: 35px;
+                bottom: 0;
+                z-index: 3;
+            }
+
+            .d {
+                grid-area: d;
+                padding-right: 0.5em;
+            }
+
+            .e {
+                grid-area: e;
+            }
+
+            .d, .e {
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        /* CHARTE TYPO */
+        h1 {
+            font-size: 4em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-variant: all-small-caps;
+            background-color: red;
+            display: inline-block;
+            padding: 0 .35em;
+            line-height: 0.5;
+            text-shadow: 2px 2px 8px #000;
+            text-align: center;
+        }
+
+        @media (min-width: 500px) {
+            h1 {
+                font-size: 4.5em;
+            }
+        }
+
+        @media (min-width: 800px) {
+            h1 {
+                font-size: 7em;
+            }
+        }
+
+        header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p>Logo TimZines-2022</p>
+</header>
+<main>
+    <section class="shang-shi bleed">
+        <div class="conteneur grille1">
+            <h1 class="a">Shang-Shi</h1>
+            <p class="b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aspernatur atque
+                delectus
+                distinctio dolores dolorum eius excepturi natus, nemo neque non nulla, quae quibusdam repudiandae
+                totam velit voluptate! Adipisci?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon fill="white" points="0,100 100,0 100,100"/>
+            </svg>
+        </div> <!-- fin du conteneur de grille centrée-->
+    </section>
+    <section class="film-se-distingue bleed">
+        <!--        insérer un trapèze en css avec transform skew + rotate-->
+        <div class="conteneur grille2">
+            <div class="c le-grand-shang-shi">
+                <picture class="le-grand-shang-shi__picture">
+                    <source media="(min-width:500px)" srcset="entete_w230.png">
+                    <img src="entete_w230.png" alt="Shang-Shi">
+                </picture>
+            </div>
+            <div class="d">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aspernatur atque
+                    delectus distinctio dolores dolorum eius excepturi natus, nemo neque non nulla, quae quibusdam
+                    repudiandae totam velit voluptate! Adipisci?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aspernatur atque delectus
+                    distinctio dolores dolorum eius excepturi natus, nemo neque non nulla, quae quibusdam repudiandae
+                    totam velit voluptate! Adipisci?</p>
+            </div>
+            <div class="e">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aspernatur atque
+                    delectus distinctio dolores dolorum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aspernatur atque delectus
+                    distinctio dolores dolorum eius excepturi natus, nemo neque non nulla, quae quibusdam repudiandae
+                    totam velit voluptate! Adipisci?</p>
+            </div>
+        </div> <!-- fin du conteneur de grille centrée-->
+    </section>
+    <section class="histoire-de-famille bleed">
+        <div class="conteneur grille3">
+            <!--            <h2>Histoire de famille</h2>-->
+        </div> <!-- fin du conteneur de grille centrée-->
+    </section>
+</main>
+</body>
+</html>
