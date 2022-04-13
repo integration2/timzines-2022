@@ -25,14 +25,13 @@ Alternativement, on peut ajouter un calque de blanc légèrement transparent et 
 Exemples:  
   - [trois colonnes, 3 zones](exemples-schematisation/01.png)
   - [deux colonnes, 4 zones](exemples-schematisation/02.png)
-  - [trois colonnes, 8 zones](exemples-schematisation/03.png)
-- [ ] Publier les meilleures esquisses dans le [fil de discussion](https://github.com/integration2/timzines-2022/discussions)  
+  - [plusieurs grilles 5 colonnes asymétriques](exemples-schematisation/pour-gisellehessen/shema-strategie-grilles.pdf)
+- [ ] Publier votre esquisse de grille(s) css pour l'écran large dans le [fil de discussion](https://github.com/integration2/timzines-2022/discussions)  
 Partager réflexion, questionnements. Demander des commentaires.  
 - [ ] Identifier les défis d'intégration, chercher des solutions.     
-- [ ] Publier un ou plusieurs défis d'intégration dans le [fil de discussion](https://github.com/integration2/timzines-2022/discussions)   
-Partager mes solutions anticipées, demander d'autres avis ou de l'aide pour préciser une solution.  
-Documenter les défis par une description et un visuel (capture-écran, détail de la maquette).
-- [ ] Commenter un défi d'au moins une autre personne.
+- [ ] Publier un défi d'intégration dans le [fil de discussion](https://github.com/integration2/timzines-2022/discussions)   
+pour partager une solution anticipée ou demander de l'aide. Documenter par une description et un visuel.
+- [ ] Commenter grille ou défi d'au moins une autre personne.
 
 #### À partir du HTML structurel et sémantique :
 - [ ] Identifier les conteneurs sémantiques pouvant servir de contexte de mise en forme (grid ou flexbox)
@@ -44,10 +43,10 @@ S'il y a des erreurs, les corriger. Si on arrive pas à en corriger une, demande
 ### 3. Intégrer les styles CSS 
 *(Semaine 11-12 - Échéance 22 avril - 40%)*
 #### Penser et intégrer « Mobile First » 
-- [ ] Coder à la suite de chaque sélecteur les requêtes media des variantes pour écrans plus larges.
 - [ ] Aucun fichier source n’est fourni mais vous devez structurer vos fichiers en suivant les principes du cadriciel du guide de développement.
-- [ ] La zone de contenu principal est intégrée à l’aide d’une grille définie par un `grid-template-areas`.
-- [ ] D’autres techniques de positionnement (flottants, flexbox, propriété position) seront utilisés au besoin et en complément.
+- [ ] Coder à la suite de chaque sélecteur les requêtes media des variantes pour écrans plus larges.
+- [ ] Au moins une grille css est définie avec `grid-template-columns` et `grid-template-areas`.
+- [ ] D’autres techniques de positionnement (flottants, flexbox, propriété position) sont utilisés au besoin et en complément.
 - [ ] Développer la feuille de styles principale (styles.css) avec un grand souci des détails.
 
 #### Mettre en application la ou les techniques complémentaires choisies parmi :
