@@ -1,0 +1,3 @@
+Mettre balise a Href a la place du div logo
+mettre un display block
+mettre un text align center
