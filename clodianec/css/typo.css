@@ -26,30 +26,42 @@
 
 /* Polices */
 @font-face {
-    font-family: NewsCycle-bold;
-    src:url(../polices/News_Cycle/NewsCycle-bold.woff2)format('woff2'),
-    url(../polices/News_Cycle/NewsCycle-bold.woff) format('woff'),
-    url(../polices/News_Cycle/NewsCycle-bold.ttf) format('truetype');
-}
+    font-family: FelixTitling;
+    src:url(../typo/FELIXTI.TTF) format("truetype")}
 @font-face {
-    font-family: NewsCycle;
-    src:url(../polices/News_Cycle/NewsCycle-Regular.woff2)format('woff2'),
-    url(../polices/News_Cycle/NewsCycle-Regular.woff) format('woff'),
-    url(../polices/News_Cycle/NewsCycle-Regular.ttf) format('truetype');
-}
+    font-family: BodoniMT;
+    src:url(../typo/BOD_R.TTF) format("truetype")}
+@font-face {
+    font-family: InkFree;
+    src:url(../typo/Inkfree.ttf) format("truetype")}
+@font-face {
+    font-family: JavaneseText;
+    src:url(../typo/javatext.ttf) format("truetype")}
+
 h1,
-.h1,
+.h1{
+    font-family: FelixTitling, serif ;
+    margin:0;
+}
 h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-    font-family: NewsCycle-bold, sans-serif ;
+.h2{
+    font-family: BodoniMT, serif ;
     margin:0;
 }
 body{
-    font-family: NewsCycle, sans-serif ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#accroche,
+#sources,
+#info,
+#joindre{
+    font-family: 'Times New Roman', Times, serif;
+}
+.apostrophe{
+    font-family: InkFree, serif;
+}
+.texteCitation{
+    font-family: JavaneseText, serif;
 }
 
 
