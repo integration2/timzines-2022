@@ -1,5 +1,14 @@
 /* Utilitaires
    ========================================================================== */
+/* Variables */
+:root {
+    --color-text: #FFF;
+    --color-Green: #CBE3B9;
+    --color-Dark-G: #414550;
+    --color-light-G: #D4DADC;
+    --color-O: #D6AA8C;
+}
+
 /*** Clearfix ***/
 .clearfix::after {
     content: "";
