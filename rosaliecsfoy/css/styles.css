@@ -76,6 +76,9 @@ body {
     background-position: top right;
     background-size: 288px;
 }
+.RoxaneAdisq {
+    box-shadow: ;
+}
 .citation {
     background-color: var(--couleur-mauve);
 }
@@ -122,22 +125,17 @@ footer {
         display: flex;
         justify-content: space-between;
     }
-    .rangee-grid{
+    .grille1{
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(2, 5fr);
         grid-template-areas:
-                ". . c c c c c c c c . ."
-                "a a a a b b b b b b b b";
+                "picture texte";
         grid-gap: 20px;
         }
-    .accroche{
-        grid-area: c;
+    .RoxaneAdisq{
+        grid-area: picture;
     }
-    .a{
-        grid-area: a;
+    .texteIntro{
+        grid-area: texte;
     }
-    .b{
-        grid-area: b;
-    }
-
 }
