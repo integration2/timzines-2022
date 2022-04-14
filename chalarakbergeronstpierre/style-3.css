@@ -1,4 +1,6 @@
 
+/* importation des styles de police */
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Roboto+Condensed:wght@700&display=swap');
 /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
 @media (min-width: 600px) {
     .conteneur {
@@ -100,7 +102,8 @@
     grid-template-areas: 
    
       "titre ."
-      "a     b";}
+      "a     b"
+  }
 
     .noir_1 .sous-titre{
         grid-area: titre;
@@ -112,6 +115,46 @@
         grid-area: b;
     }
      
+    .domination {
+        margin: 0px;
+    }
+    .sous_titre_rose{
+        color: #FF83BC;
+    }
+
+    .p_blanc{
+        color: white;
+    }
+
+    .sous_sous_titre_blanc{
+        color: white;
+    }
+
+    .fig_blanc{
+        color: white
+    }
+
+    .c{
+        background-color:black;
+        display: flex; 
+        
+    }
+    .citation{
+        color: #EEBB0B;
+        font-size: 50px;
+        margin-top: 60px;
+        margin-left: 60px;
+       
+    }
+    .signature{
+        color: #EEBB0B;
+        font-size: 50px;
+       
+
+    }
+
+
+    /* section 3 */
     
 
   /* .noir_2{
