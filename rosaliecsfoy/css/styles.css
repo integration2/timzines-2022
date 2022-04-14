@@ -3,6 +3,7 @@
  * @author Rosalie Roy 2133488@csfoy.ca
  *
  * TABLE DES MATIERES
+ * Normalize
  * Polices
  * Mise en page
  *** entête
@@ -12,22 +13,84 @@
  *** footer
  */
 
- /* Polices importées */
- /** Delius Swash Caps (h1) **/
+ /* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+ /* Polices */
+
+ /** Polices importées **/
+
+ /*** Delius Swash Caps (h1) ***/
  @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
- /** Delius Unicase (h2) **/
+ /*** Delius Unicase (h2) ***/
  @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
- /** Roboto (texte courant) **/
+ /*** Roboto (texte courant) ***/
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+ /*** Delius (citation) ***/
+ @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
  
+ /** Polices dans la page **/
+ h1 {
+    font-family: "Delius Swash Caps";
+    font-size: 60px;
+}
+h2 {
+    font-family: "Delius Unicase";
+    font-size: 32px;
+}
+.fil-dariane {
+    font-family: "Roboto";
+    font-size: 12px;
+}
+.auteur,
+.datePublication,
+.credits {
+    font-family: "Roboto";
+    font-size: 14px;
+}
+.quote {
+    font-family: "Delius";
+    font-size: 25px;
+    color: var(--couleur-blanche);
+}
+p {
+    font-family: "Roboto";
+    font-size: 16px;
+}
  /* Mise en page */
  /****** Base commune *******/
 :root {
-    --couleur-texte: #000;
+    --couleur-noire: #000;
+    --couleur-blanche: #FFF;
     --couleur-mauve: #6E72D0;
     --couleur-jaune: #FFD700;
     --font-family: Raleway, sans-serif;
     }
 body {
     background-color: #EFF0FA;
+    max-width: 1000px;
+    background-image: url('../images/Mobile/1x/motifTitre_288.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 288px;
+}
+.citation {
+    background-color: var(--couleur-mauve);
+}
+footer {
+    background-color: var(--couleur-noire);
+    color: var(--couleur-blanche);
+}
+.credits {
+    text-align: center;
+}
+.logo {
+    width: 255px;
+}
+.logoPiedPage {
+    width: 160px;
+}
+.decorationTitre {
+    position: relative;
 }
