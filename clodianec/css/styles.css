@@ -30,8 +30,22 @@
 
 /* Mise en page
    ========================================================================== */
+main{
+   max-width: 1000px;
+   margin: auto;
+}
+body{
+   background-color: var(--color-Light-G);
+}
+#arriere-plan{
+   background-color: var(--color-Dark-G);
+}
 /*** entête
    ========================================================================== */
+header{
+   text-align: center;
+   background-color: var(--color-Dark-G);
+}
 /* Padding de l'introduction */
 
 /*** main
@@ -44,4 +58,7 @@
 
 /*** footer
    ========================================================================== */
+   footer{
+      background-color: var(--color-Dark-G);
+   }
 /* Style du pied de page */

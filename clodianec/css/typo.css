@@ -41,15 +41,29 @@
 h1,
 .h1{
     font-family: FelixTitling, serif ;
+    color: var(--color-Green);
     margin:0;
 }
 h2,
 .h2{
     font-family: BodoniMT, serif ;
+    color: var(--color-O);
     margin:0;
+}
+.pair h2,
+.pair .h2{
+    color: var(--color-Green);
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+}
+#accroche{
+    color: var(--color-O);
+}
+#sources,
+#info{
+    color: var(--color-Green);
 }
 #accroche,
 #sources,
@@ -122,40 +136,5 @@ h2,
     h2,
     .h2 { /* = 36px */
         font-size: 3.6rem;
-    }
-}
-
-h3,
-.h3 { /* = 18px */
-    font-size: 1.8rem;
-}
-@media (min-width: 600px) {
-    h3,
-    .h3 {  /* = 24px */
-        font-size: 2.4rem;
-    }
-}
-@media (min-width: 800px) {
-    h3,
-    .h3 { /* = 30px */
-        font-size: 3rem;
-    }
-}
-
-h4,
-.h4 { /* = 16px */
-    font-size: 1.6rem;
-}
-@media (min-width: 600px) {
-    h4,
-    .h4 { /* = 18px */
-        font-size: 1.8rem;
-    }
-}
-
-@media (min-width: 800px) {
-    h4,
-    .h4 { /* = 22px */
-        font-size: 2.2rem;
     }
 }
