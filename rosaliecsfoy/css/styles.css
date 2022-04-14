@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * @author Rosalie Roy 2133488@csfoy.ca
+ *
+ * TABLE DES MATIERES
+ * Polices
+ * Mise en page
+ *** entête
+ *** main
+ *** formulaire
+ *** interactivité
+ *** footer
+ */
+
+ /* Polices importées */
+ /** Delius Swash Caps (h1) **/
+ @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+ /** Delius Unicase (h2) **/
+ @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
+ /** Roboto (texte courant) **/
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+ 
+ /* Mise en page */
+ /****** Base commune *******/
+:root {
+    --couleur-texte: #000;
+    --couleur-mauve: #6E72D0;
+    --couleur-jaune: #FFD700;
+    --font-family: Raleway, sans-serif;
+    }
+body {
+    background-color: #EFF0FA;
+}
