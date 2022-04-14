@@ -1,6 +1,12 @@
 # timzines-2022
 TimZines - Design digital d'actualités culturelles
 
+## Exemples à consulter en ligne
+- [Grille 5 colonnes - exemple gisellehessen](_cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html)
+- [Grilles successives - 12 colonnes de 1fr](_cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html)
+- [Rythme vertical chevauchement de 20px](_cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html)
+- [Superposition avec grid-area défini avec lignes](_cadre-pedagogique/demo-grilles-css/03_superposition.html)
+
 ## Mandat
 Réaliser un zine digital à propos d'une actualité culturelle.   
 Chaque TimZine est une page Web réactive:   
