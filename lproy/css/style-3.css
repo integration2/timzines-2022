@@ -1,3 +1,10 @@
+/* Système de grilles fluides
+   ========================================================================== */
+   @import url(vieille-grille-avec-flottants.css);
+   
+/* Charte typographique
+   ========================================================================== */
+   @import url(typo.css);
 .wrapper {
     display: grid;
     grid-gap: 1em;
@@ -56,7 +63,7 @@ body {
     margin: 40px;
 }
 .box {
-    background-color: #EAE9E7;
+    background-color: #fff;
     color: #000000;
     border-radius: 5px;
     padding: 10px;
@@ -66,7 +73,139 @@ body {
 .footer {
     background-color: #072745;
 }
-.sidebar2 {
-    background-color: #ccc;
-    color: #444;
+
+/* HEADER */
+/* logo */
+
+.logo{
+    display: inline-block;
+    width: 202px;
+}
+@media (min-width: 700px) {
+    .logo {
+        width: 582px;
+    }
+}
+
+/* entete */
+
+.entete {
+    background: url(../images/entete-mobile.jpg) center top no-repeat;
+    background-size: cover;
+    color: #072745;
+    padding: 10px 0;
+    text-align: center;
+}
+@media (min-width: 700px){
+    .entete {
+        background: url(../images/entete.jpg) center bottom no-repeat;
+        background-size: cover;
+        padding: 20px;
+    }
+    .entete div:first-child{
+        min-height: 5rem;
+    }
+}
+/* titre */
+.entete h1{
+    background-color: #E87001;
+    padding: 0 0 0 43px;
+    text-align: left;
+    margin-left: -43px;
+    width: 125%;
+}
+.titre h1 {
+    line-height: 120%;
+    padding: 15% 0;
+}
+.accroche h1 {
+    line-height: 120%;
+    padding: 15% 0;
+}
+
+@media (min-width: 700px) {
+    .titre {
+        min-height: 80vh;
+        position: relative;
+    }
+    .titre h1 {
+        max-width: auto;
+        margin: 45px 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+    }
+}
+@media (max-height: 500px) {
+    .titre h1 {
+        position: static;
+    }
+}
+/* .banniere{
+    background-image:
+} */
+/*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
+@media (min-width: 600px) {
+    main {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 0;
+        /* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage */
+        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
+    }
+}
+
+div .banniere{
+    background: url(images/banniere_w2880.jpg) no-repeat center;
+    height: 830px;
+}
+.texte_daccroche{
+
+    background-color: #EAE9E7;
+}
+
+.h2_body02{
+    background-color: #EAE9E7;
+}
+.accroche{
+    background-color: #E87001;
+}
+
+.citation01{
+
+    color: #fff;
+    background-color: #072745;
+    border: 10px rgb(232, 112, 1);
+}
+.citation02{
+
+    color: #fff;
+    background-color: #072745;
+    border: 10px rgb(232, 112, 1);
+}
+.bordeur{
+    background-color: #E87001;
+    
+}
+/* body01 */
+.body01.conteneur{
+    padding: 0 20px;
+}
+.body01 h2 {
+    padding-bottom: 0.2em;
+    position: relative;
+}
+.body01 h2:after {
+    background-color: #dba70d;
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.accroche h1 {
+    line-height: 1.1;
 }
