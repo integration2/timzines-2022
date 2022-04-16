@@ -60,12 +60,11 @@
 
 /* régles générales */
 body {
-    margin: 40px;
+    margin: 0;
 }
 .box {
     background-color: #fff;
     color: #000000;
-    border-radius: 5px;
     padding: 10px;
     font-size: 150%;
 }
@@ -74,77 +73,102 @@ body {
     background-color: #072745;
 }
 
-/* HEADER */
+/* ENTETE */
+
+.entete {
+    background-size: cover;
+    background-color: #072745;
+}
+
 /* logo */
 
 .logo{
     display: inline-block;
-    width: 202px;
+    margin-top: 56px;
+    width: 417px;
 }
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .logo {
+        margin-top: 85px;
         width: 582px;
+
     }
 }
 
-/* entete */
+/* fil ariane */
 
-.entete {
-    background: url(../images/entete-mobile.jpg) center top no-repeat;
-    background-size: cover;
-    color: #072745;
-    padding: 10px 0;
+.fil_ariane ul {
+    margin-top: 24px;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}   
+.fil_ariane li::before {
+    content: ">";
+}
+.fil_ariane li:first-child::before {
+    content: "";
+}
+
+/* ligne cinéma */
+
+.border{
+    padding: 0;
+    margin-top: 39px;
+    border: 2px solid #FFFFFF;
+    height: 0px;
+}
+.border li{
+    list-style-type: none;
     text-align: center;
-}
-@media (min-width: 700px){
-    .entete {
-        background: url(../images/entete.jpg) center bottom no-repeat;
-        background-size: cover;
-        padding: 20px;
-    }
-    .entete div:first-child{
-        min-height: 5rem;
-    }
-}
-/* titre */
-.entete h1{
-    background-color: #E87001;
-    padding: 0 0 0 43px;
-    text-align: left;
-    margin-left: -43px;
-    width: 125%;
-}
-.titre h1 {
-    line-height: 120%;
-    padding: 15% 0;
-}
-.accroche h1 {
-    line-height: 120%;
-    padding: 15% 0;
+    margin-top: 9px;
 }
 
-@media (min-width: 700px) {
-    .titre {
-        min-height: 80vh;
-        position: relative;
-    }
-    .titre h1 {
-        max-width: auto;
-        margin: 45px 0;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        text-align: left;
+/* titre */
+
+.background {
+    background-color: #E87001;
+    padding: 30px 30px 30px 0;
+    margin: 124px -30px 0 10px;
+    /* width: 100%; */
+    display: flex;
+}
+@media (min-width: 320px){
+    .background {
+        background-color: #E87001;
+        padding: 11px 11px 11px 0;
+        margin: 107px 0 0 10px;
+        /* width: 100%; */
+        display: flex;
     }
 }
-@media (max-height: 500px) {
-    .titre h1 {
-        position: static;
+@media (min-width: 600px){
+    .background {
+        background-color: #E87001;
+        padding: 43px 43px 43px 0;
+        margin: 105px 0 0 10%;
+        box-sizing: inherit;
+        
+        /* width: 100%; */
+        display: flex;
     }
 }
-/* .banniere{
-    background-image:
-} */
+.background h1{ 
+    text-align: left;
+    margin: 0 220px 0 43px;
+} 
+@media (min-width: 320px){
+    .background h1{
+        margin: 0 220px 0 43px;
+    }
+}
+@media (min-width: 600px){
+    .background h1{
+        margin: 0 10% 0 43px;
+        width: 80%;
+    }
+}
+
 /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
 @media (min-width: 600px) {
     main {
