@@ -2,13 +2,19 @@
     margin: auto;
 }
 
+
+.section_titre {
+    background: lightcoral;
+}
+
+/* SECTION 1 */
 .section_1 {
     display: grid;
     background: lightblue;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "A A A A . . . B B B B . "
-        ". . . . C C C C C C C C"
+        "A A A A . . B B B B . . "
+        ". . . C C C C C C C C ."
 }
 
 .section_1--texte {
@@ -22,6 +28,52 @@
 .section_1--citation {
     grid-area: C;
 }
+
+/* SECTION 2 */
+.section_2 {
+    display: grid;
+    background: lightpink;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "A A A A . . . B B B B . "
+        ". . . C C C C C C C C ."
+}
+
+.section_2--texte {
+    grid-area: B;
+}
+
+.section_2--image {
+    grid-area: A;
+}
+
+.section_1--citation {
+    grid-area: C;
+}
+
+/* SECTION 3 */
+.section_3 {
+    display: grid;
+    background: lightgreen;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "A A A A . . . B B B B . "
+        ". . . . C C C C C C C C"
+}
+
+.section_3--texte {
+    grid-area: A;
+}
+
+.section_3--image {
+    grid-area: B;
+}
+
+.section_1--citation {
+    grid-area: C;
+}
+
+
 
 .wrapper {
     display: grid;
