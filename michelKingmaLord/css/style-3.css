@@ -1,3 +1,14 @@
+/* HEADER 1 */
+.section_1 {
+    display: grid;
+    background: lightblue;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "A A A A A . B B B B B B "
+        ". . . C C C C C C C C ."
+}
+
+
 .main {
     margin: auto;
     max-width: 1000px;
@@ -47,19 +58,20 @@
     display: grid;
     background: lightpink;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
     grid-template-areas:
+        "B . . . . . . . . . . . "
         "B . . A A A A A . . . . "
+        "B . . . . . . . . . . . "
 }
 
 .section_2--texte {
     grid-area: A;
-    /*grid-auto-rows: repeat(12, 0.1fr);*/
-    grid-row: auto;
+
 }
 
 .section_2--image {
     grid-area: B;
-    grid-row: auto;
 }
 
 
@@ -172,7 +184,8 @@ body {
 
 .header,
 .footer {
-    background-color: #999;
+    background-color: #1A1B1E;
+    color: white;
 }
 
 .sidebar2 {
