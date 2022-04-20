@@ -1,13 +1,26 @@
 /* HEADER 1 */
-.section_1 {
+.header {
     display: grid;
     background: lightblue;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
     grid-template-areas:
-        "A A A A A . B B B B B B "
-        ". . . C C C C C C C C ."
+        "A . . "
+        "A . . "
+        "B B . "
 }
 
+.header--image {
+    grid-area: A;
+    margin: 10px 40px 10px 40px;
+}
+
+.header--filariane {
+    grid-area: B;
+    margin: 10px 40px 10px 40px;
+}
+
+/* MAIN*/
 
 .main {
     margin: auto;
