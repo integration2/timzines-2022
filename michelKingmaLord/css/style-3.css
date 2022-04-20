@@ -1,3 +1,28 @@
+.main {
+    margin: auto;
+}
+
+.section_1 {
+    display: grid;
+    background: lightblue;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "A A A A . . . B B B B . "
+        ". . . . C C C C C C C C"
+}
+
+.section_1--texte {
+    grid-area: A;
+}
+
+.section_1--image {
+    grid-area: B;
+}
+
+.section_1--citation {
+    grid-area: C;
+}
+
 .wrapper {
     display: grid;
     grid-gap: 1em;
@@ -7,6 +32,7 @@
         "content content"
         "footer  footer"
 }
+
 
 @media only screen and (min-width: 500px) {
     .wrapper {
