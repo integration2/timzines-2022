@@ -1,7 +1,11 @@
 .main {
     margin: auto;
+    max-width: 1000px;
 }
 
+.container {
+    padding-bottom: 2.5rem;
+}
 
 .section_titre {
     background: lightcoral;
@@ -12,6 +16,7 @@
     display: grid;
     background: lightblue;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(auto, 600px) 100px 1fr;
     grid-template-areas:
         "A A A A A . B B B B B B "
         ". . . C C C C C C C C ."
@@ -27,6 +32,14 @@
 
 .section_1--citation {
     grid-area: C;
+    background: #26408B;
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+    /*min-height: 6rem;*/
+    opacity: 70%;
+    z-index: 1;
+    padding: 0 1rem;
 }
 
 /* SECTION 2 */
@@ -35,16 +48,18 @@
     background: lightpink;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "A A A A . . . B B B B . "
-        ". . . C C C C C C C C ."
+        "B . . . A A A A A . . . "
 }
 
 .section_2--texte {
-    grid-area: B;
+    grid-area: A;
+    /*grid-auto-rows: repeat(12, 0.1fr);*/
+    grid-row: auto;
 }
 
 .section_2--image {
-    grid-area: A;
+    grid-area: B;
+    grid-row: auto;
 }
 
 
@@ -53,8 +68,8 @@
     display: grid;
     background: lightgreen;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-        "A A A A A . B B B B B B "
+
+    grid-template-areas: "A A A A A . B B B B B B "
         ". . . C C C C C C C C ."
 }
 
@@ -66,9 +81,7 @@
     grid-area: B;
 }
 
-.section_1--citation {
-    grid-area: C;
-}
+
 
 /* SECTION PIED DE PAGE */
 .section_4 {
@@ -78,8 +91,7 @@
 .wrapper {
     display: grid;
     grid-gap: 1em;
-    grid-template-areas:
-        "header  header"
+    grid-template-areas: "header  header"
         "sidebar sidebar2"
         "content content"
         "footer  footer"
@@ -89,8 +101,7 @@
 @media only screen and (min-width: 500px) {
     .wrapper {
         grid-template-columns: 20% auto;
-        grid-template-areas:
-            "header   header"
+        grid-template-areas: "header   header"
             "sidebar sidebar"
             "sidebar2  content"
             "footer   footer";
@@ -101,8 +112,7 @@
     .wrapper {
         grid-gap: 20px;
         grid-template-columns: 120px auto 120px;
-        grid-template-areas:
-            "header  header  header  header"
+        grid-template-areas: "header  header  header  header"
             "sidebar  sidebar2  sidebar2 content"
             "footer  footer  footer  footer";
 
