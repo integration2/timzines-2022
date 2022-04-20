@@ -13,7 +13,7 @@
     background: lightblue;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "A A A A . . B B B B . . "
+        "A A A A A . B B B B B B "
         ". . . C C C C C C C C ."
 }
 
@@ -47,9 +47,6 @@
     grid-area: A;
 }
 
-.section_1--citation {
-    grid-area: C;
-}
 
 /* SECTION 3 */
 .section_3 {
@@ -57,8 +54,8 @@
     background: lightgreen;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "A A A A . . . B B B B . "
-        ". . . . C C C C C C C C"
+        "A A A A A . B B B B B B "
+        ". . . C C C C C C C C ."
 }
 
 .section_3--texte {
@@ -73,7 +70,10 @@
     grid-area: C;
 }
 
-
+/* SECTION PIED DE PAGE */
+.section_4 {
+    width: auto;
+}
 
 .wrapper {
     display: grid;
