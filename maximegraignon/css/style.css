@@ -1,0 +1,127 @@
+@charset "utf-8";
+@import url(grille.css);
+
+/* Section 01 */
+.biographie{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+                        "A A A A A A A . . . . ."
+                        "B B B B B B B B B . . . ";
+}
+
+.biographie__image{
+    grid-area: A;
+}
+
+.briographie__paragraphe {
+    grid-area: B;
+    
+}
+
+/* Section 02 */
+.ses_premiers_albums{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+                        ". . B B B B B . A A A ."
+                        ". . B B B B B . C C C C";
+}
+
+.ses_premiers_albums__image{
+    grid-area: A;
+}
+
+.ses_premiers_albums__paragraphe__01 {
+    grid-area: B;  
+}
+
+.ses_premiers_albums__paragraphe__02 {
+    grid-area: C;  
+}
+
+/* Section 03 */
+.son_retour_en_2022{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+                        "A A A A A A A . . . . ."
+                        "B B B B . C C C C C . .";
+}
+
+.son_retour_en_2022__image{
+    grid-area: A;
+}
+
+.son_retour_en_2022__paragraphe__01{
+    grid-area: B;  
+}
+
+.son_retour_en_2022__paragraphe__02{
+    grid-area: C;  
+}
+
+
+
+
+/* régles générales */
+body {
+    margin: auto;
+
+}
+
+.h2__02{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box {
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+}
+.header,
+.footer {
+    background-color: #999;
+}
+.sidebar2 {
+    background-color: #ccc;
+    color: #444;
+}
+
+nav.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo a{
+    width: 250px;
+    display: block;
+}
+
+.entete__image img{
+    width: 100%;
+
+}
+
+/*.container_01{
+    color: black;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container_02{
+    background-color: #416559;
+}
+
+.container_03{
+    color:black
+}*/
+
+.fil_ariane,
+.h1,
+.accroche{
+    color:black;
+}
+
