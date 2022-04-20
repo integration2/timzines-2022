@@ -31,47 +31,43 @@ body {
 }
 
 .logo {
-    width: auto;
-    position: absolute;
-    background-color: red;
+
+    display:block;
+    text-align: center;
+}
+
+.logo img{
+    width: 150px;
 }
 
 .entete{
-    position: absolute;
-    width:100%
+
+
 
 }
 
-.header__img{
-
-    padding-top:20em;
-   max-width: 1200px;
-width: auto;
+.header__content{
+   background-image: url("../images/table/entête2880.jpg");
+    background-size: cover;
 }
 
 .h1{
     font-size:5vw;
-    position: absolute;
-    width: 100%;
-    top:20%;
-    z-index: 2;
+
 
 }
 
 .header__intro{
     font-size:1.5em;
     padding-left: 1.4em;
-    padding-top:2em;
-    position: absolute;
-    width: 100%;
-    top:40%;
-    z-index:2;
+
+
 }
 
 
 .main__img{
-    max-width: 500px;
-    width:100%;
+max-width: 100%;
+
 }
 
 .main__p{
