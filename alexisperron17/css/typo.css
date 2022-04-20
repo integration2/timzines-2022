@@ -1,0 +1,39 @@
+body {
+    font-family: 'Gill Sans', sans-serif;
+}
+
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 18px;
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+        font-size: 18px;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+
+h1,
+h2 {
+    font-family: "Ayuthaya", sans-serif;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.35rem;
+    }
+}
+

@@ -1,3 +1,10 @@
+@media (min-width: 600px) {
+  .conteneur {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 0;
+  }
+}
 .grille {  display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1.5fr 0.5fr 1.5fr;
@@ -16,4 +23,3 @@
   .texte_2 { grid-area: Texte-2; }
   
   .grille.h2 { grid-area: h2; }
-  

@@ -2,6 +2,51 @@
    ===================================================================== */
    @import url(utilitaires.css);
 
-/* grilles
+/* Grilles
    ===================================================================== */
    @import url(grilles.css);
+
+/* Normalize
+   ===================================================================== */
+   @import url(normalize.css);
+
+/* Normalize
+   ===================================================================== */
+   @import url(typo.css);
+
+body{
+   background-color:#3B3936;
+}
+
+/* ENTETE */
+
+.entete {
+   background-color: #486966;
+   max-width: 2400px;
+   display: flex;
+}
+.picture__entete {
+   display: flex;
+   justify-content: left;
+}
+
+.logo {
+
+   width: 100%;
+}
+
+.entete p {
+   color: white;
+   text-align: left;
+   /* top: -2em; */
+}
+
+.entete__titre {
+   display:flex;
+   align-items: center;
+}
+
+/* MAIN */
+
+.main {
+}
