@@ -1,0 +1,122 @@
+
+
+/*réinitialisation*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*charte graphique*/
+:root {
+
+    font-size: 1.25em;
+    color: rgb(0,0,0);
+
+
+}
+
+
+
+
+.conteneur {
+    max-width: 1000px;
+    margin: auto;
+}
+
+body {
+    color: black;
+    background-color: #585858;
+    font-size: 1.25em;
+}
+
+.logo {
+    width: auto;
+    position: absolute;
+    background-color: red;
+}
+
+.entete{
+    position: absolute;
+    width:100%
+
+}
+
+.header__img{
+
+    padding-top:20em;
+   max-width: 1200px;
+width: auto;
+}
+
+.h1{
+    font-size:5vw;
+    position: absolute;
+    width: 100%;
+    top:20%;
+    z-index: 2;
+
+}
+
+.header__intro{
+    font-size:1.5em;
+    padding-left: 1.4em;
+    padding-top:2em;
+    position: absolute;
+    width: 100%;
+    top:40%;
+    z-index:2;
+}
+
+
+.main__img{
+    max-width: 500px;
+    width:100%;
+}
+
+.main__p{
+    position:relative;
+    padding-bottom: 5em;
+
+}
+
+.main__h2{
+    text-align: center;
+    font-size:3em;
+
+}
+
+.c{
+    padding-top:5em;
+}
+
+.footer__list{
+    color:red;
+    list-style: none;
+
+}
+
+
+.footer__liens:link,
+.footer__liens:visited{
+    color:turquoise;
+    text-decoration: none;
+}
+
+.footer__liens:hover,
+.footer__liens:active{
+    color:white;
+    text-decoration: none;
+}
+
+.footer__list{
+    display:flex;
+    flex-direction: row;
+
+}
+
+footer{
+    max-width: 1000px;
+    padding-bottom: 5em;
+}
+

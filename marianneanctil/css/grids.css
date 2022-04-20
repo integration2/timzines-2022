@@ -1,3 +1,5 @@
+
+
 @media (min-width: 600px) {
     .grille1 {
         display: grid;
@@ -101,7 +103,7 @@
 
     .k{
         grid-area: k;
-        position:relative;
+        position: relative;
     }
 }
 
@@ -110,22 +112,23 @@
         display: grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
         grid-template-areas:
-                "l m m n";
+                "l n n m";
+
     }
 
-    .l{
+    .l {
         grid-area: l;
-        position:relative;
+        position: relative;
     }
 
-    .m{
+    .m {
         grid-area: m;
-        position:relative;
+        position: relative;
     }
 
-    .n{
+    .n {
         grid-area: n;
-        position:relative;
+        position: relative;
     }
 
 }
