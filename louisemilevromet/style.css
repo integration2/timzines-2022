@@ -1,0 +1,86 @@
+/**
+ * @author Louis-Émile Vromet (quelques broutilles d'actualisation de l'exercice)
+ * @author Louis-Émile Vromet 2142261@csfoy.ca   <---- Utiliser nom complet ou nom d'utilisateur Github
+ *
+**/
+
+@import url(normalize.css);
+
+
+.h1 {
+    color: beige;
+}
+
+.Bored_Ape {
+    background-color: #F5CABF;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-areas: 
+                        ". . . . G G G G G . . . . . . ."
+                        ". . A A A A B B B B B B B B . ."
+                        ". . C C C C C C C C D D D D . ."
+                        ". . E E E E F F F F F F F F . .";
+}
+.Bored_Ape_Titre {
+    grid-area: G;
+}
+.Bored_Ape__images__01 {
+    grid-area: A;
+    color: #2B246A;
+}
+.Bored_Ape__description__01 {
+    grid-area: B;
+    color: #2B246A;
+}
+.Bored_Ape__images__02 {
+    grid-area: D;
+    color: #2B246A;
+}
+.Bored_Ape__description__02 {
+    grid-area: C;
+    color: #2B246A;
+}
+.Bored_Ape__images__03 {
+    grid-area: E;
+    color: #2B246A;
+}
+.Bored_Ape__description__03 {
+    grid-area: F;
+    color: #2B246A;
+}
+
+/* aire occupée par les éléments d'interface */
+.header {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.sidebar2 {
+    grid-area: sidebar2;
+}
+.footer {
+    grid-area: footer;
+}
+
+/* régles générales */
+body {
+    
+}
+.box {
+    background-color: #2B246A;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+}
+.conteneur_02 {
+    max-width: 100%;
+}
+.header,
+.footer {
+    background-color: #2B246A;
+}
