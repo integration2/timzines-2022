@@ -120,8 +120,16 @@
 
 
 /* SECTION PIED DE PAGE */
-.section_4 {
+.footer--section_4 {
     width: auto;
+}
+
+.footer--media {
+    text-align: center;
+}
+
+.footer--sources {
+    text-align: left;
 }
 
 .wrapper {
@@ -184,7 +192,7 @@
 
 /* régles générales */
 body {
-    margin: 40px;
+    margin: 240px;
 }
 
 .box {
