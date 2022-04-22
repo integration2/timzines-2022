@@ -385,7 +385,7 @@ ul{
     .noir_2 .conteneur {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: repeat(12, 20px minmax(300px,) 20px);
+    grid-template-rows: repeat(12, 20px minmax(auto, 1fr) 20px);
     gap: 30px 30px; 
     grid-template-areas: 
     "titre ."
