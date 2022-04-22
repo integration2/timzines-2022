@@ -1,19 +1,300 @@
-.grille1 {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
-    grid-template-rows: 1.5fr 1fr;
-    gap: 2px 0px;
-    grid-template-areas:
-    "titre titre titre titre ."
-    "intro intro intro . .";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.conteneur {
+    max-width: 1000px;
+    margin: auto;
 }
 
-.grille2 {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
-    grid-template-rows: 1fr 2fr;
-    gap: 2px 0px;
-    grid-template-areas:
-    ". . . heros heros"
-    ". p1 p1 p2  p2";
+body {
+    color: white;
+    background-color: rgba(26, 31, 35, 1);
+    font-size: 1.25em;
 }
+
+/* 1ère grille */
+/* triangle gris svg en ligne dans le html */
+.grille1 svg {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .grille1 {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+        grid-template-areas:
+                        "a a a a ."
+                        "b b b . .";
+        position: relative;
+    }
+
+    .grille1 svg {
+        position: absolute;
+        bottom: -0.35em;
+        right: calc(-50% + 1em);
+        width: 100%;
+        height: 20vw;
+        z-index: 2;
+        display: block;
+    }
+
+    .a {
+        grid-area: a;
+    }
+
+    .b {
+        grid-area: b;
+    }
+}
+
+/* 2ème grille */
+.film-se-distingue {
+    min-height: 80vh;
+    position: relative;
+}
+
+.film-se-distingue::before {
+    position: absolute;
+    width: 100%;
+    top: 10vh;
+    bottom: 0;
+    transform: skew(11deg) rotate(11deg);
+    background-color: rgba(200, 0, 0, 1);
+    content: " ";
+    z-index: -1;
+}
+
+@media (min-width: 600px) {
+    .film-se-distingue {
+        /* multiple backgrounds */
+        background-image: url("images/photo-1_w1200.jpeg"), url("images/photo-2_w1200.jpeg");
+        background-position: top left, bottom right;
+        background-size: calc(50% - 1em), calc(50% + 1em);
+        background-repeat: no-repeat, no-repeat;
+        background-origin: content-box, content-box;
+        padding-top: 0.25em;
+        /*background-attachment: fixed, fixed;*/
+        /*overflow: hidden;*/
+    }
+
+    .film-se-distingue::before {
+        top: 0;
+        transform: skew(-11deg) rotate(-11deg);
+        background-color: rgba(233, 10, 10, 1);
+        z-index: 0;
+    }
+}
+
+.c {
+    position: relative;
+    min-height: 20vh;
+    /*background-color: #cccccc;*/
+}
+
+.le-grand-shang-shi__picture {
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+    z-index: 3;
+}
+
+@media (min-width: 600px) {
+    .grille2 {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+        grid-template-areas:
+                        ". . . c c"
+                        ". d d e e";
+    }
+
+    .c {
+        grid-area: c;
+        position: relative;
+        min-height: 10vh;
+    }
+
+    .le-grand-shang-shi__picture {
+        position: absolute;
+        right: 35px;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .d {
+        grid-area: d;
+        padding-right: 0.5em;
+    }
+
+    .e {
+        grid-area: e;
+    }
+
+    .d, .e {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*GRILLE 3*/
+@media (min-width: 600px) {
+    .grille3 {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+        grid-template-areas:
+                        ". . f f f"
+                        ". . f f f";
+    }
+
+    .f {
+        grid-area: f;
+        padding-top: 2rem;
+        padding-bottom: 7rem;
+    }
+
+    /*GRILLE 4*/
+    @media (min-width: 600px) {
+        .grille4 {
+            display: grid;
+            background-color: rgba(233, 10, 10, 1);
+            grid-template-columns: 0.5fr 1.5fr 2fr 1.25fr 1.25fr 4fr;
+            grid-template-areas:
+                        ". g g g . h";
+        }
+
+        .g {
+            grid-area: g;
+            padding-left: 2em;
+            line-height: 1.8em;
+        }
+
+        .h {
+            grid-area: h;
+            position: relative;
+            min-height: 10vh;
+        }
+
+        .image_film {
+            position: absolute;
+            bottom: 40px;
+            z-index: 3;
+        }
+
+        /* CHARTE TYPO */
+        .titreFilm{
+            font-size: 120px;
+            background-color: red ;
+            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+            font-variant: all-small-caps;
+            text-align: center;
+            margin-bottom: 0;
+            display: block;
+            padding: 0;
+            line-height: 1;
+            border-top: 30px inset rgba(26, 31, 35, 1);
+
+        }
+
+        .titre_film1 {
+            box-sizing: border-box;
+            background-color: red;
+            width: 420px;
+            height: 150px;
+
+
+
+            /*f*/
+            /*background-color: rgba(233, 10, 10, 1);*/
+            /*!*display: inline;*!*/
+            /*padding: 0;*/
+            /*!*line-height: 1;*!*/
+            /*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
+            /*text-align: center;*/
+            /*margin-bottom: 0;*/
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .citation {
+            font-size: 25px;
+            font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+            font-variant: all-small-caps;
+        }
+
+        p {
+            font-size: 18px;
+            font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+
+        @media (min-width: 500px) {
+            .titre_film1 {
+                font-size: 4.5em;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .titre_film1 {
+                font-size: 7em;
+            }
+        }
+
+        .logo {
+            width: 300px;
+            display: block;
+            margin: 2rem auto 0;
+
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .etoiles {
+            font-size: 50px;
+            color: rgba(255, 190, 24, 1);
+            margin: 0;
+            transition: transform 0.3s;
+        }
+
+        .etoiles:hover {
+            transform: scale(150%);
+            filter: brightness(300%)
+        }
+
+        /*FOOTER*/
+        /*SPITRE CSS*/
+
+
+        footer {
+            background-color: rgba(13, 15, 17, 1);
+            padding: 2em;
+        }
+        .sources{
+        font-weight: bold;
+        }
+    }
+        li {
+            list-style: none;
+            font-size: 18px;
+            color: white;
+            font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+            line-height: 1.5;
+        }
+        a:hover{
+            color:red;
+        }
+        a:visited {
+        color:lightgray;
+        }
+
+
