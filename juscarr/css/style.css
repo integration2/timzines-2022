@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+/**
+ * @author JusCarr 
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Mise en page
+ *** entête
+ *** main
+ *** formulaire
+ *** interactivité
+ *** footer
+ */
+
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+
+/* Mise en page
+   ========================================================================== */
+/*margin_grid ESSAIE #1 BANDEAU DROIT
+.marge_right {
+   grid-area: h;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 13fr;
+   grid-template-areas:
+      "a"
+      "b"
+}
+*/
+/*Margin ESSAIE #2 BANDEAU DROIT
+/*
+.margin_right {
+   position:absolute;
+   margin-left:80%
+
+}
+.hit {
+   transform: rotate(90deg);
+}
+.allHit {
+   height: 1000px;
+   margin-left:20%
+}
+.main {
+   background-color:aqua;
+   margin-right:20%;;
+   margin-left:20%
+}
+*/
+.div {
+   margin-bottom: 50px;
+}
+
+/*body-grid format large, en laissant une marge de 1fr a droite, cela laisse la place au bandeau de ce positionner au bon endroit*/
+
+@media(min-width:1000px) {
+   .body {
+      background-color: #020426;
+      display: grid;
+      grid-template-columns: 6fr 1fr;
+      grid-template-rows: 0.2fr 5.1fr;
+      grid-template-areas:
+         "e a"
+         "f b"
+   }
+
+   /*Mise en Forme de la marge droite*/
+   .p_hit {
+      font-size: 2.5em;
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      height: 100%
+   }
+
+   .div_hit:nth-of-type(2) {
+      margin-top: 800px
+   }
+
+   .div_hit {
+      display: flex;
+      margin-bottom: 500px;
+      transform: rotate(90deg);
+      height: auto
+   }
+
+   .h3 {
+      grid-area: a;
+      background-color: #EAEAEA;
+      color: black;
+   }
+
+   .hit {
+      grid-area: b;
+      background-color: #EAEAEA;
+      color: black;
+   }
+
+}
+
+/*body-grid format medium*/
+@media(max-width:1000px) {
+   .body {
+      background-color: #020426;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 5.1fr;
+      grid-template-areas:
+         "e"
+         "f"
+   }
+
+   .hit {
+      display: none;
+   }
+
+   .h3 {
+      display: none;
+   }
+
+   .grid_header {
+      margin-right: 20%;
+   }
+}
+
+.header {
+   grid-area: e;
+}
+
+.main {
+   grid-area: f;
+}
+
+/*header-grid*/
+.grid_header {
+   margin-left: 20%;
+   display: grid;
+   grid-template-columns: 2fr 3fr;
+   grid-template-rows: 0.5fr 0.5fr 1fr;
+   grid-template-areas:
+      "c ."
+      "c ."
+      "d d"
+   ;
+}
+
+.logo {
+   grid-area: c;
+   padding-top: 20px;
+}
+
+.titre {
+   grid-area: d;
+   justify-self: center;
+}
+
+/*grid-intro*/
+.grid_1 {
+   background-color: white;
+   display: grid;
+   grid-template-columns: 1fr 3fr 0.2fr 2.5fr 0.2fr;
+   grid-template-rows: 0.5fr 0.5fr 4fr 0.2fr 0.6fr;
+   grid-template-areas:
+      ". . . . ."
+      ". r . . ."
+      ". r . s ."
+      ". r . . ."
+      ". . . . ."
+}
+
+@media(min-width:320px) {
+   .grid_1 {
+      margin-right: 5%;
+   }
+}
+
+.div_intro {
+   grid-area: r;
+   background-color: #119479;
+   padding: 2em;
+   box-shadow: -30px -30px 0px 0px #020426
+
+}
+
+.img_intro {
+   grid-area: s;
+}
+
+.p_intro {
+   margin: 10%
+}
+
+/*grid-fcklove*/
+.bg_fklove {
+   background: #EAEAEA
+}
+
+@media(min-width:320px) {
+   .bg_fklove {
+      margin-left: 15%;
+   }
+}
+
+/*footer*/
+.footer {
+   background-color: #EAEAEA;
+}
+
+.footer__menu {
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   padding-top: 10px;
+   margin-top: 0px;
+}
+
+.footer__lien {
+   font-size: 0;
+   /* fait disparaître le texte du lien */
+   display: block;
+   /* permet de donner une dimension au lien */
+   width: 97px;
+   /* largeur de l'image */
+   height: 97px;
+   /* hauteur de l'image */
+   margin-right: 2rem;
+   background-image: url(../img/SpriteFooter.png);
+   background-repeat: no-repeat;
+   border-radius: 2px;
+   margin-left: 2rem;
+
+
+}
+
+.footer__item:first-child .footer__lien {
+   background-position: 1px 1px;
+}
+
+.footer__item:nth-child(2) .footer__lien {
+   background-position: -102px 1px;
+}
+
+.footer__item:nth-child(3) .footer__lien {
+   background-position: -202px 2px;
+}
+
+.footer__item .footer__lien:hover,
+.footer__item .footer__lien:active {
+   background-position-y: -101px;
+
+}
+
+.src {
+   margin-bottom: 0px;
+}
