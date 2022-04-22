@@ -4,6 +4,7 @@
 /* Section 01 */
 .biographie{
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
                         "A A A A A A A . . . . ."
@@ -19,9 +20,27 @@
     
 }
 
+@media (max-width:600px){
+    .biographie{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1, 1fr;
+        grid-template-areas: 
+                            "A"
+                            "B";
+    }
+    .biographie__image{
+        grid-area: A;
+    }
+    .briographie__paragraphe{
+        grid-area: B;
+    }
+}
+
 /* Section 02 */
 .ses_premiers_albums{
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
                         ". . B B B B B . A A A ."
@@ -40,9 +59,41 @@
     grid-area: C;  
 }
 
+.container_02{
+    background-color: #416559;
+}
+
+@media (max-width:600px){
+    .ses_premiers_albums{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1, 1fr;
+        grid-template-areas: 
+                            "A"
+                            "B"
+                            "C";
+    }
+    .ses_premiers_albums__image{
+        grid-area: A;
+    }
+    .ses_premiers_albums__paragraphe__01{
+        grid-area: B;
+    }
+    .ses_premiers_albums__paragraphe__02{
+        grid-area: C;
+    }
+
+    .container_02{
+        background-color: #416559;
+    }
+}
+
+
+
 /* Section 03 */
 .son_retour_en_2022{
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
                         "A A A A A A A . . . . ."
@@ -61,7 +112,54 @@
     grid-area: C;  
 }
 
+@media(max-width:600px){
+    .son_retour_en_2022{
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1, 1fr;
+        grid-template-areas: 
+                            "A"
+                            "B"
+                            "C";
+    }
+    
+    .son_retour_en_2022__image{
+        grid-area: A;
+    }
+    
+    .son_retour_en_2022__paragraphe__01{
+        grid-area: B;  
+    }
+    
+    .son_retour_en_2022__paragraphe__02{
+        grid-area: C;  
+    }
 
+    .h2_03{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Footer */
+.footer{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+                        "A A A A A A A A . . . ."
+                        "B B B B B B B B B B B .";
+                        
+}
+
+.footer_fil_arianne{
+    grid-area: A;
+}
+
+.footer_sources {
+    grid-area: B;
+}
 
 
 /* régles générales */
@@ -70,24 +168,27 @@ body {
 
 }
 
+@media(max-width:600px){
+    .body{
+        margin: auto;
+    }
+}
+
 .h2__02{
     display: flex;
     justify-content: flex-end;
 }
 
-.box {
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 150%;
+@media(max-width:600px){
+    .h2__02{
+        display: flex;
+        justify-content: center;
+    }
 }
-.header,
+
+.header,        
 .footer {
     background-color: #999;
-}
-.sidebar2 {
-    background-color: #ccc;
-    color: #444;
 }
 
 nav.logo{
@@ -105,23 +206,13 @@ nav.logo{
 
 }
 
-/*.container_01{
-    color: black;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.container_02{
-    background-color: #416559;
-}
-
-.container_03{
-    color:black
-}*/
-
 .fil_ariane,
 .h1,
 .accroche{
     color:black;
+}
+
+.copyright {
+    text-align: center;
 }
 
