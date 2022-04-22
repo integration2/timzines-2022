@@ -61,9 +61,9 @@ legend {
 Balisage des images
 *************************/
 
-img {
+/*img {
     margin-left: 0;
-}
+}*/
 
 /**************************
 Section
@@ -99,21 +99,9 @@ Section
 /* SECTION DU SITE */
 
 /* HEADER 1 */
-.header {
-    display: grid;
-    /*background: lightblue;*/
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 0.5fr);
-    grid-template-areas:
-        ". . . "
-        "A . . "
-        ". . . "
-}
-
 .header--image {
-    grid-area: A;
-    margin-left: 100px;
-    /*margin: 10px 40px 10px 40px;*/
+    margin: auto;
+    max-width: 400px;
 }
 
 

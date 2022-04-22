@@ -1,9 +1,9 @@
-/** VARIABLES À DÉFINIR **/ 
-:root{
+/** VARIABLES À DÉFINIR **/
+:root {
     /** Démo **/
     /* les caractères */
     --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne:'Libre Baskerville', serif;
+    --fonte-ancienne: 'Libre Baskerville', serif;
     /* les couleurs */
     --couleur-background: rgba(50, 50, 50, 0.9);
     --couleur-principale: aliceblue;
@@ -27,16 +27,17 @@ html {
 }
 
 /* Images fluides */
-img{
+img {
     max-width: 100%;
 }
 
 /*** Styles de base ***/
-abbr[title]{
+abbr[title] {
     text-decoration: none;
-    cursor:help;
+    cursor: help;
 }
-abbr[title]:hover{
+
+abbr[title]:hover {
     background-color: rgba(244, 161, 71, 0.25);
 }
 
@@ -58,7 +59,7 @@ abbr[title]:hover{
 .screen-reader-only.focusable:active,
 .screen-reader-only.focusable:focus,
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus{
+.visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
