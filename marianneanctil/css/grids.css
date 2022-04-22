@@ -1,43 +1,26 @@
 
 
-@media (min-width: 600px) {
-    .grille1 {
-        display: grid;
-        grid-template-columns: 4fr 1fr 1fr 4fr;
-        grid-template-areas:
-                "a a a a"
-                "b b b b";
-        position: relative;
-    }
-
-    .a {
-        grid-area: a;
-        position:relative;
 
 
-    }
 
-    .b{
-        grid-area: b;
-        position:relative;
-    }
-
-}
 
 @media (min-width: 600px) {
     .grille2 {
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
+       grid-template-rows: 100px 100px auto 100px auto auto auto ;
         grid-template-areas:
-                ". . . c"
-                "d d . ."
-                ". e e e"
-                ". . . ."
-                "f f . .";
+    ". . . ."
+    "d d c c"
+    "d d . ."
+    "d d e e"
+    ". . e e"
+    "z z . ."
+    "f f . .";
     }
 
     .c{
-        grid-area: c;
+grid-area: c;
         position:relative;
     }
 
@@ -55,6 +38,10 @@
         grid-area: f;
         position:relative;
     }
+    .z{
+       grid-area: z;
+        position:relative;
+    }
 
 }
 
@@ -62,10 +49,12 @@
     .grille3{
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
+        grid-template-rows: 100px 100px auto 100px ;
         grid-template-areas:
-                ". . g g"
-                "h h . ."
-                ". . . .";
+    ". . g g"
+    ". . g g"
+    "h . g g"
+    ". . . .";
     }
 
     .g{
@@ -83,11 +72,13 @@
     .grille4{
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
+        grid-template-rows: auto auto 100px auto 100px ;
         grid-template-areas:
-                ". . i i"
-                "j j . ."
-                ". k k k"
-                ". . . .";
+    ". . i i"
+    "j j . ."
+    "j j k k"
+    ". . . .";
+
 
     }
 
@@ -107,28 +98,3 @@
     }
 }
 
-@media (min-width: 600px) {
-    .grille5 {
-        display: grid;
-        grid-template-columns: 4fr 1fr 1fr 4fr;
-        grid-template-areas:
-                "l n n m";
-
-    }
-
-    .l {
-        grid-area: l;
-        position: relative;
-    }
-
-    .m {
-        grid-area: m;
-        position: relative;
-    }
-
-    .n {
-        grid-area: n;
-        position: relative;
-    }
-
-}

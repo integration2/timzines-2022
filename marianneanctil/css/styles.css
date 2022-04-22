@@ -49,10 +49,13 @@ body {
 .header__content{
    background-image: url("../images/table/entête2880.jpg");
     background-size: cover;
+    min-height: 1000px;
 }
 
 .h1{
     font-size:5vw;
+    padding-bottom: 1.4em;
+    padding-top: 2em;
 
 
 }
@@ -60,6 +63,7 @@ body {
 .header__intro{
     font-size:1.5em;
     padding-left: 1.4em;
+    padding-top: 1em;
 
 
 }
@@ -72,8 +76,21 @@ max-width: 100%;
 
 .main__p{
     position:relative;
+
+
+}
+
+.grille2{
+    margin-top: 6em;
+}
+
+.grille3{
     padding-bottom: 5em;
 
+}
+
+.grille4{
+    padding-bottom: 15em;
 }
 
 .main__h2{
@@ -82,13 +99,34 @@ max-width: 100%;
 
 }
 
-.c{
-    padding-top:5em;
+.h{
+    padding-top: 6em;
 }
+
+.z{
+padding-bottom: 1.2em;
+}
+
+
 
 .footer__list{
     color:red;
     list-style: none;
+
+}
+
+.footer__items{
+    width: 80px;
+}
+
+.source{
+    padding-right: 2em;
+}
+
+.footer__src,
+li .footer__liens{
+    font-size: 0.6em;
+    max-width: 33%;
 
 }
 
@@ -105,14 +143,26 @@ max-width: 100%;
     text-decoration: none;
 }
 
-.footer__list{
+.footer__media .footer__list{
     display:flex;
     flex-direction: row;
 
 }
 
+.footer__media{
+    max-width: 33%;
+}
+
+.footer__logo{
+    padding-right: 2em;
+    max-width: 33%;
+}
+
 footer{
     max-width: 1000px;
     padding-bottom: 5em;
+    display:flex;
+    flex-direction: row;
+
 }
 
