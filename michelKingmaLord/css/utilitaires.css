@@ -2,8 +2,10 @@
 :root {
     /** Démo **/
     /* les caractères */
-    --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne: 'Libre Baskerville', serif;
+    --fonte-principale: 'Montserrat', sans-serif;
+    --titreSite-fonte: 'Montserrat', sans-serif;
+    --fonte-paragraphe: 'Open Sans', sans-serif;
+
     /* les couleurs */
     --couleur-background: rgba(50, 50, 50, 0.9);
     --couleur-principale: aliceblue;
