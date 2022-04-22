@@ -101,7 +101,7 @@ Section
 /* HEADER 1 */
 .header {
     display: grid;
-    background: lightblue;
+    /*background: lightblue;*/
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 0.5fr);
     grid-template-areas:
@@ -130,7 +130,7 @@ Section
 }
 
 .section_titre {
-    background: lightcoral;
+    /*background: lightcoral;*/
 }
 
 .header--filariane {
@@ -140,9 +140,10 @@ Section
 /* SECTION 1 */
 .section_1 {
     display: grid;
-    background: lightblue;
+    /*background: lightblue;*/
+    gap: 15px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(auto, 600px) 100px 1fr;
+    grid-template-rows: minmax(auto, 600px) auto 1fr;
     grid-template-areas:
         "A A A A A . B B B B B B "
         ". . . C C C C C C C C ."
@@ -158,6 +159,8 @@ Section
 
 .section_1--citation {
     grid-area: C;
+    position: relative;
+    bottom: 2em;
     background: #26408B;
     color: white;
     font-variant: small-caps;
@@ -175,9 +178,9 @@ Section
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 0.5fr);
     grid-template-areas:
-        "B . . . . . . . . . . . "
-        "B . . A A A A A . . . . "
-        "B . . . . . . . . . . . "
+        "B B B B B B . . . . . . "
+        "B B B B B B . A A A A . "
+        "B B B B B B . . . . . . "
 }
 
 .section_2--texte {
@@ -193,7 +196,7 @@ Section
 /* SECTION 3 */
 .section_3 {
     display: grid;
-    background: lightgreen;
+    /*background: lightgreen;*/
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-template-areas:
