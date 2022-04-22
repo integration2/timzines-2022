@@ -3,7 +3,7 @@
     display: grid;
     grid-gap: 1em;
     grid-template-columns: ".9fr .1fr .9fr .1fr  ";
-    grid-template-rows: "1fr 1fr 1fr 1fr 1fr";
+    grid-template-rows: "1fr 1fr 1fr 1fr";
     grid-template-areas:
                         ".      .    titre titre"
                         "image image titre titre"
@@ -20,9 +20,8 @@
 .texte1{
     grid-area: texte;
 }
-.image1{
+.imageEnTete{
     grid-area: image;
-    max-width: 500px;
 }
 
 .grilleDeux{
@@ -73,12 +72,13 @@
 .grilleQuatre {
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: "1fr   1fr   .1fr";
-    grid-template-rows: "1fr 1fr 1fr";
+    grid-template-columns: ".1fr  .8fr   .3fr   .7fr";
+    grid-template-rows: ".5fr  .5fr  .6fr    .4fr";
     grid-template-areas:
-                    "titre   titre  ."
-                    "texte image image"
-                    "texte  .       .";
+                    "titre   titre  titre   ."
+                    "texte texte  image image"
+                    "texte texte  image image"
+                    "texte  texte   .       .";
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
