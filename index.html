@@ -5,29 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
+    <meta name="description"
+        content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
     <title>TimZines 2022 - Accueil</title>
     <style>
         /* @author Ève Février */
         /* variables */
-        :root{
-            --alice:rgba(240,248,255,0.5);
-            --turquoise: rgba(114,145,173,0.5);
+        :root {
+            --alice: rgba(240, 248, 255, 0.5);
+            --turquoise: rgba(114, 145, 173, 0.5);
             --orange: chocolate;
             --mauve: purple;
         }
+
         * {
             box-sizing: border-box;
         }
+
         /* base */
-        body{
-            margin:0 1em;
+        body {
+            margin: 0 1em;
         }
+
         @media (min-width:600px) {
-            body{
-                margin:0;
+            body {
+                margin: 0;
             }
         }
+
         /* contenu principal - Web Developers list */
         .flex {
             display: flex;
@@ -37,52 +42,59 @@
             list-style: none;
             padding-left: 0;
         }
+
         @media (min-width:600px) {
             .flex {
-                 flex-direction: row-reverse;
+                flex-direction: row-reverse;
                 justify-content: center;
             }
         }
+
         .flex li {
             border-radius: 35px;
             border: 1px solid grey;
             box-shadow: 4px 4px 6px black;
             /*background: radial-gradient(#fff 64%, #9198e5);*/
             background-color: var(--alice);
-            transition:transform 0.3s;
+            transition: transform 0.3s;
             text-align: center;
             padding: 0 1em;
-            margin:1em;
+            margin: 1em;
             /* si on utilise positionnement absolu d'un svg'*/
             position: relative;
             /* cacher le reste du svg */
             overflow: hidden;
         }
+
         .flex li:hover {
             transform: scale(110%);
         }
+
         /* Border-radius pour une forme ronde ou ovale */
         .flex h3::before {
-            content:"";
+            content: "";
             display: inline-block;
             background-color: var(--orange);
-            margin-right:0.15em;
+            margin-right: 0.15em;
             /* hauteur aplatie !!! le rond se fait au survol */
             height: 2px;
             width: 15px;
             border-radius: 50%;
-            transition:height 0.3s;
+            transition: height 0.3s;
         }
+
         .flex h3:hover::before {
             background-color: var(--mauve);
             height: 15px;
         }
+
         h1,
         h2,
-        .credits{
+        .credits {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-        } 
+        }
+
         h2 {
             font-style: italic;
             background-color: #cccccc;
@@ -90,12 +102,14 @@
             padding: 0.75em 0 3em;
             margin-top: 1.5em;
         }
-        header{
+
+        header {
             /*background-color: rgba(114,145,173,1);*/
-            background: linear-gradient(353deg, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 45%, rgba(114,145,173,1) 45%, rgba(114,145,173,1) 100%);
+            background: linear-gradient(353deg, rgba(210, 105, 30, 1) 0%, rgba(210, 105, 30, 1) 45%, rgba(114, 145, 173, 1) 45%, rgba(114, 145, 173, 1) 100%);
             padding: 1em 0 1em 0;
             margin-bottom: 5em;
         }
+
         /* BANDE MAUVE SOUS LE SOUS-TITRE
            Exemple de SVG de forme trapézoïdale
            placé en background-image
@@ -103,10 +117,11 @@
            et encodé en data-uri
            voir https://css-tricks.com/lodge/svg/09-svg-data-uris/
          */
-        .titre-portfolio{
-            position:relative;
+        .titre-portfolio {
+            position: relative;
         }
-        .titre-portfolio::after{
+
+        .titre-portfolio::after {
             position: absolute;
             background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E");
             background-position: center center;
@@ -117,83 +132,100 @@
             height: 3em;
             width: 100%;
         }
+
         /* HYPERLIENS INTERACTIVITÉ */
         a:link {
-            color:black;
+            color: black;
             text-decoration: none;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        h3:hover{
+
+        h3:hover {
             transform: rotate(-5deg)
         }
-        h3{position: relative; top:-0.5em}
+
+        h3 {
+            position: relative;
+            top: -0.5em
+        }
+
         h3:hover a,
         h3 a:hover {
             /* font-size:110%; */
             text-decoration: none;
             color: var(--mauve);
         }
-        .web-developer a{
+
+        .web-developer a {
             color: var(--orange);
         }
-        .web-developer a:hover{
-            color:black;
+
+        .web-developer a:hover {
+            color: black;
         }
+
         /* SÉPARATION ENTRE TitreZine et Web Developer
            Forme trapézoïdale obtenue en combinant
            pseudo-élément ::after
            avec transform: skew + rotate
          */
-        .web-developer::after{
+        .web-developer::after {
             background-color: var(--turquoise);
-            content:" ";
-            display:block;
-            width:100%;
-            height:80%;
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 80%;
             background-size: cover;
             background-position: center center;
             position: absolute;
-            bottom:-1.5em;
-            left:-2px;
-            z-index:-1;
-            transform:skew(350deg) rotate(355deg);
+            bottom: -1.5em;
+            left: -2px;
+            z-index: -1;
+            transform: skew(350deg) rotate(355deg);
         }
-        .exemples{
+
+        .exemples {
             /*width:60vw;*/
-           padding: 1em 25vw;
+            padding: 1em 25vw;
             text-align: center;
             background-color: #cccccc;
         }
-        .exemples ul{
+
+        .exemples ul {
             list-style: none;
             padding-left: 0;
         }
-        .exemples li{
-             margin: 1rem 0;
-         }
+
+        .exemples li {
+            margin: 1rem 0;
+        }
     </style>
 </head>
 
 <body>
-<header>
-    <h1>TimZines, design digital d'actualités culturelles</h1>
-    <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
-</header>
+    <header>
+        <h1>TimZines, design digital d'actualités culturelles</h1>
+        <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
+    </header>
     <ul class="flex portfolio">
         <li>
             <h3><a href="andreannearchambault/index.html">Le titre du zine</a> </h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/andreannearchambault">andreannearchambault</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/andreannearchambault">andreannearchambault</a></p>
         </li>
         <li>
             <h3><a href="chalarakbergeronstpierre/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/chalarakbergeronstpierre">chalarakbergeronstpierre</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/chalarakbergeronstpierre">chalarakbergeronstpierre</a></p>
         </li>
         <li>
             <h3><a href="louisemilevromet/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/louisemilevromet">louisemilevromet</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/louisemilevromet">louisemilevromet</a></p>
         </li>
         <li>
             <h3><a href="lproy/index.html">Le titre du zine</a></h3>
@@ -201,86 +233,104 @@
         </li>
         <li>
             <h3><a href="clodianec/index.html">Danse du Monde</a></h3>
-           <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/clodianec">clodianec</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/clodianec">clodianec</a></p>
         </li>
         <li>
-           <h3> <a href="maximegraignon/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/maximegraignon">maximegraignon</a></p>
+            <h3> <a href="maximegraignon/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/maximegraignon">maximegraignon</a></p>
         </li>
         <li>
-           <h3> <a href="michelkingmalord/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/michelkingmalord">michelkingmalord</a></p>
+            <h3> <a href="michelKingmaLord/index.html">Le titre du zine</a></h3>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/michelkingmalord">michelkingmalord</a></p>
         </li>
         <li>
             <h3><a href="BenjaminBrouillette/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/BenjaminBrouillette">BenjaminBrouillette</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/BenjaminBrouillette">BenjaminBrouillette</a></p>
         </li>
         <li>
             <h3><a href="marianneanctil/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/marianneanctil ">marianneanctil </a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/marianneanctil ">marianneanctil </a></p>
         </li>
         <li>
             <h3><a href="gisellehessen/index.html">Le titre du zine</a></h3>
             <p class="web-developer">
                 <span class="par">par</span>&nbsp;<a href="https://github.com/gisellehessen">gisellehessen</a>
             </p>
-        
+
         </li>
         <li>
             <h3><a href="christopherbyatt/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/christopherbyatt">christopherbyatt</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/christopherbyatt">christopherbyatt</a></p>
         </li>
         <li>
             <h3><a href="jaysavard/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/jaysavard ">jaysavard</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/jaysavard ">jaysavard</a></p>
         </li>
         <li>
             <h3><a href="darengarneaudionne/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/darengarneaudionne">darengarneaudionne</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/darengarneaudionne">darengarneaudionne</a></p>
         </li>
         <li>
             <h3><a href="juscarr/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/juscarr">juscarr</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/juscarr">juscarr</a>
+            </p>
         </li>
         <li>
             <h3><a href="amanneeb/katas-grilles-css.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/amanneeb">amanneeb</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/amanneeb">amanneeb</a></p>
         </li>
         <li>
             <h3><a href="rosaliecsfoy/katas-grilles-css.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/rosaliecsfoy">rosaliecsfoy</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/rosaliecsfoy">rosaliecsfoy</a></p>
         </li>
         <li>
             <h3><a href="isaacdube/katas-grilles-css.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/isaacdube">isaacdube</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/isaacdube">isaacdube</a></p>
         </li>
         <li>
             <h3><a href="AlexisPerron17/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/AlexisPerron17">AlexisPerron17</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/AlexisPerron17">AlexisPerron17</a></p>
         </li>
         <li>
             <h3><a href="matteaue/index.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/matteaue">matteaue</a></p>
+            <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                    href="https://github.com/matteaue">matteaue</a></p>
         </li>
     </ul>
-<section class="exemples">
-    <h1>Exemples</h1>
-    <ul>
-        <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes - exemple gisellehessen</a></li>
-        <li><a href="cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html">Grilles successives - 12 colonnes de 1fr</a></li>
-        <li><a href="cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html">Rythme vertical chevauchement de 20px</a></li>
-        <li><a href="cadre-pedagogique/demo-grilles-css/03_superposition.html">Superposition avec grid-area défini avec lignes</a></li>
-    </ul>
-</section>
-<footer>
+    <section class="exemples">
+        <h1>Exemples</h1>
+        <ul>
+            <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes -
+                    exemple gisellehessen</a></li>
+            <li><a href="cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html">Grilles successives - 12
+                    colonnes de 1fr</a></li>
+            <li><a href="cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html">Rythme vertical
+                    chevauchement de 20px</a></li>
+            <li><a href="cadre-pedagogique/demo-grilles-css/03_superposition.html">Superposition avec grid-area défini
+                    avec lignes</a></li>
+        </ul>
+    </section>
+    <footer>
 
-    <p class="credits">
-    <small>
-        <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
-        <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
-    </small>
-    </p>
-</footer>
+        <p class="credits">
+            <small>
+                <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
+                <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
+            </small>
+        </p>
+    </footer>
 </body>
 
 </html>
