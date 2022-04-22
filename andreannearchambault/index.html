@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Timzine</title>
 </head>
 
@@ -24,7 +24,7 @@
             </a>
         </nav>
     </header>
-    <main>
+    <main class="conteneur">
         <section class="section1">
             <div class="titreAccroche">
                 <h1>Les contes des frères Grimm</h1>
@@ -37,9 +37,9 @@
             <div class="grille1">
                 <figure class="A">
                     <picture>
-                        <source media="(min-width: 800px)"
+                        <source media="(min-width: 700px)"
                             srcset="images/grimm/grimm_490.jpg 1x, images/grimm/grimm_980.jpg 2x">
-                        <source media="(min-width: 600px)"
+                        <source media="(min-width: 500px)"
                             srcset="images/grimm/grimm_399.jpg 1x, images/grimm/grimm_798.jpg 2x">
                         <source media="(max-width: 320px)"
                             srcset="images/grimm/grimm_236.jpg 1x, images/grimm/grimm_472.jpg 2x">
@@ -84,10 +84,11 @@
                         elle se sent extrêmement coupable et se met à pleurer. </p>
                     <figure>
                         <picture>
-                            <source media="" srcset="">
-                            <source media="" srcset="">
-                            <source media="" srcset="">
-                            <img src="" alt="">
+                            <source media="(min-width: 601px)"
+                                srcset="images/hanselgretel/hansel_405.jpg 1x, images/hanselgretel/hansel_810.jpg 2x">
+                            <source media="(max-width: 600px)"
+                                srcset="images/hanselgretel/hansel_300.jpg 1x, images/hanselgretel/hansel_600.jpg 2x">
+                            <img src="images/hanselgretel/hansel_600.jpg" alt="">
                         </picture>
                         <figcaption>La sorcière rencontre Hansel et Gretel</figcaption>
                     </figure>
@@ -111,10 +112,11 @@
                 <h2 class="F">Rapunzel</h2>
                 <figure class="G">
                     <picture>
-                        <source media="(min-width: )" srcset="">
-                        <source media="(min-width: )" srcset="">
-                        <source media="(min-width: )" srcset="">
-                        <img src="" alt=" ">
+                        <source media="(max-width: 600px)"
+                            srcset="images/rapunzel/rapunzel_217.jpg 1x, images/rapunzel/rapunzel_434.jpg 2x">
+                        <source media="(min-width: 601px)"
+                            srcset="images/rapunzel/rapunzel_415.jpg 1x, images/rapunzel/rapunzel_830.jpg 2x">
+                        <img src="images/rapunzel/rapunzel_415.jpg" alt=" ">
                     </picture>
                     <figcaption>Dame Gotel monte la tour à l'aide des cheveux de Rapunzel</figcaption>
                 </figure>
@@ -133,7 +135,7 @@
         <section class="section4">
             <div class="grille4">
                 <blockquote cite="https://www.grimmstories.com/language.php?grimm=021&l=fr&r=de" class="I">
-                    <p>Alors sa mère lui tendit un couteau en disant: «Coupe-toi un bout de talon; quand tu seras reine,
+                    <p class="citation">Alors sa mère lui tendit un couteau en disant: «Coupe-toi un bout de talon; quand tu seras reine,
                         tu
                         n'auras plus besoin d'aller à pied.» La jeune fille se coupa un bout de talon, fit entrer de
                         force
@@ -141,15 +143,16 @@
                 </blockquote>
                 <figure class="J">
                     <picture>
-                        <source media="(min-width: )" srcset="">
-                        <source media="(min-width: )" srcset="">
-                        <source media="(min-width: )" srcset="">
-                        <img src="" alt="">
+                        <source media="(max-width: 600px)"
+                            srcset="images/cendrillon/cendrillon_238.jpg 1x, images/cendrillon/cendrillon_476.jpg 2x">
+                        <source media="(min-width: 601px)"
+                            srcset="images/cendrillon/cendrillon_405.jpg 1x, images/cendrillon/cendrillon_810.jpg 2x">
+                        <img src="images/cendrillon/cendrillon_405.jpg" alt="">
                     </picture>
                     <figcaption>Aschenputtel assis, balai à la main</figcaption>
                 </figure>
                 <h2 lang="de" class="K">Aschenputtel</h2>
-                <p class="L">(Cendrillon)</p>
+                <p class="L cendrillon">(Cendrillon)</p>
                 <div class="M">
                     <p>La version des frères Grimm est beaucoup plus sombre et violente que celle de Perrault, qui sous
                         peine d’un meilleur mot peut être décrite comme courtoise. Ainsi aucune fée n’apparaît dans
@@ -197,7 +200,16 @@
         </div>
         <div class="nav__footer">
             <nav class="nav__logo">
-                <a href="index.html"><img src="" alt="Logo de Timzine, design digital des actualités culturelles"></a>
+                <a href="index.html">
+                    <picture>
+                        <source media="(min-width: 601px)"
+                            srcset="images/logo/logo_575.png 1x, images/logo/logo_1150.png 2x">
+                        <source media="(max-width: 600px)"
+                            srcset="images/logo/logo_300.png 1x, images/logo/logo_600.png 2x">
+                        <img src="images/logo/logo_575.png" alt="">
+
+                    </picture>
+                </a>
             </nav>
             <nav class="nav__mediasSociaux">
                 <a href=""><img src="" alt="Aller vers la page Facebook"></a>
@@ -208,4 +220,5 @@
         </div>
     </footer>
 </body>
+
 </html>

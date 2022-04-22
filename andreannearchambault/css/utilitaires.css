@@ -2,17 +2,16 @@
 :root{
     /** Démo **/
     /* les caractères */
-    --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne:'Libre Baskerville', serif;
+    --fonte-principale: 'BioRhyme', sans-serif;
+    --fonte-secondaire:'Birthstone', serif;
     /* les couleurs */
-    --couleur-background: rgba(50, 50, 50, 0.9);
-    --couleur-principale: aliceblue;
-    /* les tailles */
-    --fontSize-base-small: 1.4rem;
-    --fontSize-base-medium: 1.6rem;
-    --fontSize-base-large: 1.8rem;
+    --couleur-bleuFonce: #101B53;
+    --couleur-blanc: #ffff;
+    --couleur-rose: #E0A38C; 
+    --couleur-bleuPale: #BFCDDA; 
     /* bordures, coins ronds, divers */
-    --borderRadius: 10px;
+    --borderRadius: 60px;
+    --borderRadiusMobile: 40px;
 }
 
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
