@@ -31,22 +31,74 @@ body{
 }
 
 .logo {
-
    width: 100%;
 }
 
+@media (min-width: 800px) {
 .entete p {
    color: white;
    text-align: left;
    /* top: -2em; */
 }
+}
 
+@media (min-width: 800px) {
 .entete__titre {
    display:flex;
    align-items: center;
 }
+}
+
+@media (min-width: 800px) {
+.entete__titre :first-child {
+   font-family: "Ayuthaya", sans-serif;
+   font-size: 3rem;
+   margin-bottom: 0rem;
+}
+.entete__titre :last-child {
+   font-family: "Ayuthaya", sans-serif;
+   font-size: 2.25rem;
+   margin-top: 0rem;
+  
+}
+}
 
 /* MAIN */
 
-.main {
+@media (min-width: 800px) {
+.ouverture p{
+   margin-left: 3em;
+}
+}
+
+@media (min-width: 800px) {
+   .introduction {
+      display: flex;
+   }
+
+   .introduction picture {
+      width: 150%;
+   }
+
+   .text__introduction {
+      display: flex;
+      justify-content: space-between;
+   }
+   .text__introduction p {
+      max-width: 30%;
+   }
+
+   .introduction h2 {
+      margin-top: 2em;
+      margin-left: 2em;
+   }
+
+   .text__introduction p:nth-child(1) {
+      position:relative;
+      top: -5em;
+   }
+
+   .text__introduction p:nth-child(3) {
+      
+   }
 }

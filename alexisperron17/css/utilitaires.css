@@ -1,10 +1,18 @@
-/* Utilitaires
-   ========================================================================== */
-/*** Clearfix ***/
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+/** VARIABLES À DÉFINIR **/ 
+:root{
+    /** Démo **/
+    /* les caractères */
+    --fonte-principale: 'Libre Franklin', sans-serif;
+    --fonte-ancienne:'Libre Baskerville', serif;
+    /* les couleurs */
+    --couleur-background: rgba(50, 50, 50, 0.9);
+    --couleur-principale: aliceblue;
+    /* les tailles */
+    --fontSize-base-small: 1.4rem;
+    --fontSize-base-medium: 1.6rem;
+    --fontSize-base-large: 1.8rem;
+    /* bordures, coins ronds, divers */
+    --borderRadius: 10px;
 }
 
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
@@ -12,14 +20,24 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-/*** Fluidifier les images ***/
+/* Images fluides */
 img{
     max-width: 100%;
-    display:block;
+}
+
+/*** Styles de base ***/
+abbr[title]{
+    text-decoration: none;
+    cursor:help;
+}
+abbr[title]:hover{
+    background-color: rgba(244, 161, 71, 0.25);
 }
 
 /** Accessibilité
