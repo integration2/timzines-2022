@@ -26,7 +26,7 @@
 
 /* Utilitaires
    ========================================================================== */
-/*@import url(utilitaires.css);*/
+@import url(utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
@@ -129,7 +129,7 @@ Section
 .section_1 {
     display: grid;
     /*background: lightblue;*/
-    gap: 15px;
+    gap: 20px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: minmax(auto, 600px) auto 1fr;
     grid-template-areas:
@@ -162,6 +162,7 @@ Section
 /* SECTION 2 */
 .section_2 {
     display: grid;
+    gap: 20px;
     /*background: lightpink;*/
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 0.5fr);
@@ -184,6 +185,7 @@ Section
 /* SECTION 3 */
 .section_3 {
     display: grid;
+    gap: 20px;
     /*background: lightgreen;*/
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
