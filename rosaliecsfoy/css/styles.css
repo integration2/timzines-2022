@@ -75,8 +75,9 @@ header.conteneur{
     background-image: url('../images/Mobile/1x/motifTitre_288.png');
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 350px;
-    min-height: 350px;
+    background-size: 500px;
+    min-height: 600px;
+    position: relative;
 }
 @media (min-width: 600px){
     header{
@@ -100,11 +101,17 @@ footer {
 }
 .logo {
     width: 255px;
+    margin-top: 10px;
 }
 .logoPiedPage {
     width: 160px;
+    margin-top: 3px;
 }
-.lienLogoPied{
+/* .rangee {
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+.lienLogoPied {
     display: block;
     text-align: center;
 }
@@ -125,7 +132,6 @@ footer {
                                 À mettre en commentaire après */
     border: 1px solid black;
 }
-/** @MEDIA POUR ÉCRAN TABLETTE + LARGE **/
 /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
 @media (min-width: 600px) {
     .conteneur {
