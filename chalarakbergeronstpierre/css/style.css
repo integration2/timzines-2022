@@ -42,7 +42,7 @@ img {
     background-color: black;
 }
 
-.logo {
+.logo_head {
     text-align: center;
 
 }
@@ -434,6 +434,7 @@ h3 {
 /* section carriere */
 .noir_2 {
     background-color: #212121;
+    padding-bottom: 70px;
 }
 
 .noir_2  li{
@@ -572,4 +573,31 @@ ul {
     }
 
     /* ajouter j, k, l et décommenter les div j, k, l dans le html */
+}
+
+/* footer */
+
+.logo_footer{
+    text-align: center;
+}
+.reseaux{
+    text-align: center;
+    padding-top: 60px;
+}
+
+.facebook:hover{
+    background-color: #FFC90B;
+}
+.twitter:hover{
+    background-color: #FFC90B;
+}
+.instagram:hover{
+    background-color: #FFC90B;
+}
+.youtube:hover{
+    background-color: #FFC90B;
+}
+
+.credit{
+    text-align: center;
 }
