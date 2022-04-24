@@ -60,6 +60,13 @@ body{
     
 }
 
+.citation{
+    font-size: 2rem;
+}
+
+.signature{
+    font-size: 2rem;
+}
 /* Base décimale */
 html{
     font-size: 62.5%;
