@@ -72,7 +72,7 @@ grid-area: c;
     .grille4{
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
-        grid-template-rows: auto auto 100px auto 100px ;
+        grid-template-rows: auto auto 100px 100px auto ;
         grid-template-areas:
     ". . i i"
     "j j . ."
@@ -97,4 +97,30 @@ grid-area: c;
         position: relative;
     }
 }
+
+@media (min-width: 600px) {
+    .grille5 {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr 4fr;
+        grid-template-rows: 100px auto ;
+        grid-template-areas:
+    "l m m n";
+
+    }
+
+    .l{
+        grid-area: l;
+        position: relative;
+    }
+
+    .m{
+        grid-area: m;
+        position: relative;
+    }
+
+    .n{
+        grid-area: n;
+        position: relative;
+    }
+    }
 

@@ -1,5 +1,7 @@
 
-
+@import "normalize.css";
+@import "typo.css";
+@import "utilitaires.css";
 /*réinitialisation*/
 * {
     margin: 0;
@@ -18,16 +20,18 @@
 
 
 
+/*header*/
+
 
 .conteneur {
-    max-width: 1000px;
+    max-width: 500px;
     margin: auto;
 }
 
 body {
     color: black;
     background-color: #585858;
-    font-size: 1.25em;
+    font-size: 0.8em;
 }
 
 .logo {
@@ -40,20 +44,17 @@ body {
     width: 150px;
 }
 
-.entete{
-
-
-
-}
 
 .header__content{
    background-image: url("../images/table/entête2880.jpg");
     background-size: cover;
-    min-height: 1000px;
+    min-height: 600px;
+    max-width: 100%;
 }
 
 .h1{
-    font-size:5vw;
+    margin-right: 2em;
+    font-size:2.8vw;
     padding-bottom: 1.4em;
     padding-top: 2em;
 
@@ -61,12 +62,69 @@ body {
 }
 
 .header__intro{
-    font-size:1.5em;
+    font-size:.8em;
     padding-left: 1.4em;
     padding-top: 1em;
 
 
 }
+
+@media (min-width:600px ) {
+    .header__intro{
+        font-size:1em;
+
+    }
+
+    .h1{
+        margin-right: 2em;
+        font-size:3.6vw;
+
+    }
+
+    .header__content{
+        min-height: 850px;
+    }
+
+    .conteneur {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    body {
+        font-size: 1em;
+    }
+}
+
+@media (min-width:800px ) {
+    .header__intro{
+        font-size:1.5em;
+
+    }
+
+    .h1{
+        margin-right: 0;
+        font-size:5vw;
+
+    }
+
+    .header__content{
+        min-height: 1100px;
+    }
+
+    .conteneur {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    body {
+        font-size: 1.25em;
+    }
+}
+
+
+
+
+/*main*/
 
 
 .main__img{
@@ -76,6 +134,7 @@ max-width: 100%;
 
 .main__p{
     position:relative;
+
 
 
 }
@@ -108,7 +167,19 @@ padding-bottom: 1.2em;
 }
 
 
+.i{
+    padding-top:2em;
+}
 
+
+
+
+/*footer*/
+
+
+footer{
+    padding-top: 18em;
+}
 .footer__list{
     color:red;
     list-style: none;
@@ -120,7 +191,7 @@ padding-bottom: 1.2em;
 }
 
 .source{
-    padding-right: 2em;
+
 }
 
 .footer__src,
@@ -146,20 +217,24 @@ li .footer__liens{
 .footer__media .footer__list{
     display:flex;
     flex-direction: row;
-
+    justify-content: center;
+    align-items: center;
 }
 
-.footer__media{
-    max-width: 33%;
+.footer__media .footer__items{
+    margin-right: 1.6em;
 }
+
+
 
 .footer__logo{
-    padding-right: 2em;
+
+
     max-width: 33%;
 }
 
 footer{
-    max-width: 1000px;
+    max-width: 100%;
     padding-bottom: 5em;
     display:flex;
     flex-direction: row;
