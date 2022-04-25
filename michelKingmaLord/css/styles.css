@@ -383,6 +383,7 @@ Section
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 0rem;
 }
 
 .menu-sociaux__lien {
