@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
+          content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
     <title>TimZines 2022 - Accueil</title>
     <style>
         /* @author Ève Février */
@@ -27,7 +27,7 @@
             margin: 0 1em;
         }
 
-        @media (min-width:600px) {
+        @media (min-width: 600px) {
             body {
                 margin: 0;
             }
@@ -43,7 +43,7 @@
             padding-left: 0;
         }
 
-        @media (min-width:600px) {
+        @media (min-width: 600px) {
             .flex {
                 flex-direction: row-reverse;
                 justify-content: center;
@@ -85,7 +85,7 @@
 
         .flex h3:hover::before {
             background-color: var(--mauve);
-            height: 15px;
+            height: 0.5em;
         }
 
         h1,
@@ -145,12 +145,13 @@
         }
 
         h3:hover {
-            transform: rotate(-5deg)
+            /*transform: rotate(-5deg)*/
         }
 
         h3 {
             position: relative;
-            top: -0.5em
+            top: 0.5em;
+            transform: scaleY(250%);
         }
 
         h3:hover a,
@@ -158,6 +159,7 @@
             /* font-size:110%; */
             text-decoration: none;
             color: var(--mauve);
+
         }
 
         .web-developer a {
@@ -185,7 +187,7 @@
             bottom: -1.5em;
             left: -2px;
             z-index: -1;
-            transform: skew(350deg) rotate(355deg);
+            transform: skew(78deg) rotate(355deg);
         }
 
         .exemples {
@@ -203,134 +205,177 @@
         .exemples li {
             margin: 1rem 0;
         }
+
+        .par {
+            vertical-align: super;
+            position: relative;
+            top: -20px;
+        }
+
+        .web-developer img {
+            width: 60px;
+            border: 1px solid darkgrey;
+            border-radius: 50%;
+            filter: saturate(0.5);
+            transition: all 1s;
+        }
+        .web-developer a:hover img{
+            filter: saturate(2);
+            transform: rotate(360deg);
+        }
+
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>TimZines, design digital d'actualités culturelles</h1>
-        <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
-    </header>
-    <ul class="flex portfolio">
-        <li>
-            <h3><a href="andreannearchambault/index.html">Le titre du zine</a> </h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/andreannearchambault">andreannearchambault</a></p>
-        </li>
-        <li>
-            <h3><a href="chalarakbergeronstpierre/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/chalarakbergeronstpierre">chalarakbergeronstpierre</a></p>
-        </li>
-        <li>
-            <h3><a href="louisemilevromet/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/louisemilevromet">louisemilevromet</a></p>
-        </li>
-        <li>
-            <h3><a href="lproy/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/lproy">lproy</a></p>
-        </li>
-        <li>
-            <h3><a href="clodianec/index.html">Danse du Monde</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/clodianec">clodianec</a></p>
-        </li>
-        <li>
-            <h3> <a href="maximegraignon/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/maximegraignon">maximegraignon</a></p>
-        </li>
-        <li>
-            <h3> <a href="michelKingmaLord/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/michelkingmalord">michelkingmalord</a></p>
-        </li>
-        <li>
-            <h3><a href="BenjaminBrouillette/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/BenjaminBrouillette">BenjaminBrouillette</a></p>
-        </li>
-        <li>
-            <h3><a href="marianneanctil/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/marianneanctil ">marianneanctil </a></p>
-        </li>
-        <li>
-            <h3><a href="gisellehessen/index.html">Le titre du zine</a></h3>
-            <p class="web-developer">
-                <span class="par">par</span>&nbsp;<a href="https://github.com/gisellehessen">gisellehessen</a>
-            </p>
-
-        </li>
-        <li>
-            <h3><a href="christopherbyatt/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/christopherbyatt">christopherbyatt</a></p>
-        </li>
-        <li>
-            <h3><a href="jaysavard/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/jaysavard ">jaysavard</a></p>
-        </li>
-        <li>
-            <h3><a href="darengarneaudionne/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/darengarneaudionne">darengarneaudionne</a></p>
-        </li>
-        <li>
-            <h3><a href="juscarr/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a href="https://github.com/juscarr">juscarr</a>
-            </p>
-        </li>
-        <li>
-            <h3><a href="amanneeb/katas-grilles-css.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/amanneeb">amanneeb</a></p>
-        </li>
-        <li>
-            <h3><a href="rosaliecsfoy/katas-grilles-css.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/rosaliecsfoy">rosaliecsfoy</a></p>
-        </li>
-        <li>
-            <h3><a href="isaacdube/katas-grilles-css.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/isaacdube">isaacdube</a></p>
-        </li>
-        <li>
-            <h3><a href="AlexisPerron17/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/AlexisPerron17">AlexisPerron17</a></p>
-        </li>
-        <li>
-            <h3><a href="matteaue/index.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
-            <p class="web-developer"><span class="par">par</span>&nbsp;<a
-                    href="https://github.com/matteaue">matteaue</a></p>
-        </li>
-    </ul>
-    <section class="exemples">
-        <h1>Exemples</h1>
-        <ul>
-            <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes -
-                    exemple gisellehessen</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html">Grilles successives - 12
-                    colonnes de 1fr</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html">Rythme vertical
-                    chevauchement de 20px</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/03_superposition.html">Superposition avec grid-area défini
-                    avec lignes</a></li>
-        </ul>
-    </section>
-    <footer>
-
-        <p class="credits">
-            <small>
-                <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
-                <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
-            </small>
+<header>
+    <h1>TimZines, design digital d'actualités culturelles</h1>
+    <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
+</header>
+<ul class="flex portfolio">
+    <li>
+        <h3><a href="andreannearchambault/index.html">Les contes des frères Grimm</a></h3>
+        <p class="web-developer"><span class="par">par</span><a
+                href="https://github.com/andreannearchambault"><img
+                src="https://avatars.githubusercontent.com/u/98476814" alt="andreannearchambault"></a></p>
+    </li>
+    <li>
+        <h3><a href="chalarakbergeronstpierre/index.html">La liberté de Britney Spears</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/chalarakbergeronstpierre"><img
+                src="https://avatars.githubusercontent.com/u/98475391" alt="chalarakbergeronstpierre"></a></p>
+    </li>
+    <li>
+        <h3><a href="louisemilevromet/index.html">NFT non-fungible token</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/louisemilevromet"><img src="https://avatars.githubusercontent.com/u/98475140"
+                                                                alt="louisemilevromet"></a></p>
+    </li>
+    <li>
+        <h3><a href="lproy/index.html">Tom Holland</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;
+            <a href="https://github.com/lproy">
+                <img src="https://avatars.githubusercontent.com/u/93927147?v=4" alt="lproy">
+            </a>
         </p>
-    </footer>
+    </li>
+    <li>
+        <h3><a href="clodianec/index.html">Danse du Monde</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/clodianec"><img src="https://avatars.githubusercontent.com/u/98475192"
+                                                         alt="clodianec"></a></p>
+    </li>
+    <li>
+        <h3><a href="maximegraignon/index.html">La vie de Stromae</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/maximegraignon"><img src="https://avatars.githubusercontent.com/u/98475284"
+                                                              alt="maximegraignon"></a></p>
+    </li>
+    <li>
+        <h3><a href="michelKingmaLord/index.html">Yvette Chauviré</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/michelkingmalord"><img src="https://avatars.githubusercontent.com/u/98476389"
+                                                                alt="michelKingmaLord"></a></p>
+    </li>
+    <li>
+        <h3><a href="BenjaminBrouillette/index.html">Déni cosmique</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/BenjaminBrouillette"><img
+                src="https://avatars.githubusercontent.com/u/98479344?v=4" alt="BenjaminBrouillette"></a></p>
+    </li>
+    <li>
+        <h3><a href="marianneanctil/index.html">Départ en hiatus</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/marianneanctil"><img src="https://avatars.githubusercontent.com/u/98492645"
+                                                              alt="marianneanctil"></a></p>
+    </li>
+    <li>
+        <h3><a href="gisellehessen/index.html">Shang-Shi</a></h3>
+        <p class="web-developer">
+            <span class="par">par</span>&nbsp;<a href="https://github.com/gisellehessen"><img
+                src="https://avatars.githubusercontent.com/u/98491353" alt="gisellehessen"></a>
+        </p>
+
+    </li>
+    <li>
+        <h3><a href="christopherbyatt/index.html">The Batman: Critique qui crie vengeance</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/christopherbyatt"><img src="https://avatars.githubusercontent.com/u/98491337"
+                                                                alt="christopherbyatt"></a></p>
+    </li>
+    <li>
+        <h3><a href="jaysavard/index.html">Le titre du zine</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/jaysavard "><img src="https://avatars.githubusercontent.com/u/98488089"
+                                                          alt="jaysavard"></a></p>
+    </li>
+    <li>
+        <h3><a href="darengarneaudionne/index.html">WandaVision</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/darengarneaudionne"><img src="https://avatars.githubusercontent.com/u/98491387"
+                                                                  alt="darengarneaudionne"></a></p>
+    </li>
+    <li>
+        <h3><a href="juscarr/index.html" lang="en">The Kid Laroi</a></h3>
+        <p class="web-developer"><span class="par">par</span>
+            <a href="https://github.com/juscarr"><img src="https://avatars.githubusercontent.com/u/98491230"
+                                                      alt="juscarr"></a>
+        </p>
+    </li>
+    <li>
+        <h3><a href="amanneeb/katas-grilles-css.html">Stromae et “Multitude”</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/amanneeb"><img src="https://avatars.githubusercontent.com/u/98492567"
+                                                        alt="amanneeb"></a></p>
+    </li>
+    <li>
+        <h3><a href="rosaliecsfoy/katas-grilles-css.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/rosaliecsfoy"><img src="https://avatars.githubusercontent.com/u/92270297"
+                                                            alt="rosaliecsfoy"></a></p>
+    </li>
+    <li>
+        <h3><a href="isaacdube/katas-grilles-css.html">Osheaga</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/isaacdube"><img src="https://avatars.githubusercontent.com/u/98491693"
+                                                         alt="isaacdube"></a></p>
+    </li>
+    <li>
+        <h3><a href="AlexisPerron17/index.html">Le nouveau Spider-Man</a></h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/AlexisPerron17"><img src="https://avatars.githubusercontent.com/u/98492293"
+                                                              alt="AlexisPerron17"></a></p>
+    </li>
+    <li>
+        <h3><a href="matteaue/index.html"><cite lang="en">Uncharted avec Tom Holland</cite> : tout est mieux dans le jeu</a>
+        </h3>
+        <p class="web-developer"><span class="par">par</span>&nbsp;<a
+                href="https://github.com/matteaue"><img src="https://avatars.githubusercontent.com/u/98493048"
+                                                        alt="matteaue"></a></p>
+    </li>
+</ul>
+<section class="exemples">
+    <h1>Exemples</h1>
+    <ul>
+        <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes -
+            exemple gisellehessen</a></li>
+        <li><a href="cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html">Grilles successives - 12
+            colonnes de 1fr</a></li>
+        <li><a href="cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html">Rythme vertical
+            chevauchement de 20px</a></li>
+        <li><a href="cadre-pedagogique/demo-grilles-css/03_superposition.html">Superposition avec grid-area défini
+            avec lignes</a></li>
+    </ul>
+</section>
+<footer>
+
+    <p class="credits">
+        <small>
+            <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
+            <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
+        </small>
+    </p>
+</footer>
 </body>
 
 </html>
