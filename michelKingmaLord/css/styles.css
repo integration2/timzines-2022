@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /**
  * @author Michel Kingma-Lord <0801342@csfoy.ca>
  *
@@ -15,38 +14,27 @@
  *** interactivité
  *** footer
  */
-
 /* Grille
    ========================================================================== */
 @import url(grille.css);
-
 /* Normalize
    ========================================================================== */
 @import url(normalize.css);
-
 /* Utilitaires
    ========================================================================== */
 @import url(utilitaires.css);
-
 /* Charte typographique
    ========================================================================== */
 @import url(typo.css);
 
-
-
 /* Mise en page
    ========================================================================== */
-
-
 /**************************
 Arrière Plan
 *************************/
-
-
 /**************************
 Banderole
 *************************/
-
 .titre {
     width: 100%;
     padding: var(--padding-text);
@@ -60,20 +48,13 @@ legend {
 /**************************
 Balisage des images
 *************************/
-
 /*img {
     margin-left: 0;
 }*/
-
-
-
-
 /**************************
 Section
 *************************/
-
 /* Interactivité générale */
-
 :focus {
     outline: green auto 10px;
 }
@@ -91,16 +72,13 @@ Section
     width: 1px;
 }
 
-
 /*** Erreurs ***/
 .message-erreur {
     color: orangered;
 }
 
 /* SECTION DU SITE */
-
 /* régles générales */
-
 .body {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -119,7 +97,6 @@ Section
 }
 
 /* MAIN*/
-
 .main {
     margin: auto;
     max-width: 1000px;
@@ -132,7 +109,6 @@ Section
 /*.section_titre {
     background: lightcoral;
 }*/
-
 .header--filariane {
     font-size: medium;
 }
@@ -282,7 +258,6 @@ Section
     opacity: 50%;
     z-index: 0;
 }*/
-
 .triangle-left {
     position: absolute;
     width: 1000px;
@@ -309,7 +284,6 @@ Section
 
     .section_2--texte {
         grid-area: A;
-
     }
 
     .section_2--image {
@@ -331,9 +305,9 @@ Section
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #0B0B0B;
+        background-color: red;
         background-size: cover;
-        clip-path: polygon(0% 0%, 100% 7%, 100% 40%, 0% 50%);
+        clip-path: polygon(0% 0%, 100% 7%, 100% 70%, 0% 90%);
     }
 }
 
@@ -354,7 +328,6 @@ Section
 
     .section_2--texte {
         grid-area: A;
-
     }
 
     .section_2--image {
@@ -371,18 +344,15 @@ Section
         border-bottom: 725px solid transparent;
         z-index: 0;
     }*/
-
     .triangle-left {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #0B0B0B;
+        background-color: blue;
         background-size: cover;
-        clip-path: polygon(0% 0%, 100% 5%, 100% 45%, 0% 50%);
+        clip-path: polygon(0% 0%, 100% 5%, 100% 90%, 0% 100%);
     }
 }
-
-
 
 /* SECTION 3 */
 .section_3 {
@@ -417,8 +387,6 @@ Section
 /*.section_3--imgseule {
     transform: scaleX(-1);
 }*/
-
-
 /* Tablette Section 3 */
 @media(max-width : 800px) {
     .section_3 {
@@ -491,7 +459,6 @@ Section
 /* CONTENU DU FOOTER */
 .footer--texte {
     margin: 1rem;
-
 }
 
 .footer--media {
@@ -501,9 +468,6 @@ Section
 .footer--sources {
     text-align: left;
 }
-
-
-
 
 /*SPRITE MEDIA SOCIAUX */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
@@ -548,7 +512,6 @@ Section
 .menu-sociaux__item .menu-sociaux__lien:visited {
     transition:
         all .2s ease;
-
 }
 
 .menu-sociaux__item .menu-sociaux__lien:hover,
