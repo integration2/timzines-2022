@@ -2,17 +2,10 @@
 :root{
     /** Démo **/
     /* les caractères */
-    --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne:'Libre Baskerville', serif;
-    /* les couleurs */
-    --couleur-background: rgba(50, 50, 50, 0.9);
-    --couleur-principale: aliceblue;
-    /* les tailles */
-    --fontSize-base-small: 1.4rem;
-    --fontSize-base-medium: 1.6rem;
-    --fontSize-base-large: 1.8rem;
-    /* bordures, coins ronds, divers */
-    --borderRadius: 10px;
+    --fonteTitreH1: 'Amaranth', sans-serif;
+    --fonteTitreH2:'Amaranth', serif;
+    --fonteAccroche: 'Andika New Basic', sans-serif;
+    --fonteParagraphe: 'Arbutus Slab', serif;
 }
 
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/

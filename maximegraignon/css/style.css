@@ -1,12 +1,15 @@
 @charset "utf-8";
 @import url(grille.css);
+@import url(typo.css);
 
 /* Section 01 */
 .biographie{
     display: grid;
+    max-width: 100%;
     gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
+                        ". . C C C . . . . . . ."
                         "A A A A A A A . . . . ."
                         "B B B B B B B B B . . . ";
 }
@@ -20,29 +23,67 @@
     
 }
 
-@media (max-width:600px){
+.h2_01 {
+    grid-area: C;
+}
+
+@media (max-width:800px){
     .biographie{
         display: grid;
         gap: 10px;
-        grid-template-columns: 1, 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
                             "A"
                             "B";
     }
     .biographie__image{
         grid-area: A;
+        display: flex;
+        justify-content: center;
     }
     .briographie__paragraphe{
         grid-area: B;
+    }
+
+    .h2_01{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px){
+    .biographie{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                            "A"
+                            "B";
+    }
+    .biographie__image{
+        grid-area: A;
+        display: flex;
+        justify-content: center;
+    }
+    .briographie__paragraphe{
+        grid-area: B;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .h2_01{
+        text-align: center;
     }
 }
 
 /* Section 02 */
 .ses_premiers_albums{
     display: grid;
+    max-width: 100%;
     gap: 15px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
+                        ". . . . . . . D D D . ."
                         ". . B B B B B . A A A ."
                         ". . B B B B B . C C C C";
 }
@@ -63,11 +104,15 @@
     background-color: #416559;
 }
 
+.h2_02{
+    grid-area: D;
+}
+
 @media (max-width:600px){
     .ses_premiers_albums{
         display: grid;
         gap: 10px;
-        grid-template-columns: 1, 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
                             "A"
                             "B"
@@ -75,9 +120,45 @@
     }
     .ses_premiers_albums__image{
         grid-area: A;
+        display: flex;
+        justify-content: center;
     }
     .ses_premiers_albums__paragraphe__01{
         grid-area: B;
+    }
+    .ses_premiers_albums__paragraphe__02{
+        grid-area: C;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container_02{
+        background-color: #416559;
+    }
+
+    .h2__02{
+            text-align: center;
+    }
+}
+
+@media (max-width:800px){
+    .ses_premiers_albums{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                            "A"
+                            "B"
+                            "C";
+    }
+    .ses_premiers_albums__image{
+        grid-area: A;
+        display: flex;
+        justify-content: center;
+    }
+    .ses_premiers_albums__paragraphe__01{
+        grid-area: B;
+        
     }
     .ses_premiers_albums__paragraphe__02{
         grid-area: C;
@@ -86,6 +167,11 @@
     .container_02{
         background-color: #416559;
     }
+
+    .h2_02{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -93,11 +179,17 @@
 /* Section 03 */
 .son_retour_en_2022{
     display: grid;
+    max-width: 100%;
     gap: 15px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
+                        ". D D D D D . . . . . ."
                         "A A A A A A A . . . . ."
                         "B B B B . C C C C C . .";
+}
+
+.h2_03{
+    grid-area: D;
 }
 
 .son_retour_en_2022__image{
@@ -116,7 +208,7 @@
     .son_retour_en_2022{
         display: grid;
         gap: 15px;
-        grid-template-columns: 1, 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
                             "A"
                             "B"
@@ -125,6 +217,41 @@
     
     .son_retour_en_2022__image{
         grid-area: A;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .son_retour_en_2022__paragraphe__01{
+        grid-area: B;  
+    }
+    
+    .son_retour_en_2022__paragraphe__02{
+        grid-area: C;  
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .h2_03{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:800px){
+    .son_retour_en_2022{
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                            "A"
+                            "B"
+                            "C";
+    }
+    
+    .son_retour_en_2022__image{
+        grid-area: A;
+        display: flex;
+        justify-content: center;
     }
     
     .son_retour_en_2022__paragraphe__01{
@@ -161,6 +288,29 @@
     grid-area: B;
 }
 
+@media(max-width: 600px){
+    .footer{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                            "A"
+                            "B";
+                            
+    }
+
+    .footer_fil_arianne{
+        grid-area: A;
+    }
+    
+    .footer_sources {
+        grid-area: B;
+        
+    }
+}
+
+
+
 
 /* régles générales */
 body {
@@ -174,17 +324,6 @@ body {
     }
 }
 
-.h2__02{
-    display: flex;
-    justify-content: flex-end;
-}
-
-@media(max-width:600px){
-    .h2__02{
-        display: flex;
-        justify-content: center;
-    }
-}
 
 .header,        
 .footer {
@@ -216,3 +355,38 @@ nav.logo{
     text-align: center;
 }
 
+.menu-sociaux {
+    margin: 1rem 3rem 3rem 3rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu-sociaux__lien {
+    font-size: 0; /* fait disparaître le texte du lien */
+    display: block; /* permet de donner une dimension au lien */
+    width: 50px; /* largeur de l'image */
+    height: 50px; /* hauteur de l'image */
+    margin-right: 1rem; /* espace entre les liens */
+    background-image: url(http://www.hautemontagne.ca/images/icones-social-sprite-w212.png);
+    background-repeat: no-repeat;
+  }
+  .menu-sociaux__item:first-child .menu-sociaux__lien {
+    background-position: 0 0;
+    
+  }
+  .menu-sociaux__item:nth-child(2) .menu-sociaux__lien {
+    background-position: -52.5px 0;
+  }
+  .menu-sociaux__item:nth-child(3) .menu-sociaux__lien {
+    background-position: -105px 0;
+  }
+  .menu-sociaux__item:nth-child(4) .menu-sociaux__lien {
+    background-position: -157px 0;
+  }
+  
+  .menu-sociaux__item .menu-sociaux__lien:hover, 
+  .menu-sociaux__item .menu-sociaux__lien:active {
+    background-position-y: -55px; 
+   
+  }
