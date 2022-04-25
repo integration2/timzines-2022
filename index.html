@@ -24,14 +24,9 @@
 
         /* base */
         body {
-            margin: 0 1em;
+            margin: 0;
         }
 
-        @media (min-width: 600px) {
-            body {
-                margin: 0;
-            }
-        }
         .conteneur{
             /*max-width: 1200px;*/
             margin:auto;
@@ -48,7 +43,7 @@
         @media (min-width: 600px) {
             .flex {
                 display: flex;
-                flex-wrap: wrap;
+                flex-wrap: wrap-reverse;
                 flex-direction: row-reverse;
                 justify-content: center;
             }
@@ -66,11 +61,12 @@
             position: relative;
             /* cacher le reste du svg */
             overflow: hidden;
-            margin: 1em;
+            margin: 3em 2em;
         }
         @media(min-width: 600px){
             .flex li {
                 padding: 0 1em;
+                margin: 1em;
             }
         }
 
@@ -129,12 +125,18 @@
         .titre-portfolio {
             position: relative;
             min-height: 30vh;
-            background-image: url("images/pokerplanning-gr1.jpg");
+            background-image: url("images/pokerplanning_tim-unis.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-            padding-top: 1.25em;
+            padding-top: .25em;
+            text-shadow: 3px 3px 3px white;
         }
-
+@media (min-width: 800px) {
+    .titre-portfolio {
+        background-image: url("images/pokerplanning-gr1.jpg");
+        padding-top: 1.25em;
+    }
+}
         .titre-portfolio::after {
             position: absolute;
             bottom:0;
@@ -220,6 +222,7 @@
             transition: all 1s;
             position: relative;
             z-index: 2;
+            margin-top: 1em;
         }
         .web-developer a:hover img{
             filter: saturate(2);
@@ -237,12 +240,13 @@
         @media (min-width: 700px) {
             .exemples{
                 margin-top: 0;
-               align-self: flex-start;
+                align-self: flex-start;
                 position: relative;
                 top:-10em;
                 right:3em;
                 border-radius: 50%;
                 border-left: 20px dashed var(--orange);
+                box-shadow: 5px 5px 5px black;
             }
         }
 
