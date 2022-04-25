@@ -65,11 +65,12 @@ Balisage des images
     margin-left: 0;
 }*/
 
+
+
+
 /**************************
 Section
 *************************/
-
-
 
 /* Interactivité générale */
 
@@ -98,13 +99,23 @@ Section
 
 /* SECTION DU SITE */
 
+/* régles générales */
+
+.body {
+    margin: 1rem;
+}
+
+.header,
+.footer {
+    background-color: #1A1B1E;
+    color: white;
+}
+
 /* HEADER 1 */
 .header--image {
     margin: auto;
     max-width: 400px;
 }
-
-
 
 /* MAIN*/
 
@@ -378,6 +389,20 @@ Section
     justify-content: center;
 }
 
+/* CONTENU DU FOOTER */
+.footer--texte {
+    margin: 1rem;
+
+}
+
+.footer--media {
+    text-align: center;
+}
+
+.footer--sources {
+    text-align: left;
+}
+
 /*SPRITE MEDIA SOCIAUX */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
@@ -435,55 +460,4 @@ Section
     border: 1px #26408B solid;
     margin: 0 3rem 6rem 3rem;
     background: url(http://www.hautemontagne.ca/images/icones-social-sprite-w212.png) no-repeat;
-}
-
-/* infos */
-.section_titre,
-.titre-principal,
-.titre-h2 {
-    margin: 1rem;
-}
-
-/*h1,
-h3,
-p {
-    margin: 1rem;
-}*/
-
-.body {
-    margin: 1rem;
-}
-
-/* CONTENU DU FOOTER */
-.footer--media {
-    text-align: center;
-}
-
-.footer--sources {
-    text-align: left;
-}
-
-
-/* régles générales */
-.main {
-    margin: auto;
-}
-
-.box {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 150%;
-}
-
-.header,
-.footer {
-    background-color: #1A1B1E;
-    color: white;
-}
-
-.sidebar2 {
-    background-color: #ccc;
-    color: #444;
 }
