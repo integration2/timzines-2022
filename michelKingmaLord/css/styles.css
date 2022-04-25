@@ -253,6 +253,9 @@ Section
 
 .section_2--image {
     grid-area: B;
+    display: flex;
+    justify-content: flex-end;
+    transform: scaleX(-1);
 }
 
 /* Tablette Section 2 */
@@ -274,6 +277,7 @@ Section
 
     .section_2--image {
         grid-area: B;
+        transform: scaleX(-1);
     }
 }
 
@@ -297,6 +301,7 @@ Section
 
     .section_2--image {
         grid-area: B;
+        transform: scaleX(-1);
     }
 }
 
@@ -433,15 +438,21 @@ Section
 }
 
 /* infos */
+.section_titre,
 .titre-principal,
 .titre-h2 {
-    margin: 1rem 0 0 1rem;
-}
-
-p {
     margin: 1rem;
 }
 
+/*h1,
+h3,
+p {
+    margin: 1rem;
+}*/
+
+.body {
+    margin: 1rem;
+}
 
 /* CONTENU DU FOOTER */
 .footer--media {
