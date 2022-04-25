@@ -102,7 +102,8 @@ Section
 /* régles générales */
 
 .body {
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .header,
@@ -250,16 +251,18 @@ Section
     gap: 20px;
     /*background: lightpink;*/
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-rows: repeat(4, 0.5fr);
     grid-template-areas:
-        "B B B B B B . . . . . . "
+        ". . . . . . . . . . . . "
         "B B B B B B . A A A A . "
         "B B B B B B . . . . . . "
+        ". . . . . . . . . . . . "
 }
 
 .section_2--texte {
     grid-area: A;
-
+    color: white;
+    z-index: 1;
 }
 
 .section_2--image {
@@ -269,6 +272,26 @@ Section
     transform: scaleX(-1);
 }
 
+/*.triangle-right {
+    position: absolute;
+    width: 0;
+    height: 0px;
+    border-top: 400px solid transparent;
+    border-left: 1600px solid #0B0B0B;
+    border-bottom: 805px solid transparent;
+    opacity: 50%;
+    z-index: 0;
+}*/
+
+.triangle-left {
+    position: absolute;
+    width: 1000px;
+    height: 1500px;
+    background-color: #0B0B0B;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 15%, 100% 50%, 0% 80%);
+}
+
 /* Tablette Section 2 */
 @media(max-width : 800px) {
     .section_2 {
@@ -276,9 +299,12 @@ Section
         gap: 20px;
         /*background: lightpink;*/
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 0.5fr);
+        grid-template-rows: repeat(4, 0.25fr);
         grid-template-areas:
+            ". ."
+            ". ."
             "B A"
+            ". ."
     }
 
     .section_2--texte {
@@ -289,6 +315,25 @@ Section
     .section_2--image {
         grid-area: B;
         transform: scaleX(-1);
+    }
+
+    /*.triangle-right {
+        position: absolute;
+        max-width: 1000px;
+        width: 0;
+        height: 0px;
+        border-top: 85px solid transparent;
+        border-left: 1800px solid #0B0B0B;
+        border-bottom: 700px solid transparent;
+        z-index: 0;
+    }*/
+    .triangle-left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #0B0B0B;
+        background-size: cover;
+        clip-path: polygon(0% 0%, 100% 7%, 100% 40%, 0% 50%);
     }
 }
 
@@ -299,10 +344,12 @@ Section
         gap: 20px;
         /*background: lightpink;*/
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 0.5fr);
+        grid-template-rows: repeat(4, 0.5fr);
         grid-template-areas:
+            "."
             "B"
-            "A";
+            "A"
+            ".";
     }
 
     .section_2--texte {
@@ -314,7 +361,28 @@ Section
         grid-area: B;
         transform: scaleX(-1);
     }
+
+    /*.triangle-right {
+        position: absolute;
+        width: 0;
+        height: 0px;
+        border-top: 150px solid transparent;
+        border-left: 1800px solid #0B0B0B;
+        border-bottom: 725px solid transparent;
+        z-index: 0;
+    }*/
+
+    .triangle-left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #0B0B0B;
+        background-size: cover;
+        clip-path: polygon(0% 0%, 100% 5%, 100% 45%, 0% 50%);
+    }
 }
+
+
 
 /* SECTION 3 */
 .section_3 {
@@ -358,8 +426,39 @@ Section
         gap: 20px;
         /*background: lightgreen;*/
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 0.75fr);
+        grid-template-rows: repeat(4, 0.25fr);
         grid-template-areas:
+            "."
+            "."
+            "A"
+            "B"
+    }
+
+    .section_3--texte {
+        grid-area: A;
+    }
+
+    .section_3--image {
+        grid-area: B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_3--imgseule {
+        transform: scaleX(-1);
+    }
+}
+
+/* Mobile section 3*/
+@media(max-width : 600px) {
+    .section_3 {
+        display: grid;
+        gap: 20px;
+        /*background: lightgreen;*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        grid-template-areas:
+            "."
             "A"
             "B"
     }
@@ -402,6 +501,9 @@ Section
 .footer--sources {
     text-align: left;
 }
+
+
+
 
 /*SPRITE MEDIA SOCIAUX */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
