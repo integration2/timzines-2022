@@ -387,15 +387,10 @@ Section
 
 .menu-sociaux__lien {
     font-size: 0;
-    /* fait disparaître le texte du lien */
     display: block;
-    /* permet de donner une dimension au lien */
     width: 50px;
-    /* largeur de l'image */
     height: 50px;
-    /* hauteur de l'image */
     margin-right: 1rem;
-    /* espace entre les liens */
     background-image: url(http://www.hautemontagne.ca/images/icones-social-sprite-w212.png);
     background-repeat: no-repeat;
 }
@@ -431,7 +426,7 @@ Section
 .sprite {
     width: 212px;
     height: 108px;
-    border: 1px green solid;
+    border: 1px #26408B solid;
     margin: 0 3rem 6rem 3rem;
     background: url(http://www.hautemontagne.ca/images/icones-social-sprite-w212.png) no-repeat;
 }
