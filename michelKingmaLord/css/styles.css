@@ -117,9 +117,9 @@ Section
     padding-bottom: 2.5rem;
 }
 
-.section_titre {
-    /*background: lightcoral;*/
-}
+/*.section_titre {
+    background: lightcoral;
+}*/
 
 .header--filariane {
     font-size: medium;
@@ -197,7 +197,7 @@ Section
     }
 }
 
-/* Mobile */
+/* Mobile section 1*/
 @media(max-width : 600px) {
     .section_1 {
         display: grid;
@@ -255,7 +255,7 @@ Section
     grid-area: B;
 }
 
-/* Tablette Section 1 */
+/* Tablette Section 2 */
 @media(max-width : 800px) {
     .section_2 {
         display: grid;
@@ -277,6 +277,7 @@ Section
     }
 }
 
+/* Mobile section 2*/
 @media(max-width : 600px) {
     .section_2 {
         display: grid;
@@ -329,7 +330,38 @@ Section
     grid-area: B;
 }
 
+/*.section_3--imgseule {
+    transform: scaleX(-1);
+}*/
 
+
+/* Tablette Section 3 */
+@media(max-width : 800px) {
+    .section_3 {
+        display: grid;
+        gap: 20px;
+        /*background: lightgreen;*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 0.75fr);
+        grid-template-areas:
+            "A"
+            "B"
+    }
+
+    .section_3--texte {
+        grid-area: A;
+    }
+
+    .section_3--image {
+        grid-area: B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_3--imgseule {
+        transform: scaleX(-1);
+    }
+}
 
 /* SECTION PIED DE PAGE */
 .footer--section_4 {
