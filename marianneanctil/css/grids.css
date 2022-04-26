@@ -1,16 +1,51 @@
 
 
 
+.grille2 {
+    display:grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas:
+    ". . ."
+    "d d ."
+    ". c c"
+    "e e e"
+    ". . ."
+    "z z z"
+    "f f f";
+}
 
+.c{
+    grid-area: c;
+    position:relative;
+}
+
+.d{
+    grid-area: d;
+    position:relative;
+}
+
+.e{
+    grid-area: e;
+    position:relative;
+}
+
+.f{
+    grid-area: f;
+    position:relative;
+}
+.z{
+    grid-area: z;
+    position:relative;
+}
 
 
 @media (min-width: 600px) {
     .grille2 {
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
-       grid-template-rows: 100px 100px auto 100px auto auto auto ;
+       grid-template-rows: 60px 100px auto 100px auto auto auto ;
         grid-template-areas:
-    ". . . ."
+    ". . c c"
     "d d c c"
     "d d . ."
     "d d e e"
@@ -45,27 +80,72 @@ grid-area: c;
 
 }
 
+
+.grille3{
+    display:grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas:
+    "g g ."
+    "h h h";
+    position:relative;
+}
+
+.g{
+    grid-area: g;
+    position: absolute;
+    bottom:-70px;
+
+}
+
+.h{
+    grid-area: h;
+}
 @media (min-width: 600px) {
     .grille3{
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
-        grid-template-rows: 100px 100px auto 100px ;
+        position:relative;
         grid-template-areas:
-    ". . g g"
-    ". . g g"
     "h . g g"
-    ". . . .";
+
     }
 
     .g{
         grid-area: g;
-        position:relative;
+        position:absolute;
+        bottom: 1em;
     }
 
     .h{
         grid-area: h;
-        position:relative;
+
     }
+}
+
+.grille4{
+    display:grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas:
+    "j j ."
+    ". i i"
+    "k k k";
+
+
+}
+
+.i{
+    grid-area: i;
+    position:relative;
+}
+
+.j{
+    grid-area: j;
+    position:relative;
+}
+
+.k{
+    grid-area: k;
+    position: relative;
 }
 
 @media (min-width: 600px) {
@@ -77,7 +157,8 @@ grid-area: c;
     ". . i i"
     "j j . ."
     "j j k k"
-    ". . . .";
+    ". . k k"
+    ". . k k";
 
 
     }
@@ -102,7 +183,6 @@ grid-area: c;
     .grille5 {
         display: grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
-        grid-template-rows: 100px auto ;
         grid-template-areas:
     "l m m n";
 
