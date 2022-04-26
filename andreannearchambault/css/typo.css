@@ -63,7 +63,7 @@ body {
 }
 @media (min-width: 800px) {
     body {
-        line-height: 1.75;
+        line-height: 1.7;
     }
 }
 
@@ -73,19 +73,19 @@ h1,
 .h1 { /* = 52px */
     font-size: 5.2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 @media (min-width: 600px) {
     h1,
-    .h1 { /* = 100px */
-        font-size: 10rem;
+    .h1 { /* = 90px */
+        font-size: 9rem;
         line-height: 1.2;
     }
 }
 @media (min-width: 800px) {
     h1,
-    .h1 { /* = 150px */
-        font-size: 15rem;
+    .h1 { /* = 100px */
+        font-size: 10rem;
         line-height: 1.2;
     }
 }
