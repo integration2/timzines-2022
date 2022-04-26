@@ -71,7 +71,8 @@ body{
 #joindre{
     font-family: 'Times New Roman', Times, serif;
 }
-.apostrophe{
+.apostrophe1,
+.apostrophe2{
     font-family: InkFree, serif;
     margin: 0;
 }
@@ -117,7 +118,7 @@ body {
 }
 
 #texteCitation{ /* = 23px */
-    font-size: 2.3rem;
+    font-size: 2.1rem;
 }
 @media (min-width: 800px) {
     #texteCitation{ /* = 45px */
@@ -125,11 +126,13 @@ body {
     }
 }
 
-.apostrophe{ /* = 120px */
+.apostrophe1,
+.apostrophe2{ /* = 120px */
     font-size: 12rem;
 }
 @media (min-width: 800px) {
-    .apostrophe{ /* = 250px */
+    .apostrophe1,
+    .apostrophe2{ /* = 250px */
         font-size: 25rem;
     }
 }
@@ -149,4 +152,9 @@ h2,
     .h2 { /* = 60px */
         font-size: 6rem;
     }
+}
+
+#avertissement,
+#copyright{
+    font-size: 1.4rem;
 }
