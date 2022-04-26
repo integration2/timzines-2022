@@ -20,6 +20,7 @@
                         ". . A A A A B B B B B B B B . ."
                         ". . C C C C C C C C D D D D . ."
                         ". . E E E E F F F F F F F F . .";
+
 }
 .Bored_Ape_Titre {
     grid-area: G;
@@ -52,6 +53,7 @@
 /* aire occupée par les éléments d'interface */
 .header {
     grid-area: header;
+    background-color: aqua;
 }
 .content {
     grid-area: content;
@@ -70,13 +72,18 @@
 body {
     
 }
-.box {
-    background-color: #2B246A;
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5CABF;
     color: #fff;
-    border-radius: 5px;
-    padding: 10px;
     font-size: 150%;
 }
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
 .conteneur_02 {
     max-width: 100%;
 }
