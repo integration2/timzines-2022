@@ -56,7 +56,7 @@ S'il y a des erreurs, les corriger. Si on arrive pas à en corriger une, demande
 - [ ] [multiple images d’arrière-plan et/ou bordures](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
 
 ### 4. Finition 
-*(Semaine 12-13 - Échéance 27 avril - 20%)*
+*(Semaine 12-13 - Échéance 29 avril - 20%)*
 - [ ] Ajouter des métadonnées dans le `<head>`
 - [ ] Concevoir, réaliser et intégrer un favicon adapté au sujet
 #### Contrôle de qualité, tests et révision de code
@@ -68,7 +68,7 @@ S'il y a des erreurs, les corriger. Si on arrive pas à en corriger une, demande
 - [ ] Optimiser le code
 - [ ] Minifier les fichiers
 - [ ] Ajouter une page pour les erreurs 404
-- [ ] Vérifier les *checklists* du Guide de développement Web.
+- [ ] Vérifier le *checklist 101* du [Guide de développement Web](https://github.com/evefevrier/guide-developpement-web/blob/main/liste-de-controle-101.md).
 #### Mise en ligne 
 - [ ] Bien tester et faire tester (sur différents appareils)   
 L'affichage et la fonctionnalité après avoir fait les dernières corrections et améliorations.
