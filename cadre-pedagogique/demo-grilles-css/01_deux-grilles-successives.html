@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cas 1 - selon la résolution</title>
+    <link href="css/style-01.css" rel="stylesheet">
+ </head>
+<body>
+    <header>
+        <div class="conteneur">
+            <h1>Titre principal</h1>
+        </div>
+    </header>
+    <main>
+        <div class="conteneur rangee-grid">
+            <p class="col accroche">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+            adipisci dignissimos distinctio, fuga iusto laudantium libero maxime nisi odit officia pariatur perspiciatis, quas repellendus sed sint
+            tempore veritatis vitae. Laudantium! Asperiores atque beatae blanditiis, dicta distinctio impedit ipsam ipsum
+            iste labore magni mollitia nisi non numquam perferendis perspiciatis placeat quae quam recusandae repellat
+            reprehenderit sed similique soluta temporibus unde voluptas?
+            </p>
+        </div>
+        <div class="rangee-flex bleed"><!-- DIV HORS CONTENEUR -->
+            <picture class="col">
+                <source media="(max-width: 600px)"
+                        srcset="https://picsum.photos/id/1024/600/300" />
+                <source media="(min-width: 601px)"
+                        srcset="https://picsum.photos/id/1024/1000/500" />
+                <img src="https://picsum.photos/id/1024/600/300" alt="Rapace en vol"/>
+            </picture>
+             <picture class="col">
+                <source media="(max-width: 600px)"
+                        srcset="https://picsum.photos/id/1025/600/300" />
+                <source media="(min-width: 601px)"
+                        srcset="https://picsum.photos/id/1025/1000/500" />
+                <img src="https://picsum.photos/id/1025/600/300" alt="Carlin déguisé en sage Yoda"/>
+            </picture>
+        </div>
+        <div class="conteneur rangee-grid cadres">
+            <p class="col a">Adipisci, beatae blanditiis dicta dolorem doloribus facere fugiat id illo iste labore libero nemo non officiis omnis porro quam repellat, sapiente sit.</p>
+            <p class="col b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, beatae blanditiis dicta dolorem doloribus facere fugiat id illo iste labore libero nemo non officiis omnis porro quam repellat, sapiente sit.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="conteneur">
+            <p>
+                <small>&copy; Tous droits réservés</small>
+            </p>
+        </div>
+    </footer>
+    <script src="js/lib/picturefill.min.js" async></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+/**
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Ombre
+ * Mise en page
+ *** entête
+ *** main
+ *** interactivité
+ *** footer
+ *** grids
+ */
+
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+
+/* Ombre 
+   ========================================================================== */
+@media (max-width: 800px){
+   header,
+   footer,
+   .paragraphes_intro,
+   .contenu,
+   #conclusion{
+      box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
+   }
+}
+   @media (min-width: 800px){
+   header,
+   footer, 
+   main{
+      box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
+   }
+}
+
+
+/* Mise en page
+   ========================================================================== */
+main{
+   max-width: 300px;
+   margin: auto;
+}
+@media(min-width: 600px){
+   main{
+      max-width: 540px;
+   }
+}
+@media(min-width: 800px){
+   main{
+      max-width: 1000px;
+   }
+}
+
+body{
+   background-color: var(--color-Light-G);
+   background-image: url(../images/fabric_plaid.png);
+   background-blend-mode: multiply;
+}
+@media(min-width: 800px){
+   #arriere-plan{
+      background-color: var(--color-Dark-G);
+      background-image: url(../images/concrete_wall_2.png);
+      background-blend-mode: multiply;
+      margin: 0;
+         padding: 20px;
+   }
+}
+
+/*** entête
+   ========================================================================== */
+header{
+   text-align: center;
+   padding-bottom: 20px;
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+   margin: 0;
+}
+#logo{
+   max-width: 265px;
+}
+@media(min-width: 600px){
+   #logo{
+      max-width: 420px;
+   }
+}
+@media(min-width: 800px){
+   #logo{
+      max-width: 575px;
+   }
+}
+
+#img_entete{
+   width: 100%;
+}
+
+/* Padding de l'introduction */
+#accroche,
+#citation,
+#introduction{
+   margin: 50px 10px;
+}
+@media(min-width: 800px){
+   #accroche,
+   #citation,
+   #introduction{
+      margin: 0 90px;
+      padding: 10px 0;
+   }
+}
+
+/* Citation */
+#texteCitation{
+   margin-top: 8.5rem;
+}
+.apostrophe2{
+   margin-top: 18.5rem;
+}
+@media(min-width: 600px){
+   .apostrophe2{
+      margin-top: 3.5rem;
+   }
+}
+@media(min-width: 800px){
+   #texteCitation{
+      margin-top: 21rem;
+   }
+   .apostrophe2{
+      margin-top: 18rem;
+   }
+}
+
+/*** main
+   ========================================================================== */
+.paragraphes_intro{
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+}
+.contenu{
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+}
+#conclusion{
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+   padding: 10px 20px;
+   width: 300px;
+   margin: 25px auto;
+}
+
+.titre_secondaire,
+.texte_contenu{
+   text-align: left;
+   padding: 0 10px;
+}
+
+#accroche{
+   padding-top: 20px;
+}
+#introduction{
+   padding-bottom: 20px;
+}
+
+.contenu{
+   margin-top: 40px;
+   padding: 20px 0;
+}
+
+@media (min-width: 600px){
+   .image_contenu{
+      float: left;
+      padding: 20px;
+   }
+
+   #accroche{
+      padding-top: 20px;
+   }
+   #introduction{
+      padding-bottom: 20px;
+   }
+
+   #conclusion{
+      padding: 10px 20px;
+      width: 540px;
+      margin: 25px auto;
+   }
+}
+@media(min-width: 800px){
+   .pair .texte_contenu{
+      padding: 40px;
+   }
+   .impair .image_contenu{
+      margin-right: 100px;
+   }
+   .titre_secondaire{
+      margin-left: 50px;
+   }
+   .image_contenu{
+      width: 370px;
+   }
+   .contenu{
+      margin: 75px 0;
+   }
+}
+
+
+/* Couleur d'arrière plan générale et du main */
+
+/*** interactivité
+   ========================================================================== */
+   /* icones réseaux sociaux */
+   .lien_sociaux{
+      background-image: url(../images/icones.png);
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+   }
+   .instagram{
+      background-position: 0px 0px;
+   }
+   .twitter{
+      background-position: 50px 0px;
+   }
+   .facebook{
+      background-position: 100px 0px;
+   }
+   
+   .twitter:hover,
+   .twitter:active{
+      background-position: 50px 50px;
+   }
+   .instagram:hover,
+   .instagram:active{
+      background-position: 0px 50px;
+   }
+   .facebook:hover,
+   .facebook:active{
+      background-position: 100px 50px;
+   }
+
+/*** footer
+   ========================================================================== */
+   footer{
+      padding: 20px 10px;
+      background-color: var(--color-Dark-G);
+      background-image: url(../images/concrete_wall_2.png);
+      background-blend-mode: multiply;
+      margin: 0;
+   }
+   #joindre{
+      margin: auto;
+      text-align: center;
+   }
+   #copyright,
+   #avertissement{
+      margin: auto;
+      text-align: center;
+   }
+   #avertissement{
+      margin-top: 25px;
+   }
+   #copyright{
+      padding-bottom: 25px;
+   }
+/* Style du pied de page */
+
+/*** grids
+   ========================================================================== */
+   /* main */
+   @media(min-width: 800px){
+      .contenu.impair{
+         display: grid;
+         grid-gap: 20px;
+         grid-template-columns: 370px auto 95px;
+         grid-template-areas: 
+            "i t t"
+            "i p .";
+      }
+      .contenu.pair{
+         display: grid;
+         grid-gap: 20px;
+         grid-template-columns: 95px auto 370px;
+         grid-template-areas: 
+            "t t t"
+            "p p i";
+      }
+
+      .image_contenu{
+         grid-area: i;
+      }
+      .texte_contenu{
+         grid-area: p;
+      }
+      .titre_secondaire{
+         grid-area: t;
+      }
+   }
+   
+
+   /* footer */
+   @media (min-width: 600px) {
+     .info_footer{
+         max-width: 1000px;
+         margin: auto;
+         display: grid;
+         grid-gap: 20px;
+         grid-template-columns: 6fr 4fr;
+         grid-template-areas: 
+            "s p";
+      }
+
+      .sources{
+         grid-area: s;
+      }
+      .info{
+         grid-area: p;
+      } 
+   }
+
+   /* citation */
+      #citation{
+          margin: auto;
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: 1fr 8fr 1fr;
+          grid-template-areas: 
+             "a c b";
+       }
+ 
+       .apostrophe1{
+          grid-area: a;
+       }
+       .apostrophe2{
+         grid-area: b;
+      }
+       #texteCitation{
+          grid-area: c;
+      }

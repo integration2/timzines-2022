@@ -1,0 +1,299 @@
+/**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIÈRES
+ * Polices
+ * Base décimale
+ * Hiérarchie responsive
+ *
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 599px
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 600 à 799px
+ * point de rupture: 800px
+ *
+ * Écran large : 800px et +
+ */
+
+
+/** Polices **/
+@import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Archivo&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Alatsi&family=Archivo&family=Roboto:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Alatsi&family=Archivo&family=Archivo+Black&family=Roboto:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@300&display=swap);
+
+body{
+    /* font-family: Raleway, sans-serif ; */
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-weight: bold;
+}
+
+
+/** Base décimale **/
+html{
+    font-size: 62.5%;
+}
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1,
+.h1 {
+    text-align: left;
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 150%;
+    color: black;
+    max-width: 100%;
+}
+@media (min-width: 600px) {
+    h1,
+    .h1 {
+        font-size: 5.5rem;
+    }
+}
+@media (min-width: 900px) {
+    h1,
+    .h1 {
+        font-size: 7rem;
+    }
+}
+@media (min-width: 1200px){
+    h1,
+    .h1  {
+        font-size: 9rem;
+    }
+}
+
+h2,
+.h2 { /* = 30px */
+    font-size: 3rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Archivo Black';
+    color: #072745;
+    font-style: normal;
+}
+@media (min-width: 600px) {
+    h2,
+    .h2 { /* = 4px */
+        font-size: 4rem;
+    }
+}
+@media (min-width: 800px) {
+    h2,
+    .h2 { /* = 36px */
+        font-size: 6.5rem;
+    }
+}
+
+p,
+.p { /* = 16px */
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+}
+@media (min-width: 600px) {
+    p,
+    .p { /* = 20px */
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    p,
+    .p { /* = 30px */
+        font-size: 3rem;
+    }
+}
+.accroche p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 150%;
+    font-size: 'Alatsi';
+    font-weight: 600;
+}
+@media (min-width: 600px) {
+    .accroche p {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 800px) {
+    .accroche p {
+        font-size: 5.5rem;
+    }
+}
+/* Fil d'Ariane */
+.fil_ariane,
+.fil_ariane a{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+/* categorie */
+.categorie{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* auteur */
+.auteur .article{
+    font-family: 'Archivo Black';
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+}
+@media (min-width: 800px) {
+    .auteur .article {
+        font-size: 1.8rem;
+    }
+}
+.auteur .date{
+    font-family: 'Archivo';
+    line-height: 150%;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+@media (min-width: 600px) {
+    .auteur .date{
+        font-size: 1.6rem;
+    }
+}
+/* citation01 */
+
+.citation_p { 
+    font-size: 1.8rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Archivo';
+    color: #fff;
+}
+@media (min-width: 600px) {
+    .citation_p {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    .citation_p {
+        font-size: 6rem;
+    }
+}
+
+.nom { 
+    font-size: 1.8rem;
+    line-height: 150%;
+    text-align: right;
+    font-family: 'Archivo black';
+    color: #fff;
+}
+@media (min-width: 600px) {
+    .nom {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    .nom {
+        font-size: 4rem;
+    }
+}
+/* citation02 */
+
+.citation_p02 { 
+    font-size: 1.8rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Archivo';
+    color: #fff;
+}
+@media (min-width: 600px) {
+    .citation_p02 {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    .citation_p02 {
+        font-size: 6rem;
+    }
+}
+
+.nom02 { 
+    font-size: 1.8rem;
+    line-height: 150%;
+    text-align: right;
+    font-family: 'Archivo black';
+    color: #fff;
+}
+@media (min-width: 600px) {
+    .nom02 {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    .nom02 {
+        font-size: 4rem;
+    }
+}
+figcaption{
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    font-weight: 800;
+
+}
+@media (min-width: 600px) {
+    figcaption {
+        font-size: 1.6rem;
+    }
+}
+@media (min-width: 800px) {
+    figcaption {
+        font-size: 1.8rem;
+    }
+}
