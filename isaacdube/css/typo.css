@@ -1,8 +1,6 @@
 /**
  * Typographie responsive (Mobile First)
    ========================================================================
- * Les valeurs de taille de police suggérées ici sont à titre indicatif.
- * À ajuster selon la direction visuelle et le choix de polices de caractères.
  *
  * @author Prénom Nom courriel
  *
@@ -10,37 +8,24 @@
  * Polices
  * Base décimale
  * Hiérarchie responsive
- *
- *
- * Doc des points de rupture :
- * ==========================================================================
- * Écran étroit : de 0 à 599px
- * point de rupture: 600px
- *
- * Écran moyen : de 600 à 799px
- * point de rupture: 800px
- *
- * Écran large : 800px et +
  */
 
 
 /** Polices **/
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina|Raleway:400,700,900');
 
-body{
-    font-family: Raleway, sans-serif ;
+/*Import des fonts*/
+
+@font-face {
+    font-family: 'strasuaregular';
+    src: url('../font/strasua/strasua-webfont.woff2') format('woff2'),
+        url('../font/strasua/strasua-webfont.woff') format('woff'),
+        url('../font/strasua/strasua.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-    font-weight: bold;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 
 /** Base décimale **/

@@ -3,11 +3,8 @@
 
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
 :root {
-    /** À DÉFINIR
-      * Couleur d'interactivité (jaune): #dba70d
-      * Blanc avec effet de transparence : rgba(255, 255, 255, 0.25)
-      * Valeur de border-radius des éléments :
-      */
+ --couleurTurquoise: rgb(147, 176, 176);
+ --couleurRose: #D65079;
 }
 
 /*** Clearfix ***/

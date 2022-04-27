@@ -1,15 +1,38 @@
-/*Import des fonts*/
+@charset "UTF-8";
 
-@font-face {
-    font-family: 'strasuaregular';
-    src: url('../font/strasua/strasua-webfont.woff2') format('woff2'),
-        url('../font/strasua/strasua-webfont.woff') format('woff'),
-        url('../font/strasua/strasua.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+/**
+ * @author Yves Hélie (conception et réalisation pour @timcsf)
+ * @author Ève Février (quelques broutilles d'actualisation de l'exercice)
+ * @author Prénom Nom courriel   <---- Utiliser nom complet ou nom d'utilisateur Github
+ *
+ * TABLE DES MATIÈRES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Menu
+ * Règles générales
+ * Mise en page
+ *** Entête du site
+ *** Menu principal
+ *** Accroche
+ *** Entreprise
+ *** Expériences
+ *** Services
+ *** Pied de page
+ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
 
 
 body {
@@ -52,7 +75,7 @@ img {
     left: -100px;
     height: 0.6em;
     width: 90%;
-    background-color: #D65079;
+    background-color: var(--couleurRose);
     position: absolute;
     z-index: -1;
 }
@@ -129,12 +152,12 @@ p {
 .text-presentation {    
     column-count: 2;
     padding-top: 10px;
-    margin-top: -0.25em;
+    margin-top: -0.6em;
     margin-left: -100px;
     padding-left: 100px;
     margin-right: -100px;
     padding-right: 100px;
-    background-color: rgb(147, 176, 176);
+    background-color: var(--couleurTurquoise);
     position: relative;
     padding-bottom: 10px;
 }
@@ -254,6 +277,16 @@ p {
     padding-top: 4rem;
     padding-bottom: 2rem;
     text-align: center;
+}
+
+
+.quote {
+    position: absolute;
+    bottom: -2em;
+}
+
+.duaLipaQuote{
+    text-align: right;
 }
 
 .a {
