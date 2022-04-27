@@ -1,0 +1,170 @@
+/**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIÈRES
+ * Polices
+ * Base décimale
+ * Hiérarchie responsive
+ *
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 599px
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 600 à 799px
+ * point de rupture: 800px
+ *
+ * Écran large : 800px et +
+ */
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+h1,
+.h1,
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: var(--fonte-principale);
+}
+h2,
+.h2{
+    font-family: var(--fonte-secondaire);
+}
+body{
+    font-family: var(--fonte-principale);
+}
+
+
+/* Base décimale */
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.7;
+    }
+}
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1,
+.h1 { /* = 52px */
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+@media (min-width: 600px) {
+    h1,
+    .h1 { /* = 90px */
+        font-size: 9rem;
+        line-height: 1.2;
+    }
+}
+@media (min-width: 800px) {
+    h1,
+    .h1 { /* = 100px */
+        font-size: 10rem;
+        line-height: 1.2;
+    }
+}
+
+h2,
+.h2 { /* = 64px */
+    font-size: 6.4rem;
+    font-weight: 400;
+}
+@media (min-width: 600px) {
+    h2,
+    .h2 { /* = 115px */
+        font-size: 11.5rem;
+    }
+}
+@media (min-width: 800px) {
+    h2,
+    .h2 { /* = 154px */
+        font-size: 15.4rem;
+    }
+}
+
+h3,
+.h3 { /* = 22px */
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+@media (min-width: 600px) {
+    h3,
+    .h3 { /* = 24px */
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 800px) {
+    h3,
+    .h3 { /* = 28px */
+        font-size: 2.8rem;
+    }
+}
+
+.citation {/* = 18px */
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+@media (min-width: 600px) {
+    .citation { /* = 25px */
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 800px) {
+    .citation { /* = 28px */
+        font-size: 2.8rem;
+    }
+}
+
+.cendrillon {/* = 35px */
+    font-family: var(--fonte-secondaire);
+    font-size: 3.5rem;
+}
+@media (min-width: 600px) {
+    .cendrillon { /* = 50px */
+        font-size: 5rem;
+    }
+}
+@media (min-width: 800px) {
+    .cendrillon{ /* = 60px */
+        font-size: 6rem;
+    }
+}
+
+p {/* = 35px */
+    font-size: 1.6rem;
+}
+@media (min-width: 800px) {
+    p{ /* = 20px */
+        font-size: 2rem;
+    }
+}
+
+figcaption {
+    font-size: 1.6rem;
+}

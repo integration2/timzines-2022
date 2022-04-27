@@ -1,28 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="style-1.css">
-	<!-- source url=https://gridbyexample.com/examples/code/example13.html -->
-    <title>Exemple 13 - départ pour katas de grilles css</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- source url=https://gridbyexample.com/examples/code/example13.html -->
+    <title>Timzine</title>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <header class="box header">Header</header>
-    <main class="box content">
-		<h1>Contenu principal</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			A, consectetur dolorem ducimus facilis, fugit hic impedit,
-			in ipsam itaque laborum natus obcaecati perspiciatis quam
-			quos reiciendis sapiente sunt tempore velit.</p>
-    </main>
-	<aside class="box sidebar">Sidebar</aside>
-	<aside class="box sidebar2">Sidebar 2</aside>
-    <footer class="box footer">Footer</footer>
-</div>
+<div class="layout-page">
+    <header class="box header">
+        <img class="logo" src="images/logo.svg" alt="logo Timzine">
+    </header>
+    <main class="main">
+        <section class="shang-shi bleed">
+            <div class="conteneur grille1">
+                <div class="a">
+                    <h1><span class="titreFilm">Shang-Shi</span>
+                        <br>
+                        <span class="titre_film2">and the Legend of the Ten Rings</span>
+                    </h1>
+                    <p class="type_film">Kung-fu fantastique</p>
+                    <div class="box">
+                        <p class="etoiles">★</p>
+                        <p class="etoiles">★</p>
+                        <p class="etoiles">★</p>
+                        <p class="etoiles">★</p>
+                    </div>
+                </div>
+                <p class="b">À plusieurs égards, Shang-Chi and the Legend of the Ten Rings et Black Panther se
+                    ressemblent :
+                    de nouveaux personnages y font leur apparition, on y découvre des mondes secrets et, surtout, une
+                    communauté sous-représentée dans les films hollywoodiens à grand déploiement y brille.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon fill="gray" points="0,100 100,0 100,100"/>
+                </svg>
+            </div> <!-- fin du conteneur de grille centrée-->
+            <section class="film-se-distingue bleed">
 
+                <div class="conteneur grille2">
+                    <div class="c le-grand-shang-shi">
+                        <picture class="le-grand-shang-shi__picture">
+                            <source srcset="images/entete_w130.png" media="(max-width:400px)">
+                            <source srcset="images/entete_w230.png" media="(min-width:701px)">
+<!--                            <source srcset="images/entete_w380.png" media="(min-width:701px)">-->
+                            <img class="entete__img" src="images/entete_w230.png" alt="Shang-Shi">
+                        </picture>
+                    </div>
+
+                    <div class="d">
+                        <p class="premierePartie">Car oui, même si Shang-Chi est un superhéros plutôt méconnu des bandes dessinées, le long
+                            métrage qui
+                            l’introduit dans l’univers cinématique Marvel (MCU) n’a rien à envier aux « films d’origine
+                            » précédents. Le
+                            rythme est excellent, la distribution est remarquable, puis le mélange d’action, d’humour et
+                            d’enjeux plus
+                            sérieux est fort réussi. Même si le gigantesque casse-tête qu’est le MCU est fascinant, il
+                            peut aussi être
+                            contraignant. Puisque Shang-Chi lance une nouvelle aventure avec de nouveaux personnages, il
+                            est moins
+                            limité dans ce qu’il peut explorer. Outre la mention du Blip, rien ne laisse penser qu’on
+                            est dans le MCU.
+                            Restez jusqu’à la toute fin pour voir comment il s’imbriquera avec le reste…</p>
+                    </div>
+                    <div class="e">
+                        <p class="citation premierePartie">Le film se distingue également par son esthétisme extraordinaire. Certains
+                            plans sont
+                            empreints d’une beauté poétique, lumineuse et zen, d’autres sont sombres, saccadés et
+                            étourdissants.</p>
+                        <p class="premierePartie">On passe du San Francisco d’aujourd’hui à un Macao clandestin en passant par la Chine d’avant
+                            la dynastie
+                            Ming, pour finir dans un village caché peuplé de créatures fantastiques. Ça pourrait être
+                            essoufflant, mais
+                            l’authenticité et la beauté des lieux nous gardent accrochés. Le directeur photo William
+                            Pope (The Jungle
+                            Book, Spider-Man 2, The Matrix) épate une fois de plus .</p>
+                    </div>
+                </div>
+                 <!-- fin du conteneur de grille centrée-->
+            </section>
+            <section class="histoire-de-famille bleed">
+                <div class="conteneur grille3">
+                    <div class="x">
+                    <picture>
+                    <source src="images/photo-3_w600.jpg" media="(max-width:400px)">
+                    <source src="images/photo-3_w1200.jpg" media="(max-width:700px)">
+                    <img  src="images/photo-3_w1200.jpg" alt="Shang-Shi">
+                    </picture>
+                    </div>
+                    <div class="f">
+                        <h2>Une histoire de famille</h2>
+
+                        <p class="p_UneHistoireFamille">Le président des studios Marvel, Kevin Feige, a souvent dit qu’il ne faisait pas des films de
+                            superhéros,
+                            mais des films de genre mettant en vedette des superhéros. Dans le cas présent, il s’agit
+                            essentiellement
+                            d’un film d’arts martiaux. Comme pour les images, on observe la même variété et les mêmes
+                            contrastes dans
+                            les combats, tous magnifiquement chorégraphiés. Il y en a qui sont tout en élégance,
+                            d’autres vifs et
+                            brutaux et, évidemment, ceux qui démontrent la grande puissance des 10 anneaux.
+
+                            Dans les BD, Shang-Chi est aussi appelé le maître du kung-fu. Dans le film, il sait bien se
+                            défendre, mais
+                            son père (génial Tony Leung) est celui qui détient le véritable pouvoir, et ce, depuis un
+                            millénaire. Il est
+                            le Mandarin des comics sans vraiment l’être. Ses actions ont déchiré sa famille et ses deux
+                            enfants ont fui.
+                            Tous se retrouveront, se parleront et s’affronteront avec des dragons. Simpliste mais
+                            spectaculaire, et
+                            raconté en allant droit au but.
+
+                            Le Canadien d’origine chinoise Simu Liu est convaincant dans le rôle-titre. Il est
+                            sympathique et déterminé.
+                            Un héros exemplaire qui plaira certainement beaucoup aux plus jeunes. Sa sœur Xialing
+                            (Meng’er Zhang) et sa
+                            meilleure amie Katy (Awkwafina) sont bien différentes et ne font pas que l’épauler dans sa
+                            quête. Elles
+                            découvrent aussi qu’elles sont capables de bien plus qu’elles le croyaient. Encore ici, des
+                            modèles
+                            inspirants.</p>
+                    </div>
+                </div> <!-- fin du conteneur de grille centrée-->
+            </section>
+            <section class="grille4">
+                <div class="g">
+                    <h2>Un film de superhéros</h2>
+                    <p class="infosFilm">
+                        Shang-Chi and the Legend of the Ten Rings
+                        <br>
+                        Destin Daniel Cretton
+                        <br>
+                        Avec Simu Liu, Awkwafina, Tony Leung
+                        <br>
+                        2 h 12
+                        <br>
+                        ★★★★</p>
+                </div>
+                <div class="h">
+                    <picture class="image_film">
+                        <source src="images/photo-4_w200.jpg" media="(max-width:400px)">
+                        <source src="images/photo-4_w320.jpg.jpg" media="(max-width:700px)">
+                        <img src="images/photo-4_w200.jpg" alt="Shang-Shi">
+                    </picture>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <ul class="menu-sociaux">
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://www.facebook.com">Facebook</a>
+            </li>
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://twitter.com">Twitter</a>
+            </li>
+            <li class="menu-sociaux__item">
+                <a class="menu-sociaux__lien" href="https://www.instagram.com">Instagram</a>
+            </li>
+        </ul>
+
+        <p class="sources">Source article:</p>
+            <ul>
+                <li>
+                    <a href="https://www.lapresse.ca/cinema/critiques/2021-09-03/shang-chi-and-the-legend-of-the-ten-rings/kung-fu-fantastique.php">https://www.lapresse.ca/cinema/critiques/2021-09-03/shang-chi-and-the-legend-of-the-ten-rings/kung-fu-fantastique.php</a>
+                </li>
+            </ul>
+            <p class="sources">Sources images:</p>
+            <ul>
+                <li><a href="//www.imdb.com/title/tt9376612/>://www.imdb.com/title/tt9376612/">https://www.imdb.com/title/tt9376612/>://www.imdb.com/title/tt9376612/</a>
+                </li>
+
+                <li>
+                    <a href="https://www.uscannenbergmedia.com/2021/09/13/why-the-shang-chi-fight-scenes-are-more-than-meets-the-eye/"</a>
+                    https://www.uscannenbergmedia.com/2021/09/13/why-the-shang-chi-fight-scenes-are-more-than-meets-the-eye/
+                </li>
+
+                <li>
+                    <a href="https://www.nytimes.com/2021/09/01/movies/shang-chi-and-the-legend-of-the-ten-rings-review.html">https://www.nytimes.com/2021/09/01/movies/shang-chi-and-the-legend-of-the-ten-rings-review.html</a>
+                </li>
+
+                <li>
+                    <a href="https://www.nbcnews.com/news/china/mar vel-s-shang-chi-was-made-china-mind-here-s-n1280571">https://www.nbcnews.com/news/china/mar
+                        vel-s-shang-chi-was-made-china-mind-here-s-n1280571</a></li>
+            </ul>
+    </footer>
+</div>
 </body>
 </html>

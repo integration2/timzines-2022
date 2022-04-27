@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>03 - Superposition</title>
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .grille{
+            margin: 5rem auto;
+        }
+        @media (min-width: 700px) {
+            .grille{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+                grid-template-rows: minmax(auto, 300px) 100px 1fr;
+                max-width: 1140px;
+            }
+        }
+        .grille__accroche,
+        .grille__image,
+        .grille__citation{
+            background-color: antiquewhite;
+            border-radius: 15px;
+        }
+        .grille__accroche{
+            grid-area: 1 / 1 / 3 / 3;
+        }
+        .grille__image{
+            grid-area: 1 / 3 / 3 / 6;
+        }
+        .grille__citation{
+            grid-area: 2 / 2 / 4 / 5;
+            border: 1px solid black;
+            z-index: 1;
+        }
+        blockquote{
+            font-variant: small-caps;
+            text-align: center;
+            font-size: 3vw;
+        }
+        .auteur{
+            font-variant: none;
+            font-size: 1rem;
+        }
+        h1,
+        p,
+        blockquote{
+            padding: 0 1rem;
+        }
+        h1,
+        figure {
+            margin-top: 0;
+            position: relative;
+        }
+        figcaption{
+            position: absolute;
+            top:15px;
+            left:15px;
+        }
+        h1 {
+            text-align: center;
+            transform: scaleY(250%);
+            position: relative;
+            top: -0.85em;
+        }
+        @media (min-width: 700px) {
+            h1 {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<p> Défi de superposition </p>
+<div class="grille">
+    <div class="grille__accroche">
+        <h1>Yvette Chauviré</h1>
+        <p class="texte">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium qui, voluptas? Ipsum quaerat tempora vero? Ad adipisci atque consectetur consequuntur dolor eius ex exercitationem quas, ratione sapiente? Asperiores, iusto quia!
+        </p>
+    </div>
+    <figure class="grille__image">
+        <img src="https://picsum.photos/id/1018/600/300" alt="">
+        <figcaption>Image provenant du site picsum.photos</figcaption>
+    </figure>
+    <blockquote class="grille__citation">
+        <p>La danse est une forme de foi, une espérance.
+        C'est une aspiration, le besoin d'atteindre un univers, une atmosphère, un état qui vous fait progresser, la recherche d'une vérité.</p>
+    <p class="auteur">
+        Yvette Chauré, danseuse étoile
+    </p>
+    </blockquote>
+</div>
+</body>
+</html>
