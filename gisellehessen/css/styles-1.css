@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@charset "UTF-8";
+
+@import url("normalize.css");
+@import url("typo.css");
+@import url("utilitaires.css");
+
 
 .conteneur {
     max-width: 1000px;
@@ -9,8 +13,13 @@
 body {
     color: white;
     background-color: rgba(26, 31, 35, 1);
-    font-size: 1.25em;
+    /*font-size: 1.25em;*/
 }
+/*@media (min-width: 500px) {*/
+/*    body {*/
+/*        margin: 0 30px 0;*/
+/*    }*/
+/*}*/
 
 /* 1ère grille */
 /* triangle gris svg en ligne dans le html */
@@ -40,6 +49,7 @@ body {
 
     .a {
         grid-area: a;
+        padding-top: 3em;
     }
 
     .b {
@@ -67,7 +77,7 @@ body {
 @media (min-width: 600px) {
     .film-se-distingue {
         /* multiple backgrounds */
-        background-image: url("images/photo-1_w1200.jpeg"), url("images/photo-2_w1200.jpeg");
+        background-image: url("../images/photo-1_w600.jpg"), url("../images/photo-2_w1200.jpg");
         background-position: top left, bottom right;
         background-size: calc(50% - 1em), calc(50% + 1em);
         background-repeat: no-repeat, no-repeat;
@@ -134,167 +144,293 @@ body {
         z-index: 1;
     }
 }
+.premierePartie {
+    margin: 10px 20px 20px;
+}
 
 /*GRILLE 3*/
 @media (min-width: 600px) {
     .grille3 {
         display: grid;
         grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 4fr;
+        column-gap: 30px;
         grid-template-areas:
                         ". . f f f"
+                        "x x f f f"
                         ". . f f f";
     }
 
     .f {
         grid-area: f;
         padding-top: 2rem;
-        padding-bottom: 7rem;
+        padding-bottom: 12rem;
     }
 
-    /*GRILLE 4*/
-    @media (min-width: 600px) {
-        .grille4 {
-            display: grid;
-            background-color: rgba(233, 10, 10, 1);
-            grid-template-columns: 0.5fr 1.5fr 2fr 1.25fr 1.25fr 4fr;
-            grid-template-areas:
+    .x {
+        grid-area: x;
+        margin-left: 20px;
+
+    }
+}
+
+/*GRILLE 4*/
+.grille4 {
+    display: grid;
+    background-color: rgba(233, 10, 10, 1);
+    grid-template-columns: 0.5fr 1.5fr 2fr 1.25fr 1.25fr 4fr;
+    grid-template-areas:
                         ". g g g . h";
+}
+.g {
+    grid-area:g;
+    line-height: 1.8em;
+}
+.h {
+         grid-area: h;
+         position: relative;
+    right: 20px;
+         /*min-height: 10vh;*/
+     }
+.image_film {
+           position: absolute;
+           bottom: 40px;
+           z-index: 3;
+       }
+@media (min-width: 600px) {
+
+    .g {
+        /*padding-left: 2em;*/
+        line-height: 1.8em;
+    }
+
+}
+
+/*CHARTE TYPO*/
+.titreFilm {
+    font-size: 1rem;
+    background-color: red;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-variant: all-small-caps;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+@media (min-width: 500px) {
+    .titreFilm {
+        font-size: 7rem;
+        margin: 0 30px 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .titreFilm {
+        font-size: 10rem;
+    }
+}
+
+
+.titre_film2 {
+    margin-top: 100px;
+    font-size: 1rem;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+}
+@media (min-width: 500px) {
+    .titre_film2{
+        font-size: 3rem;
+        margin: 0 30px 0;
+    }
+}
+.type_film{
+    margin: 0px 30px 10px;
+}
+
+/*f*/
+/*background-color: rgba(233, 10, 10, 1);*/
+/*/*display: inline;*/
+
+
+/*padding: 0;*/
+/*/*line-height: 1;*/
+
+
+
+/*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
+/*text-align: center;*/
+/*margin-bottom: 0;*/
+/*}*/
+
+
+.citation {
+    font-size: 0.5rem;
+    font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (min-width: 500px) {
+    .citation {
+        font-size: 2rem;
+        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+@media (min-width: 800px) {
+    .citation {
+        font-size: 2.5rem;
+        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-variant: all-small-caps;
+    margin: 10px 40px 10px;
+}
+.p_UneHistoireFamille {
+    margin: 10px 40px 10px;
+}
+p {
+    font-size: 5rem;
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+
+}
+
+@media (min-width: 500px) {
+    p {
+        font-size: 1.7rem;
+    }
+}
+.infosFilm {
+    margin: 15px 1px 10px 40px;
+}
+    .logo {
+        width: 100px;
+        display: block;
+        margin: 2rem auto 3rem;
+
+    }
+
+    @media (min-width: 500px) {
+        .logo {
+            width: 200px;
         }
-
-        .g {
-            grid-area: g;
-            padding-left: 2em;
-            line-height: 1.8em;
-        }
-
-        .h {
-            grid-area: h;
-            position: relative;
-            min-height: 10vh;
-        }
-
-        .image_film {
-            position: absolute;
-            bottom: 40px;
-            z-index: 3;
-        }
-
-        /* CHARTE TYPO */
-        .titreFilm{
-            font-size: 120px;
-            background-color: red ;
-            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-            font-variant: all-small-caps;
-            text-align: center;
-            margin-bottom: 0;
-            display: block;
-            padding: 0;
-            line-height: 1;
-            border-top: 30px inset rgba(26, 31, 35, 1);
-
-        }
-
-        .titre_film1 {
-            box-sizing: border-box;
-            background-color: red;
-            width: 420px;
-            height: 150px;
-
-
-
-            /*f*/
-            /*background-color: rgba(233, 10, 10, 1);*/
-            /*!*display: inline;*!*/
-            /*padding: 0;*/
-            /*!*line-height: 1;*!*/
-            /*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
-            /*text-align: center;*/
-            /*margin-bottom: 0;*/
-        }
-
-        h1 {
-            font-size: 30px;
-            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .citation {
-            font-size: 25px;
-            font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        h2 {
-            font-size: 35px;
-            font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-            font-variant: all-small-caps;
-        }
-
-        p {
-            font-size: 18px;
-            font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-
-        @media (min-width: 500px) {
-            .titre_film1 {
-                font-size: 4.5em;
-            }
-        }
-
-        @media (min-width: 800px) {
-            .titre_film1 {
-                font-size: 7em;
-            }
-        }
-
+    }
+    @media (min-width: 800px) {
         .logo {
             width: 300px;
-            display: block;
-            margin: 2rem auto 0;
-
-        }
-
-        .box {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .etoiles {
-            font-size: 50px;
-            color: rgba(255, 190, 24, 1);
-            margin: 0;
-            transition: transform 0.3s;
-        }
-
-        .etoiles:hover {
-            transform: scale(150%);
-            filter: brightness(300%)
-        }
-
-        /*FOOTER*/
-        /*SPITRE CSS*/
-
-
-        footer {
-            background-color: rgba(13, 15, 17, 1);
-            padding: 2em;
-        }
-        .sources{
-        font-weight: bold;
         }
     }
-        li {
-            list-style: none;
-            font-size: 18px;
-            color: white;
-            font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-            line-height: 1.5;
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 30px 10px;
+    }
+
+    .etoiles {
+        font-size: 20px;
+        color: rgba(255, 190, 24, 1);
+        margin: 0;
+        transition: transform 0.3s;
+    }
+
+    .etoiles:hover {
+        transform: scale(2);
+        filter: brightness(300%);
+    }
+
+    @media (min-width: 500px) {
+        .etoiles {
+            font-size: 50px;
         }
-        a:hover{
-            color:red;
-        }
-        a:visited {
-        color:lightgray;
-        }
+    }
+
+
+    /*FOOTER*/
+
+
+    footer {
+        background-color: rgba(13, 15, 17, 1);
+        padding: 2em;
+        /*position: relative;*/
+    }
+/*SPITRE CSS*/
+/*menu medias sprite*/
+.menu-sociaux {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    /*margin-left: 50%;*/
+    /*margin-right: 50%;*/
+    /*position: absolute;*/
+    /*padding: 2rem;*/
+    /*top: 10px;*/
+    /*left:30%;*/
+}
+@media (min-width: 600px){
+    .menu-sociaux{
+        /*position: absolute;*/
+        /*top: 2px;*/
+        /*left:15%;*/
+    }
+}
+.menu-sociaux__lien {
+    font-size: 0; /* fait disparaître le texte du lien */
+    display: block; /* permet de donner une dimension au lien */
+    width: 50px; /* largeur de l'image */
+    height: 50px; /* hauteur de l'image */
+    margin-right: 1rem; /* espace entre les liens */
+    background-image: url(../images/contactMedia.png);
+    background-repeat: no-repeat;
+}
+.menu-sociaux__item:first-child .menu-sociaux__lien {
+    background-position: 0 0;
+}
+.menu-sociaux__item:nth-child(2) .menu-sociaux__lien {
+    background-position: -81px 0;
+}
+.menu-sociaux__item:nth-child(3) .menu-sociaux__lien {
+    background-position: -162px 0;
+}
+
+.menu-sociaux__item .menu-sociaux__lien:link,
+.menu-sociaux__item .menu-sociaux__lien:visited {
+    transition: all .7s ease;
+    /* permet de voir le déplacement de l'image */
+}
+.menu-sociaux__item .menu-sociaux__lien:hover,
+.menu-sociaux__item .menu-sociaux__lien:active {
+    background-position-y: -55px;
+}
+.sprite {
+    width: 212px;
+    height: 108px;
+    border: 1px green solid;
+    margin: 0 3rem 6rem 3rem;
+    background: url(../images/contactMedia.png) no-repeat;
+}
+
+    .sources {
+        font-weight: bold;
+    }
+
+    li {
+        list-style: none;
+        font-size: 18px;
+        color: white;
+        font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+        line-height: 1.5;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    a:visited {
+        color: lightgray;
+    }
 
 

@@ -1,19 +1,19 @@
 /** VARIABLES À DÉFINIR **/ 
-:root{
-    /** Démo **/
-    /* les caractères */
-    --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne:'Libre Baskerville', serif;
-    /* les couleurs */
-    --couleur-background: rgba(50, 50, 50, 0.9);
-    --couleur-principale: aliceblue;
-    /* les tailles */
-    --fontSize-base-small: 1.4rem;
-    --fontSize-base-medium: 1.6rem;
-    --fontSize-base-large: 1.8rem;
-    /* bordures, coins ronds, divers */
-    --borderRadius: 10px;
-}
+/*:root{*/
+/*    !** Démo **!*/
+/*    !* les caractères *!*/
+/*    --fonte-principale: 'Libre Franklin', sans-serif;*/
+/*    --fonte-ancienne:'Libre Baskerville', serif;*/
+/*    !* les couleurs *!*/
+/*    --couleur-background: rgba(50, 50, 50, 0.9);*/
+/*    --couleur-principale: aliceblue;*/
+/*    !* les tailles *!*/
+/*    --fontSize-base-small: 1.4rem;*/
+/*    --fontSize-base-medium: 1.6rem;*/
+/*    --fontSize-base-large: 1.8rem;*/
+/*    !* bordures, coins ronds, divers *!*/
+/*    --borderRadius: 10px;*/
+/*}*/
 
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
 html {
