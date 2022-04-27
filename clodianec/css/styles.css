@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @Clodiane Charette clodianecharette@gmail.com 
  *
  * TABLE DES MATIERES
  * Normalize
@@ -172,7 +172,6 @@ main{
    #citation,
    #introduction{
       margin: 0 90px;
-      padding: 10px 0;
    }
 }
 
@@ -235,15 +234,6 @@ main{
    }
 }
 @media(min-width: 800px){
-   .pair .texte_contenu{
-      padding: 40px;
-   }
-   .impair .image_contenu{
-      margin-right: 100px;
-   }
-   .titre_secondaire{
-      margin-left: 50px;
-   }
    .image_contenu{
       width: 370px;
    }
@@ -270,7 +260,7 @@ main{
       grid-gap: 20px;
       grid-template-columns: 370px auto 95px;
       grid-template-areas: 
-         "i t t"
+         "i t ."
          "i p .";
    }
    .contenu.pair{
@@ -278,10 +268,10 @@ main{
       grid-gap: 20px;
       grid-template-columns: 95px auto 370px;
       grid-template-areas: 
-         "t t i"
+         ". t i"
          ". p i";
    }
-   .image_contenu{
+   .picture_contenu{
       grid-area: i;
    }
    .texte_contenu{
