@@ -1,0 +1,127 @@
+/**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIÈRES
+ * Polices
+ * Base décimale
+ * Hiérarchie responsive
+ *
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 599px
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 600 à 799px
+ * point de rupture: 800px
+ *
+ * Écran large : 800px et +
+ */
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/*h1,*/
+/*.h1,*/
+/*h2,*/
+/*.h2,*/
+/*h3,*/
+/*.h3,*/
+/*h4,*/
+/*.h4 {*/
+/*    font-family: var(--titreSite-fonte);*/
+/*}*/
+/*body{*/
+/*    font-family: var(--fonte-principale);*/
+/*}*/
+
+
+/* Base décimale */
+html{
+    font-size: 62.5%;
+}
+
+
+/*body {*/
+/*    !* 16px pour toutes les largeurs d'écran *!*/
+/*    font-size: 1.6rem;*/
+/*    !* facteur multiplicateur de la taille de la police 1.375x16 = 22 *!*/
+/*    line-height: 1.375;*/
+/*}*/
+/*@media (min-width: 600px) {*/
+/*    body {*/
+/*        line-height: 1.5;*/
+/*    }*/
+/*}*/
+/*@media (min-width: 800px) {*/
+/*    body {*/
+/*        line-height: 1.75;*/
+/*    }*/
+/*}*/
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+/* CHARTE TYPO */
+/*.titreFilm{*/
+/*    font-size: 10rem;*/
+/*    background-color: red ;*/
+/*    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;*/
+/*    font-variant: all-small-caps;*/
+/*    text-align: center;*/
+/*    margin-bottom: 0;*/
+/*    padding: 0;*/
+/*    line-height: 1;*/
+/*}*/
+/*@media (min-width: 500px) {*/
+/*    .titreFilm {*/
+/*        font-size: 3rem;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 800px) {*/
+/*    .titreFilm {*/
+/*        font-size: 50px;*/
+/*    }*/
+/*}*/
+
+
+/*.titre_film2 {*/
+/*    margin-top:40px;*/
+/*    font-size: 30px;*/
+/*    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;*/
+/*}*/
+
+
+/*f*/
+/*background-color: rgba(233, 10, 10, 1);*/
+/*!*display: inline;*!*/
+/*padding: 0;*/
+/*!*line-height: 1;*!*/
+/*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
+/*text-align: center;*/
+/*margin-bottom: 0;*/
+}
+
+
+/*.citation {*/
+/*    font-size: 25px;*/
+/*    font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;*/
+/*}*/
+
+/*h2 {*/
+/*    font-size: 35px;*/
+/*    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;*/
+/*    font-variant: all-small-caps;*/
+/*}*/
+
+/*p {*/
+/*    font-size: 18px;*/
+/*    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;*/
+/*    line-height: 1.5;*/
+/*}*/
