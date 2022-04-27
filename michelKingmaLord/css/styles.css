@@ -1,0 +1,523 @@
+@charset "UTF-8";
+/**
+ * @author Michel Kingma-Lord <0801342@csfoy.ca>
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Mise en page
+ *** entête
+ *** main
+ *** formulaire
+ *** interactivité
+ *** footer
+ */
+/* Grille
+   ========================================================================== */
+/*@import url(grille.css);*/
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+/* Mise en page
+   ========================================================================== */
+/**************************
+Arrière Plan
+*************************/
+/**************************
+Banderole
+*************************/
+.titre {
+    width: 100%;
+    padding: var(--padding-text);
+    margin-bottom: 0;
+}
+
+legend {
+    padding-top: 2rem;
+}
+
+/**************************
+Balisage des images
+*************************/
+/*img {
+    margin-left: 0;
+}*/
+/**************************
+Section
+*************************/
+/* Interactivité générale */
+:focus {
+    outline: green auto 10px;
+}
+
+/**** Screen Reader ***/
+.screen-reader-only,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*** Erreurs ***/
+.message-erreur {
+    color: orangered;
+}
+
+/* SECTION DU SITE */
+/* régles générales */
+.body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header,
+.footer {
+    background-color: #1A1B1E;
+    color: white;
+}
+
+/* HEADER 1 */
+.header--image {
+    margin: auto;
+    max-width: 400px;
+}
+
+/* MAIN*/
+.main {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.container {
+    padding-bottom: 2.5rem;
+}
+
+.container:focus {
+    outline: green auto 10px;
+}
+
+/*.section_titre {
+    background: lightcoral;
+}*/
+.header--filariane {
+    font-size: medium;
+}
+
+/* SECTION 1 */
+.section_1 {
+    display: grid;
+    /*background: lightblue;*/
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(auto, 600px) auto 1fr;
+    grid-template-areas:
+        "A A A A A . B B B B B B "
+        ". . . C C C C C C C C ."
+}
+
+.section_1--texte {
+    grid-area: A;
+}
+
+.section_1--image {
+    grid-area: B;
+}
+
+.section_1--citation {
+    grid-area: C;
+    position: relative;
+    bottom: 2em;
+    background: #26408B;
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+    /*min-height: 6rem;*/
+    opacity: 70%;
+    z-index: 1;
+    padding: 0 1rem;
+}
+
+/* Tablette Section 1 */
+@media(max-width : 800px) {
+    .section_1 {
+        display: grid;
+        /*background: lightblue;*/
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: minmax(auto, 300px) auto 1fr;
+        grid-template-areas:
+            "A"
+            "B"
+            "C";
+    }
+
+    .section_1--texte {
+        grid-area: A;
+    }
+
+    .section_1--image {
+        grid-area: B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_1--citation {
+        grid-area: C;
+        position: relative;
+        bottom: 11em;
+        background: #26408B;
+        color: white;
+        font-variant: small-caps;
+        text-align: center;
+        opacity: 70%;
+        z-index: 1;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile section 1*/
+@media(max-width : 600px) {
+    .section_1 {
+        display: grid;
+        /*background: lightblue;*/
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: minmax(auto, 425px) 1fr;
+        grid-template-areas:
+            "A"
+            "B"
+            "C";
+    }
+
+    .section_1--texte {
+        grid-area: A;
+    }
+
+    .section_1--image {
+        grid-area: B;
+    }
+
+    .section_1--citation {
+        grid-area: C;
+        position: relative;
+        bottom: 14em;
+        background: #26408B;
+        color: white;
+        font-variant: small-caps;
+        text-align: center;
+        opacity: 70%;
+        z-index: 1;
+        padding: 0 1rem;
+    }
+}
+
+/* SECTION 2 */
+.section_2 {
+    position: relative;
+    display: grid;
+    gap: 20px;
+    /*background: lightpink;*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-areas:
+        ". . . . . . . . . . . . "
+        "B B B B B B . A A A A . "
+        "B B B B B B . . . . . . "
+        ". . . . . . . . . . . . "
+}
+
+.section_2--texte {
+    grid-area: A;
+    color: white;
+    z-index: 1;
+}
+
+.section_2--image {
+    grid-area: B;
+    display: flex;
+    justify-content: flex-end;
+    transform: scaleX(-1);
+}
+
+.polygone {
+    position: absolute;
+    width: 100%;
+    max-width: 1000px;
+    height: 1500px;
+    background-color: #0B0B0B;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 15%, 100% 60%, 0% 80%);
+}
+
+/* Tablette Section 2 */
+@media(max-width : 800px) {
+    .section_2 {
+        position: relative;
+        display: grid;
+        gap: 20px;
+        /*background: lightpink;*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 0.25fr);
+        grid-template-areas:
+            ". ."
+            "B A"
+            ". ."
+            ". .";
+    }
+
+    .section_2--texte {
+        grid-area: A;
+    }
+
+    .section_2--image {
+        grid-area: B;
+        transform: scaleX(-1);
+    }
+
+    .polygone {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-height: 900px;
+        background-color: #0B0B0B;
+        clip-path: polygon(0% 0%, 100% 10%, 100% 70%, 0% 100%);
+    }
+}
+
+/* Mobile section 2*/
+@media(max-width : 600px) {
+    .section_2 {
+        position: relative;
+        display: grid;
+        gap: 20px;
+        /*background: lightpink;*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 0.5fr);
+        grid-template-areas:
+            "."
+            "B"
+            "A"
+        ;
+    }
+
+    .section_2--texte {
+        grid-area: A;
+    }
+
+    .section_2--image {
+        grid-area: B;
+        transform: scaleX(-1);
+        opacity: 80%;
+    }
+
+    .polygone {
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        max-height: 500px;
+        background-color: #0B0B0B;
+        background-size: cover;
+        clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
+    }
+}
+
+/* Mobile section Spécifique au polygone*/
+@media(max-width : 350px) {
+    .polygone {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        max-height: 800px;
+        background-color: #0B0B0B;
+        background-size: cover;
+        clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
+    }
+}
+
+
+/* SECTION 3 */
+.section_3 {
+    display: grid;
+    gap: 20px;
+    /*background: lightgreen;*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+        ". . . . . . B B B B B B "
+        ". . . . . . B B B B B B "
+        ". . . . . . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        ". . . . . . B B B B B B "
+}
+
+.section_3--texte {
+    grid-area: A;
+}
+
+.section_3--image {
+    grid-area: B;
+}
+
+/*.section_3--imgseule {
+    transform: scaleX(-1);
+}*/
+/* Tablette Section 3 */
+@media(max-width : 800px) {
+    .section_3 {
+        display: grid;
+        gap: 20px;
+        /*background: lightgreen;*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        grid-template-areas:
+            "."
+            "A"
+            "B"
+    }
+
+    .section_3--texte {
+        grid-area: A;
+    }
+
+    .section_3--image {
+        grid-area: B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_3--imgseule {
+        transform: scaleX(-1);
+    }
+}
+
+/* Mobile section 3*/
+@media(max-width : 600px) {
+    .section_3 {
+        display: grid;
+        gap: 20px;
+        /*background: lightgreen;*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        grid-template-areas:
+            "."
+            "A"
+            "B"
+    }
+
+    .section_3--texte {
+        grid-area: A;
+    }
+
+    .section_3--image {
+        grid-area: B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_3--imgseule {
+        transform: scaleX(-1);
+    }
+}
+
+/* SECTION PIED DE PAGE */
+.footer--section_4 {
+    width: auto;
+}
+
+.footer--image {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTENU DU FOOTER */
+.footer--texte {
+    margin: 1rem;
+}
+
+.footer--media {
+    text-align: center;
+}
+
+.footer--sources {
+    text-align: left;
+}
+
+/*SPRITE MEDIA SOCIAUX */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+/* sprite css */
+.menu-sociaux {
+    margin: 4rem 4em 4rem 4rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0rem;
+}
+
+.menu-sociaux__lien {
+    font-size: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    background-image: url(/assets/footer/social-icons-sprite.png);
+    background-repeat: no-repeat;
+}
+
+.menu-sociaux__item:first-child .menu-sociaux__lien {
+    background-position: 0 0;
+}
+
+.menu-sociaux__item:nth-child(2) .menu-sociaux__lien {
+    background-position: -52.5px 0;
+}
+
+.menu-sociaux__item:nth-child(3) .menu-sociaux__lien {
+    background-position: -105px 0;
+}
+
+.menu-sociaux__item:nth-child(4) .menu-sociaux__lien {
+    background-position: -157px 0;
+}
+
+.menu-sociaux__item .menu-sociaux__lien:link,
+.menu-sociaux__item .menu-sociaux__lien:visited {
+    transition:
+        all .2s ease;
+}
+
+.menu-sociaux__item .menu-sociaux__lien:hover,
+.menu-sociaux__item .menu-sociaux__lien:active {
+    background-position-y: -55px;
+}
+
+.sprite {
+    width: 300px;
+    height: 108px;
+    border: 1px #26408B solid;
+    margin: 0 3rem 6rem 3rem;
+    background: url(/assets/footer/social-icons-sprite.png) no-repeat;
+}

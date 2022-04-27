@@ -1,442 +1,180 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
-    <title>TimZines 2022 - Accueil</title>
-    <style>
-        /* @author Ève Février */
-        /* variables */
-        :root {
-            --alice: rgba(240, 248, 255, 0.5);
-            --turquoise: rgba(114, 145, 173, 0.5);
-            --orange: chocolate;
-            --mauve: purple;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        /* base */
-        body {
-            margin: 0;
-        }
-
-        .conteneur{
-            /*max-width: 1200px;*/
-            margin:auto;
-            background-image: linear-gradient(360deg, rgba(114,145,173,1) 0%, rgba(251,251,251,1) 60%, rgba(255,255,255,1) 100%);
-        }
-
-        /* contenu principal - Web Developers list */
-        .flex {
-            /* base sur ul */
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-        @media (min-width: 600px) {
-            .flex {
-                display: flex;
-                flex-wrap: wrap-reverse;
-                flex-direction: row-reverse;
-                justify-content: center;
-            }
-        }
-
-        .flex li {
-            border-radius: 35px;
-            border: 1px solid grey;
-            box-shadow: 4px 4px 6px black;
-            /*background: radial-gradient(#fff 64%, #9198e5);*/
-            background-color: var(--alice);
-            transition: transform 0.3s;
-            text-align: center;
-            /* si on utilise positionnement absolu d'un svg'*/
-            position: relative;
-            /* cacher le reste du svg */
-            overflow: hidden;
-            margin: 3em 2em;
-        }
-        @media(min-width: 600px){
-            .flex li {
-                padding: 0 1em;
-                margin: 1em;
-            }
-        }
-
-        .flex li:hover {
-            transform: scale(110%);
-        }
-
-        /* Border-radius pour une forme ronde ou ovale */
-        .flex h3::before {
-            content: "";
-            display: inline-block;
-            background-color: var(--orange);
-            margin-right: 0.15em;
-            /* hauteur aplatie !!! le rond se fait au survol */
-            height: 2px;
-            width: 15px;
-            border-radius: 50%;
-            transition: height 0.3s;
-        }
-
-        .flex h3:hover::before {
-            background-color: var(--mauve);
-            height: 0.5em;
-        }
-
-        h1,
-        h2,
-        .credits {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-align: center;
-        }
-
-        h2 {
-            font-style: italic;
-            font-variant: small-caps;
-            background-color: #cccccc;
-            transform: skew(-5deg) rotate(-5deg);
-            padding: 0.75em 0 3em;
-            margin-top: 1.5em;
-        }
-
-        header {
-            /*background-color: rgba(114,145,173,1);*/
-            background: linear-gradient(353deg, rgba(210, 105, 30, 1) 0%, rgba(210, 105, 30, 1) 45%, rgba(114, 145, 173, 1) 45%, rgba(114, 145, 173, 1) 100%);
-            padding: 1em 0 1em 0;
-            /*margin-bottom: 5em;*/
-        }
-
-        /* BANDE MAUVE SOUS LE SOUS-TITRE
-           Exemple de SVG de forme trapézoïdale
-           placé en background-image
-           dans un pseudo-élément ::before ou ::after
-           et encodé en data-uri
-           voir https://css-tricks.com/lodge/svg/09-svg-data-uris/
-         */
-        .titre-portfolio {
-            position: relative;
-            min-height: 30vh;
-            background-image: url("images/pokerplanning_tim-unis.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding-top: .25em;
-            text-shadow: 3px 3px 3px white;
-        }
-@media (min-width: 800px) {
-    .titre-portfolio {
-        background-image: url("images/pokerplanning-gr1.jpg");
-        padding-top: 1.25em;
-    }
-}
-        .titre-portfolio::after {
-            position: absolute;
-            bottom:0;
-            background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            content: '';
-            display: block;
-            height: 3em;
-            width: 100%;
-        }
-
-        /* HYPERLIENS INTERACTIVITÉ */
-        a:link {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        h3:hover {
-            /*transform: rotate(-5deg)*/
-        }
-
-        h3 {
-            position: relative;
-            z-index:2;
-            top: 0.5em;
-            transform: scaleY(250%);
-        }
-
-        h3:hover a,
-        h3 a:hover {
-            /* font-size:110%; */
-            text-decoration: none;
-            color: var(--mauve);
-
-        }
-
-        .web-developer a {
-            color: var(--orange);
-        }
-
-        .web-developer a:hover {
-            color: black;
-        }
-
-        /* SÉPARATION ENTRE TitreZine et Web Developer
-           Forme trapézoïdale obtenue en combinant
-           pseudo-élément ::after
-           avec transform: skew + rotate
-         */
-        .web-developer::after {
-            background-color: var(--turquoise);
-            content: " ";
-            display: block;
-            width: 100%;
-            height: 80%;
-            background-size: cover;
-            background-position: center center;
-            position: absolute;
-            bottom: -1.5em;
-            left: -2px;
-            z-index: 1;
-            transform: skew(78deg) rotate(355deg);
-        }
-        .par {
-            vertical-align: super;
-            position: relative;
-            top: -20px;
-            z-index: 2;
-        }
-
-        .web-developer img {
-            width: 60px;
-            border: 1px solid darkgrey;
-            border-radius: 50%;
-            filter: saturate(0.5);
-            transition: all 1s;
-            position: relative;
-            z-index: 2;
-            margin-top: 1em;
-        }
-        .web-developer a:hover img{
-            filter: saturate(2);
-            transform: rotate(360deg);
-        }
-        .exemples,
-        footer{
-            text-align: center;
-            padding:3em;
-        }
-        .exemples{
-            margin-top: 2em;
-            background-color: #eebf9e;
-        }
-        @media (min-width: 700px) {
-            .exemples{
-                margin-top: 0;
-                align-self: flex-start;
-                position: relative;
-                top:-10em;
-                right:3em;
-                border-radius: 50%;
-                border-left: 20px dashed var(--orange);
-                box-shadow: 5px 5px 5px black;
-            }
-        }
-
-        footer{
-            background-color: rgba(114,145,173,1);
-            /*padding:3em;*/
-        }
-        .credits{
-            margin: 0;
-        }
-        .exemples ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .exemples li {
-            margin: 1rem 0;
-        }
-        @media (min-width: 700px) {
-            main.conteneur{
-                display: flex;
-                flex-direction: row;
-                margin-top: 2em;
-            }
-            main.conteneur aside{
-                min-width: 20em;
-            }
-        }
-
-
-    </style>
+    <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet" media="all">
 </head>
 
-<body>
-<header>
-    <h1>TimZines, design digital d'actualités culturelles</h1>
-    <h2 class="titre-portfolio">portfolio pour le cours Intégration II</h2>
-</header>
-<main class="conteneur">
-    <ul class="flex portfolio">
-        <li>
-            <h3><a href="andreannearchambault/index.html">Les contes des frères Grimm</a></h3>
-            <p class="web-developer"><span class="par">par Andréanne </span><a
-                    href="https://github.com/andreannearchambault"><img
-                    src="https://avatars.githubusercontent.com/u/98476814" alt="andreannearchambault"></a></p>
-        </li>
-        <li>
-            <h3><a href="chalarakbergeronstpierre/index.html">La liberté de Britney Spears</a></h3>
-            <p class="web-developer"><span class="par">par Chalarak </span>&nbsp;<a
-                    href="https://github.com/chalarakbergeronstpierre"><img
-                    src="https://avatars.githubusercontent.com/u/98475391" alt="chalarakbergeronstpierre"></a></p>
-        </li>
-        <li>
-            <h3><a href="louisemilevromet/index.html">NFT non-fungible token</a></h3>
-            <p class="web-developer"><span class="par">par Louis-Émile </span>&nbsp<a
-                    href="https://github.com/louisemilevromet"><img src="https://avatars.githubusercontent.com/u/98475140"
-                                                                    alt="louisemilevromet"></a></p>
-        </li>
-        <li>
-            <h3><a href="lproy/index.html">Tom Holland</a></h3>
-            <p class="web-developer"><span class="par">par Louis-Philippe </span>&nbsp;
-                <a href="https://github.com/lproy">
-                    <img src="https://avatars.githubusercontent.com/u/93927147?v=4" alt="lproy">
-                </a>
+<body class="body">
+    <a href="#contenu" class="screen-reader-only focusable"> Allez au contenu</a>
+    <div class="header">
+        <header class="header--image" role="banner">
+            <picture>
+                <source media="(max-width: 600px)" srcset="assets/header/logo.svg" />
+                <img src="assets/header/logo.svg" alt="Les grandes ballerines de Serge Lifa, Yvette Chauviré" />
+            </picture>
+        </header>
+
+    </div>
+    <main class="main" role="main">
+        <div class="conteneur">
+            <section class="container section_titre">
+                <p class="header--filariane">Accueil > Danse > 2016 > Une étoile s'éteint</p>
+                <h1 id="contenu">Une étoile s'éteint</h1>
+                <h3 class="Accroche">DISPARITION - La grande ballerine française Yvette Chauviré vient de mourir à l'âge
+                    de
+                    99
+                    ans. Étoile fétiche de Serge Lifar, Giselle inégalée, elle a incarné le meilleur de la danse
+                    française.
+                </h3>
+                <p>Ariane Bavelier</p>
+                <p>19/10/2016</p>
+            </section>
+
+            <section class="container section_1" role="section1">
+                <div class="section_1--texte">
+                    <h2>Yvette Chauviré</h2>
+                    <p>Elle recevait dans son appartement de la place du Commerce à Paris.
+                        <br>
+                        Elle vivait entourée de cygnes de porcelaine, et cherchait parfois dans l'éclat de ces figurines
+                        l'écho
+                        de
+                        ses souvenirs, si lointains qu'ils l'avaient fuie.
+                        <br>
+                        Yvette Chauviré a pourtant été la plus grande danseuse française du XX° siècle, l'égale de Maïa
+                        Plissetsakaïa pour la Russie, de Margot Fonteyn pour l'Angleterre ou de Suzanne Farrel pour les
+                        Etats
+                        Unis.
+                        <br>
+                        La seule française désignée par le titre de «Prima ballerina assoluta».
+                    </p>
+                </div>
+                <div class="section_1--image">
+                    <picture class="image">
+                        <source media="(max-width: 600px)" srcset="assets/section1/yvette_300.jpg" />
+                        <source media="(min-width: 601px)" srcset="assets/section1/yvette_470.jpg" />
+                        <img src="" alt="Les grandes ballerines de Serge Lifa, Yvette Chauviré" />
+                    </picture>
+                </div>
+
+                <div class="section_1--citation">
+                    <p>
+                        <q>
+                            La danse est une forme de foi, une espérance. C’est une aspiration, le besoin d’atteindre un
+                            univers,
+                            une atmosphère, un état qui vous fait progresser, la recherche d’une vérité
+                        </q>
+                        <br>
+                        <span>Yvette Chauviré, danseuse étoile </span>
+                    </p>
+                </div>
+            </section>
+
+            <section class="container section_2" role="section2">
+                <div class="polygone">
+                    <div class="section_2--image">
+                        <picture class="">
+                            <source media="(max-width: 600px)" srcset="assets/section2/ballet_noir_250.jpg" />
+                            <source media="(min-width: 601px)" srcset="assets/section2/ballet_noir_490.jpg" />
+                            <img src="" alt="Les grandes ballerines de Serge Lifa, Yvette Chauviré" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="section_2--texte">
+                    <h2>Prima Ballerina Absoluta</h2>
+                    <p>Le titre de « prima ballerina assoluta ((it)première ballerine absolue) était originellement
+                        inspiré
+                        par
+                        les
+                        maîtres du ballet italien du début du Romantisme (b) , et désignait une ballerine considérée
+                        comme
+                        douée
+                        de
+                        talents exceptionnels, comme étant au-dessus du niveau des autres principales ballerines.
+                    </p>
+                </div>
+            </section>
+
+            <section class="container section_3" role="section3">
+                <div class="section_3--image">
+                    <figure>
+                        <picture class="section_3--imgseule">
+                            <source media="(max-width: 600px)" srcset="assets/section3/pierina_300.jpg" />
+                            <source media="(min-width: 601px)" srcset="assets/section3/pierina_470.jpg" />
+                            <img src="" alt="Les grandes ballerines, Pierina" />
+                        </picture>
+                        <p>Pierina Legnani</p>
+                    </figure>
+                </div>
+
+                <div class="section_3--texte">
+                    <h2>Les Origines</h2>
+                    <p>Ce titre fut attribué pour la première fois de manière officielle à Pierina Legnani (b) par le
+                        maître
+                        de ballet (b) français du Ballet impérial de Saint-Pétersbourg (b) , Marius Petipa (b) , en 1894
+                        (b).
+                        <br>
+                        Il s'inspirait des maîtres de ballets italiens de l'époque du ballet romantique (b) qui
+                        distinguaient des ballerines exceptionnelles.
+                        <br>
+                        Marius Petipa considérait Pierina Legnani (b) , qui dansa au Ballet impérial de 1893 à 1901,
+                        comme
+                        la danseuse suprême de toute l'Europe.
+                        <br>
+                        La deuxième ballerine à recevoir ce titre fut Mathilde Kschessinska (b) , elle aussi issue du
+                        Théâtre Mariinsky (b) , mais Petipa désapprouva ce choix et y voyait l'influence des faveurs
+                        impériales (la danseuse fut la maîtresse de Nicolas II de Russie (b)).
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <section class="footer--section_4">
+            <picture class="footer--image">
+                <source media="(max-width: 600px)" srcset="assets/pied-de-page/Ballerine_blanc_320.jpg" />
+                <source media="(min-width: 601px)" src="assets/pied-de-page/Ballerine_blanc_600.jpg" />
+                <img src="assets/pied-de-page/Ballerine_blanc_1440.jpg" alt="Les grandes ballerines" />
+            </picture>
+        </section>
+        <div class="footer--texte">
+            <div class="footer--media">
+                <p class="footer--sprite">
+                <ul class="menu-sociaux">
+                    <li class="menu-sociaux__item">
+                        <a class="menu-sociaux__lien" href="https://www.facebook.com">Facebook</a>
+                    </li>
+                    <li class="menu-sociaux__item">
+                        <a class="menu-sociaux__lien" href="https://twitter.com">Twitter</a>
+                    </li>
+                    <li class="menu-sociaux__item">
+                        <a class="menu-sociaux__lien" href="https://www.youtube.com">YouTube</a>
+                    </li>
+                    <li class="menu-sociaux__item">
+                        <a class="menu-sociaux__lien" href="https://www.instagram.com">Instagram</a>
+                    </li>
+                </ul>
+                </p>
+                <p>Michel Kingma-Lord @ Cégep de Sainte-Foy, Design d’interface II, 2022
+                </p>
+            </div>
+            <p class="footer--sources">Source de l’article:
+                https://www.lefigaro.fr/culture/2016/10/19/03004-20161019ARTFIG00350-disparition-d-yvette-chauvire-etoile-absolue.php
+
+                Sources des photos:
+                Yvette Chauviré: https://i.pinimg.com/originals/08/3a/4e/083a4e43245d3eb161194baa86cf610c.jpg
+                Ballerine noirceur:
+                https://www.pexels.com/photo/unrecognizable-ballerina-silhouette-jumping-with-raised-arms-6533952/
+                Pierina Legnani: https://www.gramilano.com/2020/11/pierina-legnani-more-than-32-fouettes/
+                Ballerine lumière: https://www.pexels.com/photo/grayscale-photography-of-a-ballerina-dancing-8502130/
             </p>
-        </li>
-        <li>
-            <h3><a href="clodianec/index.html">Danse du Monde</a></h3>
-            <p class="web-developer"><span class="par">par Clodiane </span>&nbsp;<a
-                    href="https://github.com/clodianec"><img src="https://avatars.githubusercontent.com/u/98475192"
-                                                             alt="clodianec"></a></p>
-        </li>
-        <li>
-            <h3><a href="maximegraignon/index.html">La vie de Stromae</a></h3>
-            <p class="web-developer"><span class="par">par Maxime </span>&nbsp;<a
-                    href="https://github.com/maximegraignon"><img src="https://avatars.githubusercontent.com/u/98475284"
-                                                                  alt="maximegraignon"></a></p>
-        </li>
-        <li>
-
-            <h3><a href="michelKingmaLord/index.html">Yvette Chauviré</a></h3>
-            <p class="web-developer"><span class="par">par Michel </span>&nbsp;<a
-                    href="https://github.com/michelkingmalord"><img src="https://avatars.githubusercontent.com/u/98476389"
-                                                                    alt="michelKingmaLord"></a></p>
-
-        </li>
-        <li>
-            <h3><a href="BenjaminBrouillette/index.html">Don't Look Up - Déni cosmique</a></h3>
-            <p class="web-developer"><span class="par">par Benjamin </span>&nbsp;<a
-                    href="https://github.com/BenjaminBrouillette"><img
-                    src="https://avatars.githubusercontent.com/u/98479344?v=4" alt="BenjaminBrouillette"></a></p>
-        </li>
-        <li>
-            <h3><a href="marianneanctil/index.html">Départ en hiatus</a></h3>
-            <p class="web-developer"><span class="par">par Marianne </span>&nbsp;<a
-                    href="https://github.com/marianneanctil"><img src="https://avatars.githubusercontent.com/u/98492645"
-                                                                  alt="marianneanctil"></a></p>
-        </li>
-        <li>
-            <h3><a href="gisellehessen/index.html">Shang-Shi</a></h3>
-            <p class="web-developer">
-                <span class="par">par Giselle </span>&nbsp;<a href="https://github.com/gisellehessen"><img
-                    src="https://avatars.githubusercontent.com/u/98491353" alt="gisellehessen"></a>
-            </p>
-
-        </li>
-        <li>
-            <h3><a href="christopherbyatt/index.html">The Batman: Critique qui crie vengeance</a></h3>
-            <p class="web-developer"><span class="par">par Christopher </span>&nbsp;<a
-                    href="https://github.com/christopherbyatt"><img src="https://avatars.githubusercontent.com/u/98491337"
-                                                                    alt="christopherbyatt"></a></p>
-        </li>
-        <li>
-            <h3><a href="jaysavard/index.html">Le titre du zine</a></h3>
-            <p class="web-developer"><span class="par">par Jérémi </span>&nbsp;<a
-                    href="https://github.com/jaysavard "><img src="https://avatars.githubusercontent.com/u/98488089"
-                                                              alt="jaysavard"></a></p>
-        </li>
-        <li>
-            <h3><a href="darengarneaudionne/index.html">WandaVision</a></h3>
-            <p class="web-developer"><span class="par">par Daren </span>&nbsp;<a
-                    href="https://github.com/darengarneaudionne"><img src="https://avatars.githubusercontent.com/u/98491387"
-                                                                      alt="darengarneaudionne"></a></p>
-        </li>
-        <li>
-            <h3><a href="juscarr/index.html" lang="en">The Kid Laroi</a></h3>
-            <p class="web-developer"><span class="par">par Justin </span>
-                <a href="https://github.com/juscarr"><img src="https://avatars.githubusercontent.com/u/98491230"
-                                                          alt="juscarr"></a>
-            </p>
-        </li>
-        <li>
-            <h3><a href="amanneeb/katas-grilles-css.html">Stromae et “Multitude”</a></h3>
-            <p class="web-developer"><span class="par">par Anaïs </span>&nbsp;<a
-                    href="https://github.com/amanneeb"><img src="https://avatars.githubusercontent.com/u/98492567"
-                                                            alt="amanneeb"></a></p>
-        </li>
-        <li>
-            <h3><a href="rosaliecsfoy/katas-grilles-css.html">Titre TRÈS looooooooooooooooonnnnnnnngggggggggg</a></h3>
-            <p class="web-developer"><span class="par">par Rosalie </span>&nbsp;<a
-                    href="https://github.com/rosaliecsfoy"><img src="https://avatars.githubusercontent.com/u/92270297"
-                                                                alt="rosaliecsfoy"></a></p>
-        </li>
-        <li>
-            <h3><a href="isaacdube/katas-grilles-css.html">Osheaga</a></h3>
-            <p class="web-developer"><span class="par">par Isaac </span>&nbsp;<a
-                    href="https://github.com/isaacdube"><img src="https://avatars.githubusercontent.com/u/98491693"
-                                                             alt="isaacdube"></a></p>
-        </li>
-        <li>
-            <h3><a href="AlexisPerron17/index.html">Le nouveau Spider-Man</a></h3>
-            <p class="web-developer"><span class="par">par Alexis </span>&nbsp;<a
-                    href="https://github.com/AlexisPerron17"><img src="https://avatars.githubusercontent.com/u/98492293"
-                                                                  alt="AlexisPerron17"></a></p>
-        </li>
-        <li>
-            <h3><a href="matteaue/index.html"><cite lang="en">Uncharted avec Tom Holland</cite> : tout est mieux dans le jeu</a>
-            </h3>
-            <p class="web-developer"><span class="par">par Éloïse </span>&nbsp;<a
-                    href="https://github.com/matteaue"><img src="https://avatars.githubusercontent.com/u/98493048"
-                                                            alt="matteaue"></a></p>
-        </li>
-    </ul>
-
-    <aside class="exemples">
-        <h1>Exemples</h1>
-        <ul>
-            <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes -
-                exemple</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/01_deux-grilles-successives.html">Grilles successives - 12
-                colonnes de 1fr</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/02_rythmeVertical-fonctionMinmax.html">Rythme vertical
-                chevauchement de 20px</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/03_superposition.html">Superposition avec grid-area défini
-                avec lignes</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/v2.html">Clip-path, object-fit et object-position</a></li>
-            <li><a href="cadre-pedagogique/demo-grilles-css/04_lproy/index.html">Forme irrégulière (polygone svg) en arrière-plan</a></li>
-        </ul>
-    </aside>
-
-</main>
-<footer>
-
-    <p class="credits">
-        <small>
-            <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
-            <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
-        </small>
-    </p>
-</footer>
+        </div>
+    </footer>
 </body>
 
 </html>
