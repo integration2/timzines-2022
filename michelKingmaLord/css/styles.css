@@ -483,7 +483,7 @@ Section
     width: 50px;
     height: 50px;
     margin-right: 1rem;
-    background-image: url(/assets/Footer/social-icons-sprite.png);
+    background-image: url(/assets/footer/social-icons-sprite.png);
     background-repeat: no-repeat;
 }
 
@@ -519,5 +519,5 @@ Section
     height: 108px;
     border: 1px #26408B solid;
     margin: 0 3rem 6rem 3rem;
-    background: url(/assets/Footer/social-icons-sprite.png) no-repeat;
+    background: url(/assets/footer/social-icons-sprite.png) no-repeat;
 }
