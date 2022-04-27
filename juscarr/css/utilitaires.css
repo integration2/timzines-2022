@@ -1,10 +1,13 @@
 /* Utilitaires
+ *** vaiables
  *** Clearfix
  *** Box-Sizing
  *** images
  *** Accessibilité
  *** validations
    ========================================================================== */
+/** Variables */
+
 /*** Clearfix ***/
 .clearfix::after {
     content: "";
@@ -22,7 +25,7 @@ html {
 }
 
 /*** Fluidifier les images ***/
-img{
+img {
     max-width: 100%;
 }
 
@@ -44,7 +47,7 @@ img{
 .screen-reader-only.focusable:active,
 .screen-reader-only.focusable:focus,
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus{
+.visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -54,21 +57,24 @@ img{
 }
 
 /*** validations ***/
-.icone{
+.icone {
     display: inline-block;
-    width:24px;
-    height:24px;
-    background-image:url("../images/good-warning-error.png");
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/good-warning-error.png");
     background-size: cover;
     position: relative;
-    top:3px;
+    top: 3px;
 }
-.icone--ok{
-    background-position:0 0;
+
+.icone--ok {
+    background-position: 0 0;
 }
-.icone--avertissement{
-    background-position:49px 0;
+
+.icone--avertissement {
+    background-position: 49px 0;
 }
-.icone--erreur{
-    background-position:99px 0;
+
+.icone--erreur {
+    background-position: 99px 0;
 }
