@@ -469,12 +469,14 @@ Section
 
 /* sprite css */
 .menu-sociaux {
-    margin: 4rem 4em 4rem 4rem;
+    margin: 1rem 1em 1rem 1rem;
     list-style-type: none;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     padding: 0rem;
+    resize: inherit;
 }
 
 .menu-sociaux__lien {
@@ -484,6 +486,7 @@ Section
     height: 50px;
     margin-right: 1rem;
     background-image: url(/assets/footer/social-icons-sprite.png);
+    background-size: 425%;
     background-repeat: no-repeat;
 }
 
