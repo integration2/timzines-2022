@@ -1,0 +1,6 @@
+<svg height="55" width="255">
+    <filter id="shadow">
+        <feDropShadow dx="2" dy="2" stdDeviation="1"/>
+    </filter>
+    <polygon points="20,0 0,50 60,40 190,40 250,50 230,0" style="fill:#ccc;" filter="url(#shadow)"/>
+</svg>
