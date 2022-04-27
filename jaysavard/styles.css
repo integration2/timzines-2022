@@ -1,7 +1,219 @@
-* {
-font-family: Poiret -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h1{
+font-family: urw-form, sans-serif;
+font-weight: 600;
+font-style: italic;
+font-size: 14.2rem;
+
+}
+
+h2{
+font-family: poiret-one, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 8rem;
+}
+
+p{
+font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+font-size: 2.8rem;
+color: #FFFBFC;
 }
 
 .logo{
     max-width: 100%;
+}
+
+.grid-header {
+    display: grid; 
+    grid-template-columns: 200px 3fr 5fr 200px; 
+    /* grid-template-rows: 0.7fr 1.3fr 1fr;  */
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". logo . . ."
+      ". . titre . ."
+      ". intro intro . ."; 
+  }
+
+  h1, 
+  .titre h2 {
+    margin: 0;
+    line-height: 1;
+  }
+  .grid-header {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 200px 3fr 2fr 2.9fr 200px;
+    grid-template-rows: 0.6fr 0fr 0fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". logo . . ."
+      ". . titre titre ."
+      ". intro intro . ."; 
+  }
+  .intro { 
+      grid-area: intro;
+      margin-top: 10em;
+      font-size: 3rem;
+    }
+  .titre { grid-area: titre; }
+  .logo { grid-area: logo; }
+
+  .rectangle-haut__bleu{
+  position: absolute;
+  width: 2000.31px;
+  height: 2000.55px;
+  left: -490.43px;
+  top: 1290.6px;
+  z-index: -1;
+  
+  background: #36454F;
+  transform: rotate(-50.16deg);
+  }
+  .rectangle-haut__gris{
+    position: absolute;
+    width: 972px;
+    height: 1095px;
+    left: 887px;
+    top: 1306px;
+    z-index: -2;
+    
+    background: transparent;
+    transform: rotate(-90deg);
+    }
+
+  .triangle{
+    margin-right: -12.5%;
+    color: #C4C4C4;
+    overflow: hidden;
+    fill: #C4C4C4;
+  }
+
+.section1{
+  background-color: #36454F;
+}
+
+.grid-section1 {
+  display: grid; 
+  grid-template-columns: 200px 5fr 1fr 3fr 200px; 
+   /* grid-template-rows: 1fr 1fr 1fr 1fr;  */
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". image1 image1 h2-zaire ."
+    ". texte-p2 texte-p2 texte-p1 ."
+    ". . texte-p3 texte-p3 ."
+    ". cite1 cite1 cite1 ."; 
+}
+.image1 { grid-area: image1; }
+.texte-p2 { grid-area: texte-p2; }
+.h2-zaire { grid-area: h2-zaire; }
+.texte-p3 { grid-area: texte-p3; }
+.texte-p1 { grid-area: texte-p1; }
+.cite1 { grid-area: cite1; }
+
+.image1{
+  max-width: 100%;
+  margin-right: 10%;
+}
+
+.h2-zaire{
+  align-items: top;
+  color: #FFFBFC;
+  -webkit-text-stroke-width: 6px;
+
+}
+.texte-p1{
+  display: flex;
+  -webkit-text-stroke-width: 0px;
+
+}
+
+.texte-p2{
+  margin-right: 20%;
+}
+
+.cite1{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  background-color: #c4c4c4;
+  font-size: 3.5rem;
+}
+
+.grid-section2 {
+  display: grid; 
+  grid-template-columns: 200px 4fr 4fr 200px; 
+  /* grid-template-rows: 1fr 1fr 1fr 1fr;  */
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "image2 image2 image2 image2"
+    ". titre2 titre2 ."
+    ". texte2-p1 cite2 ."
+    ". texte2-p1 . ."
+    ". . texte2-p2 ."; 
+}
+.image2 { grid-area: image2; }
+.titre2 { grid-area: titre2; }
+.texte2-p1 { grid-area: texte2-p1; }
+.cite2 { grid-area: cite2; }
+.texte2-p2 { grid-area: texte2-p2; }
+
+
+
+  .image2{
+    max-width: 100%;
+}
+
+.titre2{
+  color: white;
+  stroke: 3px;
+  -webkit-text-stroke-width: 6px;
+
+}
+
+.section2{
+  background: black;
+  z-index: -3;
+  padding-bottom: 60vh;
+}
+
+.cite2{
+  background: #36454F;
+  display: inline-block;
+  height: 1500px;
+  margin: 20%;
+  font-size: 4rem;
+  color: white;
+  padding-top: 260px;
+  line-height: 5rem;
+}
+
+.grid-section3 {
+  display: grid; 
+  grid-template-columns: 200px 0.8fr 1.2fr 200px; 
+  /* grid-template-rows: 1fr 1fr 1fr;  */
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . titre3 ."
+    ". texte3 image3 ."
+    ". . cite3 ."; 
+}
+
+.section3{
+  background:#36454F
+}
+.titre3 { grid-area: titre3; }
+.texte3 { grid-area: texte3; }
+.image3 { grid-area: image3; }
+.cite3 { grid-area: cite3; }
+
+.titre3{
+  color: white;
+  padding-left: 300px;
+  -webkit-text-stroke-width: 6px;
+ 
+}
+
+  .image3{
+    max-width: 100%;
+    margin-left: 10%;
 }
