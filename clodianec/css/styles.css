@@ -7,13 +7,20 @@
  * Normalize
  * Utilitaires
  * Charte typographique
- * Ombre
  * Mise en page
- *** entête
+ *** background
+ *** header
+  **** logo
  *** main
- *** interactivité
+  **** paragraphes-intro
+   ***** grid citation
+  **** contenu
+   ***** grid contenu
+  **** conclusion
  *** footer
- *** grids
+  **** lien réseaux sociaux
+  **** info footer
+  **** grid footer
  */
 
 
@@ -30,53 +37,20 @@
 @import url(typo.css);
 
 
-/* Ombre 
-   ========================================================================== */
-@media (max-width: 800px){
-   header,
-   footer,
-   .paragraphes_intro,
-   .contenu,
-   #conclusion{
-      box-shadow:
-       var(--box-shadow-offset-x)
-       var(--box-shadow-offset-y)
-       var(--box-shadow-blur)
-       var(--box-shadow-spread)
-       var(--box-shadow-color);
-   }
-}
-   @media (min-width: 800px){
-   header,
-   footer, 
-   main{
-      box-shadow:
-       var(--box-shadow-offset-x)
-       var(--box-shadow-offset-y)
-       var(--box-shadow-blur)
-       var(--box-shadow-spread)
-       var(--box-shadow-color);
-   }
-}
 
 
 /* Mise en page
    ========================================================================== */
-main{
-   max-width: 300px;
-   margin: auto;
-}
-@media(min-width: 600px){
-   main{
-      max-width: 540px;
-   }
-}
-@media(min-width: 800px){
-   main{
-      max-width: 1000px;
-   }
-}
 
+/*** background
+   ========================================================================== */
+header{
+   text-align: center;
+   padding-bottom: 20px;
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+}
 body{
    background-color: var(--color-Light-G);
    background-image: url(../images/fabric_plaid.png);
@@ -88,20 +62,42 @@ body{
       background-image: url(../images/concrete_wall_2.png);
       background-blend-mode: multiply;
       margin: 0;
-         padding: 20px;
+      padding: 20px;
    }
 }
-
-/*** entête
-   ========================================================================== */
-header{
-   text-align: center;
-   padding-bottom: 20px;
+.paragraphes_intro{
    background-color: var(--color-Dark-G);
    background-image: url(../images/concrete_wall_2.png);
    background-blend-mode: multiply;
-   margin: 0;
 }
+.contenu{
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+}
+#conclusion{
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+}
+
+/*** header
+   ========================================================================== */
+header{
+   margin: 0;
+   box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
+}
+#img_entete{
+   width: 100%;
+}
+
+/**** logo
+   ========================================================================== */
 #logo{
    max-width: 265px;
 }
@@ -115,16 +111,61 @@ header{
       max-width: 575px;
    }
 }
-
-#img_entete{
-   width: 100%;
+  
+/*** main
+   ========================================================================== */
+main{
+   max-width: 300px;
+   margin: auto;
+}
+@media(min-width: 600px){
+   main{
+      max-width: 540px;
+   }
+}
+@media(min-width: 800px){
+   main{
+      max-width: 1000px;
+      box-shadow:
+         var(--box-shadow-offset-x)
+         var(--box-shadow-offset-y)
+         var(--box-shadow-blur)
+         var(--box-shadow-spread)
+         var(--box-shadow-color);
+   }
 }
 
-/* Padding de l'introduction */
+/**** paragraphes-intro
+   ========================================================================== */
+@media(max-width: 800px){
+   .paragraphes_intro{
+      box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
+   } 
+}
+
+#accroche{
+   padding-top: 20px;
+}
+#introduction{
+   padding-bottom: 20px;
+}
 #accroche,
 #citation,
 #introduction{
    margin: 50px 10px;
+}
+@media(min-width: 600px){
+   #accroche{
+      padding-top: 20px;
+   }
+   #introduction{
+      padding-bottom: 20px;
+   }
 }
 @media(min-width: 800px){
    #accroche,
@@ -135,7 +176,6 @@ header{
    }
 }
 
-/* Citation */
 #texteCitation{
    margin-top: 8.5rem;
 }
@@ -156,40 +196,33 @@ header{
    }
 }
 
-/*** main
+/***** grid citation
    ========================================================================== */
-.paragraphes_intro{
-   background-color: var(--color-Dark-G);
-   background-image: url(../images/concrete_wall_2.png);
-   background-blend-mode: multiply;
+#citation{
+   margin: auto;
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: 1fr 8fr 1fr;
+   grid-template-areas: 
+      "a c b";
 }
-.contenu{
-   background-color: var(--color-Dark-G);
-   background-image: url(../images/concrete_wall_2.png);
-   background-blend-mode: multiply;
+.apostrophe1{
+   grid-area: a;
 }
-#conclusion{
-   background-color: var(--color-Dark-G);
-   background-image: url(../images/concrete_wall_2.png);
-   background-blend-mode: multiply;
-   padding: 10px 20px;
-   width: 300px;
-   margin: 25px auto;
+.apostrophe2{
+  grid-area: b;
+}
+#texteCitation{
+   grid-area: c;
 }
 
+/**** contenu
+   ========================================================================== */
 .titre_secondaire,
 .texte_contenu{
    text-align: left;
    padding: 0 10px;
 }
-
-#accroche{
-   padding-top: 20px;
-}
-#introduction{
-   padding-bottom: 20px;
-}
-
 .contenu{
    margin-top: 40px;
    padding: 20px 0;
@@ -199,19 +232,6 @@ header{
    .image_contenu{
       float: left;
       padding: 20px;
-   }
-
-   #accroche{
-      padding-top: 20px;
-   }
-   #introduction{
-      padding-bottom: 20px;
-   }
-
-   #conclusion{
-      padding: 10px 20px;
-      width: 540px;
-      margin: 25px auto;
    }
 }
 @media(min-width: 800px){
@@ -231,137 +251,154 @@ header{
       margin: 75px 0;
    }
 }
+@media(max-width: 800px){
+   .contenu{
+      box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
+   } 
+}
 
-
-/* Couleur d'arrière plan générale et du main */
-
-/*** interactivité
+/***** grid contenu
    ========================================================================== */
-   /* icones réseaux sociaux */
-   .lien_sociaux{
-      background-image: url(../images/icones.png);
-      display: inline-block;
-      width: 50px;
-      height: 50px;
+@media(min-width: 800px){
+   .contenu.impair{
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 370px auto 95px;
+      grid-template-areas: 
+         "i t t"
+         "i p .";
    }
-   .instagram{
-      background-position: 0px 0px;
+   .contenu.pair{
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 95px auto 370px;
+      grid-template-areas: 
+         "t t i"
+         ". p i";
    }
-   .twitter{
-      background-position: 50px 0px;
+   .image_contenu{
+      grid-area: i;
    }
-   .facebook{
-      background-position: 100px 0px;
+   .texte_contenu{
+      grid-area: p;
    }
-   
-   .twitter:hover,
-   .twitter:active{
-      background-position: 50px 50px;
+   .titre_secondaire{
+      grid-area: t;
    }
-   .instagram:hover,
-   .instagram:active{
-      background-position: 0px 50px;
+}
+
+/**** conclusion
+   ========================================================================== */
+#conclusion{
+   padding: 10px 20px;
+   width: 300px;
+   margin: 25px auto;
+}
+@media(min-width: 600px){
+   #conclusion{
+      padding: 10px 20px;
+      width: 540px;
+      margin: 25px auto;
    }
-   .facebook:hover,
-   .facebook:active{
-      background-position: 100px 50px;
+}
+@media (max-width: 800px){
+   #conclusion{
+      box-shadow:
+       var(--box-shadow-offset-x)
+       var(--box-shadow-offset-y)
+       var(--box-shadow-blur)
+       var(--box-shadow-spread)
+       var(--box-shadow-color);
    }
+}
 
 /*** footer
    ========================================================================== */
-   footer{
-      padding: 20px 10px;
-      background-color: var(--color-Dark-G);
-      background-image: url(../images/concrete_wall_2.png);
-      background-blend-mode: multiply;
-      margin: 0;
-   }
-   #joindre{
-      margin: auto;
-      text-align: center;
-   }
-   #copyright,
-   #avertissement{
-      margin: auto;
-      text-align: center;
-   }
-   #avertissement{
-      margin-top: 25px;
-   }
-   #copyright{
-      padding-bottom: 25px;
-   }
-/* Style du pied de page */
+footer{
+   padding: 20px 10px;
+   background-color: var(--color-Dark-G);
+   background-image: url(../images/concrete_wall_2.png);
+   background-blend-mode: multiply;
+   margin: 0;
+   box-shadow:
+      var(--box-shadow-offset-x)
+      var(--box-shadow-offset-y)
+      var(--box-shadow-blur)
+      var(--box-shadow-spread)
+      var(--box-shadow-color);
+}
 
-/*** grids
+/**** lien réseaux sociaux
    ========================================================================== */
-   /* main */
-   @media(min-width: 800px){
-      .contenu.impair{
-         display: grid;
-         grid-gap: 20px;
-         grid-template-columns: 370px auto 95px;
-         grid-template-areas: 
-            "i t t"
-            "i p .";
-      }
-      .contenu.pair{
-         display: grid;
-         grid-gap: 20px;
-         grid-template-columns: 95px auto 370px;
-         grid-template-areas: 
-            "t t t"
-            "p p i";
-      }
+.lien_sociaux{
+   background-image: url(../images/icones.png);
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+}
+.instagram{
+   background-position: 0px 0px;
+}
+.twitter{
+   background-position: 50px 0px;
+}
+.facebook{
+   background-position: 100px 0px;
+}
 
-      .image_contenu{
-         grid-area: i;
-      }
-      .texte_contenu{
-         grid-area: p;
-      }
-      .titre_secondaire{
-         grid-area: t;
-      }
-   }
-   
+.twitter:hover,
+.twitter:active{
+   background-position: 50px 50px;
+}
+.instagram:hover,
+.instagram:active{
+   background-position: 0px 50px;
+}
+.facebook:hover,
+.facebook:active{
+   background-position: 100px 50px;
+}
 
-   /* footer */
-   @media (min-width: 600px) {
-     .info_footer{
-         max-width: 1000px;
-         margin: auto;
-         display: grid;
-         grid-gap: 20px;
-         grid-template-columns: 6fr 4fr;
-         grid-template-areas: 
-            "s p";
-      }
+/**** info footer
+   ========================================================================== */
+#joindre{
+   margin: auto;
+   text-align: center;
+}
+#copyright,
+#avertissement{
+   margin: auto;
+   text-align: center;
+}
+#avertissement{
+   margin-top: 25px;
+}
+#copyright{
+   padding-bottom: 25px;
+}
 
-      .sources{
-         grid-area: s;
-      }
-      .info{
-         grid-area: p;
-      } 
-   }
+/**** grid footer
+   ========================================================================== */
+@media (min-width: 600px) {
+   .info_footer{
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 6fr 4fr;
+      grid-template-areas: 
+         "s p";
+    }
 
-   /* citation */
-      #citation{
-          margin: auto;
-          display: grid;
-          grid-gap: 20px;
-          grid-template-columns: 1fr 8fr 1fr;
-          grid-template-areas: 
-             "a c b";
-       }
- 
-       .apostrophe1{
-          grid-area: a;
-       }
-       .apostrophe2{
-         grid-area: b;
-      }
-       #texteCitation{
-          grid-area: c;
-      }
+    .sources{
+      grid-area: s;
+    }
+    .info{
+      grid-area: p;
+   } 
+}
