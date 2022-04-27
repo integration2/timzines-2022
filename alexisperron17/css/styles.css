@@ -1,0 +1,252 @@
+/* Utilitaires
+   ===================================================================== */
+   @import url(utilitaires.css);
+
+/* Grilles
+   ===================================================================== */
+   @import url(grilles.css);
+
+/* Normalize
+   ===================================================================== */
+   @import url(normalize.css);
+
+/* Normalize
+   ===================================================================== */
+   @import url(typo.css);
+
+body{
+   background-color:#3B3936;
+}
+
+/* ENTETE */
+
+.entete__titre p {
+   font-family: "Ayuthaya", sans-serif;
+}
+.entete {
+   background-color: #486966;
+   display: flex;
+}
+
+@media(max-width:799px) {
+.logo {
+   margin-top: 1rem;
+   width: 30%;
+}
+.entete__titre p:first-child {
+   font-size: 2.25rem;
+   position: relative;
+   top: -6rem;
+   margin-left: 4rem;
+}
+.entete__titre p:nth-child(2) {
+   font-size: 1.25rem;
+   position: relative;
+   top: -7rem;
+}
+}
+
+@media(min-width:800px) {
+.picture__entete {
+   display: flex;
+   justify-content: left;
+}
+
+.logo {
+   width: 100%;
+}
+}
+
+
+@media (min-width: 800px) {
+.entete p {
+   color: white;
+   text-align: left;
+   /* top: -2em; */
+}
+}
+
+@media (min-width: 800px) {
+.entete__titre {
+   display:flex;
+   align-items: center;
+}
+}
+
+@media (min-width: 800px) {
+.entete__titre :first-child {
+   font-size: 3rem;
+   margin-bottom: 0rem;
+}
+.entete__titre :last-child {
+   font-size: 2.25rem;
+   margin-top: 0rem;
+  
+}
+}
+
+/* MAIN */
+@media (max-width: 799px) {
+   .introduction {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+   }
+   .introduction picture {
+      text-align: right;
+   }
+   .introduction h2 {
+      margin-left: 2rem;
+   }
+   .text__introduction {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+   }
+   .text__introduction p {
+      max-width: 55%;
+      margin-left: 2rem;
+   }
+   .text__introduction p:nth-child(2) {
+      position: relative;
+      right: -13rem;
+   }
+}
+
+@media(max-width: 799px) {
+   .boxoffice {
+      background-color: #486966;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .boxoffice p {
+      max-width: 32.625rem;
+   }
+   .boxoffice picture {
+      margin-top: 2em;
+   }
+}
+
+@media (max-width: 799px) {
+   .grille {
+      display: flex;
+      flex-direction: column;
+   }
+   .grille h2 {
+      text-align: center;
+   }
+   .grille p {
+      width: 300px;
+   }
+   
+   .texte_1 {
+      margin-left: 1.875rem;
+   }
+   .texte_2 {
+      position: relative;
+      right: -17.063rem;
+   }
+}
+
+@media (min-width: 800px) {
+.ouverture p{
+   margin-left: 3rem;
+}
+}
+
+@media (min-width: 800px) {
+   .introduction {
+      display: flex;
+   }
+
+   .introduction picture {
+      width: 150%;
+   }
+
+   .text__introduction {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9em;
+   }
+   .text__introduction p {
+      max-width: 30%;
+   }
+
+   .introduction h2 {
+      margin-left: 2em;
+   }
+
+   .text__introduction p:nth-child(1) {
+      position:relative;
+      top: -8em;
+   }
+
+   .text__introduction p:nth-child(3) {
+      position: relative;
+      bottom: -8em;
+   }
+}
+
+@media (min-width: 800px) {
+   .boxoffice {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color:#486966;
+   }
+   .boxoffice picture {
+      margin-left: 5.438rem;
+      margin-top: 6rem;
+   }
+   .boxoffice h2{
+      margin-left: 16.563rem;
+      position: relative;
+      top: -13rem;
+   }
+   .boxoffice p {
+      max-width: 32.625rem;
+      margin-left: 48.188rem;
+      position: relative;
+      top: -21em;
+   }
+   
+}
+
+@media (min-width: 800px) {
+   .texte_2 {
+      position: relative;
+      bottom: -9em;
+   }
+}
+
+/* FOOTER */
+
+
+.footer {
+   background-color: #486966;
+   position: relative;
+   bottom: -5em;
+}
+
+.media img {
+   max-width: 32px;
+}
+.media {
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   padding: 0px;
+}
+.media li {
+   margin-left: 0.5rem;
+   margin-right: 0.5rem;
+   margin-top: 1em;
+}
+.copyright {
+   color: black;
+   text-align: center;
+}
