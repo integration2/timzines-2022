@@ -293,7 +293,7 @@ figcaption{
     }
 }
 @media (min-width: 800px) {
-    figcaption {
+    figcaption{
         font-size: 1.8rem;
     }
 }
