@@ -60,6 +60,10 @@ Section
     outline: green auto 10px;
 }
 
+.section_1:focus {
+    outline: green auto 10px;
+}
+
 /**** Screen Reader ***/
 .screen-reader-only,
 .visuallyhidden {
