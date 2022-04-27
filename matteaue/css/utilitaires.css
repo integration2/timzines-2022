@@ -1,0 +1,59 @@
+/** VARIABLES À DÉFINIR **/ 
+:root{
+    /** Démo **/
+    /* les caractères */
+    --fonte-principale: 'Raleway', sans-serif;
+    --fonte-ronde:'Baloo 2', cursive;
+    /* les couleurs */
+    --couleur-principale: #393939;
+    --couleur-secondaire: #E8BF31;
+    --couleur-tertiaire: #ffff;
+    /* les tailles */
+    --fontSize-base-small: 1.4rem;
+    --fontSize-base-medium: 1.6rem;
+    --fontSize-base-large: 1.8rem;
+}
+
+/*** Harmoniser le modèle de boîte avec Box-Sizing ***/
+html {
+    box-sizing: border-box;
+    background-color: var(--couleur-principale);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Images fluides */
+img{
+    max-width: 100%;
+}
+
+/** Accessibilité
+  * Pour cacher visuellement tout en gardant accessible un contenu:
+  * screen-reader-only ou visuallyhidden **/
+.screen-reader-only,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus,
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
