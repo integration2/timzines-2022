@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+
+
+.grilleUn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+@media (min-width: 601px){
+    .grilleUn{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: ".9fr .1fr .9fr .1fr  ";
+        grid-template-rows: "1fr 1fr 1fr 1fr";
+        grid-template-areas:
+                        "image image titre titre"
+                        "image image titre titre"
+                        "image image texte texte"
+                        ".      .     texte texte";
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+@media (min-width: 601px){
+    .titre1{
+        grid-area: titre;
+    }
+}
+@media (min-width: 601px){
+    .texte1{
+        grid-area: texte;
+    }
+}
+@media (min-width: 601px){
+    .imageEnTete{
+        grid-area: image;
+    }
+}
+
+.grilleDeux{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+@media (min-width: 601px){
+    .grilleDeux{
+        display: grid;
+        grid-gap: 1.5em;
+        grid-template-columns: ".9fr .1fr .1fr  .9fr ";
+        grid-template-rows: " .2fr .2fr .2fr .2fr .2fr  ";
+        grid-template-areas:
+                        "titre  titre   .   ."
+                        "titre  titre image image"
+                        "texte texte image image"
+                        "texte texte image image"
+                        "texte texte .    .";
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+@media (min-width: 601px){
+    .titre2{
+        grid-area: titre;
+    }
+}
+@media (min-width: 601px){
+    .texte2{
+        grid-area: texte;
+    }
+}
+@media (min-width: 601px){
+    .image2{
+        grid-area: image;
+    }
+}
+
+.grilleTrois{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+@media (min-width: 601px){
+    .grilleTrois{
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: ".8fr   .2fr   .2fr   .8fr";
+        grid-template-areas:
+              ".   titre  titre  titre"
+              "image image texte texte";
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+@media (min-width: 601px){
+    .titre3{
+        grid-area: titre;
+    }
+}
+@media (min-width: 601px){
+    .texte3{
+        grid-area: texte;
+    }
+}
+@media (min-width: 601px){
+    .image3{
+        grid-area: image;
+        max-width: 500px;
+    }
+}
+
+
+.grilleQuatre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+@media (min-width: 601px){
+    .grilleQuatre {
+        display: grid;
+        grid-gap: 1.5em;
+        grid-template-columns: ".1fr  .8fr   .3fr   .7fr";
+        grid-template-rows: ".5fr  .5fr  .6fr    .4fr";
+        grid-template-areas:
+                    "titre   titre  titre   ."
+                    "texte texte  image image"
+                    "texte texte  image image"
+                    "texte  texte   .       .";
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 601px){
+    .titre4{
+        grid-area: titre;
+    }
+}
+
+@media (min-width: 601px){
+    .texte4{
+        grid-area: texte;
+    }
+}
+
+@media (min-width: 601px){
+    .image4{
+        grid-area: image;
+        max-width: 500px;
+    }
+}
+
+
+@media (min-width: 601px){
+    .grilleCinq{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: ".8fr   .2fr   .2fr   .8fr";
+        grid-template-rows: ".5fr .5fr .5fr .5fr";
+        grid-template-areas:
+                    "titre  titre    citation citation"
+                    "texte texte citation citation"
+                    "texte texte   citation     citation"
+                    "texte texte   .      .";
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 601px){
+    .titre5{
+        grid-area: titre;
+    }
+}
+
+@media (min-width: 601px){
+    .citationAuteur{
+        grid-area: citation;
+    }
+}
+
+@media (min-width: 601px){
+    .dateTournee{
+        grid-area: texte;
+    }
+}
+
+@media (min-width: 601px) {
+    .grilleInterieure{
+        grid-template-columns: "1fr   1fr";
+        grid-template-rows: ".1fr .9fr .1fr";
+        grid-template-areas:
+                    "citation  citation"
+                    "citation citation"
+                    "citation texte";
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 601px) {
+    .citation{
+        grid-area: citation;
+    }
+}
+@media (min-width: 601px) {
+    .auteur{
+        grid-area: texte;
+    }
+}
+
+
+
+
+
