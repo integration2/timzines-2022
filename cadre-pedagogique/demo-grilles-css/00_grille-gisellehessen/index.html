@@ -66,22 +66,22 @@
             z-index: -1;
         }
         @media (min-width: 600px) {
-            .film-se-distingue {
-                /* multiple backgrounds */
+            /*.film-se-distingue {
+                !* multiple backgrounds *!
                 background-image: url("images/photo-1_w1200.jpeg"), url("images/photo-2_w1200.jpeg");
                 background-position: top left, bottom right;
                 background-size: calc(50% - 1em), calc(50% + 1em);
                 background-repeat: no-repeat, no-repeat;
                 background-origin: content-box, content-box;
                 padding-top: 0.25em;
-                /*background-attachment: fixed, fixed;*/
-                /*overflow: hidden;*/
-            }
+                !*background-attachment: fixed, fixed;*!
+                !*overflow: hidden;*!
+            }*/
             .film-se-distingue::before {
                 top: 0;
                 transform: skew(-11deg) rotate(-11deg);
                 background-color: rgba(200, 0, 0, 0.75);
-                z-index: 0;
+                /*z-index: 0;*/
             }
         }
         .c {
