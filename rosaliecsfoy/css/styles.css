@@ -151,9 +151,55 @@ footer {
         justify-content: space-between;
     }
 }
+picture.RoxaneAdisq {
+    display: flex;
+    justify-content: center;
+}
+div.texteIntro {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 @media (min-width: 600px) {
     .grille1 {
         display: grid;
+        grid-template-columns: repeat(2, 5fr);
+        grid-template-areas:
+                "picture titre";
+        grid-gap: 20px;
+        position: relative;
+        top: -335px;
+        }
+    picture.RoxaneAdisq {
+        grid-area: picture;
+        align-items: flex-start;
+    }
+    h1 {
+        grid-area: titre;
+    }
+}
+.chansons,
+.divertir,
+.tournee,
+.balado {
+    background-color: var(--couleur-blanche);
+    border: 2px solid var(--couleur-noire);
+    margin-bottom: 60px;
+    box-shadow: 15px 15px 15px var(--couleur-mauve);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.divertirP {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.tourneeP {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+@media (min-width: 1000px) {
+    .grille1 {
+        display: grid;
+        align-items: flex-start;
         grid-template-columns: repeat(2, 5fr);
         grid-template-areas:
                 "picture texte";
@@ -161,32 +207,78 @@ footer {
         position: relative;
         top: -335px;
         }
-    .RoxaneAdisq {
+    picture.RoxaneAdisq {
         grid-area: picture;
     }
     .texteIntro {
         grid-area: texte;
     }
-    .chansons{
+    .chansons {
         grid-area: 1 / 1 / 2 / 4;
-        background-color: var(--couleur-blanche);
-        border: 2px solid var(--couleur-noire);
-        margin-bottom: 60px;
     }
     .divertir {
         grid-area: 2 / 1 / 3 / 3;
-        background-color: var(--couleur-blanche);
-        border: 2px solid var(--couleur-noire);
     }
 }
+    @media (min-width: 600px) {
+        .chansons {
+            grid-area: 1 / 1 / 2 / 4;
+            background-color: var(--couleur-blanche);
+        }
+        .divertir {
+            grid-area: 2 / 1 / 3 / 3;
+            margin-bottom: 60px;
+            margin-left: 60px;
+        }
+        .divertirP {
+            margin-right: 100px;
+            margin-left: 15px;
+        }
+        .tourneeP {
+            margin-left: 165px;
+            margin-right: 10px;
+        }
+    }
+    .bleed {
+        margin-bottom: 35px;
+    }
+    @media (min-width: 600px) {
+        .bleed {
+            background-color: var(--couleur-mauve);
+            display: block;
+            position: relative;
+            padding-top: 5px;
+            top: -150px;
+            margin-bottom: 0px;
+        }
+    }
+    picture.imageAMM {
+        display: flex;
+        justify-content: center;
+    }
+    picture.imageAcrophobie {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+    picture.imageTournee {
+        display: flex;
+        justify-content: center;
+    }
+    @media (min-width: 600px) {
+        picture.imageTournee {
+            justify-content: center;
+            position: relative;
+            top: -25px;
+        }
+    }
 @media (min-width: 600px) {
     .citation {
         background-color: var(--couleur-mauve);
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
-        position: relative;
-        top: -250px;
+        max-width: 1000px;
     }
     .imageAcrophobie{
         width: 100%;
@@ -194,6 +286,8 @@ footer {
     .imageAMM{
         grid-area: 2 / 2 / 3 / 4;
         width:100%;
+        position: relative;
+        top: -15px;
     }
     .grille2{
         display: grid;
@@ -207,20 +301,16 @@ footer {
         grid-template-columns: 5fr 150px 5fr;
         align-items: center;
         position: relative;
-        top: -250px;
+        top: -75px;
     }
     .imageTournee{
         grid-area: 1 / 1 / 2 / 3;
     }
     .tournee {
         grid-area: 1 / 2 / 2 / 4;
-        background-color: var(--couleur-blanche);
-        border: 2px solid var(--couleur-noire);
     }
     .balado {
         grid-area: 2 / 1 / 2 / 4;
-        background-color: var(--couleur-blanche);
-        border: 2px solid var(--couleur-noire);
     }
 }
 .contourJaune{
@@ -230,36 +320,34 @@ footer {
     box-shadow: -15px 15px 15px var(--couleur-mauve);
 }
 .chansonsP {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.tourneeP {
-    margin-left: 165px;
-    margin-right: 10px;
-}
-.divertir {
-    margin-bottom: 60px;
-    margin-left: 60px;
-}
-.divertirP {
-    margin-right: 100px;
     margin-left: 15px;
+    margin-right: 15px;
 }
 .balado {
     margin-top: 60px;
     margin-bottom: 60px;
 }
 .baladoP {
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 .quote {
     margin-left: 20px;
     margin-right: 10px; 
+    padding: 15px;
+}
+.separateur {
+    background-color: var(--couleur-jaune);
+    width: 100%;
+    height: 10px;
+    position: relative;
+    bottom: -17px;
 }
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 200px;
+    border-top: 20px solid var(--couleur-mauve);
 }
