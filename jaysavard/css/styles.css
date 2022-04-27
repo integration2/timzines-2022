@@ -63,11 +63,12 @@ color: #FFFBFC;
 
   .rectangle-haut__bleu{
   position: absolute;
-  width: 2000.31px;
-  height: 2000.55px;
-  left: -490.43px;
+  width: 2400.31px;
+  height: 1812.55px;
+  left: -745.43px;
   top: 1290.6px;
   z-index: -1;
+  overflow: hidden;
   
   background: #36454F;
   transform: rotate(-50.16deg);
