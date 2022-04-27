@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cas 1 des images adaptatives - selon la résolution</title>
+    <link href="css/style-02.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="conteneur">
+        <h1>Titre principal</h1>
+    </div>
+</header>
+<main>
+    <div class="conteneur rangee-grid accroche">
+        <p class="col accroche__texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+            adipisci dignissimos distinctio, fuga iusto laudantium libero maxime nisi odit officia pariatur
+            perspiciatis, quas repellendus sed sint
+            tempore veritatis vitae. Laudantium! Asperiores atque beatae blanditiis, dicta distinctio impedit ipsam
+            ipsum
+            iste labore magni mollitia nisi non numquam perferendis perspiciatis placeat quae quam recusandae repellat
+            reprehenderit sed similique soluta temporibus unde voluptas?
+        </p>
+    </div>
+    <div class="bleed">
+        <ul class="conteneur rangee-grid alternance">
+            <li class="rangee-flex a col">
+                <picture>
+                    <source srcset="https://picsum.photos/id/1024/600/300"/>
+                    <img src="https://picsum.photos/id/1024/600/300" alt="Rapace en vol"/>
+                </picture>
+                <p>A Adipisci, beatae blanditiis dicta dolorem doloribus facere fugiat id illo iste labore libero nemo
+                    non officiis omnis porro quam repellat, sapiente sit.</p>
+            </li>
+            <li class="rangee-flex b col">
+                <picture>
+                    <source srcset="https://picsum.photos/id/1025/600/300"/>
+                    <img src="https://picsum.photos/id/1025/600/300" alt="Carlin déguisé en sage Yoda"/>
+                </picture>
+                <p>B Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, beatae blanditiis dicta dolorem
+                    doloribus facere fugiat id illo iste labore libero nemo non officiis omnis porro quam repellat,
+                    sapiente sit.</p>
+            </li>
+            <li class="rangee-flex c col">
+                <picture>
+                    <source srcset="https://picsum.photos/id/1014/600/300"/>
+                    <img src="https://picsum.photos/id/1014/600/300" alt="Rapace en vol"/>
+                </picture>
+                <p>C Adipisci, beatae blanditiis dicta dolorem doloribus facere fugiat id illo iste labore libero nemo
+                    non officiis omnis porro quam repellat, sapiente sit.</p>
+            </li>
+            <li class="rangee-flex d col">
+                <picture>
+                    <source srcset="https://picsum.photos/id/1027/600/300"/>
+                    <img src="https://picsum.photos/id/1027/600/300" alt="Carlin déguisé en sage Yoda"/>
+                </picture>
+                <p>D Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, beatae blanditiis dicta dolorem
+                    doloribus facere fugiat id illo iste labore libero nemo non officiis omnis porro quam repellat,
+                    sapiente sit.</p>
+            </li>
+            <li class="rangee-flex e col">
+                <picture>
+                    <source srcset="https://picsum.photos/id/1028/600/300"/>
+                    <img src="https://picsum.photos/id/1028/600/300" alt="Rapace en vol"/>
+                </picture>
+                <p>E Adipisci, beatae blanditiis dicta dolorem doloribus facere fugiat id illo iste labore libero nemo
+                    non officiis omnis porro quam repellat, sapiente sit.</p>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <div class="conteneur">
+        <p>
+            <small>&copy; Tous droits réservés</small>
+        </p>
+    </div>
+</footer>
+<script src="js/lib/picturefill.min.js" async></script>
+</body>
+</html>
