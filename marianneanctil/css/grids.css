@@ -4,6 +4,7 @@
 .grille2 {
     display:grid;
     grid-template-columns: 4fr 2fr 4fr;
+    position:relative;
     grid-template-areas:
     ". . ."
     "d d ."
@@ -38,12 +39,12 @@
     position:relative;
 }
 
-
-@media (min-width: 600px) {
+@media (min-width: 600px){
     .grille2 {
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
-       grid-template-rows: 60px 100px auto 100px auto auto auto ;
+        grid-template-rows: 60px 100px auto 100px auto auto auto ;
+        position:relative;
         grid-template-areas:
     ". . c c"
     "d d c c"
@@ -52,6 +53,52 @@
     ". . e e"
     "z z . ."
     "f f . .";
+
+
+    }
+
+    .c{
+        grid-area: c;
+        position:relative;
+    }
+
+    .d{
+        grid-area: d;
+        position:absolute;
+        bottom:-190px;
+    }
+
+    .e{
+        grid-area: e;
+        position:relative;
+    }
+
+    .f{
+        grid-area: f;
+        position:relative;
+    }
+    .z{
+        grid-area: z;
+        position:relative;
+    }
+}
+
+    @media (min-width: 800px) {
+    .grille2 {
+        display:grid;
+        grid-template-columns: 4fr 1fr 1fr 4fr;
+       grid-template-rows: 60px 100px auto 100px auto auto auto ;
+        position:relative;
+        grid-template-areas:
+    ". . c c"
+    "d d c c"
+    "d d . ."
+    "d d e e"
+    ". . e e"
+    "z z . ."
+    "f f . .";
+
+
     }
 
     .c{
@@ -61,7 +108,8 @@ grid-area: c;
 
     .d{
         grid-area: d;
-        position:relative;
+        position:absolute;
+        bottom:-275px;
     }
 
     .e{
@@ -153,6 +201,7 @@ grid-area: c;
         display:grid;
         grid-template-columns: 4fr 1fr 1fr 4fr;
         grid-template-rows: auto auto 100px 100px auto ;
+        position:relative;
         grid-template-areas:
     ". . i i"
     "j j . ."
@@ -170,7 +219,8 @@ grid-area: c;
 
     .j{
         grid-area: j;
-        position:relative;
+        position:absolute;
+        bottom:-165px;
     }
 
     .k{
