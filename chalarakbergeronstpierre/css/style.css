@@ -112,6 +112,8 @@ p {
 }
 
 
+
+
 /* pictures */
 
 
@@ -383,11 +385,11 @@ h3 {
         }
 
         .signature {
-            font-size: 50px;
+            font-size: 40px;
         }
 
         .citation {
-            font-size: 50px;
+            font-size: 40px;
         }
     }
 
