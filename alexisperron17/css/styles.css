@@ -28,7 +28,7 @@ body{
    display: flex;
 }
 
-@media(min-width:600px) {
+@media(max-width:799px) {
 .logo {
    margin-top: 1rem;
    width: 30%;
@@ -86,7 +86,7 @@ body{
 }
 
 /* MAIN */
-@media (min-width: 600px) {
+@media (max-width: 799px) {
    .introduction {
       display: flex;
       flex-direction: column-reverse;
@@ -113,7 +113,7 @@ body{
    }
 }
 
-@media(min-width: 600px) {
+@media(max-width: 799px) {
    .boxoffice {
       background-color: #486966;
       display: flex;
@@ -125,6 +125,27 @@ body{
    }
    .boxoffice picture {
       margin-top: 2em;
+   }
+}
+
+@media (max-width: 799px) {
+   .grille {
+      display: flex;
+      flex-direction: column;
+   }
+   .grille h2 {
+      text-align: center;
+   }
+   .grille p {
+      width: 300px;
+   }
+   
+   .texte_1 {
+      margin-left: 1.875rem;
+   }
+   .texte_2 {
+      position: relative;
+      right: -17.063rem;
    }
 }
 
@@ -153,8 +174,6 @@ body{
    }
 
    .introduction h2 {
-      position: relative;
-      top: -2em;
       margin-left: 2em;
    }
 
@@ -174,9 +193,11 @@ body{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      background-color:#486966;
    }
    .boxoffice picture {
       margin-left: 5.438rem;
+      margin-top: 6rem;
    }
    .boxoffice h2{
       margin-left: 16.563rem;
@@ -201,7 +222,7 @@ body{
 
 /* FOOTER */
 
-@media (min-width:800px) {
+
 .footer {
    background-color: #486966;
    position: relative;
@@ -218,13 +239,14 @@ body{
    justify-content: center;
    align-items: center;
    height: 100%;
+   padding: 0px;
 }
 .media li {
-   margin-left: 1em;
+   margin-left: 0.5rem;
+   margin-right: 0.5rem;
    margin-top: 1em;
 }
 .copyright {
    color: black;
    text-align: center;
-}
 }
