@@ -1,237 +1,353 @@
-@charset "utf-8";
+@charset "UTF-8";
 
-/****************************
- * Katas de grilles CSS
- * STYLE 1
- * STYLE 2
- * STYLE 3
- * style switcher
- ****************************/
+/**
+ * @author Yves Hélie (conception et réalisation pour @timcsf)
+ * @author Ève Février (quelques broutilles d'actualisation de l'exercice)
+ * @author Prénom Nom courriel   <---- Utiliser nom complet ou nom d'utilisateur Github
+ *
+ * TABLE DES MATIÈRES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Règles générales
+ * Entête du site
+ * Main
+ */
 
-/*** base commune aux 3 styles ***/
-.wrapper {
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+/* Grille
+   ========================================================================== */
+   .grille1 {
     display: grid;
-    grid-gap: 1em;
-}
-
-/*** STYLE 1 ***/
-.style1 .wrapper {
+    grid-column-gap: 10px;
+    grid-template-columns: 0.12fr 0.1fr 0.5fr 0.5fr 0.1fr 0.12fr;
+    grid-template-rows: 0.5fr minmax(1.8fr, 320px) 0.6fr 0.6fr;
     grid-template-areas:
-            "header"
-            "sidebar"
-            "content"
-            "sidebar2"
-            "footer"
-}
-@media only screen and (min-width: 500px) {
-    .style1 .wrapper {
-        grid-template-columns: 20% auto;
-        grid-template-areas:
-            "header   header"
-            "sidebar  content"
-            "sidebar2 sidebar2"
-            "footer   footer";
-    }
-}
-@media only screen and (min-width: 600px) {
-    .style1 .wrapper {
-        grid-gap: 20px;
-        grid-template-columns: 120px auto 120px;
-        grid-template-areas:
-            "header  header  header"
-            "sidebar content sidebar2"
-            "footer  footer  footer";
-
-        /* CENTRAGE */
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - À utiliser au besoin */
-        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
-    }
-}
-/* aire occupée par les éléments d'interface */
-.style1 .header {
-    grid-area: header;
-}
-.style1 .content {
-    grid-area: content;
-}
-.style1 .sidebar {
-    grid-area: sidebar;
-}
-.style1 .sidebar2 {
-    grid-area: sidebar2;
-}
-.style1 .footer {
-    grid-area: footer;
+        ". . d d d d "
+        ". . d d d d "
+        ". . a a . . "
+        ". . a a . . ";
+    position: relative;
 }
 
-/*** STYLE 2 ***/
-.style2 .wrapper {
-    grid-template-columns: 1fr 1fr;
+@media (max-width:800px) {
+    .grille1 {
+        display: grid;
+        grid-column-gap: 10px;
+        grid-template-columns: 0.12fr 0.1fr 0.5fr 0.5fr 0.1fr 0.12fr;
+        grid-template-rows: 0.5fr 1.8fr, 0.6fr 0.6fr;
+        grid-template-areas:
+            ". d d d d d "
+            ". d d d d d "
+            ". a a a a . "
+            ". a a a a . ";
+    }
+}
+
+.titre-grille {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 0.2fr 0.1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
     grid-template-areas:
-            "header header"
-            "content content"
-            "sidebar sidebar2"
-            "footer footer"
+        ". b b b"
+        ". c c c";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 100%;
 }
-@media only screen and (min-width: 500px) {
-    .style2 .wrapper {
-        grid-template-columns: 20% auto;
+
+@media (min-width:800px) {
+    .titre-grille {
+        display: grid;
+        grid-column-gap: 10px;
+        grid-template-columns: 0.25fr 0.1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr;
         grid-template-areas:
-            "header   header"
-            "sidebar  content"
-            "sidebar2 sidebar2"
-            "footer   footer";
+            ". . b b"
+            ". . c c";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        width: 100%;
     }
 }
-@media only screen and (min-width: 600px) {
-    .style2 .wrapper {
-        grid-gap: 20px;
-        grid-template-columns: 120px 120px auto;
-        grid-template-areas:
-            "header  header  header"
-            "sidebar sidebar2 content "
-            "footer  footer  footer";
 
-        /* CENTRAGE */
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - À utiliser au besoin */
-        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
-    }
-}
-/* aire occupée par les éléments d'interface */
-.style2 .header {
-    grid-area: header;
-}
-.style2 .content {
-    grid-area: content;
-}
-.style2 .sidebar {
-    grid-area: sidebar;
-}
-.style2 .sidebar2 {
-    grid-area: sidebar2;
-}
-.style2 .footer {
-    grid-area: footer;
-}
-
-
-/*** STYLE 3 ***/
-.style3 .wrapper {
+.grille_artiste_gauche{
+    display: grid;
+    grid-template-columns: 0.12fr 0.33fr 0.53fr 0.33fr 0.12fr;
+    grid-template-rows: 0.03fr 0.13fr 0.81fr 0.03fr;
     grid-template-areas:
-            "header"
-            "sidebar"
-            "content"
-            "sidebar2"
-            "footer"
-}
-@media only screen and (min-width: 500px) {
-    .style3 .wrapper {
-        grid-template-columns: 20% auto;
-        grid-template-areas:
-            "header   header"
-            "sidebar  content"
-            "sidebar2 content"
-            "sidebar2  content"
-            "footer   footer";
-    }
-}
-@media only screen and (min-width: 600px) {
-    .style3 .wrapper {
-        grid-gap: 20px;
-        grid-template-columns: 120px 120px auto;
-        grid-template-areas:
-            "header  header  header"
-            "sidebar sidebar2 content"
-            "footer  footer  footer";
-
-        /* CENTRAGE */
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - À utiliser au besoin */
-        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
-    }
-}
-@media only screen and (min-width: 800px) {
-    .style3 .wrapper {
-        grid-gap: 20px;
-        grid-template-columns: 120px auto 120px;
-        grid-template-areas:
-            "header content  sidebar"
-            "header content sidebar2"
-            "header content sidebar2"
-            "footer  footer  footer";
-
-        /* CENTRAGE */
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - À utiliser au besoin */
-        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
-    }
-}
-/* aire occupée par les éléments d'interface */
-.style3 .header {
-    grid-area: header;
-}
-.style3 .content {
-    grid-area: content;
-}
-.style3 .sidebar {
-    grid-area: sidebar;
-}
-.style3 .sidebar2 {
-    grid-area: sidebar2;
-}
-.style3 .sidebar3 {
-    grid-area: sidebar3;
-}
-.style3 .footer {
-    grid-area: footer;
+        ". f . . ."
+        ". f . . ."
+        ". f e . ."
+        ". f e . .";
 }
 
-/* régles générales */
+.grille_artiste_droite{
+    display: grid;
+    grid-template-columns: 0.12fr 0.33fr 0.53fr 0.33fr 0.12fr;
+    grid-template-rows: 0.03fr 0.13fr 0.81fr 0.03fr;
+    grid-template-areas:
+        ". . . g ."
+        ". . . g ."
+        ". . h g ."
+        ". . h g .";
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+.g {
+    grid-area: g;
+}
+
+.h {
+    grid-area: h;
+}
+
+/* Règles générales
+   ========================================================================== */
+
+
 body {
-    margin: 40px;
+    margin: 0;
 }
-.box {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 150%;
+
+main {
+    margin-bottom: 20vh;
+} 
+
+p {
+    margin: 0;
 }
-.header,
-.footer {
-    background-color: #999;
+
+/* Entête du site
+   ========================================================================== */
+
+   svg {
+    width: 300px;
+    margin: 0 auto;
 }
-.sidebar2 {
-    background-color: #ccc;
-    color: #444;
+
+.svg {
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
 }
-/*** style switcher ***/
-.style-switcher{
-    list-style: none;
-    padding-left: 0;
-    margin:0;
-    display: inline-flex;
-    justify-content: center;
+
+.picture__entete {
+    position: relative;
 }
-.style-switcher li{
-    flex:1 1 auto;
-    margin:0 1em;
+
+.intro {
+    margin-top: 30vh;
 }
-.style-switcher button{
-    border:none;
-    border-radius: 4px;
-    padding:0.5em 1em;
+
+.text-presentation {    
+    column-count: 2;
+    padding-top: 10px;
+    margin-top: -0.6em;
+    margin-left: -100px;
+    padding-left: 100px;
+    margin-right: -100px;
+    padding-right: 100px;
+    background-color: var(--couleurTurquoise);
+    position: relative;
+    padding-bottom: 10px;
 }
-.style-switcher button:hover{
-    background-color: azure;
+
+@media (max-width:800px) {
+    .text-presentation {
+        column-count: 1;
+    }
 }
+
+.text-presentation::before {
+    content: "";
+    height: 50vh;
+    width: 100px;
+    top: -50vh;
+    left: 0px;
+    background-color: var(--couleurTurquoise);
+    position: absolute;
+}
+
+@media (max-width:1000px) {
+    .text-presentation::before {
+        content: " ";
+        height: 35vh;
+        width: 100px;
+        top: -35vh;
+        left: 0px;
+        background-color: var(--couleurTurquoise);
+        position: absolute;
+    }
+}
+
+@media (max-width:570px) {
+    .text-presentation {
+        margin-right: -70px;
+        padding-right: 70px;
+        background-color: var(--couleurTurquoise);
+        position: relative;
+        padding-bottom: 10px;
+    }
+}
+
+.h2::before {
+    content:'';
+    top: -0.5em;
+    left: -100px;
+    height: 0.6em;
+    width: 90%;
+    background-color: var(--couleurRose);
+    position: absolute;
+    z-index: -1;
+}
+
+/* Main
+   ========================================================================== */
+
+.h3 {
+    position: relative;
+}
+
+.h3::before {
+    position: absolute;
+    content:'';
+    top: -0.5em;
+    right: 0px;
+    height: 0.6em;
+    width: 64%;
+    background-color: var(--couleurRose);
+    position: absolute;
+    z-index: -1;
+}
+
+.presentation-tete-daffiche {
+    position: relative;
+}
+
+.grille_artiste_gauche::before {
+    content: " ";
+    height: 78%;
+    width: 69%;
+    top: 15%;
+    left: 0px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.grille_artiste_droite::before {
+    content: " ";
+    height: 78%;
+    width: 69%;
+    top: 15%;
+    right: 0px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.image_affiche {
+    z-index: 1;
+    background-color: transparent;
+}
+
+.tete_daffiche {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.quote {
+    position: absolute;
+    bottom: -2em;
+}
+
+.duaLipaQuote{
+    text-align: right;
+}
+
+.text_artiste, .texte_artiste_droite {
+    position: relative;
+}
+
+.text_artiste::before {
+    position: absolute;
+    content: " ";
+    height: 3px;
+    width: 28%;
+    top: 8%;
+    left: 16px;
+    background-color: #ECC371;
+}
+
+.text_artiste::after{
+    position: absolute;
+    content: " ";
+    height: 15%;
+    width: 6%;
+    top: 73%;
+    right: -4%;
+    background-color: #ECC371;
+}
+
+.texte_artiste_droite::after{
+    position: absolute;
+    content: " ";
+    height: 15%;
+    width: 6%;
+    top: 73%;
+    left: -4%;
+    background-color: #ECC371;
+}
+
+.section_rose::after {
+    position: absolute;
+    bottom: 0;
+    background-image: url(data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    display: block;
+    height: 3em;
+    width: 100%;
