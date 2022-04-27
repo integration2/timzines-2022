@@ -243,7 +243,7 @@ h4 { /* = 16px */
     }
     .drake {
         grid-area: drake;
-    }
+        }
     .casting {
         grid-area: content1;
     }
@@ -308,8 +308,12 @@ h4 { /* = 16px */
                     "content2 chloe"
                     "content3 chloe"
     }
-    .drake {
+    .drake picture {
         grid-area: drake;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto; 
+        text-align: center;
     }
     .casting {
         grid-area: content1;
@@ -327,16 +331,20 @@ h4 { /* = 16px */
 
  /* Mise en page
  ========================================================================== */
-
+ .section_casting{
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
 
  /*** Entête
  ========================================================================== */
 .logo{
- text-align: center;
-}
-.menu_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
     text-align: center;
 }
+
 
  /*** Main
  ========================================================================== */
@@ -349,6 +357,62 @@ margin: 0;
 h2{
     text-align: center;
 }
+.caisse picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+  }
+  .caisse {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+                    "image"
+                    "content1"
+                    "content2"
+}
+@media (min-width:500px){
+.caisse{
+        margin-left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas:
+                    "image content2"
+                    "content1 content2"
+}
+}
+
+@media only screen and (min-width: 800px) {
+    .caisse {
+        margin-left: calc((( - 40rem) / 2) * -1);
+        width: 92vw;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+                    "content1 image"
+                    "content2 image"
+    }
+.caisse picture {
+    grid-area: image;
+
+}
+.texte_caisse1 {
+    grid-area: content1;
+    margin-right: 10%;
+
+}
+.texte_caisse2 {
+    grid-area: content2;
+    margin-right: 10%;
+}
+}
+.physique picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+}
 /**** La Citation 
  ========================================================================== */
  .citation{
@@ -359,6 +423,17 @@ h2{
      box-shadow: -3px 5px 10px black;
      padding:5px 10px;
  }
+ @media (min-width: 500px){
+    .citation{
+
+    }
+}
+
+@media (min-width: 800px){
+   .citation{
+
+   }
+}
 /**** Le verdict 
  ========================================================================== */
  .verdict{
@@ -382,6 +457,23 @@ h2{
 
 /***Footer
 ========================================================================== */
+.menu-sociaux {
+    /* margin: 1rem 3rem 3rem 3rem; */
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .footer__media{
+    font-size: 1.2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .sources{
+      padding-top: 5em;
+  }
 .list_sources{
     list-style: none;
     padding-top: 1em;
@@ -390,11 +482,11 @@ h2{
     list-style: none;
 }
 .menu-sociaux__lien {
-    font-size: 0; /* fait disparaître le texte du lien */
-    display: block; /* permet de donner une dimension au lien */
-    width: 100px; /* largeur de l'image */
-    height: 100px; /* hauteur de l'image */
-    margin-right: 1rem; /* espace entre les liens */
+    font-size: 0;
+    display: block; 
+    width: 100px; 
+    height: 100px;
+    margin-right: 1rem; 
     background-image: url(../images/sprite_css.png);
     background-repeat: no-repeat;
     list-style: none;
@@ -423,6 +515,12 @@ h2{
     margin: 0 3rem 6rem 3rem;
     background: url(../images/sprite_css.png) no-repeat;
   }
+  .sources_menu_sociaux{
+    display: flex;
+  }
 .footer{
     background-color: var(--couleur-secondaire);
+}
+.credits{
+    text-align: center;
 }
