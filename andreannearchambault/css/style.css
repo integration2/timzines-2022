@@ -14,6 +14,7 @@ figure {
 }
 img {
     max-width: 100%;
+    padding-bottom: .5em;
 }
 body {
     background-color: var(--couleur-bleuPale);
@@ -22,6 +23,7 @@ body {
 /*Header*/
 header {
     background-color: var(--couleur-bleuFonce);
+    
 }
 
 /*Section1*/
@@ -29,9 +31,21 @@ header {
 .section1 {
     background-color: var(--couleur-bleuFonce);
     color: var(--couleur-blanc);
+    max-width: 100vw;
+
+}
+.titreAccroche {
     margin-left: 20px;
     margin-right: 20px;
-
+    margin-bottom: 5em;
+}
+@media (min-width: 700px) {
+    .titreAccroche {
+        max-width: 1000px;
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media (min-width: 700px) {
     h1 {
@@ -45,9 +59,11 @@ header {
     border-style: solid;
     border-width: 18px;
     color: black;
-    padding: 1em;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
-
 .figure_grimm {
     text-align: center;
 }
@@ -57,9 +73,19 @@ header {
     }
 }
 /*Section2*/ 
+
 .section2 {
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 5em;
+}
+@media (min-width: 700px) {
+    .section2{
+        max-width: 1000px;
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .figure_hansel{
     text-align: center;
@@ -72,29 +98,58 @@ header {
 
 /*Section3*/ 
 .section3 {
-
+    background-color: var(--couleur-bleuFonce);
+    border-radius: var(--borderRadius);
+    border-color: var(--couleur-rose);
+    border-style: solid;
+    border-width: 18px;
+    color: var(--couleur-blanc);
+    max-width: 1000px;
+    margin-bottom: 5em;
+    padding-bottom: 1em;
 }
-
+@media (min-width: 700px) {
+    .section3 {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.figure_rapunzel {
+    text-align: center;
+}
+@media (min-width: 700px) {
+    .figure_rapunzel{
+        padding-left: 1.5em;
+    }
+}
 /*Section4*/
 .section4 {
-
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5em;
 }
-
-/*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
-@media (min-width: 600px) {
-    .conteneur {
-        margin: 0 auto;
+@media (min-width: 700px) {
+    .section4{
         max-width: 1000px;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage */
-        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.figure_cendrillon {
+    text-align: center;
+}
+@media (min-width: 700px) {
+    .figure_cendrillon{
+        padding-left: 1.5em;
     }
 }
 
 /*Grilles*/
 .grille1 {
     display: grid;
-    grid-gap: 20px;
+    gap: 20px;
     justify-items: center;
     grid-template-areas: "A"
                          "B";
@@ -103,7 +158,7 @@ header {
 @media  only screen and (min-width: 500px) {
     .grille1 {
         display: grid;
-        grid-gap: 20px; 
+        gap: 20px; 
         grid-template-areas: "A"
                              "B";
     }}
@@ -112,7 +167,7 @@ header {
 .grille1 {
     display: grid;
     max-width: 1100px;
-    grid-gap: 1em; 
+    gap: 1em 1em; 
     grid-template-columns: 2em 6fr 2em 5fr 2em;
     grid-template-areas: ". A . B .";
 }}
@@ -126,7 +181,6 @@ header {
 
 .grille2 {
     display: grid;
-    grid-gap: 20px;
     grid-template-areas: "C"
                          "D"
                          "E";
@@ -134,7 +188,6 @@ header {
 @media only screen and (min-width: 500px) {
     .grille2 {
         display: grid;
-        grid-gap: 20px; 
         grid-template-areas: "C"
                              "D"
                              "E";
@@ -142,9 +195,11 @@ header {
 @media only screen and (min-width: 700px) {    
     .grille2 {
             display: grid;
-            grid-gap: 1em; 
+            grid-auto-columns: 1fr;
+            gap: 1em 1em;
+            max-width: 1000px;
             grid-template-columns: 6fr 2em 5fr;
-            grid-template-rows: 1fr 2fr;
+            grid-template-rows: .5fr 1.5fr;
             grid-template-areas: "C C C"
                                  "D . E"; 
 }}
@@ -166,4 +221,151 @@ header {
 
 .E {
     grid-area: E;
+}
+.grille3 {
+    display: grid;
+    grid-template-areas: "F"
+                         "G"
+                         "H";
+}
+@media only screen and (min-width: 500px) {
+    .grille3 {
+        display: grid; 
+        grid-template-areas: "F"
+                             "G"
+                             "H";
+}}
+@media only screen and (min-width: 700px) {    
+    .grille3 {
+            display: grid;
+            gap: 1em; 
+            max-width: 1100px;
+            grid-template-columns: 2em 6fr 2em 5fr 2em;
+            grid-template-rows: .2fr 1.5fr;
+            grid-template-areas: ". F F F ."
+                                 ". G . H ."; 
+}}
+.F {
+    grid-area: F;
+    justify-self: center; 
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.G {
+    grid-area: G;
+}
+
+.H {
+    grid-area: H;
+    padding: .5em;
+
+}
+@media (min-width: 700px) {
+    .H{
+        margin: 0;
+    }
+}
+.grille4 {
+    display: grid;
+    grid-template-areas: "J"
+                         "K"
+                         "L"
+                         "I"
+                         "M";
+}
+@media only screen and (min-width: 500px) {
+    .grille4 {
+        display: grid;
+        grid-template-rows: .5fr .1fr .1fr .2fr 1fr;
+        grid-template-areas: "J"
+                             "K"
+                             "L"
+                             "I"
+                             "M";
+}}
+@media only screen and (min-width: 700px) {    
+    .grille4 {
+            display: grid;
+            grid-gap: 1em; 
+            grid-template-columns: 4fr 1.7fr 2em 5fr;
+            grid-template-rows: .5fr 20em 1fr;
+            grid-template-areas: "I I . J"
+                                 "K K K K"
+                                 "L M M M"; 
+}}
+ .I {
+     grid-area: I;
+     margin-left: 0;
+     margin-right: 0;
+ }
+ .J {
+     grid-area: J;
+ }
+
+.K {
+    grid-area: K;
+    justify-self: center;
+    margin-bottom: 0;
+}
+@media (min-width: 700px) {
+    .K {
+        justify-self: start;
+    }
+}
+.L {
+    grid-area: L;
+    justify-self: end;
+    margin-top: 0;
+}
+@media (min-width: 700px) {
+    .L {
+        justify-self: start;
+    }
+}
+.M {
+    grid-area: M;
+}
+
+/*FOOTER*/ 
+
+.sources {
+    background-color: var(--couleur-bleuFonce);
+    color: var(--couleur-blanc);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 100vw;
+}
+
+.sources h3, p {
+    max-width: 1000px;
+    margin-left: 20px;
+}
+
+.nav__footer {
+    background-color: var(--couleur-blanc);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+@media (min-width: 500px) {
+    .nav__footer {
+        text-align: end;
+    }
+}
+@media (min-width: 500px) {
+    .nav__logo { 
+        align-self: start;
+    }
+}
+.nav__mediasSociaux img{
+    max-height: 50px;
+}
+@media (min-width: 700px){
+    .nav__mediasSociaux img{
+        max-height: 60px;
+    }
 }

@@ -108,6 +108,24 @@ h2,
     }
 }
 
+h3,
+.h3 { /* = 22px */
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+@media (min-width: 600px) {
+    h3,
+    .h3 { /* = 24px */
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 800px) {
+    h3,
+    .h3 { /* = 28px */
+        font-size: 2.8rem;
+    }
+}
+
 .citation {/* = 18px */
     font-size: 1.8rem;
     font-weight: 700;
