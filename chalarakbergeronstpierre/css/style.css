@@ -141,6 +141,10 @@ h2 {
 
 }
 
+figcaption{
+    text-align: center;
+}
+
 
 @media (min-width: 500px) {
     .img_insta {
@@ -181,11 +185,15 @@ h2 {
     }
 
     .img_insta {
+        /* position: relative;
+        z-index: 1; */
+        float: left;
+
         margin: 0;
     }
 
     .img_insta_2 {
-        float: left;
+       
         margin: 20px;
     }
 
@@ -583,6 +591,15 @@ ul {
     display: flex;
     justify-content: center;
 }
+
+
+
+.sources{
+    text-align: center;
+}
+
+
+
 .reseaux{
     text-align: center;
     padding-top: 60px;
