@@ -52,6 +52,9 @@ header {
     z-index: 99;
 }
 
+p {
+    line-height: 150%;
+}
 
 /*Navigation breadcrumb*/
 
@@ -82,14 +85,14 @@ h2 {
 }
 
 h3 {
-    margin: 20px 0 5px 0;
+    margin: 20px 0 20px 0;
     font-size: 2.2vw;
 }
 
 /* images */
 .banniere img {
     width: 100%;
-    filter: brightness(0.6);
+    filter: brightness(0.9);
     vertical-align: bottom;
 }
 
@@ -188,14 +191,14 @@ gap: 10px;
 }
 
 section:first-of-type {
-    margin: 150px 0 150px 0;
+    margin: 300px 0 50px 0;
 }
 
 section {
     display: flex;
     justify-content: center;
     background-color: #222222;
-    margin: 0 0 150px 0;
+    margin: 300px 0 150px 0;
     padding: 20px 0 20px 0;
     padding-top: 20px;
     border-color: #00F0FF #00F0FF #C81227 #C81227;
@@ -205,6 +208,58 @@ section {
 
 section p {
     line-height: 150%;
+    margin: 30px 0 30px 0;
+}
+
+.section-special {
+    position: relative;
+    margin: 40px auto 80px auto;
+    max-width: 70%;
+    border: solid white 5px;
+    background-color: black;
+    border-radius: 26px;
+    z-index: 2;
+}
+
+.section-special::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: solid white 5px;
+    border-radius: 26px;
+    z-index: -20;
+}
+
+.section-special-conteneur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: black;
+    border-radius: 26px;
+}
+
+.section-special-conteneur > * {
+    width: 90%;
+}
+
+.cercle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cercle circle {
+    fill: white;
+}
+
+.citation {
+    max-width: 40%;
 }
 
 footer {
@@ -226,6 +281,7 @@ footer {
 footer p {
     display: flex;
     flex-direction: column;
+    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -268,7 +324,7 @@ footer small a:hover {
         'texte3 texte3 texte3 texte3 texte3 texte3';
     
         grid-template-columns: 2fr 3fr 1fr 1fr 2fr 2fr;
-        grid-template-rows: 1.3fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .section-1 img {
@@ -287,6 +343,10 @@ footer small a:hover {
     .section-1-conteneur, .section-titre-conteneur {
         width: 90%;
     }
+    
+    .section-special {
+        max-width: 70%;
+    }
 
     .titre {
         font-size: 8vw;
@@ -301,7 +361,7 @@ footer small a:hover {
     }
 
     p {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
 
