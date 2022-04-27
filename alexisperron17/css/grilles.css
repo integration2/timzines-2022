@@ -1,8 +1,15 @@
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .conteneur {
       margin: 0 auto;
       max-width: 1000px;
       padding: 0;
+  }
+}
+@media (max-width: 999px) {
+  .conteneur {
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 0;
   }
 }
 .grille {  display: grid;
@@ -16,10 +23,10 @@
       ". Texte-1 Texte-2 .";
   }
   
-  .grille.picture { grid-area: image; }
+  .grille picture { grid-area: image; }
   
   .texte_1 { grid-area: Texte-1; }
   
   .texte_2 { grid-area: Texte-2; }
   
-  .grille.h2 { grid-area: h2; }
+  .grille h2 { grid-area: h2; }
