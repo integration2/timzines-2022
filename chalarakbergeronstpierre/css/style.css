@@ -611,6 +611,9 @@ ul {
     background-color: #FFC90B;
     border-radius: 2.5rem;
 }
+
+
+
 .twitter:hover{
     background-color: #FFC90B;
     border-radius: 2.5rem;
@@ -624,6 +627,22 @@ ul {
     border-radius: 2.5rem;
 }
 
+.rs:focus{ 
+    background-color: #FFC90B;
+    border-radius:1rem;
+    outline:#FFC90B auto 3rem ;
+}
+
 .credit{
     text-align: center;
+}
+
+/* focus liens */
+a:focus{
+    outline:#FFC90B auto 3rem;
+}
+
+p:focus{
+    outline:#FFC90B auto 3rem;
+
 }
