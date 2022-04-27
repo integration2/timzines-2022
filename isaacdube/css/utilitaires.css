@@ -28,6 +28,10 @@ abbr[title] {
     cursor: help;
 }
 
+img {
+    width: 100%;
+}
+
 /** Accessibilité
   * Pour cacher visuellement tout en gardant accessible un contenu:
   * screen-reader-only ou visuallyhidden **/

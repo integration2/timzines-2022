@@ -10,16 +10,9 @@
  * Utilitaires
  * Charte typographique
  * Grille
- * Menu
  * Règles générales
- * Mise en page
- *** Entête du site
- *** Menu principal
- *** Accroche
- *** Entreprise
- *** Expériences
- *** Services
- *** Pied de page
+ * Entête du site
+ * Main
  */
 
 /* Normalize
@@ -34,71 +27,9 @@
    ========================================================================== */
 @import url(typo.css);
 
-
-body {
-    margin: 0;
-}
-
-main {
-    margin-bottom: 20vh;
-} 
-
-
-img {
-    width: 100%;
-}
-
-.h1 {
-    margin: 0;
-    line-height: 0;
-    font-family: 'strasuaregular';
-    font-size: 10vw;
-    -webkit-text-stroke: 0.1px black;
-    -webkit-text-fill-color: white;
-}
-
-.h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    font-size: 4.5vw;
-    line-height: 0;
-    padding-left: 0.3em;
-    color: white;
-    text-shadow: 2px 2px 10px #000;
-    position: relative;
-}
-
-.h2::before {
-    content:'';
-    top: -0.5em;
-    left: -100px;
-    height: 0.6em;
-    width: 90%;
-    background-color: var(--couleurRose);
-    position: absolute;
-    z-index: -1;
-}
-
-svg {
-    width: 300px;
-    margin: 0 auto;
-}
-
-.svg {
-    text-align: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: black;
-}
-
-.picture__entete {
-    position: relative;
-}
-
-.grille1 {
+/* Grille
+   ========================================================================== */
+   .grille1 {
     display: grid;
     grid-column-gap: 10px;
     grid-template-columns: 0.12fr 0.1fr 0.5fr 0.5fr 0.1fr 0.12fr;
@@ -125,7 +56,6 @@ svg {
     }
 }
 
-
 .titre-grille {
     display: grid;
     grid-column-gap: 10px;
@@ -138,66 +68,6 @@ svg {
     z-index: 1;
     left: 0;
     width: 100%;
-}
-
-
-.intro {
-    margin-top: 30vh;
-}
-
-p {
-    margin: 0;
-}
-
-.text-presentation {    
-    column-count: 2;
-    padding-top: 10px;
-    margin-top: -0.6em;
-    margin-left: -100px;
-    padding-left: 100px;
-    margin-right: -100px;
-    padding-right: 100px;
-    background-color: var(--couleurTurquoise);
-    position: relative;
-    padding-bottom: 10px;
-}
-
-@media (max-width:800px) {
-    .text-presentation {
-        column-count: 1;
-    }
-}
-
-.text-presentation::before {
-    content: "";
-    height: 50vh;
-    width: 100px;
-    top: -50vh;
-    left: 0px;
-    background-color: rgb(147, 176, 176);
-    position: absolute;
-}
-
-@media (max-width:1000px) {
-    .text-presentation::before {
-        content: " ";
-        height: 35vh;
-        width: 100px;
-        top: -35vh;
-        left: 0px;
-        background-color: rgb(147, 176, 176);
-        position: absolute;
-    }
-}
-
-@media (max-width:570px) {
-    .text-presentation {
-        margin-right: -70px;
-        padding-right: 70px;
-        background-color: rgb(147, 176, 176);
-        position: relative;
-        padding-bottom: 10px;
-    }
 }
 
 @media (min-width:800px) {
@@ -224,21 +94,7 @@ p {
         ". f . . ."
         ". f . . ."
         ". f e . ."
-        ". f . . .";
-}
-
-.presentation-tete-daffiche {
-    position: relative;
-}
-
-.grille_artiste_gauche::before {
-    content: " ";
-    height: 78%;
-    width: 69%;
-    top: 15%;
-    left: 0px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
+        ". f e . .";
 }
 
 .grille_artiste_droite{
@@ -249,44 +105,7 @@ p {
         ". . . g ."
         ". . . g ."
         ". . h g ."
-        ". . . g .";
-}
-
-.grille_artiste_droite::before {
-    content: " ";
-    height: 78%;
-    width: 69%;
-    top: 15%;
-    right: 0px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-}
-
-.image_affiche {
-    z-index: 1;
-    background-color: transparent;
-}
-
-
-.text_artiste {
-    color: white;
-    z-index: 2;
-}
-
-.tete_daffiche {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    text-align: center;
-}
-
-
-.quote {
-    position: absolute;
-    bottom: -2em;
-}
-
-.duaLipaQuote{
-    text-align: right;
+        ". . h g .";
 }
 
 .a {
@@ -320,3 +139,215 @@ p {
 .h {
     grid-area: h;
 }
+
+/* Règles générales
+   ========================================================================== */
+
+
+body {
+    margin: 0;
+}
+
+main {
+    margin-bottom: 20vh;
+} 
+
+p {
+    margin: 0;
+}
+
+/* Entête du site
+   ========================================================================== */
+
+   svg {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.svg {
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+.picture__entete {
+    position: relative;
+}
+
+.intro {
+    margin-top: 30vh;
+}
+
+.text-presentation {    
+    column-count: 2;
+    padding-top: 10px;
+    margin-top: -0.6em;
+    margin-left: -100px;
+    padding-left: 100px;
+    margin-right: -100px;
+    padding-right: 100px;
+    background-color: var(--couleurTurquoise);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+@media (max-width:800px) {
+    .text-presentation {
+        column-count: 1;
+    }
+}
+
+.text-presentation::before {
+    content: "";
+    height: 50vh;
+    width: 100px;
+    top: -50vh;
+    left: 0px;
+    background-color: var(--couleurTurquoise);
+    position: absolute;
+}
+
+@media (max-width:1000px) {
+    .text-presentation::before {
+        content: " ";
+        height: 35vh;
+        width: 100px;
+        top: -35vh;
+        left: 0px;
+        background-color: var(--couleurTurquoise);
+        position: absolute;
+    }
+}
+
+@media (max-width:570px) {
+    .text-presentation {
+        margin-right: -70px;
+        padding-right: 70px;
+        background-color: var(--couleurTurquoise);
+        position: relative;
+        padding-bottom: 10px;
+    }
+}
+
+.h2::before {
+    content:'';
+    top: -0.5em;
+    left: -100px;
+    height: 0.6em;
+    width: 90%;
+    background-color: var(--couleurRose);
+    position: absolute;
+    z-index: -1;
+}
+
+/* Main
+   ========================================================================== */
+
+.h3 {
+    position: relative;
+}
+
+.h3::before {
+    position: absolute;
+    content:'';
+    top: -0.5em;
+    right: 0px;
+    height: 0.6em;
+    width: 64%;
+    background-color: var(--couleurRose);
+    position: absolute;
+    z-index: -1;
+}
+
+.presentation-tete-daffiche {
+    position: relative;
+}
+
+.grille_artiste_gauche::before {
+    content: " ";
+    height: 78%;
+    width: 69%;
+    top: 15%;
+    left: 0px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.grille_artiste_droite::before {
+    content: " ";
+    height: 78%;
+    width: 69%;
+    top: 15%;
+    right: 0px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.image_affiche {
+    z-index: 1;
+    background-color: transparent;
+}
+
+.tete_daffiche {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.quote {
+    position: absolute;
+    bottom: -2em;
+}
+
+.duaLipaQuote{
+    text-align: right;
+}
+
+.text_artiste, .texte_artiste_droite {
+    position: relative;
+}
+
+.text_artiste::before {
+    position: absolute;
+    content: " ";
+    height: 3px;
+    width: 28%;
+    top: 8%;
+    left: 16px;
+    background-color: #ECC371;
+}
+
+.text_artiste::after{
+    position: absolute;
+    content: " ";
+    height: 15%;
+    width: 6%;
+    top: 73%;
+    right: -4%;
+    background-color: #ECC371;
+}
+
+.texte_artiste_droite::after{
+    position: absolute;
+    content: " ";
+    height: 15%;
+    width: 6%;
+    top: 73%;
+    left: -4%;
+    background-color: #ECC371;
+}
+
+.section_rose::after {
+    position: absolute;
+    bottom: 0;
+    background-image: url(data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='purple' preserveAspectRatio='none'%3E%3Cpolygon points='100,100 100,0 0,100' /%3E%3C/svg%3E);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    display: block;
+    height: 3em;
+    width: 100%;
