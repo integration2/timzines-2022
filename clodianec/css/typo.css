@@ -1,0 +1,160 @@
+/**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIÈRES
+ * Polices
+ * Base décimale
+ * Hiérarchie responsive
+ *
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 599px
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 600 à 799px
+ * point de rupture: 800px
+ *
+ * Écran large : 800px et +
+ */
+
+
+/* Polices */
+@font-face {
+    font-family: FelixTitling;
+    src:url(../typo/FELIXTI.TTF) format("truetype")}
+@font-face {
+    font-family: BodoniMT;
+    src:url(../typo/BOD_R.TTF) format("truetype")}
+@font-face {
+    font-family: InkFree;
+    src:url(../typo/Inkfree.ttf) format("truetype")}
+@font-face {
+    font-family: JavaneseText;
+    src:url(../typo/javatext.ttf) format("truetype")}
+
+h1,
+.h1{
+    font-family: FelixTitling, serif ;
+    color: var(--color-Green);
+    margin:0;
+}
+h2,
+.h2{
+    font-family: BodoniMT, serif ;
+    color: var(--color-O);
+    margin:0;
+}
+.pair h2,
+.pair .h2{
+    color: var(--color-Green);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+}
+#accroche{
+    color: var(--color-O);
+}
+#sources,
+#info{
+    color: var(--color-Green);
+}
+#accroche,
+#sources,
+#info,
+#joindre{
+    font-family: 'Times New Roman', Times, serif;
+}
+.apostrophe1,
+.apostrophe2{
+    font-family: InkFree, serif;
+    margin: 0;
+}
+#texteCitation{
+    font-family: JavaneseText, serif;
+    margin: 0;
+}
+
+
+/* Base décimale */
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 16px;
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+#accroche{ /* = 20px */
+    font-size: 2rem;
+}
+@media (min-width: 800px) {
+    #accroche{ /* = 26px */
+        font-size: 2.6rem;
+    }
+}
+
+#texteCitation{ /* = 23px */
+    font-size: 2.1rem;
+}
+@media (min-width: 800px) {
+    #texteCitation{ /* = 45px */
+        font-size: 4.5rem;
+    }
+}
+
+.apostrophe1,
+.apostrophe2{ /* = 120px */
+    font-size: 12rem;
+}
+@media (min-width: 800px) {
+    .apostrophe1,
+    .apostrophe2{ /* = 250px */
+        font-size: 25rem;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 10vw; 
+}
+
+
+h2,
+.h2 { /* = 35px */
+    font-size: 3.5rem;
+}
+@media (min-width: 800px) {
+    h2,
+    .h2 { /* = 60px */
+        font-size: 6rem;
+    }
+}
+
+#avertissement,
+#copyright{
+    font-size: 1.4rem;
+}
