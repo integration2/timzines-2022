@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- source url=https://gridbyexample.com/examples/code/example13.html -->
     <title>Timzines 2022</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/normalize.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <!-- <link href="css/utilitaires.css" rel="stylesheet" type="text/css" media="all"> -->
 
 </head>
@@ -17,23 +17,21 @@
         <nav class="logo">
             <a href="#Accueil"><img src="images/logo_Officiel.svg" alt="Logo Timzine"></a>
         </nav>
-        <picture class="entete__image">
-            <source media="(max-width: 600px)" srcset="" />
-            <source media="(min-width: 601px)" srcset="" />
+        <a href="#contenu" class="screen-reader-only focusable"> Allez au contenu</a>
+        <picture class="entete__image">         
             <img src="images/stromae-lenfer_1440.jpg" alt="Stromae sur son nouvel album" />
         </picture>
     </header>
     <main class="main">
-        <div class="conteneur">
+        <div class="conteneur" id="contenu">
             <p class="fil_ariane">Accueil > Musique > De ses débuts, jusqu’à aujourd’hui : La vie de Stromae </p>
             <h1 class="h1">De ses débuts, jusqu’à aujourd’hui : La vie de Stromae </h1>
             <p class="accroche">Né en 1985 à Bruxelles, Stromae alias Paul Van Haver est un
                 auteur-compositeur-interprète belge d'origine rwandaise. Il puise son inspiration autant dans le hip-hop
                 que dans la musique électronique.</p>
             <div class="biographie">
-                <div class="biographie_image">
                     <h2 class="h2_01">Biographie Rapide</h2>
-                    <picture class="col col_6_de_12">
+                    <picture class="biographie__image">
                         <source media="(max-width: 600px)" srcset="images/stromae_320.jpg" />
                         <source media="(min-width: 601px)" srcset="images/stromae_575.jpg" />
                         <img src="images/stromae_575.jpg" alt="Photo simple de Stromae" />
