@@ -1,18 +1,160 @@
+/* HEADER 1 */
+.header {
+    display: grid;
+    background: lightblue;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas:
+        ". . . "
+        "A . . "
+        ". . . "
+}
+
+.header--image {
+    grid-area: A;
+    margin-left: 100px;
+    /*margin: 10px 40px 10px 40px;*/
+}
+
+
+
+/* MAIN*/
+
+.main {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.container {
+    padding-bottom: 2.5rem;
+}
+
+.section_titre {
+    background: lightcoral;
+}
+
+.header--filariane {
+    font-size: medium;
+}
+
+/* SECTION 1 */
+.section_1 {
+    display: grid;
+    background: lightblue;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(auto, 600px) 100px 1fr;
+    grid-template-areas:
+        "A A A A A . B B B B B B "
+        ". . . C C C C C C C C ."
+}
+
+.section_1--texte {
+    grid-area: A;
+}
+
+.section_1--image {
+    grid-area: B;
+}
+
+.section_1--citation {
+    grid-area: C;
+    background: #26408B;
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+    /*min-height: 6rem;*/
+    opacity: 70%;
+    z-index: 1;
+    padding: 0 1rem;
+}
+
+/* SECTION 2 */
+.section_2 {
+    display: grid;
+    background: lightpink;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas:
+        "B . . . . . . . . . . . "
+        "B . . A A A A A . . . . "
+        "B . . . . . . . . . . . "
+}
+
+.section_2--texte {
+    grid-area: A;
+
+}
+
+.section_2--image {
+    grid-area: B;
+}
+
+
+/* SECTION 3 */
+.section_3 {
+    display: grid;
+    background: lightgreen;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+        ". . . . . . B B B B B B "
+        ". . . . . . B B B B B B "
+        ". . . . . . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        "A A A A A . B B B B B B "
+        ". . . . . . B B B B B B "
+}
+
+.section_3--texte {
+    grid-area: A;
+}
+
+.section_3--image {
+    grid-area: B;
+}
+
+
+
+/* SECTION PIED DE PAGE */
+.footer--section_4 {
+    width: auto;
+}
+
+.footer--image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 40px);
+}
+
+.footer--media {
+    text-align: center;
+}
+
+.footer--sources {
+    text-align: left;
+}
+
 .wrapper {
     display: grid;
     grid-gap: 1em;
-    grid-template-areas:
-        "header  header"
+    grid-template-areas: "header  header"
         "sidebar sidebar2"
         "content content"
         "footer  footer"
 }
 
+
 @media only screen and (min-width: 500px) {
     .wrapper {
         grid-template-columns: 20% auto;
-        grid-template-areas:
-            "header   header"
+        grid-template-areas: "header   header"
             "sidebar sidebar"
             "sidebar2  content"
             "footer   footer";
@@ -23,8 +165,7 @@
     .wrapper {
         grid-gap: 20px;
         grid-template-columns: 120px auto 120px;
-        grid-template-areas:
-            "header  header  header  header"
+        grid-template-areas: "header  header  header  header"
             "sidebar  sidebar2  sidebar2 content"
             "footer  footer  footer  footer";
 
@@ -59,8 +200,8 @@
 }
 
 /* régles générales */
-body {
-    margin: 40px;
+main {
+    margin: 240px;
 }
 
 .box {
@@ -73,7 +214,8 @@ body {
 
 .header,
 .footer {
-    background-color: #999;
+    background-color: #1A1B1E;
+    color: white;
 }
 
 .sidebar2 {
