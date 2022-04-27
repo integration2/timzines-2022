@@ -302,7 +302,7 @@ header{
          grid-gap: 20px;
          grid-template-columns: 370px auto 95px;
          grid-template-areas: 
-            "t t t"
+            "i t t"
             "i p .";
       }
       .contenu.pair{
