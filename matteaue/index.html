@@ -4,8 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" href="favicon" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Timzine - Uncharted avec Tom Holland : tout est mieux dans le jeu </title>
 </head>
 
@@ -15,11 +15,17 @@
         <a class="logo" href="../index.html">
             <img class="menu__img" src="images/logo_230 copie.png" alt="logo">
         </a>
-        <picture class="picture">
-            <source srcset="images/header_600.jpg" media="(max-width:599px)">
-            <source srcset="images/header_1440.jpg" media="(min-width: 600px">
-            <img src="images/header_600.jpg" alt="">
+        <div class="bleed">
+        <picture class="picture_entete">
+            <source media="(min-width:1000px)"
+            srcset="images/header_1440.jpg 1x, images/header_2800.jpg 2x">
+            <source media="(min-width:600px)"
+            srcset="images/header_600.jpg 1x, images/header_1200.jpg 2x">
+            <source media="(max-width:599px)"
+            srcset="images/header_320.jpg 1x, images/header_640.jpg 2x">
+            <img src="images/header_320.jpg" alt="">
         </picture>
+        </div>
     </header>
     <main role="main" class="rangee">
         <p class="fil_dariane">
@@ -146,20 +152,12 @@
         <section>
             <h2 class="titre_verdict">Le verdict</h2>
             <div class="verdict">
-                <ul class="+aime"> <h3>On a aimé<picture class="thumbs_up">
-                    <source srcset="images/like_32.png" media="(max-width:599px)">
-                <source srcset="images/like_64.png" media="(min-width:600px)">
-                <img src="images/like_32.png" alt="">
-                </picture></h3>
+                <ul class="+aime"> <h3>On a aimé<img class="thumbs" src="images/thumbs_up.svg"></h3>
                     <li class="+aime_lien">
                        <h4>Le casting est talentueux dans son ensemble et redonne des couleurs au film</h4>
                     </li>
                 </ul>
-                <ul class="-aime"> <h3>On a moins aimé <picture class="thumbs_down">
-                    <source srcset="images/dislike_32.png" media="(max-width:599px)">
-                <source srcset="images/dislike_64.png" media="(min-width:600px)">
-                <img src="images/dislike_32.png" alt="">
-                </picture></h3>
+                <ul class="-aime"> <h3>On a moins aimé <img class="thumbs" src="images/thumbs_down.svg"></h3>
                     <li class="-aime_lien"><h4>La crédibilité a disparu en même temps que la gravité sur Terre</h4></li>
                     <li class="-aime_lien"><h4>Les émotions ont aussi disparu (et c’est pire)</h4></li>
                     <li class="-aime_lien"><h4>C’est globalement décevant vu le potentiel</h4></li>
@@ -194,7 +192,7 @@
     <footer class="footer" role="contentinfo">
         <div class="sources_menu_sociaux">
         <div class="sources">
-            <ul class="list_sources">
+            <ul class="list_sources"> <h3>Sources des images</h3>
                 <li>
                     <a class="lien_source"
                         href="https://wall.alphacoders.com/big.php?i=1205664&lang=French">Bannière</a>

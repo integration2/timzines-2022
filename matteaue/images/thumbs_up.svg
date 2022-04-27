@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e8bf31;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1"/>
+  <g id="Calque_2" data-name="Calque 2">
+    <g id="Layer_21" data-name="Layer 21">
+      <rect class="cls-1" y="7" width="3" height="10"/>
+      <path class="cls-1" d="M17,6h-5V1c0-.6-.4-1-1-1h-1L5.7,5.4c-.4,.5-.7,1.2-.7,1.9v7.7c0,1.1,.9,2,2,2h6.4c1.1,0,2.2-.6,2.7-1.7l2.9-5.8v-1.5c0-1.1-.9-2-2-2Z"/>
+    </g>
+  </g>
+</svg>

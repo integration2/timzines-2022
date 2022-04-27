@@ -2,22 +2,22 @@
 :root{
     /** Démo **/
     /* les caractères */
-    --fonte-principale: 'Libre Franklin', sans-serif;
-    --fonte-ancienne:'Libre Baskerville', serif;
+    --fonte-principale: 'Raleway', sans-serif;
+    --fonte-ronde:'Baloo 2', cursive;
     /* les couleurs */
-    --couleur-background: rgba(50, 50, 50, 0.9);
-    --couleur-principale: aliceblue;
+    --couleur-principale: #393939;
+    --couleur-secondaire: #E8BF31;
+    --couleur-tertiaire: #ffff;
     /* les tailles */
     --fontSize-base-small: 1.4rem;
     --fontSize-base-medium: 1.6rem;
     --fontSize-base-large: 1.8rem;
-    /* bordures, coins ronds, divers */
-    --borderRadius: 10px;
 }
 
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
 html {
     box-sizing: border-box;
+    background-color: var(--couleur-principale);
 }
 
 *,
@@ -29,15 +29,6 @@ html {
 /* Images fluides */
 img{
     max-width: 100%;
-}
-
-/*** Styles de base ***/
-abbr[title]{
-    text-decoration: none;
-    cursor:help;
-}
-abbr[title]:hover{
-    background-color: rgba(244, 161, 71, 0.25);
 }
 
 /** Accessibilité
