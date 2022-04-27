@@ -1,0 +1,629 @@
+@charset "UTF-8";
+
+/**
+ * @author JusCarr 
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Mise en page
+ ***body
+ ***header
+ ***intro
+ ***fcklove
+ ***origin
+ ***prochain_album
+ ***footer
+
+ **MOBILE
+ **MEDIUM
+ **LARGE
+ */
+
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+
+/* Mise en page
+   ========================================================================== */
+/*margin_grid ESSAIE #1 BANDEAU DROIT
+.marge_right {
+   grid-area: h;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 13fr;
+   grid-template-areas:
+      "a"
+      "b"
+}
+*/
+/*Margin ESSAIE #2 BANDEAU DROIT
+/*
+.margin_right {
+   position:absolute;
+   margin-left:80%
+
+}
+.hit {
+   transform: rotate(90deg);
+}
+.allHit {
+   height: 1000px;
+   margin-left:20%
+}
+.main {
+   background-color:aqua;
+   margin-right:20%;;
+   margin-left:20%
+}
+*/
+
+
+/*MISE EN PAGE DES DIV + Autre */
+
+
+.div {
+   margin-bottom: 50px;
+}
+
+.div:nth-of-type(4) {
+   margin-bottom: 0px;
+}
+p {
+   line-height: 20px;
+   margin: 0px;
+}
+
+
+/*body-grid format large, en laissant une marge de 1fr a droite, cela laisse la place au bandeau de ce positionner au bon endroit*/
+
+
+@media(min-width:1000px) {
+   .body {
+      background-color: #020426;
+      display: grid;
+      grid-template-columns: 6fr 1fr;
+      grid-template-rows: 0.7fr 5.1fr;
+      grid-template-areas:
+         "e a"
+         "e b"
+         "f b"
+         ;
+   }
+
+
+   /*Mise en Forme de la marge droite*/
+
+
+   .p_hit {
+      font-size: 2.5em;
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      height: 100%;
+      font-family: "Timmana";
+   }
+
+   .div_hit:nth-of-type(2n) {
+      margin-top: 500px
+   }
+
+   .div_hit {
+      display: flex;
+      margin-top: 300px;
+      transform: rotate(90deg);
+      height: auto;
+   }
+
+   .h3 {
+      grid-area: a;
+      background-color: #EAEAEA;
+      color: black;
+      text-align: center;
+      align-items: center;
+      padding-top: 30px;
+   }
+
+   .hit {
+      grid-area: b;
+      background-color: #EAEAEA;
+      color: black;
+   }
+}
+
+
+/*body grid MEDIUM*/
+
+
+@media(max-width:1000px) {
+   .body {
+      background-color: #020426;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 4fr;
+      grid-template-areas:
+         "e"
+         "f"
+         ;
+   }
+
+   .h3 {
+      display: none;
+   }
+
+   .hit {
+      display: none;
+   }
+
+
+   .grid_header {
+      margin-right: 20%;
+   }
+}
+
+@media(max-width:600px) {
+   .body {
+      background-color: #020426;
+      display: block;
+   }
+
+}
+
+.header {
+   grid-area: e;
+}
+
+.main {
+   grid-area: f;
+}
+
+.footer {
+   grid-area: fa;
+}
+
+
+/*header grid LARGE+MEDIUM*/
+
+
+@media(min-width:800px) {
+   .grid_header {
+      margin-left: 20%;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: 0.5fr 0.5fr 1fr;
+      grid-template-areas:
+         "c ."
+         "c ."
+         "d d"
+      ;
+   }
+
+   .logo {
+      grid-area: c;
+      padding-top: 20px;
+   }
+
+   .titre {
+      grid-area: d;
+      justify-self: center;
+   }
+}
+
+
+/*header MOBILE*/
+
+
+.grid_header {
+   margin-left: 20%;
+   margin-right: 20%;
+   padding-top: 20px;
+}
+
+.titre {
+   text-align: center;
+   padding-bottom: 20px;
+   width: auto;
+}
+
+.logo {
+   width: auto;
+}
+
+/*grid intro LARGE*/
+@media(min-width:800px) {
+   .grid_intro {
+      background-color: white;
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.2fr 2.5fr 0.2fr;
+      grid-template-rows: 0.5fr 0.5fr 4fr 0.2fr 0.6fr;
+      grid-template-areas:
+         ". . . . ."
+         ". g . . ."
+         ". g . h ."
+         ". g . . ."
+         ". . . . ."
+   }
+
+   .div_intro {
+      grid-area: g;
+      box-shadow: -30px -30px 0px 0px #020426;
+   }
+   .img_intro {
+      grid-area: h;
+   }
+   
+}
+
+/*intro MEDIUM + MOBILE*/
+@media(max-width:800px) {
+   .grid_intro {
+      background-color: white;
+      padding: 3%;
+      
+   }
+}
+.div_intro {
+   background-color: #119479;
+   padding: 2em;
+   box-shadow: -20px -20px 0px 0px #020426;
+   margin-top: 20px;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+.p_intro {
+   margin: 5%;
+}
+
+
+/*MARGE QUE SUR MEDIUM/LARGE intro*/
+
+
+@media(min-width:320px) {
+   .grid_intro {
+      margin-right: 5%;
+   }
+}
+
+
+/*grid fcklove LARGE*/
+
+
+@media(min-width:800px) {
+   .grid_fklove {
+      background: #EAEAEA;
+      display: grid;
+      grid-template-columns: 0.3fr 3fr 1fr 1fr 2.5fr 3fr 1fr;
+      grid-template-rows: 0.2fr 0.4fr 1fr 0.4fr;
+
+   }
+
+   .h2_fcklove {
+      grid-area: 2 / 5 / 2 / 5;
+      color: #020426;
+   }
+
+   .img_fcklove {
+      grid-area: 2 / 2 / 4 / 4;
+   }
+
+   .p_fcklove {
+      grid-area: 3 / 3 / 3 / 7;
+      box-shadow: 75px -30px 0px 0px #119479;
+      padding: 5%;
+      background-color: #020426;
+      column-count: 3;
+   }
+}
+
+
+/*fcklove MEDIUM*/
+
+
+.grid_fklove {
+   background: #EAEAEA;
+   padding: 5%;
+}
+
+.h2_fcklove {
+   color: #020426;
+   text-align: center;
+   padding-bottom: 20px;
+}
+
+.p_fcklove {
+   margin-top: 30px;
+   padding: 5%;
+   background-color: #020426;
+   box-shadow: 30px -30px 0px 0px #119479;
+}
+
+/*MOBILE ajustement fcklove*/
+
+
+@media(min-width:320px) {
+   .grid_fklove {
+      margin-left: 15%;
+   }
+}
+
+
+/*grid origine LARGE*/
+
+
+@media(min-width:1000px) {
+   .grid_origin {
+      display: grid;
+      grid-template-columns: 0.7fr 1.5fr 0.7fr 0.3fr 0.7fr 0.7fr 0.1fr;
+      grid-template-rows: 0.4fr 0.2fr 1fr 0.2fr;
+      grid-template-areas:
+         ". . ac ac ac . ."
+         ". . . . . . ."
+         ". bc bc . cc cc ."
+         ". bc bc . . . ."
+   }
+
+   ;
+
+   .h2_origin {
+      text-align: left;
+   }
+}
+
+@media(min-width:800px) {
+   .grid_origin {
+      display: grid;
+      grid-template-columns: 0.7fr 0.6fr 0.7fr 0.3fr 0.7fr 0.7fr 0.1fr;
+      grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
+      grid-template-areas:
+         ". . ac ac ac . ."
+         ". . . . . . ."
+         ". bc bc . cc cc ."
+         ". bc bc . . . ."
+   }
+
+   .h2_origin {
+      grid-area: ac;
+      text-align: center;
+      padding-top:30px;
+   }
+   .img_origin {
+      grid-area: cc;
+   }
+}
+
+/*MEDIUM origine*/
+
+
+@media(max-width:800px) {
+   .h2_origin {
+      text-align: center;
+      padding-bottom: 30px;
+   }
+
+   .grid_origin {
+      padding: 10%;
+   }
+
+   .p_origin {
+      column-count: 2;
+      background-color: #EAEAEA;
+      box-shadow: -15px -15px 0px 0px #119479;
+      padding: 5%;
+      margin-top: 30px;
+      color: black
+   }
+}
+
+
+/*origin changement pour MOBILE*/
+
+
+@media(max-width:320px) {
+   .p_origin {
+      column-count: 1;
+   }
+}
+
+
+/*UNIVERSEL origin*/
+
+
+.p_origin {
+   grid-area: bc;
+   column-count: 2;
+   background-color: #EAEAEA;
+   box-shadow: -30px -30px 0px 0px #119479;
+   padding: 5%;
+   color: black
+}
+
+
+
+/*grid prochain_album LARGE-MEDIUM*/
+
+
+@media(min-width:800px) {
+
+   .h2_prochain {
+      grid-area: 1 / 3 / 1 / 5;
+      color: #020426;
+   }
+
+   .p_prochain {
+      grid-area: 3 / 2 / 7 / 4;
+      background-color: #119479;
+      color: black;
+      column-count: 2;
+      z-index: 0;
+      padding: 5%;
+      box-shadow: 30px -30px 0px 0px #020426;
+   }
+
+   .img_prochain {
+      grid-area: 2 / 5 / 6 / 7
+   }
+
+   .citation {
+      grid-area: 5 / 3 / 8 / 3;
+      z-index: 1;
+      padding: 5%;
+      background-color: #EAEAEA;
+      color: black;
+      box-shadow: -10px -10px 0px 0px #020426;
+      margin-top: 5%
+   }
+
+   .bg_prochain {
+      display: grid;
+      grid-template-columns: 0.5fr 0.5fr 1.5fr 0.2fr 0.1fr 1.5fr 0.2fr;
+      grid-template-rows: 1fr 0.2fr 0.2fr 4fr 1fr 0.2fr 0.3fr 1fr;
+      background-color: white;
+   }
+}
+
+
+/*MEDIUM-MOBILE prochain_album*/
+
+
+@media(max-width:800px) {
+   .bg_prochain {
+      padding: 10%;
+      margin-left: 10%;
+      background-color: white;
+   }
+
+   .h2_prochain {
+      text-align: center;
+      padding-bottom: 30px;
+      color: #020426;
+   }
+
+   .p_prochain {
+      margin: 10%;
+      background-color: #119479;
+      color: black;
+      column-count: 2;
+      z-index: 0;
+      padding: 5%;
+      box-shadow: 30px -30px 0px 0px #020426;
+   }
+
+   .citation {
+      margin: 10%;
+      padding: 5%;
+      background-color: #EAEAEA;
+      color: black;
+      box-shadow: -10px -10px 0px 0px #020426;
+      margin-top: 5%
+   }
+}
+
+
+/*Ajustement MEDIUM*/
+
+
+@media(max-width:1200px) {
+   .bg_prochain {
+      grid-template-rows: 1fr 0.2fr 0.2fr 5fr 1fr 0.2fr 0.3fr 1fr;
+   }
+}
+
+
+/*porchain_album MOBILE*/
+
+
+@media(max-width:320px) {
+   .bg_prochain {
+      padding: 2%;
+      margin-left: 0px;
+      background-color: white;
+   }
+
+   .p_prochain {
+      column-count: 1;
+   }
+}
+
+/*footer LARGE*/
+.src {
+   text-align: center;
+   padding-left: 10%;
+   padding-right: 10%;
+   color: black;
+   padding-top: 10px;
+
+}
+
+.footer {
+   background-color: #EAEAEA;
+   padding-top: 5%;
+   padding-bottom: 5%;
+}
+
+.footer__menu {
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   padding-top: 10px;
+   margin-top: 0px;
+   padding-left: 0px
+}
+
+.footer__lien {
+   font-size: 0;
+   display: block;
+   width: 97px;
+   height: 97px;
+   margin-right: 2rem;
+   background-image: url(../img/SpriteFooter.png);
+   background-repeat: no-repeat;
+   border-radius: 2px;
+   margin-left: 2rem;
+}
+.footer__item:first-child .footer__lien {
+   background-position: 1px 1px;
+}
+
+.footer__item:nth-child(2) .footer__lien {
+   background-position: -102px 1px;
+}
+
+.footer__item:nth-child(3) .footer__lien {
+   background-position: -202px 2px;
+}
+
+.footer__item .footer__lien:hover,
+.footer__item .footer__lien:active {
+   background-position-y: -101px;
+
+}
+
+.src {
+   margin-bottom: 0px;
+}
+/*footer MOBILE/MEDIUM*/
+@media(max-width:600px) {
+   .footer__lien {
+      font-size: 0;
+      display: block;
+      width: 97px;
+      height: 97px;
+      margin-right: 2px;
+      background-image: url(../img/SpriteFooter.png);
+      background-repeat: no-repeat;
+      border-radius: 2px;
+      margin-left: 2px;
+   }
+}
