@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="Un portfolio d'apprentissages dans le cours d'Intégration II, session 2, programme Techniques d'intégration multimédia du Cégep de Sainte-Foy.">
+    <link rel="apple-touch-icon" sizes="180x180" href="cadre-pedagogique/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="cadre-pedagogique/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="cadre-pedagogique/images/favicon-16x16.png">
+    <!--    <link rel="manifest" href="cadre-pedagogique/images/site.webmanifest">-->
+    <link rel="mask-icon" href="cadre-pedagogique/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>TimZines 2022 - Accueil</title>
     <style>
         /* @author Ève Février */
@@ -38,6 +45,7 @@
             /* base sur ul */
             list-style: none;
             padding-left: 0;
+            padding-bottom: 2em;
             margin-bottom: 0;
         }
         @media (min-width: 600px) {
@@ -124,19 +132,19 @@
          */
         .titre-portfolio {
             position: relative;
-            min-height: 30vh;
+            min-height: 40vh;
             background-image: url("images/pokerplanning_tim-unis.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             padding-top: .25em;
             text-shadow: 3px 3px 3px white;
         }
-@media (min-width: 800px) {
-    .titre-portfolio {
-        background-image: url("images/pokerplanning-gr1.jpg");
-        padding-top: 1.25em;
-    }
-}
+        @media (min-width: 800px) {
+            .titre-portfolio {
+                background-image: url("images/pokerplanning-gr1.jpg");
+                padding-top: 1.25em;
+            }
+        }
         .titre-portfolio::after {
             position: absolute;
             bottom:0;
@@ -212,20 +220,23 @@
             position: relative;
             top: -20px;
             z-index: 2;
+            font-weight: 800;
+            color:black;
+            text-shadow: 5px 2px 8px white;
         }
 
         .web-developer img {
             width: 60px;
             border: 1px solid darkgrey;
             border-radius: 50%;
-            filter: saturate(0.5);
-            transition: all 1s;
+            filter: saturate(0);
+            transition: transform 1s ease-out, filter 1.5s ease-out;
             position: relative;
             z-index: 2;
             margin-top: 1em;
         }
         .web-developer a:hover img{
-            filter: saturate(2);
+            filter: saturate(1.25);
             transform: rotate(360deg);
         }
         .exemples,
@@ -409,7 +420,7 @@
         </li>
     </ul>
 
-    <aside class="exemples">
+    <!--<aside class="exemples">
         <h1>Exemples</h1>
         <ul>
             <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/index.html">Grille 5 colonnes -
@@ -423,12 +434,13 @@
             <li><a href="cadre-pedagogique/demo-grilles-css/00_grille-gisellehessen/v2.html">Clip-path, object-fit et object-position</a></li>
             <li><a href="cadre-pedagogique/demo-grilles-css/04_lproy/index.html">Forme irrégulière (polygone svg) en arrière-plan</a></li>
         </ul>
-    </aside>
+    </aside>-->
 
 </main>
 <footer>
 
     <p class="credits">
+        Cours 582-204-SF Intégration II, session 2 du programme des <br>
         <small>
             <a href="https://timcsf.ca">Techniques d'intégration multimédia</a>,
             <a href=https://csfoy.ca"">Cégep de Sainte-Foy</a>
