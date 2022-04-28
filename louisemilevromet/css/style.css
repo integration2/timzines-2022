@@ -71,6 +71,68 @@ img {
     font-size: 115%;
 }
 
+@media(max-width:800px){
+
+    .Bored_Ape {
+        background-color: #F5CABF;
+        margin: 0%;
+        background-image: url(../images/texture-1.png), url(../images/texture-1.png);
+        background-position: center left, center right;
+        background-repeat: repeat-y;
+        background-size: 200px;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-areas: 
+                            ". N ."
+                            ". H ."
+                            ". I ."
+                            ". J ."
+                            ". K ."
+                            ". L ."
+                            ". M ."
+
+    
+    }
+    .Bored_Ape_Titre {
+        grid-area: N;
+        margin-left: 150%;
+    }
+    .Bored_Ape__images__01 {
+        grid-area: H;
+        color: #2B246A;
+        margin-left: 10%;
+    }
+    .Bored_Ape__description__01 {
+        grid-area: I;
+        color: #2B246A;
+        font-size: 115%;
+        margin-left: 180%;
+    }
+    .Bored_Ape__images__02 {
+        grid-area: J;
+        color: #2B246A;
+        margin-left: 150%;
+    }
+    .Bored_Ape__description__02 {
+        grid-area: K;
+        color: #2B246A;
+        font-size: 115%;
+        margin-left: 150%;
+    }
+    .Bored_Ape__images__03 {
+        grid-area: L;
+        color: #2B246A;
+        margin-left: 150%;
+    }
+    .Bored_Ape__description__03 {
+        grid-area: M;
+        color: #2B246A;
+        font-size: 115%;
+        margin-left: 150%;
+    }
+
+} 
+
 /* aire occupée par les éléments d'interface */
 .header {
     max-width: 100%;
@@ -312,13 +374,7 @@ body {
 
 } 
 
-@media(max-width:600px){
 
-    .img_conteneur03{
-        margin: auto;
-    }
-
-} 
 
   .column img {
       border-radius: 8%;
