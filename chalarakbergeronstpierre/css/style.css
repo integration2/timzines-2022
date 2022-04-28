@@ -189,7 +189,8 @@ figcaption{
     .img_insta {
         /* position: relative;
         z-index: 1; */
-        float: left;
+        position: relative;
+        bottom: -3em;
 
         margin: 0;
     }
