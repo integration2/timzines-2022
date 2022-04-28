@@ -36,30 +36,30 @@
  
  /** Polices dans la page **/
  h1 {
-    font-family: "Delius Swash Caps";
+    font-family: "Delius Swash Caps"; /* Ajouter la famille de police */
     font-size: 60px;
 }
 h2 {
-    font-family: "Delius Unicase";
+    font-family: "Delius Unicase"; /* Ajouter la famille de police */
     font-size: 32px;
 }
 .fil-dariane {
-    font-family: "Roboto";
+    font-family: "Roboto"; /* Ajouter la famille de police */
     font-size: 12px;
 }
 .auteur,
 .datePublication,
 .credits {
-    font-family: "Roboto";
+    font-family: "Roboto"; /* Ajouter la famille de police */
     font-size: 14px;
 }
 .quote {
-    font-family: "Delius";
+    font-family: "Delius"; /* Ajouter la famille de police */
     font-size: 25px;
     color: var(--couleur-blanche);
 }
 p {
-    font-family: "Roboto";
+    font-family: "Roboto"; /* Ajouter la famille de police */
     font-size: 16px;
 }
  /* Mise en page */
@@ -75,16 +75,17 @@ body {
     background-color: #EFF0FA;
     background-image: url('../images/Mobile/1x/motifTitre_288.png');
     background-repeat: no-repeat;
-    background-position: relative;
+    /* background-position: relative; MISMATCH */
     background-position-y: 525px;
-    background-position-x: 40%;
+    /*background-position-x: 40%;*/
+    background-position-x: calc(50% + 250px);
     background-size: 320px;
     width: 100%;
 }
 @media (min-width: 600px) {
     body {
-        background-position-x: right;
-        background-position-y: 0px;
+        /*background-position-x: right;*/
+        background-position-y: 0px;  /* L'unité de mesure px est superflu avec le nombre 0 */
         background-size: 650px;
     }
 }
