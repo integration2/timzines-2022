@@ -169,21 +169,21 @@ h4 { /* = 16px */
         max-width: 1000px;
         padding: 0;
         /* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage */
-        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
+        /* background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(0, 0, 255, 0.2);" /%3E%3Cstop offset="100%" style="stop-color:rgba(0, 0, 255, 0.1);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll; */
     }
  }
-@media only screen and (max-width:599){
  .section_casting {
     display: grid;
     grid-gap: 1em;
     grid-template-areas:
+                    "content1"
                     "drake"
-                    "h2"
-                    "content"
+                    "content2"
                     "chloe"
+                    "content3"
 }
-}
-@media only screen and (max-width: 999px) {
+
+@media only screen and (min-width: 500px) {
     .section_casting {
         display: grid;
         grid-gap: 20px;
@@ -195,169 +195,96 @@ h4 { /* = 16px */
 
         /* CENTRAGE */
         max-width: 1000px;
-        margin: 0 auto;
+        margin: auto;
         padding: 0;
     }
-        .drake {
-            grid-area: drake;
-        }
-        .casting {
-            grid-area: content1;
-        }
-        .texte_casting1 {
-            grid-area: content2;
-        }
-        .chloe {
-            grid-area: chloe;
-        }
-        .texte_casting2 {
-            grid-area: content3;
-        }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
     .section_casting {
         display: grid;
+        grid-gap: 20px;
         grid-template-columns: 5fr 5fr;
         grid-template-areas:
                     "drake content1"
                     "content2 chloe"
                     "content3 chloe"
     }
-    .drake {
-        grid-area: drake;
-        }
-    .casting {
-        grid-area: content1;
+} 
+.drake {
+    grid-area: drake;
+    align-self: center;
+    justify-self: center;
     }
-    .texte_casting1 {
-        grid-area: content2;
-    }
-    .chloe {
-        grid-area: chloe;
-    }
-    .texte_casting3 {
-        grid-area: content3;
-    }
+.intro_texte_casting {
+    grid-area: content1;
+}
+.texte_casting2 {
+    grid-area: content2;
+}
+.chloe {
+    grid-area: chloe;
+    align-self: center;
+    justify-self: center;
+}
+.texte_casting3 {
+    grid-area: content3;
 }
 /* Section physique */
-@media only screen and (max-width:599px){
 .section_physique {
     display: grid;
     grid-gap: 1em;
     grid-template-areas:
-                    "physique"
+                    "image"
                     "content1"
                     "content2"
                     "content3"
                     "citation"
 }
-}
-@media only screen and (max-width: 999px) {
+@media only screen and (min-width: 500px) {
     .section_physique {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 5fr 5fr;
         grid-template-areas:
-                    "physique physique"
-                    "content1 content3"
-                    "content2  citation";
+        "image image"
+        "content1 content3"
+        "content2  citation";
 
         /* CENTRAGE */
         max-width: 1000px;
         margin: 0 auto;
         padding: 0;
     }
-@media only screen and (max-width: 999px) {
+}
+@media only screen and (min-width: 800px) {
     .section_physique {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 5fr 5fr;
         grid-template-areas:
-                    "physique physique"
+                    "image image"
                     "content1 content3"
                     "content2  citation";
-        .physique {
-            grid-area: physique;
-        }
-        .texte_physique1 {
-            grid-area: content1;
-        }
-        .texte_physique2 {
-            grid-area: content2;
-        }
-        .texte_physique3 {
-            grid-area: content3;
-        }
-        .citation {
-            grid-area: citation;
-        }
+    }
 }
-@media only screen and (min-width: 1000px) {
-    .section_casting {
-        display: grid;
-        grid-template-columns: 5fr 5fr;
-        grid-template-areas:
-                    "drake content1"
-                    "content2 chloe"
-                    "content3 chloe"
-    }
-    .drake picture {
-        grid-area: drake;
-        display: block;
-        margin-top: auto;
-        margin-bottom: auto; 
-        text-align: center;
-    }
-    .casting {
-        grid-area: content1;
-    }
-    .texte_casting1 {
-        grid-area: content2;
-    }
-    .chloe {
-        grid-area: chloe;
-    }
-    .texte_casting3 {
-        grid-area: content3;
-    }
+.physique {
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+}
+.texte_physique1 {
+    grid-area: content1;
+}
+.texte_physique2 {
+    grid-area: content2;
+}
+.texte_physique3 {
+    grid-area: content3;
+}
+.citation {
+    grid-area: citation;
 }
 
- /* Mise en page
- ========================================================================== */
- .section_casting{
-    padding-top: 10em;
-    padding-bottom: 10em;
-}
-
- /*** Entête
- ========================================================================== */
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    text-align: center;
-    max-width: 100%;
-}
-.bleed{
-display: block;
-}
-.picture_entete picture{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
- /*** Main
- ========================================================================== */
-.fil_dariane{
-margin: 0;
-}
-.info_article>p{
-    margin: 0;
-}
-h2{
-    text-align: center;
-}
 .caisse picture{
     display: block;
     margin-left: auto;
@@ -373,8 +300,9 @@ h2{
                     "content1"
                     "content2"
 }
-@media (min-width:500px){
+@media only screen and (min-width:500px){
 .caisse{
+        padding-bottom: 2em;
         margin-left: 0;
         width: 100%;
         display: grid;
@@ -390,11 +318,12 @@ h2{
         margin-left: calc((( - 40rem) / 2) * -1);
         width: 92vw;
         display: grid;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: 1fr auto;
         grid-template-areas:
                     "content1 image"
                     "content2 image"
     }
+}
 .caisse picture {
     grid-area: image;
 
@@ -408,13 +337,51 @@ h2{
     grid-area: content2;
     margin-right: 10%;
 }
-}
+
 .physique picture {
     display: block;
     margin-left: auto;
     margin-right: auto; 
     text-align: center;
 }
+ /* Mise en page
+ ========================================================================== */
+ .section_casting{
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+.section_physique{
+    padding-top: 10em;
+}
+
+ /*** Entête
+ ========================================================================== */
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    max-width: 100%;
+}
+.picture_entete picture{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+ /*** Main
+ ========================================================================== */
+.fil_dariane{
+margin: 0;
+}
+.info_article>p{
+    margin: 0;
+}
+h2{
+    text-align: center;
+}
+
 /**** La Citation 
  ========================================================================== */
  .citation{
@@ -472,6 +439,14 @@ color: var(--couleur-principale);
     color: var(--couleur-tertiaire);
 }
 
+a.credits_lien:link,
+a.credits_lien:visited{
+color: var(--couleur-principale);
+}
+a.credits_lien:hover, 
+a.credits_lien:active {
+color: var(--couleur-tertiaire)
+}
 
 /***Footer
 ========================================================================== */
@@ -497,6 +472,9 @@ color: var(--couleur-principale);
 .list_sources li{
     list-style: none;
     color: var(--couleur-principale);
+}
+.list_sources{
+    padding-left: 0;
 }
 .menu-sociaux{
     list-style: none;
@@ -541,6 +519,7 @@ color: var(--couleur-principale);
   }
 .footer{
     background-color: var(--couleur-secondaire);
+    padding-bottom: 1em;
 }
 .credits{
     text-align: center;
