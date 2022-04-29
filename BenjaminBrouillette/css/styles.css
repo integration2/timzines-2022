@@ -1,3 +1,37 @@
+@charset "UTF-8";
+/**
+ * @author Michel Kingma-Lord <0801342@csfoy.ca>
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Mise en page
+ *** entête
+ *** main
+ *** formulaire
+ *** interactivité
+ *** footer
+ */
+/* Grille
+   ========================================================================== */
+/*@import url(grille.css);*/
+
+/* Normalize
+   ========================================================================== */
+@import url(normalize.css);
+/* Utilitaires
+   ========================================================================== */
+@import url(utilitaires.css);
+/* Charte typographique
+   ========================================================================== */
+@import url(typo.css);
+
+/* Mise en page
+   ========================================================================== */
+/***************************/
+
 * {
     /*margin-left: 1em;*/
     /*margin-right: 1em;*/
@@ -11,9 +45,6 @@ body {
             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='50' height='9999' style='fill:rgb(250,50,20);' /%3E%3C/svg%3E");
     background-position: -350px 0, 300px 0;
     /*background-position: calc(50% - 250px), calc(50% + 100px);*/
-}
-
-picture {
 }
 
 .h1 {
