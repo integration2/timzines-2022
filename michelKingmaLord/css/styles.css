@@ -30,9 +30,20 @@
 
 /* Mise en page
    ========================================================================== */
-/**************************
-Arrière Plan
-*************************/
+/***************************/
+
+a:link,
+a:visited {
+    color: blue;
+}
+
+a:hover,
+a:active {
+    color: #26408B;
+}
+
+/* Arrière Plan *************************/
+
 /**************************
 Banderole
 *************************/
@@ -57,6 +68,10 @@ Section
 *************************/
 /* Interactivité générale */
 :focus {
+    outline: green auto 10px;
+}
+
+.section_1:focus {
     outline: green auto 10px;
 }
 
@@ -461,7 +476,9 @@ Section
 }
 
 .footer--sources {
-    text-align: left;
+    margin: auto;
+    max-width: 1000px;
+    padding-bottom: 1rem;
 }
 
 /*SPRITE MEDIA SOCIAUX */
@@ -469,12 +486,14 @@ Section
 
 /* sprite css */
 .menu-sociaux {
-    margin: 4rem 4em 4rem 4rem;
+    margin: 1rem 1em 1rem 1rem;
     list-style-type: none;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     padding: 0rem;
+    resize: inherit;
 }
 
 .menu-sociaux__lien {
@@ -483,7 +502,8 @@ Section
     width: 50px;
     height: 50px;
     margin-right: 1rem;
-    background-image: url(/assets/footer/social-icons-sprite.png);
+    background-image: url(/michelKingmaLord/assets/footer/social-icons-sprite.png);
+    background-size: 425%;
     background-repeat: no-repeat;
 }
 
@@ -519,5 +539,5 @@ Section
     height: 108px;
     border: 1px #26408B solid;
     margin: 0 3rem 6rem 3rem;
-    background: url(/assets/footer/social-icons-sprite.png) no-repeat;
+    background: url(/michelKingmaLord/assets/footer/social-icons-sprite.png) no-repeat;
 }
