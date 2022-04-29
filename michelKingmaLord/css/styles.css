@@ -465,6 +465,7 @@ Section
 }
 
 .footer--sources {
+    margin: 40px;
     text-align: left;
 }
 
