@@ -60,3 +60,11 @@ h2 {
     }
 }
 
+@media (min-width: 600px) {
+    .citation {
+        font-family: "Myriad Pro", sans-serif;
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+}
+
