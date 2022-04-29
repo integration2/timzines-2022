@@ -6,6 +6,7 @@
     font-size: 16px;
     padding: 0;
     margin: 0;
+
 }
 .conteneur {
     max-width: 1000px;
@@ -55,6 +56,7 @@ h2 {
     font-size: 30px;
     text-align: center;
     padding-bottom: 1rem;
+
 
 }
 @media (min-width : 301px) {
@@ -117,6 +119,69 @@ img {
     background-color: rgb(129, 1, 1);
     border: 10em;
 }
+
+
+.info {
+    text-align: center;
+}
+
+.synopsis {
+    text-align: left;
+}
+small{
+    font-size: 14px;
+    justify-content: center;
+}
+h1,
+h2,
+h3 {
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+h3 {
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+.div__paire > p {
+    color: black;
+}
+.div__paire > h2 {
+    color: black;
+}
+img {
+    max-width: 90%;
+    padding-left: 1.5em;
+}
+
+.div__medias > img {
+    max-width: 25%;
+    
+}
+body {
+    background-color: black;
+}
+
+.div__impaire {
+    background-color: rgb(129, 1, 1);
+    border: 10em;
+}
+
 
 .div__paire {
     background-color: rgb(178, 173, 173);
