@@ -1,8 +1,11 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 @import url("normalize.css");
-@import url("typo.css");
 @import url("utilitaires.css");
+@import url("typo.css");
+
 
 
 .conteneur {
@@ -12,21 +15,21 @@
 
 body {
     color: white;
-    background-color: rgba(26, 31, 35, 1);
-    /*font-size: 1.25em;*/
+    background-color: var(--couleur-background);
+
 }
-/*@media (min-width: 500px) {*/
-/*    body {*/
-/*        margin: 0 30px 0;*/
-/*    }*/
-/*}*/
 
 /* 1ère grille */
-/* triangle gris svg en ligne dans le html */
+
 .grille1 svg {
     display: none;
 }
-
+@media (max-width: 600px){
+.b {
+    margin-right: 150px;
+    margin-left: 30px;
+}
+}
 @media (min-width: 600px) {
     .grille1 {
         display: grid;
@@ -69,7 +72,7 @@ body {
     top: 10vh;
     bottom: 0;
     transform: skew(11deg) rotate(11deg);
-    background-color: rgba(200, 0, 0, 1);
+    background-color: var(--couleur-rouge);
     content: " ";
     z-index: -1;
 }
@@ -90,7 +93,7 @@ body {
     .film-se-distingue::before {
         top: 0;
         transform: skew(-11deg) rotate(-11deg);
-        background-color: rgba(233, 10, 10, 1);
+        background-color: var(--couleur-rouge);
         z-index: 0;
     }
 }
@@ -163,7 +166,7 @@ body {
     .f {
         grid-area: f;
         padding-top: 2rem;
-        padding-bottom: 12rem;
+        padding-bottom: 40px;
     }
 
     .x {
@@ -176,7 +179,8 @@ body {
 /*GRILLE 4*/
 .grille4 {
     display: grid;
-    background-color: rgba(233, 10, 10, 1);
+    margin-top: 100px;
+    background-color: var(--couleur-rouge);
     grid-template-columns: 0.5fr 1.5fr 2fr 1.25fr 1.25fr 4fr;
     grid-template-areas:
                         ". g g g . h";
@@ -199,110 +203,12 @@ body {
 @media (min-width: 600px) {
 
     .g {
-        /*padding-left: 2em;*/
         line-height: 1.8em;
     }
 
 }
 
-/*CHARTE TYPO*/
-.titreFilm {
-    font-size: 1rem;
-    background-color: red;
-    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-    font-variant: all-small-caps;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 0;
-    line-height: 1;
-}
 
-@media (min-width: 500px) {
-    .titreFilm {
-        font-size: 7rem;
-        margin: 0 30px 0;
-    }
-}
-
-@media (min-width: 800px) {
-    .titreFilm {
-        font-size: 10rem;
-    }
-}
-
-
-.titre_film2 {
-    margin-top: 100px;
-    font-size: 1rem;
-    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-}
-@media (min-width: 500px) {
-    .titre_film2{
-        font-size: 3rem;
-        margin: 0 30px 0;
-    }
-}
-.type_film{
-    margin: 0px 30px 10px;
-}
-
-/*f*/
-/*background-color: rgba(233, 10, 10, 1);*/
-/*/*display: inline;*/
-
-
-/*padding: 0;*/
-/*/*line-height: 1;*/
-
-
-
-/*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
-/*text-align: center;*/
-/*margin-bottom: 0;*/
-/*}*/
-
-
-.citation {
-    font-size: 0.5rem;
-    font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-@media (min-width: 500px) {
-    .citation {
-        font-size: 2rem;
-        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-}
-
-@media (min-width: 800px) {
-    .citation {
-        font-size: 2.5rem;
-        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-}
-
-h2 {
-    font-size: 35px;
-    line-height: 1;
-    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-    font-variant: all-small-caps;
-    margin: 10px 40px 10px;
-}
-.p_UneHistoireFamille {
-    margin: 10px 40px 10px;
-}
-p {
-    font-size: 5rem;
-    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.5;
-
-}
-
-@media (min-width: 500px) {
-    p {
-        font-size: 1.7rem;
-    }
-}
 .infosFilm {
     margin: 15px 1px 10px 40px;
 }
@@ -323,7 +229,7 @@ p {
             width: 300px;
         }
     }
-
+/*étoiles*/
     .box {
         display: flex;
         flex-direction: row;
@@ -349,13 +255,12 @@ p {
     }
 
 
-    /*FOOTER*/
+/*FOOTER*/
 
-
-    footer {
+footer {
         background-color: rgba(13, 15, 17, 1);
         padding: 2em;
-        /*position: relative;*/
+
     }
 /*SPITRE CSS*/
 /*menu medias sprite*/
@@ -363,26 +268,14 @@ p {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    /*margin-left: 50%;*/
-    /*margin-right: 50%;*/
-    /*position: absolute;*/
-    /*padding: 2rem;*/
-    /*top: 10px;*/
-    /*left:30%;*/
 }
-@media (min-width: 600px){
-    .menu-sociaux{
-        /*position: absolute;*/
-        /*top: 2px;*/
-        /*left:15%;*/
-    }
-}
+
 .menu-sociaux__lien {
-    font-size: 0; /* fait disparaître le texte du lien */
-    display: block; /* permet de donner une dimension au lien */
-    width: 50px; /* largeur de l'image */
-    height: 50px; /* hauteur de l'image */
-    margin-right: 1rem; /* espace entre les liens */
+    font-size: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
     background-image: url(../images/contactMedia.png);
     background-repeat: no-repeat;
 }
@@ -408,11 +301,10 @@ p {
 .sprite {
     width: 212px;
     height: 108px;
-    border: 1px green solid;
     margin: 0 3rem 6rem 3rem;
     background: url(../images/contactMedia.png) no-repeat;
 }
-
+/*liens footer*/
     .sources {
         font-weight: bold;
     }
@@ -425,12 +317,18 @@ p {
         line-height: 1.5;
     }
 
-    a:hover {
-        color: red;
+    a:link {
+        color: lightgray;
     }
 
     a:visited {
-        color: lightgray;
+        color: var(--couleur-rouge);
+    }
+    a:hover{
+        color: darkgray;
+    }
+    a:active {
+        color: white;
     }
 
 

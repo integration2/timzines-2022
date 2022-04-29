@@ -23,23 +23,6 @@
  * Écran large : 800px et +
  */
 
-/* Polices */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
-/*h1,*/
-/*.h1,*/
-/*h2,*/
-/*.h2,*/
-/*h3,*/
-/*.h3,*/
-/*h4,*/
-/*.h4 {*/
-/*    font-family: var(--titreSite-fonte);*/
-/*}*/
-/*body{*/
-/*    font-family: var(--fonte-principale);*/
-/*}*/
 
 
 /* Base décimale */
@@ -98,30 +81,90 @@ html{
 /*}*/
 
 
-/*f*/
-/*background-color: rgba(233, 10, 10, 1);*/
-/*!*display: inline;*!*/
-/*padding: 0;*/
-/*!*line-height: 1;*!*/
-/*border-bottom: rgba(233, 10, 10, 1) 10px solid;*/
-/*text-align: center;*/
-/*margin-bottom: 0;*/
+
 }
 
 
-/*.citation {*/
-/*    font-size: 25px;*/
-/*    font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;*/
-/*}*/
 
-/*h2 {*/
-/*    font-size: 35px;*/
-/*    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;*/
-/*    font-variant: all-small-caps;*/
-/*}*/
+/*CHARTE TYPO*/
+.titreFilm {
+    font-size: 1rem;
+    background-color: red;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-variant: all-small-caps;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 1;
+}
 
-/*p {*/
-/*    font-size: 18px;*/
-/*    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;*/
-/*    line-height: 1.5;*/
-/*}*/
+@media (min-width: 500px) {
+    .titreFilm {
+        font-size: 7rem;
+        margin: 0 30px 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .titreFilm {
+        font-size: 10rem;
+    }
+}
+
+
+.titre_film2 {
+    margin-top: 100px;
+    font-size: 1rem;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+}
+@media (min-width: 500px) {
+    .titre_film2{
+        font-size: 3rem;
+        margin: 0 30px 0;
+    }
+}
+.type_film{
+    margin: 0px 30px 10px;
+}
+
+.citation {
+    font-size: 0.5rem;
+    font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (min-width: 500px) {
+    .citation {
+        font-size: 2rem;
+        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+@media (min-width: 800px) {
+    .citation {
+        font-size: 2.5rem;
+        font-family: 'Roboto Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-variant: all-small-caps;
+    margin: 10px 40px 10px;
+}
+.p_UneHistoireFamille {
+    margin: 10px 40px 10px;
+}
+p {
+    font-size: var(--fontSize-base-small);
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+
+}
+
+@media (min-width: 600px) {
+    p {
+        font-size: var(--fontSize-base-large);
+    }
+}
