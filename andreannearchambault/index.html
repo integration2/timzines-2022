@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,72 +7,70 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Timzine</title>
 </head>
-
 <body>
-    <header>
-        <nav class="nav__header">
+    <header role="banner">
+        <nav class="nav__header" role="navigation">
             <a href="index.html">
                 <picture>
                     <source media="(min-width: 601px)"
                         srcset="images/logo/logo_575.png 1x, images/logo/logo_1150.png 2x">
                     <source media="(max-width: 600px)"
                         srcset="images/logo/logo_300.png 1x, images/logo/logo_600.png 2x">
-                    <img src="images/logo/logo_575.png" alt="">
-
+                    <img src="images/logo/logo_575.png" alt="Logo Timzine, Design digital des actualités culturelles">
                 </picture>
             </a>
         </nav>
     </header>
-    <main class="conteneur">
-            <section class="section1">
-                <div class="titreAccroche">
-                    <h1>Les contes des frères Grimm</h1>
-                    <p>À l'origine, les contes de fées de Grimm <strong>n'étaient pas destinés aux enfants</strong>. Les
-                        histoires incluaient
-                        régulièrement du sexe, de la violence, de l'inceste, etc. Initialement destinées aux adultes,
-                        les
-                        premières éditions de Nursery and Household Tales contenaient des éléments remarquablement
-                        sombres.
-                    </p>
+    <main role="main">
+        <section class="section1">
+            <div class="titreAccroche">
+                <h1>Les contes des frères Grimm</h1>
+                <p>À l'origine, les contes de fées de Grimm <strong>n'étaient pas destinés aux enfants</strong>. Les
+                    histoires incluaient
+                    régulièrement du sexe, de la violence, de l'inceste, etc. Initialement destinées aux adultes,
+                    les
+                    premières éditions de Nursery and Household Tales contenaient des éléments remarquablement
+                    sombres.
+                </p>
+            </div>
+            <div class="grille1 grimm">
+                <figure class="A figure_grimm">
+                    <picture>
+                        <source media="(min-width: 700px)"
+                            srcset="images/grimm/grimm_490.jpg 1x, images/grimm/grimm_980.jpg 2x">
+                        <source media="(min-width: 500px)"
+                            srcset="images/grimm/grimm_399.jpg 1x, images/grimm/grimm_798.jpg 2x">
+                        <source media="(max-width: 490px)"
+                            srcset="images/grimm/grimm_236.jpg 1x, images/grimm/grimm_472.jpg 2x">
+                        <img src="images/grimm/grimm_490.jpg" alt="Les frères Grimm">
+                    </picture>
+                    <figcaption class="figcaption">Les frères Grimm</figcaption>
+                </figure>
+                <div class="B">
+                    <p>D'origine allemande, les frères Jacob et Wilhelm Grimm sont deux bibliothécaires, linguistes,
+                        critiques
+                        littéraires et collecteurs de contes. Lors de leurs études de droit à l'Université de
+                        Marbourg,
+                        ils
+                        se
+                        découvrent une passion pour les contes populaires et la langue allemande. </p>
+                    <p>Les frères Grimm réécrivent aussi des contes de Charles Perrault, par exemple; Cendrillon, La
+                        belle
+                        au
+                        bois dormant et Le petit chaperon rouge. Bien que les histoires ressemblent beaucoup à la
+                        version
+                        originale, les contes des Grimm s'en distinguent par leur écriture parfois teintée de
+                        réalisme,
+                        de
+                        fantastique et de romantisme, alliant humour et cruauté. On leur doit plus de 200 contes et
+                        légendes,
+                        dont Blanche-Neige, Hansel et Gretel, Le Vaillant Petit Tailleur, Tom Pouce, Raiponce et
+                        bien
+                        d'autres
+                        encore. </p>
                 </div>
-                <div class="grille1 grimm">
-                    <figure class="A figure_grimm">
-                        <picture>
-                            <source media="(min-width: 700px)"
-                                srcset="images/grimm/grimm_490.jpg 1x, images/grimm/grimm_980.jpg 2x">
-                            <source media="(min-width: 500px)"
-                                srcset="images/grimm/grimm_399.jpg 1x, images/grimm/grimm_798.jpg 2x">
-                            <source media="(max-width: 490px)"
-                                srcset="images/grimm/grimm_236.jpg 1x, images/grimm/grimm_472.jpg 2x">
-                            <img src="images/grimm/grimm_490.jpg" alt="">
-                        </picture>
-                        <figcaption class="figcaption">Les frères Grimm</figcaption>
-                    </figure>
-                    <div class="B">
-                        <p>D'origine allemande, les frères Jacob et Wilhelm Grimm sont deux bibliothécaires, linguistes,
-                            critiques
-                            littéraires et collecteurs de contes. Lors de leurs études de droit à l'Université de
-                            Marbourg,
-                            ils
-                            se
-                            découvrent une passion pour les contes populaires et la langue allemande. </p>
-                        <p>Les frères Grimm réécrivent aussi des contes de Charles Perrault, par exemple; Cendrillon, La
-                            belle
-                            au
-                            bois dormant et Le petit chaperon rouge. Bien que les histoires ressemblent beaucoup à la
-                            version
-                            originale, les contes des Grimm s'en distinguent par leur écriture parfois teintée de
-                            réalisme,
-                            de
-                            fantastique et de romantisme, alliant humour et cruauté. On leur doit plus de 200 contes et
-                            légendes,
-                            dont Blanche-Neige, Hansel et Gretel, Le Vaillant Petit Tailleur, Tom Pouce, Raiponce et
-                            bien
-                            d'autres
-                            encore. </p>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
         <section class="section2">
             <div class="grille2">
                 <h2 class="C">Hansel et Gretel</h2>
@@ -92,7 +89,7 @@
                                 srcset="images/hanselgretel/hansel_405.jpg 1x, images/hanselgretel/hansel_810.jpg 2x">
                             <source media="(max-width: 600px)"
                                 srcset="images/hanselgretel/hansel_300.jpg 1x, images/hanselgretel/hansel_600.jpg 2x">
-                            <img src="images/hanselgretel/hansel_600.jpg" alt="">
+                            <img src="images/hanselgretel/hansel_600.jpg" alt="La sorcière rencontre Hansel et Gretel">
                         </picture>
                         <figcaption>La sorcière rencontre Hansel et Gretel</figcaption>
                     </figure>
@@ -120,7 +117,7 @@
                             srcset="images/rapunzel/rapunzel_217.jpg 1x, images/rapunzel/rapunzel_434.jpg 2x">
                         <source media="(min-width: 601px)"
                             srcset="images/rapunzel/rapunzel_415.jpg 1x, images/rapunzel/rapunzel_830.jpg 2x">
-                        <img src="images/rapunzel/rapunzel_415.jpg" alt=" ">
+                        <img src="images/rapunzel/rapunzel_415.jpg" alt="Dame Gotel monte la tour à l'aide des cheveux de Rapunzel">
                     </picture>
                     <figcaption>Dame Gotel monte la tour à l'aide des cheveux de Rapunzel</figcaption>
                 </figure>
@@ -152,9 +149,9 @@
                             srcset="images/cendrillon/cendrillon_238.jpg 1x, images/cendrillon/cendrillon_476.jpg 2x">
                         <source media="(min-width: 601px)"
                             srcset="images/cendrillon/cendrillon_405.jpg 1x, images/cendrillon/cendrillon_810.jpg 2x">
-                        <img src="images/cendrillon/cendrillon_405.jpg" alt="">
+                        <img src="images/cendrillon/cendrillon_405.jpg" alt="Aschenputtel assis, balai à la main">
                     </picture>
-                    <figcaption>Aschenputtel assis, balai à la main</figcaption>
+                    <figcaption> <i lang="de">Aschenputtel</i> assis, balai à la main</figcaption>
                 </figure>
                 <h2 lang="de" class="K">Aschenputtel</h2>
                 <p class="L cendrillon">(Cendrillon)</p>
@@ -184,52 +181,67 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="sources">
             <h3>Sources images</h3>
-            <p> <a href="https://www.biography.com/news/brothers-grimm-facts">https://www.biography.com</a> <br />
+            <p> 
+                <a href="https://www.biography.com/news/brothers-grimm-facts">https://www.biography.com</a> <br />
                 <a href="https://fr.wikipedia.org/wiki/Hansel_et_Gretel">https://fr.wikipedia.org</a> <br />
-                <a href="https://threadbythread.wordpress.com/2015/01/11/a-cinderella-story-part-i/">https://threadbythread.wordpress.com</a> <br />
-                <a href="https://www.terriwindling.com/blog/2020/06/rapunzel.html">https://www.terriwindling.com</a> <br />
+                <a
+                    href="https://threadbythread.wordpress.com/2015/01/11/a-cinderella-story-part-i/">https://threadbythread.wordpress.com</a>
+                <br />
+                <a href="https://www.terriwindling.com/blog/2020/06/rapunzel.html">https://www.terriwindling.com</a>
+                <br />
             </p>
             <h3>Sources textes</h3>
             <p>
                 <a href="https://www.biography.com/news/brothers-grimm-facts">https://www.biography.com</a> <br />
-                <a href="https://www.alloprof.qc.ca/fr/eleves/bv/histoire/jacob-grimm-1785-1863-et-wilhelm-grimm-1786-185-d1088">https://www.alloprof.qc.ca</a> <br />
-                <a href="https://www.oxygen.com/very-real/disney-versus-fairy-tale-justice-good-gruesome-and-grimm">https://www.oxygen.com</a> <br />
-                <a href="https://www.grimmstories.com/language.php?grimm=021&l=fr&r=de">https://www.grimmstories.com</a> <br />
-                <a href="http://grimmanddisney.blogspot.com/2011/09/hansel-and-gretel-fairy-tale-by.html">http://grimmanddisney.blogspot.com</a> <br />
-                <a href="https://florilegeswebjournal.com/2019/04/17/cendrillon-disney-vs-realite/#:~:text=La%20version%20des%20fr%C3%A8res%20Grimm,m%C3%A8re%20surplomb%C3%A9e%20par%20un%20arbre">https://florilegeswebjournal.com</a>
+                <a
+                    href="https://www.alloprof.qc.ca/fr/eleves/bv/histoire/jacob-grimm-1785-1863-et-wilhelm-grimm-1786-185-d1088">https://www.alloprof.qc.ca</a>
+                <br />
+                <a
+                    href="https://www.oxygen.com/very-real/disney-versus-fairy-tale-justice-good-gruesome-and-grimm">https://www.oxygen.com</a>
+                <br />
+                <a href="https://www.grimmstories.com/language.php?grimm=021&l=fr&r=de">https://www.grimmstories.com</a>
+                <br />
+                <a
+                    href="http://grimmanddisney.blogspot.com/2011/09/hansel-and-gretel-fairy-tale-by.html">http://grimmanddisney.blogspot.com</a>
+                <br />
+                <a
+                    href="https://florilegeswebjournal.com/2019/04/17/cendrillon-disney-vs-realite/#:~:text=La%20version%20des%20fr%C3%A8res%20Grimm,m%C3%A8re%20surplomb%C3%A9e%20par%20un%20arbre">https://florilegeswebjournal.com</a>
             </p>
         </div>
         <div class="nav__footer">
-            <nav class="nav__logo">
+            <nav class="nav__logo" role="navigation">
                 <a href="index.html">
                     <picture>
                         <source media="(min-width: 601px)"
                             srcset="images/logo/logo_footer_575.png 1x, images/logo/logo_footer_1150.png 2x">
                         <source media="(max-width: 600px)"
                             srcset="images/logo/logo_footer_300.png 1x, images/logo/logo_footer_600.png 2x">
-                        <img src="images/logo/logo_575.png" alt="">
+                        <img src="images/logo/logo_575.png" alt="Logo Timzine, Design digital des actualités culturelles">
                     </picture>
                 </a>
             </nav>
             <nav class="nav__mediasSociaux">
                 <ul class="media-sociaux">
                     <li class="media-liste">
-                        <a href="facebook.com" class="menu-sociaux__lien"><span class="screen-reader-only">Facebook</span><span class="facebook"></span></a>
+                        <a href="facebook.com" class="menu-sociaux__lien"><span
+                                class="screen-reader-only">Facebook</span><span class="facebook"></span></a>
                     </li>
                     <li class="media-liste">
-                        <a href="instagram.com" class="menu-sociaux__lien"><span class="screen-reader-only">Instagram</span><span class="instagram"></span></a>
+                        <a href="instagram.com" class="menu-sociaux__lien"><span
+                                class="screen-reader-only">Instagram</span><span class="instagram"></span></a>
                     </li>
                     <li class="media-liste">
-                        <a href="twitter.com" class="menu-sociaux__lien"><span class="screen-reader-only">Twitter</span><span class="twitter"></span></a>
+                        <a href="twitter.com" class="menu-sociaux__lien"><span
+                                class="screen-reader-only">Twitter</span><span class="twitter"></span></a>
                     </li>
                     <li class="media-liste">
-                        <a href="youtube.com" class="menu-sociaux__lien"><span class="screen-reader-only">Youtube</span><span class="youtube"></span></a>
+                        <a href="youtube.com" class="menu-sociaux__lien"><span
+                                class="screen-reader-only">Youtube</span><span class="youtube"></span></a>
                     </li>
                 </ul>
-                
             </nav>
         </div>
     </footer>
