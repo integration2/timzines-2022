@@ -332,26 +332,33 @@ footer{
    height: 50px;
 }
 .instagram{
-   background-position: 0px 0px;
+   background-position: 100px 0px;
 }
 .twitter{
-   background-position: 50px 0px;
+   background-position: 0px 0px;
 }
 .facebook{
-   background-position: 100px 0px;
+   background-position: 150px 0px;
+}
+.linkedin{
+   background-position: 50px 0px;
 }
 
 .twitter:hover,
 .twitter:active{
-   background-position: 50px 50px;
+   background-position: 0px 50px;
 }
 .instagram:hover,
 .instagram:active{
-   background-position: 0px 50px;
+   background-position: 100px 50px;
 }
 .facebook:hover,
 .facebook:active{
-   background-position: 100px 50px;
+   background-position: 150px 50px;
+}
+.linkedin:hover,
+.linkedin:active{
+   background-position: 50px 50px;
 }
 
 /**** info footer
@@ -370,6 +377,24 @@ footer{
 }
 #copyright{
    padding-bottom: 25px;
+}
+
+footer a:link,
+footer a:visited{
+   color: var(--color-Green);
+}
+footer a:hover,
+footer a:active{
+   color: var(--color-text);
+}
+
+footer #copyright a:link,
+footer #copyright a:visited{
+   color: var(--color-text);
+}
+footer #copyright a:hover,
+footer #copyright a:active{
+   color: var(--color-Green);
 }
 
 /**** grid footer
