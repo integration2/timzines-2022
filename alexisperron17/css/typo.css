@@ -48,6 +48,23 @@ h2 {
 
     h2 {
         font-size: 2.35rem;
+        line-height: 1.35;
+    }
+}
+
+@media (min-width: 800px) {
+    .citation {
+        font-family: "Myriad Pro", sans-serif;
+        font-style: italic;
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .citation {
+        font-family: "Myriad Pro", sans-serif;
+        font-style: italic;
+        font-size: 1.5rem;
     }
 }
 

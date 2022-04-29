@@ -1,3 +1,10 @@
+/* @media (min-width: 3px) {
+.conteneur {
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 0;
+}
+} */
 @media (min-width: 800px) {
   .conteneur {
       margin: 0 auto;
@@ -12,6 +19,7 @@
     padding: 0;
   }
 }
+@media (min-width: 600px) {
 .grille {  display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1.5fr 0.5fr 1.5fr;
@@ -23,10 +31,12 @@
       ". Texte-1 Texte-2 .";
   }
   
-  .grille picture { grid-area: image;  position: relative;}
+  .grille figure { grid-area: image;  position: relative;}
+  .grille figcaption {position:absolute; bottom: 0;}
   
   .texte_1 { grid-area: Texte-1; }
   
   .texte_2 { grid-area: Texte-2; }
   
   .grille h2 { grid-area: h2; }
+}
