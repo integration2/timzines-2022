@@ -55,7 +55,7 @@ h1 {
 h2 {
     font-size: 30px;
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 0.2rem;
 
 
 }
@@ -85,14 +85,19 @@ h3 {
 .fil-ariane {
     text-align: center;
 }
+.credit {
+    text-align: center;
+}
 img {
     max-width: 100%;
 }
 @media (min-width : 601px){
     .image_2 {
         max-width: 100%;
+        display: block;
     }
 }
+
 .logo {
     display: block;
     text-align: center;
@@ -101,16 +106,23 @@ img {
 .logo__img {
     width: 250px;
 }
-
-.div__medias > img {
-    width: 20%;
-    justify-content: space-between;
-}
 @media (min-width : 601px){
     .div__medias > img {
         width: 15%;
     }
 }
+.logo__fb {
+    width: 72px;
+}
+.logo__tw {
+    width: 72px;
+}
+
+.medias__sociaux {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .conteneur {
     background-color: black;
 }
@@ -130,8 +142,13 @@ img {
 }
 small{
     font-size: 14px;
+    display:flex;
     justify-content: center;
+    align-content: center;
+    padding-bottom: 2em;
+    padding-top: 1em;
 }
+
 h1,
 h2,
 h3 {
@@ -164,15 +181,7 @@ h3 {
 .div__paire > h2 {
     color: black;
 }
-img {
-    max-width: 90%;
-    padding-left: 1.5em;
-}
 
-.div__medias > img {
-    max-width: 25%;
-    
-}
 body {
     background-color: black;
 }
@@ -189,4 +198,16 @@ body {
 .div__medias{
     background-color: rgb(129, 1, 1);
     padding-top: 1.3em;
+}
+.div__impaire > p {
+    text-align: center;
+}
+.fil-ariane > strong {
+    text-decoration: underline;
+}
+.h2__footer{
+    padding-bottom: 0.8em;
+}
+ul {
+    list-style: none;
 }
