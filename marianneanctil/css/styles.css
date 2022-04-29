@@ -59,6 +59,7 @@ body {
     color: white;
 
 
+
 }
 
 .header__intro {
@@ -179,6 +180,7 @@ body {
 .main__h2 {
     text-align: center;
     font-size: 2.4em;
+    color: white;
 
 }
 
@@ -218,9 +220,7 @@ body {
     padding-top: 40px;
 }
 
-.z{
-    color:white;
-}
+
 
 .citation__conteneur {
     background-color: #99E0F1;
@@ -301,6 +301,19 @@ body {
 
 /*footer*/
 
+.footer .source{
+    order:3;
+}
+.footer .footer__logo{
+    order:1;
+}
+
+.footer .footer__media{
+    order:2;
+}
+
+
+
 
 .footer__list {
     color: red;
@@ -360,13 +373,15 @@ footer {
     padding-top: 2em;
 
 
+
 }
 
 .footer__logo {
     width: 90px;
-    margin-left: 2em;
-    margin-right: 2em;
+
 }
+
+
 
 @media (min-width: 600px ) {
     footer {
