@@ -285,58 +285,6 @@ h4 { /* = 16px */
     grid-area: citation;
 }
 
- /* Mise en page
- ========================================================================== */
- .section_casting{
-    padding-top: 10em;
-    padding-bottom: 10em;
-}
-.section_physique{
-    padding-top: 10em;
-}
-
- /*** Entête
- ========================================================================== */
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    text-align: center;
-    max-width: 100%;
-}
-/* .picture_entete{
-display: block;
-margin: 0 auto;
-max-width: 2800px;
-padding: 0;
-} */
-.picture_entete picture{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-/* .contenu_image{
-    background-image: url(/matteaue/images/header_1440.jpg);
-}
-.bleed{
-    max-width: 100%;
-    margin-left:0;
-    margin-right:0; 
-    text-align: center;
-
-} */
-
- /*** Main
- ========================================================================== */
-.fil_dariane{
-margin: 0;
-}
-.info_article>p{
-    margin: 0;
-}
-h2{
-    text-align: center;
-}
 .caisse picture{
     display: block;
     margin-left: auto;
@@ -396,6 +344,44 @@ h2{
     margin-right: auto; 
     text-align: center;
 }
+ /* Mise en page
+ ========================================================================== */
+ .section_casting{
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+.section_physique{
+    padding-top: 10em;
+}
+
+ /*** Entête
+ ========================================================================== */
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    max-width: 100%;
+}
+.picture_entete picture{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+ /*** Main
+ ========================================================================== */
+.fil_dariane{
+margin: 0;
+}
+.info_article>p{
+    margin: 0;
+}
+h2{
+    text-align: center;
+}
+
 /**** La Citation 
  ========================================================================== */
  .citation{
