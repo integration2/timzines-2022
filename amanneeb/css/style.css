@@ -1,29 +1,35 @@
 @charset "UTF-8";
-
-@import url(href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 @import url("grilles.css");
+@import url(href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+
 
 /* ALLER AU CONTENU */
 
 body{
-    
+    height: 70vh;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
+    background-position: 25vh -20vh, -20vh 330vh, 12vh 1000vh;
+    background-size: 700px, 500px, 700px;
+    background-repeat: no-repeat;
+    margin: 0;
 }
-@media (max-width: 800px){
+@media (max-width: 1000px){
     body{
         height: 70vh;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
-        background-position: 25vh -20vh, -20vh 330vh, 60vh 420vh;
-        background-size: 700px, 500px, 905px;
+        background-position: 40vh -10vh, -20vh 240vh, 30vh 300vh;
+        background-size: 700px, 500px, 800px;
         background-repeat: no-repeat;
+        background-attachment: initial;
         margin: 0;
     }
 }
-@media (min-width: 800px){
+@media (min-width: 1000px){
     body {
         height: 70vh;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
-        background-position: 110vh -20vh, -20vh 330vh, 60vh 420vh;
-        background-size: 700px, 500px, 905px;
+        background-position: 110vh -13vh, -20vh 330vh, 60vh 390vh;
+        background-size: 850px, 500px, 800px;
         background-repeat: no-repeat;
         margin: 0;
     }
@@ -36,6 +42,8 @@ body{
     align-items: stretch;
 }
 
+
+
 /*ARRIÈRE-PLAN*/
 .filAriane,
 .grilleUn,
@@ -47,11 +55,30 @@ body{
 }
 
 .grilleUn{
+    max-width: 100%;
     padding-left: 2em;
+    margin: 0 ;
+
 }
+@media (max-width: 600px) {
+    .grilleUn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+@media (min-width: 800px) {
+    .grilleUn{
+        padding-left: 2em;
+        margin: 0 220px ;
+
+    }
+}
+
 .filAriane{
     text-align: right;
-    margin-right: 200px;
     padding-top: 1em;
     padding-bottom: 1em;
 }
@@ -81,13 +108,29 @@ body{
 
 
 /* POLICES */
+
 .titre1{
     font-family: Roboto, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bolder;
-    letter-spacing: -.05em;
-    font-size: 5em;
+    font-size: 3em;
+    max-width: 100%;
 }
+
+@media (max-width: 999px) {
+    .titre1{
+        letter-spacing: -.04em;
+        font-size: 6vh;
+    }
+}
+
+@media (min-width: 1000px) {
+    .titre1{
+        letter-spacing: -.05em;
+        font-size: 7vh;
+    }
+}
+
 
 .titre2,
 .titre3,
@@ -96,7 +139,7 @@ body{
     font-family: "Style Script", fantasy;
     font-size: 5vh;
 }
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
     .titre2,
     .titre3,
     .titre4,
@@ -104,7 +147,7 @@ body{
         font-size: 7vh;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .titre2,
     .titre3,
     .titre4,
@@ -125,31 +168,37 @@ body{
 
 /*IMAGES*/
 .imageEnTete{
-    max-width: 500px;
-    max-height: 750px;
+    max-width: 400px;
+    max-height: 685px;
     box-shadow: -1em 1em #F5D3D9;
     z-index: -1;
 }
-@media(min-width: 800px){
+@media(min-width: 600px){
     .imageEnTete{
+        order: 1;
+    }
+}
+@media(min-width: 1000px){
+    .imageEnTete{
+        max-width: 500px;
+        max-height: 750px;
         box-shadow: -1em 1em #F5D3D9;
-        z-index: -1;
     }
 }
 
 .image2{
     box-shadow: -.8em .8em #A7CBC7;
-    order: 1;
-    max-width: 100%;
-    max-height: 100%;
+    order: 2;
+    max-width: 400px;
     margin: 20px 2em;
 }
-@media (min-width: 600px){
+@media (min-width: 1000px){
     .image2{
-
+        margin: 0 0;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
-
 
 .image3{
     box-shadow: .8em .8em #FF9B4C;
@@ -171,13 +220,29 @@ body{
     padding-bottom: 2em;
 }
 
+
 /*EN-TÊTE*/
-.titre1{
-    max-width: 100%;
+@media(min-width: 600px){
+    .titre1{
+        order: 2;
+    }
 }
 .texte1{
+    max-width: 100%;
     padding-top: 1em;
+    padding-right: 2em;
 }
+@media(min-width: 600px){
+    .texte1{
+        order: 3;
+    }
+}
+@media (min-width: 800px){
+    .texte1{
+        padding-right: ;
+    }
+}
+
 
 /** CORPS DU TEXTE **/
 .titre2,
@@ -203,36 +268,58 @@ body{
 }
 
 .titre2{
-
+    display: inline-block;
 }
 @media (min-width: 600px){
     .titre2{
         order: 2;
     }
 }
+
 .texte2{
+    padding-left: 1em;
+    max-width: 400px;
+}
+@media (min-width: 800px){
+    .texte2{
+        order: 2;
         padding: 0em 1em;
     }
+}
+@media (min-width: 1000px){
+    .texte2{
+        padding: 0em 1em;
+    }
+}
+.texte2,
+.image2{
+    align-items: center;
+}
+
 
 .titre3{
 
 }
 
-
+.texte2{
+    order: 3;
+}
 
 
 /*TOURNÉE*/
+.grilleQuatre{
+
+}
 .citation{
     font-family: "Style Script", fantasy;
     font-size: 2.5em;
     padding-top: 1em;
-    padding-right: 2em;
+    padding-right: 2em;git status
     padding-left: 2em;
 }
 .dateTournee{
     list-style-type: none;
 }
-
 .listeTournee>li{
     margin-bottom: 1em;
 }
@@ -252,7 +339,12 @@ body{
     background-image: url("../images/logo_timzine.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 250px 150px;
+}
+@media (min-width: 500px){
+    .footer .orange{
+        background-size: contain;
+    }
 }
 .footer .rose{
     height: 50px;

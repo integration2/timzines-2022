@@ -43,8 +43,8 @@
 .grilleDeux{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: stretch;
+    align-items: space-between;
 }
 @media (min-width: 601px){
     .grilleDeux{
