@@ -16,8 +16,6 @@
 
 }
 
-
-
 img {
     max-width: 100%;
     display: block;
@@ -349,9 +347,6 @@ body {
     max-width: 100%;
 }
 
-
-
-
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
     float: left;
@@ -373,8 +368,6 @@ body {
     }
 
 } 
-
-
 
   .column img {
       border-radius: 8%;
@@ -443,4 +436,8 @@ body {
   
   .footer-nav p {
       text-align: center;
+  }
+
+  .credits {
+
   }
