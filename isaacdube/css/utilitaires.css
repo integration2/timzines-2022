@@ -5,6 +5,8 @@
 :root {
  --couleurTurquoise: rgb(147, 176, 176);
  --couleurRose: #D65079;
+ --couleurJaune: #ECC371;
+ --couleurMauve: #6868AC;
 }
 
 /*** Clearfix ***/
