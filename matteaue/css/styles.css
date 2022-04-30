@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Raleway:wght@600;700;900&display=swap');
 
 /**
- * @author Prénom Nom courriel
+ * @author Éloïse Matteau <2141439@csfoy.ca>
  *
  * TABLE DES MATIERES
  * Normalize
  * Utilitaires
  * Charte typographique
- * Grille
+ * Grilles
  * Mise en page
  *** entête
  *** main
@@ -363,10 +363,12 @@ h4 { /* = 16px */
     text-align: center;
     max-width: 100%;
 }
-.picture_entete picture{
-    width: 100%;
-    margin: auto;
-    text-align: center;
+.picture_entete img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
 }
 
 
@@ -479,6 +481,7 @@ color: var(--couleur-tertiaire)
 .menu-sociaux{
     list-style: none;
     padding-bottom: 1.5em;
+    padding-left: 0;
 }
 .menu-sociaux__lien {
     font-size: 0;
