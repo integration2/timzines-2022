@@ -1,6 +1,9 @@
+@charset "utf-8";
+
 @import "normalize.css";
-@import "typo.css";
 @import "utilitaires.css";
+@import "typo.css";
+
 /*réinitialisation*/
 * {
     margin: 0;
@@ -44,7 +47,7 @@ body {
 
 
 .header__content {
-    background-image: url("../images/table/entête2880.jpg");
+    background-image: url("../images/table/entete2880.jpg");
     background-size: cover;
     min-height: 600px;
     max-width: 100%;
@@ -57,6 +60,7 @@ body {
     padding-bottom: 1.4em;
     padding-top: 2em;
     color: white;
+
 
 
 }
@@ -165,12 +169,12 @@ body {
 
 }
 
-.grille2 {
+.grille1 {
     margin-top: 8em;
 }
 
 
-.grille3 {
+.grille2 {
     padding-bottom: 12em;
 
 }
@@ -179,6 +183,7 @@ body {
 .main__h2 {
     text-align: center;
     font-size: 2.4em;
+    color: white;
 
 }
 
@@ -202,10 +207,12 @@ body {
 
 .f {
     margin-bottom: 14em;
+    color:white;
 }
 
 .e {
     padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .k {
@@ -217,6 +224,8 @@ body {
     padding-top: 40px;
 }
 
+
+
 .citation__conteneur {
     background-color: #99E0F1;
 }
@@ -226,10 +235,13 @@ body {
 
 }
 
+.conteneur__blanc .grille1{
+    margin-top:4em;
+}
+
+
 @media (min-width: 600px ) {
-    .h {
-        padding-top: 6em;
-    }
+
 
     .z {
         padding-bottom: 1.2em;
@@ -239,28 +251,31 @@ body {
         padding-top: 2em;
     }
 
+    .e{
+        padding-top: 0;
+    }
+
     .main__h2 {
         text-align: center;
         font-size: 2.8em;
 
     }
 
-    .grille2 {
+    .grille1 {
         margin-top: 5em;
     }
 
-    .grille3 {
+    .grille2 {
         padding-bottom: 4em;
 
     }
 
 
+
 }
 
 @media (min-width: 800px ) {
-    .h {
-        padding-top: 6em;
-    }
+
 
     .z {
         padding-bottom: 1.2em;
@@ -273,6 +288,10 @@ body {
     .f {
         margin-bottom: 16em;
     }
+    .e{
+        padding-top: 0;
+    }
+
 
     .main__h2 {
         text-align: center;
@@ -280,15 +299,16 @@ body {
 
     }
 
-    .grille2 {
+    .grille1 {
         margin-top: 6em;
     }
 
 
-    .grille3 {
+    .grille2 {
         padding-bottom: 5em;
 
     }
+
 
 
 }
@@ -296,9 +316,35 @@ body {
 
 /*footer*/
 
+footer {
+    margin-top: 100px;
+    background-color: #99E0F1;
+    max-width: 100%;
+    padding-bottom: 3.5em;
+    padding-top: 2em;
+    font-size: 0.6em;
 
-.footer__list {
-    color: red;
+}
+
+
+.footer__logo img {
+    width: 90px;
+
+}
+
+.img__logo{
+    display:block;
+    text-align: center;
+}
+
+.source,
+.footer__copyright{
+    order:1;
+}
+
+.footer__ul,
+.footer__list{
+
     list-style: none;
 
 }
@@ -309,14 +355,7 @@ body {
     transition-timing-function: ease;
 }
 
-
-.footer__src,
-li .footer__liens {
-    font-size: 0.6em;
-
-}
-
-
+/*media*/
 .footer__liens:link,
 .footer__liens:visited {
     color: darkslategray;
@@ -332,36 +371,23 @@ li .footer__liens {
 .footer__media .footer__list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
-
 
 .footer__items:hover {
     width: 80px;
-
 }
-
 
 .footer__media .footer__items {
     margin-right: 1.6em;
 }
 
-
-footer {
-    margin-top: 100px;
-    background-color: #99E0F1;
-    max-width: 100%;
-    padding-bottom: 3.5em;
-    padding-top: 2em;
-
-
+.footer__copyright__p .footer__liens{
+    text-decoration: underline;
 }
 
-.footer__logo {
-    width: 90px;
-    margin-left: 2em;
-    margin-right: 2em;
-}
+
 
 @media (min-width: 600px ) {
     footer {
@@ -378,7 +404,7 @@ footer {
         transition-timing-function: ease;
     }
 
-    .footer__logo {
+    .footer__logo img {
         width: 100px;
         margin-left: 2em;
         margin-right: 2em;
@@ -387,6 +413,10 @@ footer {
     .footer__items:hover {
         width: 80px;
 
+    }
+
+    .footer__copyright{
+        text-align: center;
     }
 
 }
@@ -406,7 +436,7 @@ footer {
         transition-timing-function: ease;
     }
 
-    .footer__logo {
+    .footer__logo img {
         width: 150px;
         margin-left: 2em;
         margin-right: 2em;
@@ -415,6 +445,10 @@ footer {
     .footer__items:hover {
         width: 100px;
 
+    }
+
+    .footer__copyright{
+        text-align: center;
     }
 }
 
