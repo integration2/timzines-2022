@@ -51,6 +51,7 @@ img {
     background-color: black;
     color: #FF83BC;
     margin: 50px;
+    padding-bottom: 60px;
     text-align: center;
    
 }
@@ -107,9 +108,14 @@ figcaption {
 
 }
 
+.avocat{
+    color: white;
+}
+
 p {
     font-size: 20px;
 }
+
 
 
 
@@ -595,18 +601,66 @@ ul {
     justify-content: center;
 }
 
-
+h4{
+    margin: 10px;
+    text-decoration: underline;
+}
 
 .sources{
     text-align: center;
+   
+}
+
+.sources ul{
+    list-style: none;
 }
 
 
 
+
+.sources_lien{
+    text-align: center;
+     list-style: none;
+}
+.source_item .sources_lien{
+    font-size: 1em
+}
+
+.credit p{  text-align: center;
+
+}
+.sources_lien :hover,
+.sources_lien :active{
+     color:#FFC90B ;
+     text-decoration: none;
+ }
+
+ a{text-decoration: none}
+
+ .social_media{
+     list-style: none;
+     display: flex;
+     flex-direction: row;
+     justify-content: center ;
+    
+    
+ }
 .reseaux{
     text-align: center;
     padding-top: 60px;
 }
+.reseaux_sociaux:nth-child(1) .rs{
+    margin-right: 20px;
+}
+.reseaux_sociaux:nth-child(2) .rs{
+    margin-right: 20px;
+}
+.reseaux_sociaux:nth-child(3) .rs{
+    margin-right: 20px;
+}
+ .reseaux_sociaux:nth-child(4) .rs{
+     margin-right: 20px;
+ }
 
 .facebook:hover{
     background-color: #FFC90B;
@@ -623,27 +677,28 @@ ul {
     background-color: #FFC90B;
     border-radius: 2.5rem;
 }
-.youtube:hover{
+.linkedin:hover{
     background-color: #FFC90B;
     border-radius: 2.5rem;
 }
 
-.rs:focus{ 
+/* .rs:focus{ 
     background-color: #FFC90B;
     border-radius:1rem;
-    outline:#FFC90B auto 3rem ;
-}
+    /* outline:#FFC90B auto 3rem ; */
+   
+    
+
 
 .credit{
-    text-align: center;
+    text-align: center; 
 }
+
+
 
 /* focus liens */
-a:focus{
-    outline:#FFC90B auto 3rem;
+.rs:focus{
+    background-color: #FFC90B;
+    border-radius: 2.5rem;
 }
 
-p:focus{
-    outline:#FFC90B auto 3rem;
-
-}
