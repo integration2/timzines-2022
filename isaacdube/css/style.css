@@ -619,6 +619,13 @@ p {
     }
 }
 
+@media (min-width:1400px) {
+    .section_mauve::before {
+        left: 8.5%;
+        height: 220%;
+    }
+} 
+
 .quote {
     position: absolute;
     left: 3rem;
