@@ -1,6 +1,8 @@
 @charset "UTF-8";
+@import url("normalize.css");
 @import url("grilles.css");
-@import url(href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 
 
 /* ALLER AU CONTENU */
@@ -8,30 +10,36 @@
 body{
     height: 70vh;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
-    background-position: 25vh -20vh, -20vh 330vh, 12vh 1000vh;
-    background-size: 700px, 500px, 700px;
+    background-position: 25vh -10vh, -20vh 280vh, 15vh 450vh;
+    background-size: 700px, 500px, 500px;
     background-repeat: no-repeat;
+    transition: background-position;
     margin: 0;
 }
-@media (max-width: 1000px){
+@media (min-width: 800px){
     body{
         height: 70vh;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
         background-position: 40vh -10vh, -20vh 240vh, 30vh 300vh;
-        background-size: 700px, 500px, 800px;
-        background-repeat: no-repeat;
-        background-attachment: initial;
-        margin: 0;
+        background-size: 650px, 500px, 800px;
+
     }
 }
 @media (min-width: 1000px){
     body {
         height: 70vh;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
-        background-position: 110vh -13vh, -20vh 330vh, 60vh 390vh;
+        background-position: 45vh -13vh, -20vh 250vh, 40vh 300vh;
         background-size: 850px, 500px, 800px;
-        background-repeat: no-repeat;
-        margin: 0;
+
+    }
+}
+@media (min-width: 1200px){
+    body {
+        height: 70vh;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(255,155,76)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(167, 203, 199)' /%3E%3C/svg%3E "), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgb(245, 211, 217)' /%3E%3C/svg%3E ");
+        background-position: 100vh -13vh, -20vh 230vh, 60vh 300vh;
+
     }
 }
 
@@ -42,7 +50,30 @@ body{
     align-items: stretch;
 }
 
+/*ALLER DIRECTEMENT AU CONTENU*/
+.screen-reader-only,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus,
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
 
 /*ARRIÈRE-PLAN*/
 .filAriane,
@@ -58,6 +89,7 @@ body{
     max-width: 100%;
     padding-left: 2em;
     margin: 0 ;
+    align-self: center;
 
 }
 @media (max-width: 600px) {
@@ -72,7 +104,14 @@ body{
 @media (min-width: 800px) {
     .grilleUn{
         padding-left: 2em;
-        margin: 0 220px ;
+        margin-left: 2em;
+
+    }
+}
+@media (min-width: 1200px) {
+    .grilleUn{
+        padding-left: 2em;
+        margin-left: 2em;
 
     }
 }
@@ -104,8 +143,10 @@ body{
 }
 
 /*CONTENEURS*/
-
-
+.pair,
+.impair{
+    padding: 2em 0em;
+}
 
 /* POLICES */
 
@@ -113,18 +154,22 @@ body{
     font-family: Roboto, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 4vh;
     max-width: 100%;
+    align-self: stretch;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1000px) {
     .titre1{
         letter-spacing: -.04em;
-        font-size: 6vh;
+        font-size: 3.5vh;
+        max-width: available;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
     .titre1{
         letter-spacing: -.05em;
         font-size: 7vh;
@@ -167,22 +212,27 @@ body{
 
 
 /*IMAGES*/
+
 .imageEnTete{
-    max-width: 400px;
-    max-height: 685px;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
     box-shadow: -1em 1em #F5D3D9;
     z-index: -1;
+    order: 1;
 }
-@media(min-width: 600px){
+@media(min-width: 801px){
     .imageEnTete{
         order: 1;
+        max-width: 500px;
+        box-shadow: -1em 1em #F5D3D9;
     }
 }
-@media(min-width: 1000px){
+@media(min-width: 1250px){
     .imageEnTete{
-        max-width: 500px;
-        max-height: 750px;
+        object-fit: content;
         box-shadow: -1em 1em #F5D3D9;
+        max-width: 500px;
     }
 }
 
@@ -191,11 +241,11 @@ body{
     order: 2;
     max-width: 400px;
     margin: 20px 2em;
+    object-fit: contain;
 }
 @media (min-width: 1000px){
     .image2{
         margin: 0 0;
-        max-width: 100%;
         max-height: 100%;
     }
 }
@@ -222,7 +272,7 @@ body{
 
 
 /*EN-TÊTE*/
-@media(min-width: 600px){
+@media(min-width: 801px){
     .titre1{
         order: 2;
     }
@@ -231,10 +281,12 @@ body{
     max-width: 100%;
     padding-top: 1em;
     padding-right: 2em;
+    order: 3;
 }
-@media(min-width: 600px){
+@media(min-width: 801px){
     .texte1{
         order: 3;
+        width: auto;
     }
 }
 @media (min-width: 800px){
@@ -268,7 +320,7 @@ body{
 }
 
 .titre2{
-    display: inline-block;
+    align-self: start;
 }
 @media (min-width: 600px){
     .titre2{
@@ -278,7 +330,6 @@ body{
 
 .texte2{
     padding-left: 1em;
-    max-width: 400px;
 }
 @media (min-width: 800px){
     .texte2{
@@ -295,16 +346,14 @@ body{
 .image2{
     align-items: center;
 }
-
-
-.titre3{
-
-}
-
 .texte2{
     order: 3;
 }
 
+.texte3,
+.texte4{
+    padding-bottom: 1em;
+}
 
 /*TOURNÉE*/
 .grilleQuatre{

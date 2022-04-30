@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: stretch;
 }
-@media (min-width: 601px){
+@media (min-width: 801px){
     .grilleUn{
         display: grid;
         grid-gap: 1em;
@@ -19,22 +19,20 @@
                         "image image titre titre"
                         "image image texte texte"
                         ".      .     texte texte";
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0;
+
     }
 }
-@media (min-width: 601px){
+@media (min-width: 801px){
     .titre1{
         grid-area: titre;
     }
 }
-@media (min-width: 601px){
+@media (min-width: 801px){
     .texte1{
         grid-area: texte;
     }
 }
-@media (min-width: 601px){
+@media (min-width: 801px){
     .imageEnTete{
         grid-area: image;
     }
@@ -44,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    align-items: space-between;
+    align-items: center;
 }
 @media (min-width: 601px){
     .grilleDeux{
