@@ -148,9 +148,6 @@ gap: 10px;
     'note note note note note note'
     'auteur auteur auteur auteur auteur auteur'
     'texte1 texte1 texte1 texte1 texte1 texte1';
-
-    grid-template-columns: ;
-    grid-template-rows: 
 }
 
 .section-1-conteneur {
@@ -247,17 +244,6 @@ section p {
     width: 90%;
 }
 
-.cercle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.cercle circle {
-    fill: white;
-}
-
 .citation {
     max-width: 40%;
 }
@@ -270,7 +256,7 @@ footer {
 }
 
 .footer-logo {
-    width: 20%;
+    width: 400px;
     margin: 40px 0 40px 0;
 }
 
@@ -278,23 +264,32 @@ footer {
     width: 100%;
 }
 
-footer p {
+.menu-credit__lien:link {
+    filter: contrast(100%);
+}
+
+.menu-credit__lien:visited {
+    filter: invert(53%) sepia(15%) saturate(2000%) hue-rotate(303deg) brightness(94%) contrast(100%);
+}
+
+.menu-credit__lien:hover, .menu-credit__lien:active {
+    filter: invert(10%) sepia(51%) saturate(2872%) hue-rotate(145deg) brightness(104%) contrast(97%);
+}
+
+.menu-credit {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 10px;
+    list-style: none;
 }
 
-footer small {
+footer li {
     margin-bottom: 5px;
 }
 
-footer small a {
+footer li a {
     margin-left: 5px;
-}
-
-footer small a:hover {
-    color: #00F0FF;
 }
 
 .menu__medias-sociaux {
@@ -302,12 +297,29 @@ footer small a:hover {
     list-style: none;
 }
 
-.menu__medias-sociaux li {
+.menu-ms__items {
     margin: 20px 10px 20px 10px;
 }
 
-.menu__medias-sociaux img {
+.menu-ms__img {
     width: 50px;
+}
+
+.menu-ms__lien:link img {
+    filter: none;
+}
+
+.menu-ms__lien:visited img {
+    filter: invert(53%) sepia(15%) saturate(2000%) hue-rotate(303deg) brightness(94%) contrast(100%);
+    border: solid #00F0FF 2px ;
+}
+
+.menu-ms__lien:hover img, .menu-ms__lien:active img {
+    filter: invert(10%) sepia(51%) saturate(2872%) hue-rotate(145deg) brightness(104%) contrast(97%);
+}
+
+.lien-github {
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -316,7 +328,7 @@ footer small a:hover {
         width: 100%;
     }
 
-    .section-1-conteneur {
+    .section-1-conteneur, .section-2-conteneur, .section-3-conteneur {
         grid-template-areas:
         'image image image image image image'
         'texte1 texte1 texte1 texte1 texte1 texte1'
@@ -327,7 +339,7 @@ footer small a:hover {
         grid-template-rows: 1fr;
     }
 
-    .section-1 img {
+    .section-1 img, .section-2 img, .section-3 img {
         width: 100%;
         position: relative;
         top: 0px;
@@ -340,7 +352,7 @@ footer small a:hover {
         justify-content: center;
     }
 
-    .section-1-conteneur, .section-titre-conteneur {
+    .section-1-conteneur, .section-2-conteneur, .section-3-conteneur, .section-titre-conteneur {
         width: 90%;
     }
     
