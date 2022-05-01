@@ -380,6 +380,20 @@ body{
     text-align: left;
 }
 
+.references{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.references>ul {
+    display: inline;
+    list-style: none;
+}
+.references a{
+    color: #442B33;
+}
+
 
 /*PIED DE PAGE*/
 .footer .orange{

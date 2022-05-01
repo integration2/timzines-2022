@@ -4,7 +4,7 @@
  * Les valeurs de taille de police suggérées ici sont à titre indicatif.
  * À ajuster selon la direction visuelle et le choix de polices de caractères.
  *
- * @author Prénom Nom courriel
+ * @author Rosalie Roy 2133488@csfoy.ca
  *
  * TABLE DES MATIÈRES
  * Polices
@@ -24,114 +24,59 @@
  */
 
 /* Polices */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-    font-family: var(--titreSite-fonte);
-}
-body{
-    font-family: var(--fonte-principale);
-}
-
-
-/* Base décimale */
-html{
-    font-size: 62.5%;
-}
-
-
-body {
-    /* 16px pour toutes les largeurs d'écran */
-    font-size: 1.6rem;
-    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
-    line-height: 1.375;
+ /*** Delius Swash Caps (h1) ***/
+ @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+ /*** Delius Unicase (h2) ***/
+ @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
+ /*** Roboto (texte courant) ***/
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+ /*** Delius (citation) ***/
+ @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+ 
+ /** Polices dans la page **/
+ h1 {
+    font-family: "Delius Swash Caps";
+    font-size: 55px;
 }
 @media (min-width: 600px) {
-    body {
-        line-height: 1.5;
+    h1 {
+        font-size: 60px;
     }
 }
-@media (min-width: 800px) {
-    body {
-        line-height: 1.75;
-    }
-}
-
-
-/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
-h1,
-.h1 { /* = 32px */
-    font-size: 3.2rem;
+h2 {
+    font-family: "Delius Unicase";
+    font-size: 26px;
 }
 @media (min-width: 600px) {
-    h1,
-    .h1 { /* = 40px */
-        font-size: 4rem;
+    h2 {
+        font-size: 32px;
     }
 }
-@media (min-width: 800px) {
-    h1,
-    .h1 { /* = 48px */
-        font-size: 4.8rem;
-    }
+.fil-dariane {
+    font-family: "Roboto";
+    font-size: 12px;
 }
-
-h2,
-.h2 { /* = 24px */
-    font-size: 2.4rem;
+.auteur,
+.datePublication,
+.credits {
+    font-family: "Roboto";
+    font-size: 14px;
+}
+.quote {
+    font-family: "Delius";
+    font-size: 20px;
+    color: var(--couleur-blanche);
 }
 @media (min-width: 600px) {
-    h2,
-    .h2 { /* = 32px */
-        font-size: 3.2rem;
+    .quote {
+        font-size: 25px;
     }
 }
-@media (min-width: 800px) {
-    h2,
-    .h2 { /* = 36px */
-        font-size: 3.6rem;
-    }
+p {
+    font-family: "Roboto";
+    font-size: 16px;
 }
-
-h3,
-.h3 { /* = 18px */
-    font-size: 1.8rem;
-}
-@media (min-width: 600px) {
-    h3,
-    .h3 {  /* = 24px */
-        font-size: 2.4rem;
-    }
-}
-@media (min-width: 800px) {
-    h3,
-    .h3 { /* = 30px */
-        font-size: 3rem;
-    }
-}
-
-h4,
-.h4 { /* = 16px */
-    font-size: 1.6rem;
-}
-@media (min-width: 600px) {
-    h4,
-    .h4 { /* = 18px */
-        font-size: 1.8rem;
-    }
-}
-
-@media (min-width: 800px) {
-    h4,
-    .h4 { /* = 22px */
-        font-size: 2.2rem;
-    }
+.sources {
+    font-family: "Roboto";
+    font-size: 14px;
 }

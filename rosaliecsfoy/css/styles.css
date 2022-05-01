@@ -21,47 +21,10 @@
    ========================================================================== */
 @import url(utilitaires.css);
 
- /* Polices */
+ /* Typographie
+   ========================================================================== */
+@import url(typo.css);
 
- /** Polices importées **/
-
- /*** Delius Swash Caps (h1) ***/
- @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
- /*** Delius Unicase (h2) ***/
- @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
- /*** Roboto (texte courant) ***/
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
- /*** Delius (citation) ***/
- @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
- 
- /** Polices dans la page **/
- h1 {
-    font-family: "Delius Swash Caps"; /* Ajouter la famille de police */
-    font-size: 60px;
-}
-h2 {
-    font-family: "Delius Unicase"; /* Ajouter la famille de police */
-    font-size: 32px;
-}
-.fil-dariane {
-    font-family: "Roboto"; /* Ajouter la famille de police */
-    font-size: 12px;
-}
-.auteur,
-.datePublication,
-.credits {
-    font-family: "Roboto"; /* Ajouter la famille de police */
-    font-size: 14px;
-}
-.quote {
-    font-family: "Delius"; /* Ajouter la famille de police */
-    font-size: 25px;
-    color: var(--couleur-blanche);
-}
-p {
-    font-family: "Roboto"; /* Ajouter la famille de police */
-    font-size: 16px;
-}
  /* Mise en page */
  /****** Base commune *******/
 :root {
@@ -71,21 +34,30 @@ p {
     --couleur-jaune: #FFD700;
     --font-family: Raleway, sans-serif;
     }
+img {
+    width: 100%;
+}
 body {
     background-color: #EFF0FA;
     background-image: url('../images/Mobile/1x/motifTitre_288.png');
     background-repeat: no-repeat;
-    /* background-position: relative; MISMATCH */
-    background-position-y: 525px;
-    /*background-position-x: 40%;*/
-    background-position-x: calc(50% + 250px);
+    background-position: relative;
+    background-position-y: 620px;
+    background-position-x: 90%;
     background-size: 320px;
     width: 100%;
 }
 @media (min-width: 600px) {
     body {
-        /*background-position-x: right;*/
-        background-position-y: 0px;  /* L'unité de mesure px est superflu avec le nombre 0 */
+        background-position-x: 80%;
+        background-position-y: 0px;
+        background-size: 650px;
+    }
+}
+@media (min-width: 1000px) {
+    body {
+        background-position-x: 70%;
+        background-position-y: 0px;
         background-size: 650px;
     }
 }
@@ -96,6 +68,9 @@ header.conteneur{
     background-size: 500px;
     min-height: 240px;
     position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
 }
 @media (min-width: 600px){
     header{
@@ -121,17 +96,29 @@ footer {
     width: 255px;
     margin-top: 10px;
 }
+div.carre {
+    position: absolute;
+    background-color: transparent;
+    border: 5px solid transparent;
+    z-index: 1;
+}
+@media(min-width:1000px) {
+    /* à 1000px : apparition du carré au-dessus l'image principale (Roxane à l'Adisq) */
+    div.carre {
+        border: 5px solid black;
+        width: 46%;
+        height: 52%;
+        top: -2.6%;
+        left: 3.5%;
+    }
+}
 .logoPiedPage {
     width: 160px;
-    margin-top: 3px;
 }
-/* .rangee {
-    margin-top: 10px;
-    margin-bottom: 10px;
-} */
 .lienLogoPied {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 .decorationTitre {
     position: relative;
@@ -173,6 +160,7 @@ picture.RoxaneAdisq {
 div.texteIntro {
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 30px;
 }
 @media (min-width: 600px) {
     .grille1 {
@@ -210,6 +198,15 @@ div.texteIntro {
     margin-right: 15px;
     margin-left: 15px;
 }
+.grille1 picture.RoxaneAdisq {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width:600px){
+    .grille1 picture.RoxaneAdisq {
+        padding-right: 15px;
+    }
+}
 @media (min-width: 1000px) {
     .grille1 {
         display: grid;
@@ -240,11 +237,10 @@ div.texteIntro {
         }
         .divertir {
             grid-area: 2 / 1 / 3 / 3;
-            margin-bottom: 60px;
-            margin-left: 60px;
+            margin-bottom: 70px;
         }
         .divertirP {
-            margin-right: 100px;
+            margin-right: 95px;
             margin-left: 15px;
         }
         .tourneeP {
@@ -267,6 +263,9 @@ div.texteIntro {
     picture.imageAMM {
         display: flex;
         justify-content: center;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     picture.imageAcrophobie {
         display: flex;
@@ -276,6 +275,8 @@ div.texteIntro {
     picture.imageTournee {
         display: flex;
         justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     @media (min-width: 600px) {
         picture.imageTournee {
@@ -289,17 +290,16 @@ div.texteIntro {
         background-color: var(--couleur-mauve);
         display: flex;
         justify-content: space-between;
-        margin-bottom: 60px;
+        margin-bottom: 85px;
         max-width: 1000px;
     }
     .imageAcrophobie{
         width: 100%;
     }
-    .imageAMM{
+    .imageAMM {
         grid-area: 2 / 2 / 3 / 4;
-        width:100%;
         position: relative;
-        top: -15px;
+        top: -33px;
     }
     .grille2{
         display: grid;
@@ -307,11 +307,17 @@ div.texteIntro {
         align-items: center;
         position: relative;
     }
+    .grille2 picture {
+        padding-right: 15px;
+    }
     .grille3{
         display: grid;
         grid-template-columns: 5fr 150px 5fr;
         align-items: center;
         position: relative;
+    }
+    .grille3 picture {
+        margin-left: 15px;
     }
     .imageTournee{
         grid-area: 1 / 1 / 2 / 3;
@@ -343,7 +349,7 @@ div.texteIntro {
 
 }
 .quote {
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 10px; 
     padding: 15px;
 }
@@ -355,9 +361,62 @@ div.texteIntro {
     bottom: -17px;
 }
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    text-align: center;
     min-height: 200px;
     border-top: 20px solid var(--couleur-mauve);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.medias-sociaux {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.medias-sociaux_element {
+    list-style-type: none;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+}
+.medias-sociaux_lien:link,
+.medias-sociaux_lien:visited {
+    color: var(--couleur-blanche);
+}
+.medias-sociaux_lien:hover {
+    background-color: var(--couleur-mauve);
+}
+.medias-sociaux_lien:focus {
+    background-color: var(--couleur-jaune);
+}
+.medias-sociaux_lien:active {
+    background-color: var(--couleur-jaune);
+}
+/* p.footer__p.suivreTIM {
+    display: flex;
+    position: relative;
+    left: 128px;
+}
+p.footer__p.suivreRosalie {
+    display: flex;
+    position: relative;
+    left: 140px;
+} */
+.sources {
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+}
+.sources__lien:link,
+.sources__lien:visited {
+    color: var(--couleur-jaune);
+}
+.sources__lien:hover {
+    background-color: var(--couleur-mauve);
+    color: var(--couleur-blanche);
+}
+.sources__lien:active {
+    background-color: var(--couleur-jaune);
+    color: var(--couleur-noire);
 }
