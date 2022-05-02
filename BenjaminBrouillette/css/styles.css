@@ -148,3 +148,14 @@ h2, p, blockquote {
     justify-content: center;
     padding: 10px 0 10px 0;
 }
+
+.retour{
+    text-align: center;
+}
+.retour a{
+    color: white;
+    text-decoration: none;
+}
+.retour a:hover{
+    text-decoration: underline;
+}
