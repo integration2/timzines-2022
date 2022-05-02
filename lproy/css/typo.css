@@ -158,6 +158,10 @@ p,
 @media (min-width: 800px) {
     .accroche p {
         font-size: 5.5rem;
+        padding: 0 2em;
+        margin-bottom: 0;
+        position: relative;
+        top: -1.65em;
     }
 }
 /* Fil d'Ariane */

@@ -70,6 +70,7 @@
 
 .body01 p {
     grid-area: c;
+    /*padding: 1em;*/
 }
 
 /* body02 */
@@ -110,10 +111,13 @@
 
 .body02 h2 {
     grid-area: h2;
+    padding-right: 1em;
 }
 
 .body02 p {
     grid-area: c;
+    padding: 0 0.5em 1em 1em;
+    margin-top: 0
 }
 
 /* body03 */
@@ -380,8 +384,8 @@ p {
 
 .accroche {
     position: relative;
-    min-height: 30vh;
-    padding: 2em 1em;
+    /*min-height: 30vh;*/
+    /*padding: 2em 1em;*/
     transition: all 0.5s;
 }
 
@@ -391,14 +395,14 @@ section {
 
 @media (min-width: 375px) {
     .accroche::before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='60' width='255'%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='2' dy='2' stdDeviation='1'/%3E%3C/filter%3E%3Cpolygon points='20,0 0,50 60,40 190,40 250,50 230,0' style='fill:%23ccc;' filter='url(%23shadow)'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='120' width='180'%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='2' dy='2' stdDeviation='1'/%3E%3C/filter%3E%3Cpolygon points='20,0 0,70 140,60 175,65 160,0' style='fill:%23ccc;' filter='url(%23shadow)'/%3E%3C/svg%3E");
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
         position: absolute;
         content: "";
         width: 100%;
-        top: 0px;
+        top: 1.5em;
         bottom: 0em;
         left: 0;
         z-index: -1;
@@ -476,15 +480,15 @@ section {
 
 @media (min-width: 375px) {
     .polygone::before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='60' width='255'%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='2' dy='2' stdDeviation='1'/%3E%3C/filter%3E%3Cpolygon points='20,0 0,50 60,40 190,40 250,50 230,0' style='fill:%23ccc;' filter='url(%23shadow)'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='250' width='230'%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='2' dy='2' stdDeviation='1'/%3E%3C/filter%3E%3Cpolygon points='20,0 0,230 190,210 220,220 210,0' style='fill:%23ccc;' filter='url(%23shadow)'/%3E%3C/svg%3E");
         background-position: top center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
         content: "";
         width: 100%;
-        top: 2em;
-        bottom: 3em;
+        top: -2em;
+        bottom: -13em;
         left: 0;
         z-index: -1;
     }
@@ -504,8 +508,8 @@ section {
 
 .polygone {
     position: relative;
-    min-height: 30vh;
-    padding: 2em 1em;
+    /*min-height: 30vh;*/
+    /*padding: 2em 1em;*/
     transition: all 0.5s;
 }
 
