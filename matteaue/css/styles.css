@@ -315,8 +315,8 @@ h4 { /* = 16px */
 
 @media only screen and (min-width: 800px) {
     .caisse {
-        margin-left: calc((( - 40rem) / 2) * -1);
-        width: 92vw;
+        /*margin-left: calc(( -40rem) / 2) * -1);*/
+        width: 86vw;
         display: grid;
         grid-template-rows: 1fr auto;
         grid-template-areas:
